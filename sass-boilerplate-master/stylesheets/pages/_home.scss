@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.hero {
+    // @include grid;
+    
+    height: $hero-height;
+    padding: 30px 10px;
+
+    h1 {
+        margin-top: 0px;
+    }
+    
+    &__profile-picture {
+        width: 250px;
+        margin: 20px 0;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px $brand-color;
+    }
+
+    &__copy {
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        margin: 20px 0;
+    }
+
+}

@@ -8,7 +8,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/markom01/cv">
-    <img src="./images/profile-picture-circle.png" alt="Logo" width="80" height="80">
+    <img src="./images/Logo.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Personal CV Website</h3>

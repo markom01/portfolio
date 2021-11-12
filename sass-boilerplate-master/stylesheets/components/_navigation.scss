@@ -1,0 +1,36 @@
+.nav-wrapper {
+    @include flex;
+
+    position: fixed;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: 2px solid $white-color;
+}
+
+.menu {
+    bottom: 20px;
+    left: 20px;
+    transition: $transition-duration;
+    
+    @include interaction--primary;
+
+    &__icon {
+        height: 40px;
+        color: $white-color;
+
+    }
+}
+
+.goto-top {
+    bottom: 20px;
+    right: 20px;
+    transition: $transition-duration;
+
+    @include interaction--primary;
+
+    &__arrow {
+        height: 35px;
+        color: $white-color;
+    }
+}

@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+header {
+    height: $header-height;
+    // width: 100%;
+    padding: 20px 0px;
+    @include grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-auto-flow: row;
+
+    .icon {
+        width: 26px;
+        height: 26px;
+        border-radius: $border-radius;
+        transition: $transition-duration;
+        @include interaction--primary;
+    
+        &--github {
+    
+        }
+    
+        &--linkedin {
+        
+        }
+        
+    }
+}
+
+.header {
+    
+    &__logo {
+        height: 40px;
+        // aspect-ratio: 1;
+    }
+}
