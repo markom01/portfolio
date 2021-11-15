@@ -9,6 +9,7 @@ html {
   box-sizing: border-box;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  animation: blur-appear 2s;
 }
 
 body {
@@ -17,9 +18,26 @@ body {
   background-repeat: no-repeat;
 }
 
-section {
+section,footer {
   height: 100vh;
   scroll-snap-align: start;
+}
+
+@keyframes blur-appear {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes color-change-infinite {
+  50% {
+    background-color: $brand-color;
+  }
 }
 
 

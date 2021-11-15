@@ -346,6 +346,8 @@ html {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  -webkit-animation: blur-appear 2s;
+          animation: blur-appear 2s;
 }
 
 body {
@@ -354,11 +356,42 @@ body {
   background-repeat: no-repeat;
 }
 
-section {
+section, footer {
   height: 100vh;
   scroll-snap-align: start;
 }
 
+@-webkit-keyframes blur-appear {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes blur-appear {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+@-webkit-keyframes color-change-infinite {
+  50% {
+    background-color: #f05024;
+  }
+}
+@keyframes color-change-infinite {
+  50% {
+    background-color: #f05024;
+  }
+}
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -466,11 +499,11 @@ h2 {
 
 header {
   height: 80px;
-  padding: 20px 0px;
+  padding: 20px;
   display: grid;
   place-items: center;
   justify-content: space-between;
-  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-columns: 1fr 30fr 1fr;
   grid-auto-flow: row;
 }
 header .icon {
@@ -485,6 +518,12 @@ header .icon:hover, header .icon:active, header .icon:focus {
 }
 .header__logo {
   height: 40px;
+}
+
+footer {
+  background-image: url(/images/bg-poygonal-black-rotated.jpg);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
 }
 
 .button {
@@ -526,13 +565,16 @@ header .icon:hover, header .icon:active, header .icon:focus {
   bottom: 20px;
   left: 20px;
   transition: 0.3s;
+  -webkit-animation: color-change-infinite 5s infinite;
+          animation: color-change-infinite 5s infinite;
+  display: grid;
+  place-items: center;
 }
 .menu:hover, .menu:active, .menu:focus {
   background: #f05024;
   color: #f7f7f7;
 }
 .menu__icon {
-  height: 40px;
   color: #f7f7f7;
 }
 
@@ -540,6 +582,8 @@ header .icon:hover, header .icon:active, header .icon:focus {
   bottom: 20px;
   right: 20px;
   transition: 0.3s;
+  display: grid;
+  place-items: center;
 }
 .goto-top:hover, .goto-top:active, .goto-top:focus {
   background: #f05024;
@@ -564,6 +608,7 @@ header .icon:hover, header .icon:active, header .icon:focus {
   box-shadow: 0 0 0 2px #f05024;
 }
 .hero__copy {
+  padding: 10px;
   margin-bottom: 40px;
 }
 .hero__button {

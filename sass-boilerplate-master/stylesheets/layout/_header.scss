@@ -5,10 +5,10 @@
 header {
     height: $header-height;
     // width: 100%;
-    padding: 20px 0px;
+    padding: 20px;
     @include grid;
     justify-content: space-between;
-    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-columns: 1fr 30fr 1fr;
     grid-auto-flow: row;
 
     .icon {
