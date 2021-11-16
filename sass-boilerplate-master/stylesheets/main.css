@@ -44,7 +44,8 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -188,9 +189,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -198,9 +199,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -209,9 +210,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -229,7 +230,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -261,9 +263,10 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box;
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -272,8 +275,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -281,7 +284,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -291,7 +294,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -342,7 +345,8 @@ template {
  * Set up a decent box model on the root element
  */
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -364,34 +368,41 @@ section, footer {
 @-webkit-keyframes blur-appear {
   from {
     opacity: 0;
-    filter: blur(5px);
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
   }
   to {
     opacity: 1;
-    filter: blur(0px);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
   }
 }
 
 @keyframes blur-appear {
   from {
     opacity: 0;
-    filter: blur(5px);
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
   }
   to {
     opacity: 1;
-    filter: blur(0px);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
   }
 }
+
 @-webkit-keyframes color-change-infinite {
   50% {
     background-color: #f05024;
   }
 }
+
 @keyframes color-change-infinite {
   50% {
     background-color: #f05024;
   }
 }
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -401,7 +412,8 @@ section, footer {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 /**
@@ -411,6 +423,7 @@ a {
   color: #f05024;
   text-decoration: none;
 }
+
 /**
  * Basic typography style for copy text
  */
@@ -443,7 +456,7 @@ h2 {
  */
 .clearfix::after {
   clear: both;
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -500,22 +513,30 @@ h2 {
 header {
   height: 80px;
   padding: 20px;
+  display: -ms-grid;
   display: grid;
   place-items: center;
-  justify-content: space-between;
-  grid-template-columns: 1fr 30fr 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-columns: 1fr 30fr 1fr;
+      grid-template-columns: 1fr 30fr 1fr;
   grid-auto-flow: row;
 }
+
 header .icon {
   width: 26px;
   height: 26px;
   border-radius: 100vw;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 header .icon:hover, header .icon:active, header .icon:focus {
   background: #f05024;
   color: #f7f7f7;
 }
+
 .header__logo {
   height: 40px;
 }
@@ -531,29 +552,40 @@ footer {
   padding: 15px 20px;
   border-radius: 100vw;
   background: transparent;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 .button--primary {
   color: #f05024;
   border: 2px solid #f05024;
 }
+
 .button--primary:hover, .button--primary:active, .button--primary:focus {
   background: #f05024;
   color: #f7f7f7;
 }
+
 .button--secondary {
   color: #f7f7f7;
   border: 2px solid #f05024;
 }
+
 .button--secondary:hover, .button--secondary:active, .button--secondary:focus {
   background: #f7f7f7;
   color: #f05024;
 }
 
 .nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   border-radius: 50%;
   width: 35px;
@@ -564,16 +596,20 @@ footer {
 .menu {
   bottom: 20px;
   left: 20px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-animation: color-change-infinite 5s infinite;
           animation: color-change-infinite 5s infinite;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
+
 .menu:hover, .menu:active, .menu:focus {
   background: #f05024;
   color: #f7f7f7;
 }
+
 .menu__icon {
   color: #f7f7f7;
 }
@@ -581,14 +617,18 @@ footer {
 .goto-top {
   bottom: 20px;
   right: 20px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
+
 .goto-top:hover, .goto-top:active, .goto-top:focus {
   background: #f05024;
   color: #f7f7f7;
 }
+
 .goto-top__arrow {
   height: 35px;
   color: #f7f7f7;
@@ -598,19 +638,25 @@ footer {
   height: 90vh;
   padding: 30px 10px;
 }
+
 .hero h1 {
   margin-top: 0px;
 }
+
 .hero__profile-picture {
   width: 250px;
   margin: 20px 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px #f05024;
+  -webkit-box-shadow: 0 0 0 2px #f05024;
+          box-shadow: 0 0 0 2px #f05024;
 }
+
 .hero__copy {
   padding: 10px;
   margin-bottom: 40px;
 }
+
 .hero__button {
   margin: 20px 0;
-}/*# sourceMappingURL=main.css.map */
+}
+/*# sourceMappingURL=main.css.map */
