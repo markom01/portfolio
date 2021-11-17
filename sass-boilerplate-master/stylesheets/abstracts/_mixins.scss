@@ -43,6 +43,10 @@
   justify-content: center;
 }
 
+@mixin colored-card($h-value, $s-value, $l-value) {
+  box-shadow: 0px 7px 50px hsla($h-value, $s-value, $l-value, 0.5);
+}
+
 @mixin interaction--primary {
   @include on-event {
         background: $brand-color;

@@ -1,0 +1,20 @@
+.icon {
+    width: 26px;
+    height: 26px;
+    border-radius: $border-radius;
+    transition: $transition-duration;
+    @include interaction--primary;
+
+    &--github {
+
+    }
+
+    &--linkedin {
+        
+    }
+
+    &--front-end {
+        border-radius: 0;
+    }
+    
+}

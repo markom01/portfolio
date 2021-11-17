@@ -33,6 +33,8 @@ $white-color: hsl(0, 0%, 97%) !default;
 /// @type Color
 $brand-color: hsl(13, 87%, 54%) !default;
 
+$glass-color: hsla(0, 0%, 97%, 0.25);
+
 /// Light grey
 /// @type Color
 $light-grey: hsl(0, 0%, 93%) !default;
@@ -58,6 +60,7 @@ $max-width: 1180px !default;
 
 
 $border-radius: 100vw;
+$border-radius-rect: 10px;
 
 
 

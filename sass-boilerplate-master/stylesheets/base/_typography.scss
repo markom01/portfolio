@@ -7,15 +7,30 @@ body {
   text-align: center;
 }
 
+h1, 
+h2, 
+h3 {
+  margin-bottom: 30px;
+}
+
 h1 {
   color: $brand-color;
   font-weight: 500;
 }
 
-p, h2 {
+h2 {
+  text-transform: uppercase;
+  color: $white-color;
+  letter-spacing: 6px;
+  font-weight: 400;
+}
+
+p,
+h3  {
   color: $text-color;
 }
 
-h2 {
-  letter-spacing: 6px;
+h3 {
+  font-weight: 400;
 }
+

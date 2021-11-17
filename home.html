@@ -9,7 +9,7 @@
     <meta name="author" content="Marko Meseldžija">
 
     <link rel="stylesheet" href="./sass-boilerplate-master/stylesheets/main.css">
-    <link rel="shortcut icon" type="image" href="./images/Logo.svg"/>
+    <link rel="shortcut icon" type="image" href="./images/profile/Logo.svg"/>
     <title>CV - Home | Marko Meseldžija</title>
 </head>
 
@@ -21,22 +21,22 @@
         <header>
             <div class="icons">
                 <a href="https://www.github.com/markom01" target="_blank" class="icon__wrapper">
-                    <img src="./images/github-10-32.png" class="icon icon--github" alt="Github Icon">
+                    <img src="./images/icons/github-icon.svg" class="icon icon--github" alt="Github Icon">
                 </a>
             </div>
             <a href="./images/Logo.svg" class="header-logo__link" target="_blank">
-                <img class="header__logo" src="./images/Logo.svg"alt="Logo Icon">
+                <img class="header__logo" src="./images/profile/Logo.svg"alt="Logo Icon">
             </a>
             <div class="icons">
                 <a href="https://www.linkedin.com/in/marecardesigner" target="_blank" class="icon__wrapper">
-                    <img src="./images/linkedin-5-32.png" class="icon icon--linkedin" alt="LinkedIn Icon">
+                    <img src="./images/icons/linkedin-icon.svg" class="icon icon--linkedin" alt="LinkedIn Icon">
                 </a>
             </div>
         </header>
         
         <main>
-            <div class="hero">
-                <img class="hero__profile-picture" src="./images/profile-picture.png" alt="Personal Image">
+            <div class="hero container">
+                <img class="hero__profile-picture" src="./images/profile/profile-picture.png" alt="Personal Image">
                 <p>Hi, my name is</p>
                 <h1>Marko Meseldžija</h1>
                 <p class="hero__copy">I'm intrested in <strong>Front-End Web Development</strong> & <strong>UI/UX Design</strong>.</p>
@@ -45,20 +45,111 @@
                 <a href="" class="nav-wrapper menu">
                     <div class="menu__icon">&vellip;</div>
                 </a>
+                <a href="#top" class="nav-wrapper goto-top">
+                    <div class="goto-top__arrow">&uarr;</div>
+                </a>
             </div>
         </section>
         
-        <section class="skills">
-            <a href="#top" class="nav-wrapper goto-top">
-                <div class="goto-top__arrow">&uarr;</div>
-            </a>
-                
-            </section>
+        <section class="profile container">
+            <h2>Profile</h2>
+            <p>I'm reliable and dedicated person who learns new things quickly.</p>        
+        </section>
+
+        <section class="cards container"> 
+            <h2>Skills</h2>
+
+            <h3 class="cards__heading--front-end">Front-End Web Development</h3>
+            <div class="wrapper cards__wrapper">
+                <div class="card card--html5 container">
+                    <img class="card__icon" src="./images/icons/html5-icon.svg" alt="HTML Icon">
+                    <div class="card__progress-bar">
+                        <div class="card__progress-bar__fill card__progress-bar__fill--html5"></div>
+                    </div>
+                </div>
+                <div class="card card--css3 container">
+                    <img class="card__icon" src="./images/icons/css3-icon.svg" alt="CSS3 Icon">
+                    <div class="card__progress-bar">
+                        <div class="card__progress-bar__fill card__progress-bar__fill--css3"></div>
+                    </div>
+                </div>
+                <div class="card card--sass container">
+                    <img class="card__icon" src="./images/icons/sass-icon.svg" alt="Sass Icon">
+                    <div class="card__progress-bar">
+                        <div class="card__progress-bar__fill card__progress-bar__fill--sass"></div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="cards__heading--ui-ux">UI/UX Design</h3>
+            <div class="wrapper cards__wrapper">
+                <div class="card card--figma container">
+                    <img class="card__icon" src="./images/icons/figma-icon.svg" alt="Figma Icon">
+                    <div class="card__progress-bar">
+                        <div class="card__progress-bar__fill card__progress-bar__fill--figma"></div>
+                    </div>
+                </div>
+                <div class="card card--photoshop container">
+                    <img class="card__icon" src="./images/icons/photoshop-icon.svg" alt="Photoshop Icon">
+                    <div class="card__progress-bar">
+                        <div class="card__progress-bar__fill card__progress-bar__fill--photoshop"></div>
+                    </div>
+                </div>
+                <div class="card card--illustrator container">
+                    <img class="card__icon" src="./images/icons/illustrator-icon.svg" alt="Illustrator Icon">
+                    <div class="card__progress-bar">
+                        <div class="card__progress-bar__fill card__progress-bar__fill--illustrator"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects container">
+            <h2>Projects</h2>
+            <div class="wrapper projects__wrapper">
+                <div class="card">
+                    <img class="card__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism MCD Website Mockup">
+                    <h3>Mare Car Design Website</h3>
+                    <a class="button button--secondary" href="https://marecardesign.netlify.app" target="_blank">Visit Website</a>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism MCD Website Mockup">
+                    <h3>Portfolio Website</h3>
+                    <a class="button button--secondary" href="#top" target="_blank">Visit Website</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience container">
+            <h2>Experience</h2>
+            <div class="wrapper experience-wrapper">
+                <div class="card container">
+                    <p class="experience__date">07.2019 - Present</p>
+                    <h3 class="experience__role">Freelance Design & Copywriting</h3>
+                    <img src="./images/icons/MCD-Logo.png" class="experience__image" alt="DataDEV Logo">
+                    <p class="expereince__description">Making Car Wrap Designs, Illustrations & Sketches in PS and AI.
+                        <br>Writing posts and documents in IT industry.
+                    </p>
+                </div>
+                <div class="card container">
+                    <p class="experience__date">07.2021 - 10.2021</p>
+                    <h3 class="experience__role">Operator</h3>
+                    <img src="./images/icons/datadev.png" class="experience__image" alt="DataDEV Logo">
+                    <p class="expereince__description">Working on smaller projects with company software.</p>
+                </div>
+                <div class="card container">
+                    <p class="experience__date">05.2018</p>
+                    <h3 class="experience__role">High-School Intern</h3>
+                    <img src="./images/icons/fsd-logo.svg" class="experience__image" alt="fSD Logo">
+                    <p class="expereince__description">One-week Computer Technician Internship with a goal to 
+                        get basic experience with computer hardware & software.</p>
+                </div>
+            </div>
+        </section>
 
         </main>
 
     <footer>
-        <p>vrn</p>
+        <!-- <p>vrn</p> -->
     </footer>
 </body>
 </html>

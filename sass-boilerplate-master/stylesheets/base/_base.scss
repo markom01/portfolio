@@ -13,14 +13,25 @@ html {
 }
 
 body {
-  background-image: url(/images/bg-poygonal-black.jpg);
+  background-image: url(/images/bg/bg-poygonal-black.jpg);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
 
 section,footer {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
+}
+
+section {
+  // margin-bottom: 15vh;
+}
+
+.wrapper {
+  @include grid;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
 }
 
 @keyframes blur-appear {
