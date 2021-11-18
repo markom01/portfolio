@@ -369,9 +369,8 @@ section, footer {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   gap: 30px;
   margin-bottom: 50px;
 }
@@ -572,12 +571,12 @@ footer {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  max-width: 600px;
+  max-width: 500px;
   gap: 30px;
   border-radius: 10px;
   background: radial-gradient(73.55% 73.55% at 50.17% 26.45%, #363636 0%, #141414 100%);
-  -webkit-box-shadow: 0px 7px 50px rgba(83, 83, 83, 0.7);
-          box-shadow: 0px 7px 50px rgba(83, 83, 83, 0.7);
+  -webkit-box-shadow: 0px 7px 50px rgba(83, 83, 83, 0.5);
+          box-shadow: 0px 7px 50px rgba(83, 83, 83, 0.5);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -629,8 +628,8 @@ footer {
 }
 
 .card--html5:hover {
-  -webkit-box-shadow: 0px 7px 50px rgba(241, 100, 39, 0.5);
-          box-shadow: 0px 7px 50px rgba(241, 100, 39, 0.5);
+  -webkit-box-shadow: 0px 7px 50px rgba(241, 100, 39, 0.4);
+          box-shadow: 0px 7px 50px rgba(241, 100, 39, 0.4);
 }
 
 .card--html5:hover .card__progress-bar__fill {
@@ -638,8 +637,8 @@ footer {
 }
 
 .card--css3:hover {
-  -webkit-box-shadow: 0px 7px 50px rgba(39, 100, 241, 0.5);
-          box-shadow: 0px 7px 50px rgba(39, 100, 241, 0.5);
+  -webkit-box-shadow: 0px 7px 50px rgba(39, 100, 241, 0.4);
+          box-shadow: 0px 7px 50px rgba(39, 100, 241, 0.4);
 }
 
 .card--css3:hover .card__progress-bar__fill {
@@ -647,8 +646,8 @@ footer {
 }
 
 .card--sass:hover {
-  -webkit-box-shadow: 0px 7px 50px rgba(207, 99, 153, 0.5);
-          box-shadow: 0px 7px 50px rgba(207, 99, 153, 0.5);
+  -webkit-box-shadow: 0px 7px 50px rgba(207, 99, 153, 0.4);
+          box-shadow: 0px 7px 50px rgba(207, 99, 153, 0.4);
 }
 
 .card--sass:hover .card__progress-bar__fill {
@@ -656,8 +655,8 @@ footer {
 }
 
 .card--figma:hover {
-  -webkit-box-shadow: 0px 7px 50px rgba(255, 113, 97, 0.5);
-          box-shadow: 0px 7px 50px rgba(255, 113, 97, 0.5);
+  -webkit-box-shadow: 0px 7px 50px rgba(255, 113, 97, 0.4);
+          box-shadow: 0px 7px 50px rgba(255, 113, 97, 0.4);
 }
 
 .card--figma:hover .card__progress-bar__fill {
@@ -665,8 +664,8 @@ footer {
 }
 
 .card--photoshop:hover {
-  -webkit-box-shadow: 0px 7px 50px rgba(51, 170, 255, 0.5);
-          box-shadow: 0px 7px 50px rgba(51, 170, 255, 0.5);
+  -webkit-box-shadow: 0px 7px 50px rgba(51, 170, 255, 0.4);
+          box-shadow: 0px 7px 50px rgba(51, 170, 255, 0.4);
 }
 
 .card--photoshop:hover .card__progress-bar__fill {
@@ -674,15 +673,15 @@ footer {
 }
 
 .card--illustrator:hover {
-  -webkit-box-shadow: 0px 7px 50px rgba(255, 153, 0, 0.5);
-          box-shadow: 0px 7px 50px rgba(255, 153, 0, 0.5);
+  -webkit-box-shadow: 0px 7px 50px rgba(255, 153, 0, 0.4);
+          box-shadow: 0px 7px 50px rgba(255, 153, 0, 0.4);
 }
 
 .card--illustrator:hover .card__progress-bar__fill {
   background-color: #ff9900;
 }
 
-.projects__wrapper {
+.row__wrapper {
   -ms-grid-columns: (500px)[auto-fill];
       grid-template-columns: repeat(auto-fill, 500px);
 }
@@ -699,13 +698,24 @@ footer {
   height: auto;
 }
 
-.experience__wrapper {
-  -ms-grid-columns: (300px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 300px);
+.timeline .card {
+  width: 80vw;
 }
 
-.experience .card {
-  width: 80vw;
+.profile__languages__picture {
+  width: 30px;
+  height: auto;
+  border-radius: 2px;
+}
+
+.profile .container {
+  margin: 0;
+  padding: 15px;
+}
+
+.profile .wrapper {
+  -ms-grid-columns: (300px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 300px);
 }
 
 .button {
@@ -837,6 +847,18 @@ footer {
   margin: 20px 0;
 }
 
+.profile__description {
+  margin-bottom: 60px;
+}
+
+.profile h3::before {
+  content: url(../../images/icons/languages-icon.svg);
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
 .cards__heading--front-end::before {
   content: url(../../images/icons/front-end-web-development-icon.svg);
   display: inline-block;
@@ -855,18 +877,30 @@ footer {
   height: 20px;
 }
 
-.experience .wrapper {
-  margin-top: 50px;
+.timeline__image {
+  width: 100px;
+  height: auto;
 }
 
-.experience h3 {
+.timeline__date::before {
+  content: url(../../images/icons/calendar-icon.svg);
+  display: inline-block;
+  position: relative;
+  top: 1.5px;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.timeline .wrapper {
+  margin-top: 50px;
+  -webkit-column-gap: 100px;
+          column-gap: 100px;
+}
+
+.timeline h3 {
   text-transform: uppercase;
   margin-bottom: 0;
   color: #f7f7f7;
-}
-
-.experience__image {
-  width: 100px;
-  height: auto;
 }
 /*# sourceMappingURL=main.css.map */

@@ -29,7 +29,7 @@ section {
 
 .wrapper {
   @include grid;
-  justify-content: center;
+  justify-content: space-around;
   gap: 30px;
   margin-bottom: 50px;
 }
