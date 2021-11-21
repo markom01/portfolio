@@ -1,5 +1,5 @@
 .nav-wrapper {
-    @include flex;
+    @include grid;
 
     position: fixed;
     border-radius: 50%;
@@ -8,11 +8,10 @@
     border: 2px solid $white-color;
 }
 
-.menu {
+.menu--toggle {
     bottom: 20px;
     left: 20px;
     transition: $transition-duration;
-    animation: color-change-infinite 5s infinite;
     
     @include grid;
     @include interaction--primary;

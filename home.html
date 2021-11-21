@@ -1,190 +1,264 @@
-    <!doctype html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal CV Website">
-    <meta name="keywords" content="CV, Curriculum Vitae, Portfolio, Personal Portfolio, Web Developer
-    Front-End Web Developer, UI Developer, UI, UX">
-    <meta name="author" content="Marko Meseldžija">
+    <head>
+        <meta charset="UTF-8">    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Personal CV Website">
+        <meta name="keywords" content="CV, Curriculum Vitae, Portfolio, Personal Portfolio, Web Developer
+        Front-End Web Developer, UI Developer, UI, UX">
+        <meta name="author" content="Marko Meseldžija">
 
-    <link rel="stylesheet" href="./sass-boilerplate-master/stylesheets/main.css">
-    <link rel="shortcut icon" type="image" href="./images/profile/Logo.svg"/>
-    <title>CV - Home | Marko Meseldžija</title>
-</head>
+        <link rel="stylesheet" href="./sass-boilerplate-master/stylesheets/main.css">
+        <link rel="shortcut icon" type="image" href="./images/profile/Logo.svg"/>
+        <title>CV - Home | Marko Meseldžija</title>
+    </head>
 
-<body>
-    <a id="top"></a>
+    <body>
+        <a id="top"></a>
 
-    <section class="above-the-fold">
-        
-        <header>
-            <div class="icons">
-                <a href="https://www.github.com/markom01" target="_blank" class="icon__wrapper">
-                    <img src="./images/icons/github-icon.svg" class="icon icon--github" alt="Github Icon">
-                </a>
-            </div>
-            <a href="./images/Logo.svg" class="header-logo__link" target="_blank">
-                <img class="header__logo" src="./images/profile/Logo.svg"alt="Logo Icon">
-            </a>
-            <div class="icons">
-                <a href="https://www.linkedin.com/in/marecardesigner" target="_blank" class="icon__wrapper">
-                    <img src="./images/icons/linkedin-icon.svg" class="icon icon--linkedin" alt="LinkedIn Icon">
-                </a>
-            </div>
-        </header>
-        
-        <main>
-            <div class="hero container">
-                <img class="hero__profile-picture" src="./images/profile/profile-picture.png" alt="Personal Image">
-                <p>Hi, my name is</p>
-                <h1>Marko Meseldžija</h1>
-                <p class="hero__copy">I'm intrested in <strong>Front-End Web Development</strong> & <strong>UI/UX Design</strong>.</p>
-                <a class="button button--primary">More About Me</a>
+        <section class="above-the-fold">
+            
+            <!-- Header -->
+            
+            <header>
                 
-                <a href="" class="nav-wrapper menu">
-                    <div class="menu__icon">&vellip;</div>
+                <a href="#menu" class="menu--toggle nav-wrapper">
+                    <div class="menu--toggle__icon">&vellip;</div>
                 </a>
+                <nav id="menu" class="menu">
+                    <a href="#menu--toggle" class="menu--close">
+                        <div class="menu--close__icon">X</div>
+                    </a>
+                    <ul class="menu__list">
+                        <li class="menu__list__item">
+                            <a class="active" href="#top">Home</a>
+                        </li>
+                        <li class="menu__list__item">
+                            <a href="#profile">Profile</a>
+                        </li>
+                        <li class="menu__list__item">
+                            <a href="#skills">Skills</a>
+                        </li>
+                        <li class="menu__list__item">
+                            <a href="#projects">Projects</a>
+                        </li>
+                        <li class="menu__list__item">
+                            <a href="#experience">Expereince</a>
+                        </li>
+                        <li class="menu__list__item">
+                            <a href="#education">Education</a>
+                        </li>
+                        <li class="menu__list__item">
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#main-menu-toggle" class="backdrop" hidden></a>
+
+                <div class="icons">
+                    <a href="https://www.github.com/markom01" target="_blank" class="icon__wrapper">
+                        <img src="./images/icons/github-icon.svg" class="icon icon--github" alt="Github Icon">
+                    </a>
+                </div>
+                <a href="./images/Logo.svg" class="header-logo__link" target="_blank">
+                    <img class="header__logo" src="./images/profile/Logo.svg"alt="Logo Icon">
+                </a>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/marecardesigner" target="_blank" class="icon__wrapper">
+                        <img src="./images/icons/linkedin-icon.svg" class="icon icon--linkedin" alt="LinkedIn Icon">
+                    </a>
+                </div>
+            </header>
+
+            <!-- Menu -->
+
+            
+            <main>
+                
+                <!-- Hero Section -->
+                
+                <a id="hero"></a>
+                <div class="hero container">
+                    <img class="hero__profile-picture" src="./images/profile/profile-picture.png" alt="Personal Image">
+                    <p>Hi, my name is</p>
+                    <h1>Marko Meseldžija</h1>
+                    <p class="hero__copy">I'm intrested in <strong>Front-End Web Development</strong> & <strong>UI/UX Design</strong>.</p>
+                    <a href="#profile" class="button button--primary">More About Me</a>
+                </div>
                 <a href="#top" class="nav-wrapper goto-top">
                     <div class="goto-top__arrow">&uarr;</div>
                 </a>
-            </div>
-        </section>
-        
-        <section class="profile container">
-            <h2>Profile</h2>
-            <p class="profile__description">I'm reliable and dedicated person who learns new things quickly.</p>
-            <h3>Languages</h3>
-            <div class="wrapper row__wrapper">
-                <div class="profile__languages card container">
-                    <img class="profile__languages__picture" src="./images/icons/uk-flag.svg" alt="English Flag">
-                    <p class="profile__languages__name">English | B1 - Intermediate</p>
-                </div>
-                <div class="profile__languages card container">
-                    <img class="profile__languages__picture" src="./images/icons/serbian-flag.svg" alt=" Serbian Flag">
-                    <p class="profile__languages__name">Serbian | Native Language</p>
-                </div>
-                <div class="profile__languages card container">
-                    <img class="profile__languages__picture" src="./images/icons/german-flag.svg" alt="German Flag">
-                    <p class="profile__languages__name">German | A2 - Elementary </p>
-                </div>
-            </div>
-        </section>
+            </section>
+                    
+            <!-- Profile Section -->
 
-        <section class="cards container"> 
-            <h2>Skills</h2>
-
-            <h3 class="cards__heading--front-end">Front-End Web Development</h3>
-            <div class="wrapper cards__wrapper">
-                <div class="card card--html5 container">
-                    <img class="card__icon" src="./images/icons/html5-icon.svg" alt="HTML Icon">
-                    <div class="card__progress-bar">
-                        <div class="card__progress-bar__fill card__progress-bar__fill--html5"></div>
+            <a id="profile"></a>
+            <section class="profile container">
+                <h2>Profile</h2>
+                <p class="profile__description">I'm reliable and dedicated person who learns new things quickly.</p>
+                <h3>Languages</h3>
+                <div class="wrapper row__wrapper">
+                    <div class="profile__languages card container">
+                        <img class="profile__languages__picture" src="./images/icons/uk-flag.svg" alt="English Flag">
+                        <p class="profile__languages__name">English | B1 - Intermediate</p>
+                    </div>
+                    <div class="profile__languages card container">
+                        <img class="profile__languages__picture" src="./images/icons/serbian-flag.svg" alt=" Serbian Flag">
+                        <p class="profile__languages__name">Serbian | Native Language</p>
+                    </div>
+                    <div class="profile__languages card container">
+                        <img class="profile__languages__picture" src="./images/icons/german-flag.svg" alt="German Flag">
+                        <p class="profile__languages__name">German | A2 - Elementary </p>
                     </div>
                 </div>
-                <div class="card card--css3 container">
-                    <img class="card__icon" src="./images/icons/css3-icon.svg" alt="CSS3 Icon">
-                    <div class="card__progress-bar">
-                        <div class="card__progress-bar__fill card__progress-bar__fill--css3"></div>
+            </section>
+                            
+            <!-- Skills Section -->
+
+            <a id="skills"></a>
+
+            <section class="cards container"> 
+                <h2>Skills</h2>
+
+                <h3 class="cards__heading--front-end">Front-End Web Development</h3>
+                <div class="wrapper cards__wrapper">
+                    <div class="card card--html5 container">
+                        <img class="card__icon" src="./images/icons/html5-icon.svg" alt="HTML Icon">
+                        <div class="card__progress-bar">
+                            <div class="card__progress-bar__fill card__progress-bar__fill--html5"></div>
+                        </div>
+                    </div>
+                    <div class="card card--css3 container">
+                        <img class="card__icon" src="./images/icons/css3-icon.svg" alt="CSS3 Icon">
+                        <div class="card__progress-bar">
+                            <div class="card__progress-bar__fill card__progress-bar__fill--css3"></div>
+                        </div>
+                    </div>
+                    <div class="card card--sass container">
+                        <img class="card__icon" src="./images/icons/sass-icon.svg" alt="Sass Icon">
+                        <div class="card__progress-bar">
+                            <div class="card__progress-bar__fill card__progress-bar__fill--sass"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="card card--sass container">
-                    <img class="card__icon" src="./images/icons/sass-icon.svg" alt="Sass Icon">
-                    <div class="card__progress-bar">
-                        <div class="card__progress-bar__fill card__progress-bar__fill--sass"></div>
+                <h3 class="cards__heading--ui-ux">UI/UX Design</h3>
+                <div class="wrapper cards__wrapper">
+                    <div class="card card--figma container">
+                        <img class="card__icon" src="./images/icons/figma-icon.svg" alt="Figma Icon">
+                        <div class="card__progress-bar">
+                            <div class="card__progress-bar__fill card__progress-bar__fill--figma"></div>
+                        </div>
+                    </div>
+                    <div class="card card--photoshop container">
+                        <img class="card__icon" src="./images/icons/photoshop-icon.svg" alt="Photoshop Icon">
+                        <div class="card__progress-bar">
+                            <div class="card__progress-bar__fill card__progress-bar__fill--photoshop"></div>
+                        </div>
+                    </div>
+                    <div class="card card--illustrator container">
+                        <img class="card__icon" src="./images/icons/illustrator-icon.svg" alt="Illustrator Icon">
+                        <div class="card__progress-bar">
+                            <div class="card__progress-bar__fill card__progress-bar__fill--illustrator"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <h3 class="cards__heading--ui-ux">UI/UX Design</h3>
-            <div class="wrapper cards__wrapper">
-                <div class="card card--figma container">
-                    <img class="card__icon" src="./images/icons/figma-icon.svg" alt="Figma Icon">
-                    <div class="card__progress-bar">
-                        <div class="card__progress-bar__fill card__progress-bar__fill--figma"></div>
+            </section>
+                            
+            <!-- Projects Section -->
+
+            <a id="projects"></a>
+
+            <section class="projects container">
+                <h2>Projects</h2>
+                <div class="wrapper row__wrapper">
+                    <div class="card">
+                        <div class="card__image-box">
+                            <div class="card__image card__image--mcd"></div>
+                        </div>
+                        <h3>Mare Car Design Website</h3>
+                        <a class="button button--secondary" href="https://marecardesign.netlify.app" target="_blank">Visit Website</a>
+                    </div>
+                    <div class="card">
+                        <div class="card__image-box">
+                            <div class="card__image card__image--mcd"></div>
+                        </div>
+                        <h3>Portfolio Website</h3>
+                        <a class="button button--secondary" href="#top" target="_blank">Visit Website</a>
                     </div>
                 </div>
-                <div class="card card--photoshop container">
-                    <img class="card__icon" src="./images/icons/photoshop-icon.svg" alt="Photoshop Icon">
-                    <div class="card__progress-bar">
-                        <div class="card__progress-bar__fill card__progress-bar__fill--photoshop"></div>
+            </section>
+                            
+            <!-- Experience Section -->
+
+            <a id="experience"></a>
+
+            <section class="timeline container">
+                <h2>Expereince</h2>
+                <div class="wrapper">
+                    <div class="card container">
+                        <p class="timeline__date">07.2019 - Present</p>
+                        <h3 class="timeline__role">Freelance Design & Copywriting</h3>
+                        <img src="./images/icons/MCD-Logo.png" class="timeline__image" alt="DataDEV Logo">
+                        <p class="expereince__description">Making Car Wrap Designs, Illustrations & Sketches in PS and AI.
+                            <br>Writing posts and documents in IT industry.
+                        </p>
+                    </div>
+                    <div class="card container">
+                        <p class="timeline__date">07.2021 - 10.2021</p>
+                        <h3 class="timeline__role">Operator</h3>
+                        <img src="./images/icons/datadev.png" class="timeline__image" alt="DataDEV Logo">
+                        <p class="expereince__description">Working on smaller projects with company software.</p>
+                    </div>
+                    <div class="card container">
+                        <p class="timeline__date">05.2018</p>
+                        <h3 class="timeline__role">High-School Intern</h3>
+                        <img src="./images/icons/fsd-logo.svg" class="timeline__image" alt="fSD Logo">
+                        <p class="expereince__description">One-week Computer Technician Internship with a goal to 
+                            get basic timeline with computer hardware & software.</p>
                     </div>
                 </div>
-                <div class="card card--illustrator container">
-                    <img class="card__icon" src="./images/icons/illustrator-icon.svg" alt="Illustrator Icon">
-                    <div class="card__progress-bar">
-                        <div class="card__progress-bar__fill card__progress-bar__fill--illustrator"></div>
+            </section>
+                            
+            <!-- Education Section -->
+
+            <a id="education"></a>
+
+            <section class="timeline container">
+                <h2>Education</h2>
+                <div class="wrapper row__wrapper">
+                    <div class="card container">
+                        <p class="timeline__date">09.2020 - Present</p>
+                        <h3 class="timeline__role">Computing & Automation</h3>
+                        <img src="./images/icons/ftn.png" class="timeline__image" alt="FTN Logo">
+                        <p class="expereince__description">II year of study, where I expanded my C programming language knowledge 
+                            and learned Assembly language. Currently learning C++.
+                        </p>
+                    </div>
+                    <div class="card container">
+                        <p class="timeline__date">08.2016 - 07.2020</p>
+                        <h3 class="timeline__role">Computer Techincian</h3>
+                        <img src="./images/icons/ets.png" class="timeline__image" alt="ETŠ Mihajlo Pupin Novi Sad Logo">
+                        <p class="expereince__description">Completed course where I learned C & C# programming languages.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+                            
+            <!-- Contact Section -->
 
-        <section class="projects container">
-            <h2>Projects</h2>
-            <div class="wrapper row__wrapper">
-                <div class="card">
-                    <img class="card__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism MCD Website Mockup">
-                    <h3>Mare Car Design Website</h3>
-                    <a class="button button--secondary" href="https://marecardesign.netlify.app" target="_blank">Visit Website</a>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism MCD Website Mockup">
-                    <h3>Portfolio Website</h3>
-                    <a class="button button--secondary" href="#top" target="_blank">Visit Website</a>
-                </div>
-            </div>
-        </section>
+            <a id="contact"></a>
 
-        <section class="timeline container">
-            <h2>Expereince</h2>
-            <div class="wrapper">
-                <div class="card container">
-                    <p class="timeline__date">07.2019 - Present</p>
-                    <h3 class="timeline__role">Freelance Design & Copywriting</h3>
-                    <img src="./images/icons/MCD-Logo.png" class="timeline__image" alt="DataDEV Logo">
-                    <p class="expereince__description">Making Car Wrap Designs, Illustrations & Sketches in PS and AI.
-                        <br>Writing posts and documents in IT industry.
-                    </p>
-                </div>
-                <div class="card container">
-                    <p class="timeline__date">07.2021 - 10.2021</p>
-                    <h3 class="timeline__role">Operator</h3>
-                    <img src="./images/icons/datadev.png" class="timeline__image" alt="DataDEV Logo">
-                    <p class="expereince__description">Working on smaller projects with company software.</p>
-                </div>
-                <div class="card container">
-                    <p class="timeline__date">05.2018</p>
-                    <h3 class="timeline__role">High-School Intern</h3>
-                    <img src="./images/icons/fsd-logo.svg" class="timeline__image" alt="fSD Logo">
-                    <p class="expereince__description">One-week Computer Technician Internship with a goal to 
-                        get basic timeline with computer hardware & software.</p>
-                </div>
-            </div>
-        </section>
+            <section class="contact container">
+                <h2>Contact</h2>
+            </section>
 
-        <section class="timeline container">
-            <h2>Education</h2>
-            <div class="wrapper row__wrapper">
-                <div class="card container">
-                    <p class="timeline__date">09.2020 - Present</p>
-                    <h3 class="timeline__role">Computing & Automation</h3>
-                    <img src="./images/icons/ftn.png" class="timeline__image" alt="FTN Logo">
-                    <p class="expereince__description">II year of study, where I expanded my C programming language knowledge 
-                        and learned Assembly language. Currently learning C++.
-                    </p>
-                </div>
-                <div class="card container">
-                    <p class="timeline__date">08.2016 - 07.2020</p>
-                    <h3 class="timeline__role">Computer Techincian</h3>
-                    <img src="./images/icons/ets.png" class="timeline__image" alt="ETŠ Mihajlo Pupin Novi Sad Logo">
-                    <p class="expereince__description">Completed course where I learned C & C# programming languages.</p>
-                </div>
-            </div>
-        </section>
+            </main>
 
-        </main>
+        <!-- Footer -->
 
-    <footer>
-        <!-- <p>vrn</p> -->
-    </footer>
-</body>
+        <footer>
+            
+        </footer>
+
+    </body>
+
 </html>

@@ -27,6 +27,14 @@ section {
   // margin-bottom: 15vh;
 }
 
+ul {
+}
+
+li {
+  list-style-type: none;
+  color: $white-color;
+}
+
 .wrapper {
   @include grid;
   justify-content: space-around;
@@ -68,10 +76,12 @@ section {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $white-color;
   text-decoration: none;
 
+  
   @include on-event {
     // color: $text-color;
   }
+
 }

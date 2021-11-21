@@ -1,0 +1,74 @@
+.menu {
+    position: absolute;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    background-image: url('../../images/bg/blur-image.png');
+    // overflow-y: scroll;
+    // overflow-x: visible;
+    animation: blur-appear $transition-duration;
+    z-index: 999;
+
+    &--close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    &:target {
+        display: block;
+        left: 0;
+        outline: none;
+
+         ul {
+            position: relative;
+            z-index: 1000;
+         }
+
+        & + .backdrop {
+            position: absolute;
+            display: block;  
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 997;
+            background: rgba($color: black, $alpha: .5);
+            cursor: default;
+        } 
+
+        .menu--close {
+            z-index: 1001;
+        }
+    }
+
+    ul {
+        @include grid;
+
+        padding-top: 100px;
+        padding-bottom: 100px;
+        position: absolute;
+        width: 50vw;
+        height: 100vh;
+    }
+
+    li {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    a {
+        padding: 10px;
+        border-radius: $border-radius-rect;
+        transition: $transition-duration;
+        
+        @include on-event {
+            background-color: $brand-color;
+          }
+    }
+}
+
+.menu, 
+.menu:target + .backdrop {
+     position: fixed;
+ }

@@ -365,6 +365,11 @@ section, footer {
   scroll-snap-align: start;
 }
 
+li {
+  list-style-type: none;
+  color: #f7f7f7;
+}
+
 .wrapper {
   display: -ms-grid;
   display: grid;
@@ -430,7 +435,7 @@ section, footer {
  * Basic styles for links
  */
 a {
-  color: #f05024;
+  color: #f7f7f7;
   text-decoration: none;
 }
 
@@ -571,10 +576,11 @@ footer {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  max-width: 500px;
+  max-width: 550px;
   gap: 30px;
   border-radius: 10px;
   background: radial-gradient(73.55% 73.55% at 50.17% 26.45%, #363636 0%, #141414 100%);
+  border: 0.5px solid rgba(247, 247, 247, 0.1);
   -webkit-box-shadow: 0px 7px 50px rgba(83, 83, 83, 0.5);
           box-shadow: 0px 7px 50px rgba(83, 83, 83, 0.5);
   -webkit-transition: 0.3s;
@@ -690,12 +696,29 @@ footer {
   padding-bottom: 40px;
 }
 
-.projects .card__image {
+.projects .card__image-box {
   width: 80vw;
-  max-width: 500px;
+  max-width: 550px;
+  height: 200px;
+  overflow: hidden;
+  background: transparent;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  height: auto;
+}
+
+.projects .card__image {
+  width: 100%;
+  height: 100%;
+  background: url("../../images/mcd/Glass-Morphism-Mockup.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.projects .card__image:hover {
+  -webkit-transform: scale(1.17);
+          transform: scale(1.17);
 }
 
 .timeline .card {
@@ -710,7 +733,9 @@ footer {
 
 .profile .container {
   margin: 0;
-  padding: 15px;
+  padding: 20px;
+  gap: 10px;
+  grid-auto-flow: column;
 }
 
 .profile .wrapper {
@@ -764,16 +789,87 @@ footer {
   border-radius: 0;
 }
 
+.menu {
+  position: absolute;
+  display: none;
+  left: -200px;
+  top: 0;
+  height: 100%;
+  background-image: url("../../images/bg/blur-image.png");
+  -webkit-animation: blur-appear 0.3s;
+          animation: blur-appear 0.3s;
+  z-index: 999;
+}
+
+.menu--close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.menu:target {
+  display: block;
+  left: 0;
+  outline: none;
+}
+
+.menu:target ul {
+  position: relative;
+  z-index: 1000;
+}
+
+.menu:target + .backdrop {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.menu:target .menu--close {
+  z-index: 1001;
+}
+
+.menu ul {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+}
+
+.menu li {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu a {
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu a:hover, .menu a:active, .menu a:focus {
+  background-color: #f05024;
+}
+
+.menu,
+.menu:target + .backdrop {
+  position: fixed;
+}
+
 .nav-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   position: fixed;
   border-radius: 50%;
   width: 35px;
@@ -781,24 +877,22 @@ footer {
   border: 2px solid #f7f7f7;
 }
 
-.menu {
+.menu--toggle {
   bottom: 20px;
   left: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-animation: color-change-infinite 5s infinite;
-          animation: color-change-infinite 5s infinite;
   display: -ms-grid;
   display: grid;
   place-items: center;
 }
 
-.menu:hover, .menu:active, .menu:focus {
+.menu--toggle:hover, .menu--toggle:active, .menu--toggle:focus {
   background: #f05024;
   color: #f7f7f7;
 }
 
-.menu__icon {
+.menu--toggle__icon {
   color: #f7f7f7;
 }
 
