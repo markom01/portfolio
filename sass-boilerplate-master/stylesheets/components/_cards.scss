@@ -1,178 +1,277 @@
 .cards__wrapper {
-    grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fill, 300px);
 }
 
 .card {
-    @include grid;
+  @include grid;
 
-    margin-top: 60px;
-    margin-bottom: 35px;
-    width: max-content;
-    max-width: 550px;
-    gap: 30px;
-    border-radius: $border-radius-rect;
-    background: radial-gradient(73.55% 73.55% at 50.17% 26.45%, #363636 0%, #141414 100%);
-    border: 0.5px solid rgba($color: $white-color, $alpha: 0.1);
-    box-shadow: 0px 7px 50px rgba(83, 83, 83, 0.5);
-    transition: $transition-duration;
+  margin-top: 60px;
+  margin-bottom: 35px;
+  width: max-content;
+  max-width: 450px;
+  gap: 30px;
+  border-radius: $border-radius-rect;
+  background: radial-gradient(
+    73.55% 73.55% at 50.17% 26.45%,
+    #363636 0%,
+    #141414 100%
+  );
+  border: 0.5px solid rgba($color: $brand-color, $alpha: 0.2);
+  box-shadow: 0px 7px 50px rgba(83, 83, 83, 0.5);
+  transition: $transition-duration;
 
-    &__icon {
-        height: 80px;
-        width: auto;
+  @include on-event {
+    @include colored-card(13, 87%, 54%);
+  }
+
+  &__icon {
+    height: 80px;
+    width: auto;
+  }
+
+  &__progress-bar {
+    width: 200px;
+    height: 20px;
+    border-radius: $border-radius;
+    background-color: $text-color;
+
+    &__fill {
+      position: relative;
+      height: 100%;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+      background-color: $brand-color;
+      transition: $transition-duration;
+
+      &--html5 {
+        width: 50%;
+      }
+
+      &--css3 {
+        width: 70%;
+      }
+
+      &--sass {
+        width: 25%;
+      }
+
+      &--figma {
+        width: 60%;
+      }
+
+      &--photoshop {
+        width: 50%;
+      }
+
+      &--illustrator {
+        width: 40%;
+      }
     }
+  }
 
-    &__progress-bar {
-        
-        width: 200px;
-        height: 20px;
-        border-radius: $border-radius;
-        background-color: $text-color;
-
-        &__fill {
-            position: relative;
-            height: 100%;
-            border-top-left-radius: $border-radius;
-            border-bottom-left-radius: $border-radius;
-            background-color: $brand-color;
-            transition: $transition-duration; 
-
-            &--html5 {
-                width: 50%;
-            }
-
-            &--css3 {
-                width: 70%;
-            }
-
-            &--sass {
-                width: 25%;
-            }
-
-            &--figma {
-                width: 60%;
-            }
-
-            &--photoshop {
-                width: 50%;
-            }
-
-            &--illustrator {
-                width: 40%;
-            }
-        }
-    }
-
-&--html5:hover {
+  &--html5:hover {
     @include colored-card(18, 88%, 55%);
 
-    .card__progress-bar__fill {  
-        background-color: hsl(18, 88%, 55%);
+    .card__progress-bar__fill {
+      background-color: hsl(18, 88%, 55%);
     }
-}
+  }
 
-&--css3:hover {
+  &--css3:hover {
     @include colored-card(222, 88%, 55%);
 
-    .card__progress-bar__fill {  
-        background-color: hsl(222, 88%, 55%);
+    .card__progress-bar__fill {
+      background-color: hsl(222, 88%, 55%);
     }
-}
+  }
 
-&--sass:hover {
+  &--sass:hover {
     @include colored-card(330, 53%, 60%);
 
-    .card__progress-bar__fill {  
-        background-color: hsl(330, 53%, 60%);
+    .card__progress-bar__fill {
+      background-color: hsl(330, 53%, 60%);
     }
-}
+  }
 
-&--figma:hover {
+  &--figma:hover {
     @include colored-card(6, 100%, 69%);
 
-    .card__progress-bar__fill {  
-        background-color: hsl(6, 100%, 69%);
+    .card__progress-bar__fill {
+      background-color: hsl(6, 100%, 69%);
     }
-}
+  }
 
-&--photoshop:hover {
+  &--photoshop:hover {
     @include colored-card(205, 100%, 60%);
 
-    .card__progress-bar__fill {  
-        background-color: hsl(205, 100%, 60%);
+    .card__progress-bar__fill {
+      background-color: hsl(205, 100%, 60%);
     }
-}
+  }
 
-&--illustrator:hover {
+  &--illustrator:hover {
     @include colored-card(36, 100%, 50%);
 
-    .card__progress-bar__fill {  
-        background-color: hsl(36, 100%, 50%);
+    .card__progress-bar__fill {
+      background-color: hsl(36, 100%, 50%);
     }
-}
-
+  }
 }
 
 .row {
-    &__wrapper {
-        grid-template-columns: repeat(auto-fill, 500px);
-    }
+  &__wrapper {
+    grid-template-columns: repeat(auto-fill, 450px);
+    gap: 50px;
+  }
 }
 
 .projects {
-    .card {
-        padding-bottom: 40px;
-    
-        &__image-box {
-            width: 80vw;
-            max-width: 550px;
-            height: 200px;
-            // max-width: 500px;
-            overflow: hidden;
-            background: transparent;
-            border-top-left-radius: $border-radius-rect;
-            border-top-right-radius: $border-radius-rect;
-        }
+  .card {
+    padding-bottom: 40px;
 
-        &__image {
-            // refactor
-            width: 100%;
-            height: 100%;
-            background: url('../../images/mcd/Glass-Morphism-Mockup.jpg');
-            background-position: center;
-            background-size: cover;
-            transition: $transition-duration;
-
-            &:hover {
-                transform: scale(1.17);
-            }
-        }
+    &--mcd:hover {
+      @include colored-card(213, 70%, 50%);
     }
+
+    &--cv:hover {
+      @include colored-card(13, 87%, 54%);
+    }
+
+    &__image-box {
+      width: 80vw;
+      max-width: 450px;
+      height: 200px;
+      // max-width: 500px;
+      overflow: hidden;
+      background: transparent;
+      border-top-left-radius: $border-radius-rect;
+      border-top-right-radius: $border-radius-rect;
+    }
+
+    &__image {
+      // refactor
+      width: 100%;
+      height: 100%;
+      background: url("../../images/mcd/Glass-Morphism-Mockup.jpg");
+      background-position: center;
+      background-size: cover;
+      transition: $transition-duration;
+
+      &:hover {
+        transform: scale(1.17);
+      }
+    }
+  }
 }
 
-
 .timeline {
+  &__image__wrapper {
+    position: relative;
+    width: 100px;
 
-    .card {
-        width: 80vw;
+    &--rect {
+      height: 50px;
     }
+
+    &--circle {
+      height: 100px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    transition: $transition-duration;
+  }
+
+  .card {
+    width: 80vw;
+    padding: 50px;
+
+    @include on-event {
+      .timeline__image--top {
+        opacity: 0;
+      }
+    }
+    &--my-brand {
+      @include on-event {
+        @include colored-card(213, 70%, 50%);
+      }
+    }
+    &--datadev {
+      @include on-event {
+        @include colored-card(199, 100%, 41%);
+      }
+    }
+    &--fsd-internship {
+      @include on-event {
+        @include colored-card(358, 85%, 52%);
+      }
+    }
+    &--faculty {
+      @include on-event {
+        @include colored-card(185, 40%, 43%);
+      }
+    }
+    &--high-school {
+      @include on-event {
+        @include colored-card(205, 100%, 31%);
+      }
+    }
+  }
 }
 
 .profile {
-    &__languages__picture {
-        width: 30px;
-        height: auto;
-        border-radius: 2px;
+  &__languages__picture {
+    width: 30px;
+    height: auto;
+    border-radius: 2px;
+  }
+
+  .container {
+    margin: 0;
+    padding: 20px;
+    gap: 10px;
+    grid-auto-flow: column;
+  }
+
+  .wrapper {
+    grid-template-columns: repeat(auto-fill, 300px);
+  }
+}
+
+.form {
+  .card {
+    gap: 40px;
+    width: 80vw;
+    max-width: 450px;
+
+    label {
+      color: $text-color;
     }
 
-    .container {
-        margin: 0;
-        padding: 20px;
-        gap: 10px;
-        grid-auto-flow: column;
-    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      margin: 10px;
+      width: 55vw;
+      max-width: 350px;
+      padding: 10px;
 
-    .wrapper {
-        grid-template-columns: repeat(auto-fill, 300px);
+      &:focus {
+        outline: 0;
+      }
     }
+  }
 
+  &__radio__wrapper {
+    text-align: start;
+
+    &__label {
+      text-align: center;
+      margin: auto;
+      margin-bottom: 10px;
+      display: block;       
+    }
+  }
 }

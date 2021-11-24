@@ -31,7 +31,7 @@
                     </a>
                     <ul class="menu__list">
                         <li class="menu__list__item">
-                            <a class="active" href="#top">Home</a>
+                            <a href="#top">Home</a>
                         </li>
                         <li class="menu__list__item">
                             <a href="#profile">Profile</a>
@@ -171,14 +171,14 @@
             <section class="projects container">
                 <h2>Projects</h2>
                 <div class="wrapper row__wrapper">
-                    <div class="card">
+                    <div class="card card--mcd">
                         <div class="card__image-box">
                             <div class="card__image card__image--mcd"></div>
                         </div>
                         <h3>Mare Car Design Website</h3>
                         <a class="button button--secondary" href="https://marecardesign.netlify.app" target="_blank">Visit Website</a>
                     </div>
-                    <div class="card">
+                    <div class="card card--cv">
                         <div class="card__image-box">
                             <div class="card__image card__image--mcd"></div>
                         </div>
@@ -195,24 +195,33 @@
             <section class="timeline container">
                 <h2>Expereince</h2>
                 <div class="wrapper">
-                    <div class="card container">
-                        <p class="timeline__date">07.2019 - Present</p>
+                    <div class="card card--my-brand container">
+                        <label class="timeline__date">07.2019 - Present</label>
                         <h3 class="timeline__role">Freelance Design & Copywriting</h3>
-                        <img src="./images/icons/MCD-Logo.png" class="timeline__image" alt="DataDEV Logo">
+                        <div class="timeline__image__wrapper timeline__image__wrapper--circle">
+                            <img src="./images/icons/MCD-Logo-colored.svg" class="timeline__image timeline__image--bottom" alt="MCD Logo Colored">
+                            <img src="./images/icons/MCD-Logo-white.svg" class="timeline__image timeline__image--top" alt="MCD Logo Colored">
+                        </div>
                         <p class="expereince__description">Making Car Wrap Designs, Illustrations & Sketches in PS and AI.
                             <br>Writing posts and documents in IT industry.
                         </p>
                     </div>
-                    <div class="card container">
-                        <p class="timeline__date">07.2021 - 10.2021</p>
+                    <div class="card card--datadev container">
+                        <label class="timeline__date">07.2021 - 10.2021</label>
                         <h3 class="timeline__role">Operator</h3>
-                        <img src="./images/icons/datadev.png" class="timeline__image" alt="DataDEV Logo">
+                        <div class="timeline__image__wrapper timeline__image__wrapper--rect">
+                            <img src="./images/icons/datadev-color.png" class="timeline__image timeline__image--bottom" alt="DataDEV Colored Logo">
+                            <img src="./images/icons/datadev.png" class="timeline__image timeline__image--top" alt="DataDEV Logo">
+                        </div>
                         <p class="expereince__description">Working on smaller projects with company software.</p>
                     </div>
-                    <div class="card container">
-                        <p class="timeline__date">05.2018</p>
+                    <div class="card card--fsd-internship container">
+                        <label class="timeline__date">05.2018</label>
                         <h3 class="timeline__role">High-School Intern</h3>
-                        <img src="./images/icons/fsd-logo.svg" class="timeline__image" alt="fSD Logo">
+                        <div class="timeline__image__wrapper timeline__image__wrapper--rect">
+                            <img src="./images/icons/fsd-logo-red.svg" class="timeline__image timeline__image--bottom">
+                            <img src="./images/icons/fsd-logo.svg" class="timeline__image timeline__image--top">
+                        </div>
                         <p class="expereince__description">One-week Computer Technician Internship with a goal to 
                             get basic timeline with computer hardware & software.</p>
                     </div>
@@ -226,18 +235,24 @@
             <section class="timeline container">
                 <h2>Education</h2>
                 <div class="wrapper row__wrapper">
-                    <div class="card container">
-                        <p class="timeline__date">09.2020 - Present</p>
+                    <div class="card card--faculty container">
+                        <label class="timeline__date">09.2020 - Present</label>
                         <h3 class="timeline__role">Computing & Automation</h3>
-                        <img src="./images/icons/ftn.png" class="timeline__image" alt="FTN Logo">
+                        <div class="timeline__image__wrapper timeline__image__wrapper--circle">
+                            <img src="./images/icons/ftn-colored.png" class="timeline__image timeline__image--bottom" alt="FTN Colored Logo">
+                            <img src="./images/icons/ftn.png" class="timeline__image timeline__image--top" alt="FTN Colored Logo">
+                        </div>                        
                         <p class="expereince__description">II year of study, where I expanded my C programming language knowledge 
                             and learned Assembly language. Currently learning C++.
                         </p>
                     </div>
-                    <div class="card container">
-                        <p class="timeline__date">08.2016 - 07.2020</p>
+                    <div class="card card--high-school container">
+                        <label class="timeline__date">08.2016 - 07.2020</label>
                         <h3 class="timeline__role">Computer Techincian</h3>
-                        <img src="./images/icons/ets.png" class="timeline__image" alt="ETŠ Mihajlo Pupin Novi Sad Logo">
+                        <div class="timeline__image__wrapper timeline__image__wrapper--circle">
+                            <img src="./images/icons/ets.png" class="timeline__image timeline__image--bottom" alt="ETŠ Mihajlo Pupin">
+                            <img src="./images/icons/ets-colored.png" class="timeline__image timeline__image--top" alt="ETŠ Mihajlo Pupin">
+                        </div>                        
                         <p class="expereince__description">Completed course where I learned C & C# programming languages.</p>
                     </div>
                 </div>
@@ -247,8 +262,43 @@
 
             <a id="contact"></a>
 
-            <section class="contact container">
+            <section class="form container">
                 <h2>Contact</h2>
+
+                <form id="contact-form" class="card container" netlify>
+
+                    <div class="form__contact-info__wrapper">
+                        <label for="form__name--first">First name:</label>
+                        <input class="card" type="text" id="form__name--first" name="form__name--first">
+                        <label for="form__name--last">Last name:</label>
+                        <input class="card" type="text" id="form__name--last" name="form__name--last">
+                        <label for="form__еmail">Email:</label>
+                        <input class="card" type="email" id="form__email" name="form__email">
+                    </div>
+
+                    <div class="form__textarea__wrapper">
+                        <label for="fmessage">Type message:</label>
+                        <textarea class="card" id="fmessage" name="message" rows="5" cols="33"></textarea>
+                    </div>
+
+                    <div id="radio-buttons" class="form__radio__wrapper">
+                        <label class="form__radio__wrapper__label" for="radio-buttons">Choose service:</label>
+                        <div class="form__radio">
+                            <input type="radio" id="front-end" name="services" value="front-end" checked>
+                            <label for="front-end">Front End Web Development</label>
+                        </div class="form__radio">
+                        <div>
+                            <input type="radio" id="ui-ux" name="services" value="ui-ux">
+                            <label for="ui-ux">UI/UX Design</label>
+                        </div>
+                        <div class="form__radio">
+                            <input type="radio" id="graphic" name="services" value="graphic">
+                            <label for="graphic">Graphic Design</label>
+                        </div>
+                    </div>
+                    <button type="submit" form="contact-form" value="Submit" class="button button--secondary">Submit</button>
+
+                  </form> 
             </section>
 
             </main>

@@ -10,22 +10,17 @@
     animation: blur-appear $transition-duration;
     z-index: 999;
 
-    &--close {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-    }
-
+    
     &:target {
         display: block;
         left: 0;
         outline: none;
-
-         ul {
+        
+        ul {
             position: relative;
             z-index: 1000;
-         }
-
+        }
+        
         & + .backdrop {
             position: absolute;
             display: block;  
@@ -37,22 +32,22 @@
             background: rgba($color: black, $alpha: .5);
             cursor: default;
         } 
-
+        
         .menu--close {
             z-index: 1001;
         }
     }
-
+    
     ul {
         @include grid;
-
+        
         padding-top: 100px;
         padding-bottom: 100px;
         position: absolute;
         width: 50vw;
         height: 100vh;
     }
-
+    
     li {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -64,11 +59,21 @@
         
         @include on-event {
             background-color: $brand-color;
-          }
+        }
+    }
+    &--close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: $brand-color;
+        
+        @include on-event {
+            @include interaction--primary;
+        }
     }
 }
 
 .menu, 
 .menu:target + .backdrop {
-     position: fixed;
+    position: fixed;
  }

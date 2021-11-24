@@ -5,7 +5,7 @@
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    border: 2px solid $white-color;
+    border: 1px solid $brand-color;
 }
 
 .menu--toggle {
@@ -17,7 +17,7 @@
     @include interaction--primary;
 
     &__icon {
-        color: $white-color;
+        color: $brand-color;
 
     }
 }
@@ -32,6 +32,6 @@
 
     &__arrow {
         height: 35px;
-        color: $white-color;
+        color: $brand-color;
     }
 }

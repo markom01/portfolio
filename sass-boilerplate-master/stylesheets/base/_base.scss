@@ -35,6 +35,10 @@ li {
   color: $white-color;
 }
 
+textarea {
+  resize: none;
+}
+
 .wrapper {
   @include grid;
   justify-content: space-around;
@@ -50,6 +54,15 @@ li {
   to {
     opacity: 1;
     filter: blur(0px);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

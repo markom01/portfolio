@@ -34,3 +34,12 @@ h3 {
   font-weight: 400;
 }
 
+label,
+input[type='text'],
+input[type='email'],
+textarea {
+  font-size: 15px;
+  color: $text-color;
+  text-align: center;
+}
+
