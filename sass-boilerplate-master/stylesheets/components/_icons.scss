@@ -3,7 +3,7 @@
     height: 26px;
     border-radius: $border-radius;
     transition: $transition-duration;
-    @include interaction--primary;
+    @include interaction--secondary;
 
     &--github {
 

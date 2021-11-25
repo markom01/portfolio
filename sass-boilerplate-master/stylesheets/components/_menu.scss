@@ -7,7 +7,7 @@
     background-image: url('../../images/bg/blur-image.png');
     // overflow-y: scroll;
     // overflow-x: visible;
-    animation: blur-appear $transition-duration;
+    animation: appear $transition-duration;
     z-index: 999;
 
     
@@ -15,6 +15,7 @@
         display: block;
         left: 0;
         outline: none;
+        
         
         ul {
             position: relative;
@@ -47,20 +48,7 @@
         width: 50vw;
         height: 100vh;
     }
-    
-    li {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    a {
-        padding: 10px;
-        border-radius: $border-radius-rect;
-        transition: $transition-duration;
-        
-        @include on-event {
-            background-color: $brand-color;
-        }
-    }
+
     &--close {
         position: absolute;
         right: 10px;

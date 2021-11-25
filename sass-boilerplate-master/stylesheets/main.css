@@ -350,12 +350,12 @@ html {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  -webkit-animation: blur-appear 2s;
-          animation: blur-appear 2s;
+  -webkit-animation: appear 2s;
+          animation: appear 2s;
 }
 
 body {
-  background-image: url(/images/bg/bg-poygonal-black.jpg);
+  background-image: url("../../images/bg/blurred-polygonal-background.png");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
@@ -384,32 +384,6 @@ textarea {
   margin-bottom: 50px;
 }
 
-@-webkit-keyframes blur-appear {
-  from {
-    opacity: 0;
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-  }
-  to {
-    opacity: 1;
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-  }
-}
-
-@keyframes blur-appear {
-  from {
-    opacity: 0;
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-  }
-  to {
-    opacity: 1;
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-  }
-}
-
 @-webkit-keyframes appear {
   from {
     opacity: 0;
@@ -425,18 +399,6 @@ textarea {
   }
   to {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes color-change-infinite {
-  50% {
-    background-color: #f05024;
-  }
-}
-
-@keyframes color-change-infinite {
-  50% {
-    background-color: #f05024;
   }
 }
 
@@ -582,15 +544,36 @@ header {
   grid-auto-flow: row;
 }
 
-.header__logo {
-  height: 40px;
+footer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-image: url("../../images/bg/blurred-polygonal-background-rotated.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
-footer {
-  height: 100vh;
-  background-image: url(/images/bg/bg-poygonal-black-rotated.jpg);
-  background-size: 100vw 100vh;
-  background-repeat: no-repeat;
+footer .container {
+  padding-bottom: 0;
+}
+
+footer .icons {
+  display: inline-block;
+  margin: 10px;
+}
+
+footer a {
+  font-size: 15px;
+}
+
+footer p {
+  font-size: 15px;
+  color: #f7f7f7;
+}
+
+footer .footer__copyright {
+  color: #9c9c9c;
 }
 
 .cards__wrapper {
@@ -929,8 +912,8 @@ footer {
 }
 
 .icon:hover, .icon:active, .icon:focus {
-  background: #f7f7f7;
-  color: #f05024;
+  background: #f05024;
+  color: #f7f7f7;
 }
 
 .icon--front-end {
@@ -944,8 +927,8 @@ footer {
   top: 0;
   height: 100%;
   background-image: url("../../images/bg/blur-image.png");
-  -webkit-animation: blur-appear 0.3s;
-          animation: blur-appear 0.3s;
+  -webkit-animation: appear 0.3s;
+          animation: appear 0.3s;
   z-index: 999;
 }
 
@@ -985,22 +968,6 @@ footer {
   position: absolute;
   width: 50vw;
   height: 100vh;
-}
-
-.menu li {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.menu a {
-  padding: 10px;
-  border-radius: 10px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.menu a:hover, .menu a:active, .menu a:focus {
-  background-color: #f05024;
 }
 
 .menu--close {
@@ -1068,6 +1035,26 @@ footer {
 .goto-top__arrow {
   height: 35px;
   color: #f05024;
+}
+
+.nav li {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav a {
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav a:hover, .nav a:active, .nav a:focus {
+  background-color: #f05024;
+}
+
+.logo {
+  height: 40px;
 }
 
 .hero {

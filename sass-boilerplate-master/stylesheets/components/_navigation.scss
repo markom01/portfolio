@@ -35,3 +35,19 @@
         color: $brand-color;
     }
 }
+
+.nav {
+    li {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    a {
+        padding: 10px;
+        border-radius: $border-radius-rect;
+        transition: $transition-duration;
+        
+        @include on-event {
+            background-color: $brand-color;
+        }
+    }
+}
