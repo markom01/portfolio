@@ -7,9 +7,10 @@
  */
 html {
   box-sizing: border-box;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
   animation: appear 2s;
+  overflow-x: hidden;
 }
 
 body {

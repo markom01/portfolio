@@ -30,6 +30,7 @@
                         <div class="menu--close__icon">X</div>
                     </a>
                     <ul class="menu__list">
+                        <h2>Menu</h2>
                         <li class="menu__list__item">
                             <a href="#top">Home</a>
                         </li>
@@ -176,15 +177,36 @@
                             <div class="card__image card__image--mcd"></div>
                         </div>
                         <h3>Mare Car Design Website</h3>
-                        <a class="button button--secondary" href="https://marecardesign.netlify.app" target="_blank">Visit Website</a>
+                        <label for="show-mockups--mcd" class="button button--secondary" onclick>Show mockups &darr;</label>
                     </div>
                     <div class="card card--cv">
                         <div class="card__image-box">
                             <div class="card__image card__image--mcd"></div>
                         </div>
                         <h3>Portfolio Website</h3>
-                        <a class="button button--secondary" href="#top" target="_blank">Visit Website</a>
+                        <label for="show-mockups--cv" class="button button--secondary" onclick>Show mockups &darr;</label>
                     </div>
+                </div>
+                <input type="checkbox" id="show-mockups--mcd">
+                <div class="projects__image__slider projects__image__slider--mcd">
+                    <label for="show-mockups--mcd" onclick>X</label>
+                    <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
+                    <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
+                    <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
+                    <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
+                    <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
+                    <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
+                </div>
+                <br>
+                <input type="checkbox" id="show-mockups--cv">
+                <div class="projects__image__slider projects__image__slider--cv">
+                    <label for="show-mockups--cv" onclick>X</label>
+                    <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
+                    <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
+                    <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
+                    <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
+                    <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
+                    <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
                 </div>
             </section>
                             
@@ -215,12 +237,12 @@
                         </div>
                         <p class="expereince__description">Working on smaller projects with company software.</p>
                     </div>
-                    <div class="card card--fsd-internship container">
+                    <div class="card card--ewasoft-internship container">
                         <label class="timeline__date">05.2018</label>
                         <h3 class="timeline__role">High-School Intern</h3>
                         <div class="timeline__image__wrapper timeline__image__wrapper--rect">
-                            <img src="./images/icons/fsd-logo-red.svg" class="timeline__image timeline__image--bottom">
-                            <img src="./images/icons/fsd-logo.svg" class="timeline__image timeline__image--top">
+                            <img src="./images/icons/ewasoft-color.png" class="timeline__image timeline__image--bottom" alt="Ewasoft (Former fSD)">
+                            <img src="./images/icons/ewasoft.png" class="timeline__image timeline__image--top" alt="Ewasoft (Former fSD)">
                         </div>
                         <p class="expereince__description">One-week Computer Technician Internship with a goal to 
                             get basic timeline with computer hardware & software.</p>
@@ -262,41 +284,49 @@
 
             <a id="contact"></a>
 
-            <section class="form container">
+            <section class="container">
                 <h2>Contact</h2>
 
-                <form id="contact-form" class="card container" netlify>
+                <form id="contact-form" netlify>
 
-                    <div class="form__contact-info__wrapper">
-                        <label for="form__name--first">First name:</label>
-                        <input class="card" type="text" id="form__name--first" name="form__name--first">
-                        <label for="form__name--last">Last name:</label>
-                        <input class="card" type="text" id="form__name--last" name="form__name--last">
-                        <label for="form__еmail">Email:</label>
-                        <input class="card" type="email" id="form__email" name="form__email">
-                    </div>
+                    <div class="form">
 
-                    <div class="form__textarea__wrapper">
-                        <label for="fmessage">Type message:</label>
-                        <textarea class="card" id="fmessage" name="message" rows="5" cols="33"></textarea>
-                    </div>
-
-                    <div id="radio-buttons" class="form__radio__wrapper">
-                        <label class="form__radio__wrapper__label" for="radio-buttons">Choose service:</label>
-                        <div class="form__radio">
-                            <input type="radio" id="front-end" name="services" value="front-end" checked>
-                            <label for="front-end">Front End Web Development</label>
-                        </div class="form__radio">
-                        <div>
-                            <input type="radio" id="ui-ux" name="services" value="ui-ux">
-                            <label for="ui-ux">UI/UX Design</label>
+                        <div class="form__contact-info__wrapper">
+                            <label for="form__name--first">First name:</label>
+                            <input class="card" type="text" id="form__name--first" name="form__name--first">
+                            <label for="form__name--last">Last name:</label>
+                            <input class="card" type="text" id="form__name--last" name="form__name--last">
+                            <label for="form__еmail">Email:</label>
+                            <input class="card" type="email" id="form__email" name="form__email">
                         </div>
-                        <div class="form__radio">
-                            <input type="radio" id="graphic" name="services" value="graphic">
-                            <label for="graphic">Graphic Design</label>
+    
+                        <div class="form__textarea__wrapper">
+                            <label for="fmessage">Type message:</label>
+                            <textarea class="card" id="fmessage" name="message" rows="5" cols="33"></textarea>
+                            
+                            <div id="radio-buttons" class="form__radio__wrapper">
+                                <label class="form__radio__wrapper__label" for="radio-buttons">Choose service:</label>
+                                <div class="form__radio">
+                                    <input type="radio" id="front-end" name="services" value="front-end" checked>
+                                    <label for="front-end">Front End Web Development</label>
+                                </div>
+                                <div class="form__radio">
+                                    <input type="radio" id="ui-ux" name="services" value="ui-ux">
+                                    <label for="ui-ux">UI/UX Design</label>
+                                </div>
+                                <div class="form__radio">
+                                    <input type="radio" id="graphic" name="services" value="graphic">
+                                    <label for="graphic">Graphic Design</label>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
-                    <button type="submit" form="contact-form" value="Submit" class="button button--secondary">Submit</button>
+
+                    <div class="form__button__wrapper">
+                        <button type="submit" form="contact-form" value="Submit" class="button button--secondary">Submit</button>
+                    </div>
+                                        
 
                   </form> 
             </section>

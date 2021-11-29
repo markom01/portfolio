@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 
 header {
+    position: relative;
     height: $header-height;
     // width: 100%;
     padding: 20px;
@@ -10,4 +11,11 @@ header {
     justify-content: space-between;
     grid-template-columns: 1fr 30fr 1fr;
     grid-auto-flow: row;
+
+    &::after {
+        position: absolute;
+        top: 60px;
+        display: block;
+        content: url(../../images/bg/light-effect.png);
+      }
 }
