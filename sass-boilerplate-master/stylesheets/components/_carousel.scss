@@ -1,32 +1,29 @@
-
 .projects {
-  input[type=checkbox] {
-      position: relative;
-      left: -1000px;
-    }
-  
-    
   &__image {
-    width: 100%;
-    height: auto;
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    margin-right: 50px;
-    border-radius: $border-radius-rect;
-    
     position: relative;
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: auto;
+    margin-right: 50px;
+    border-radius: $border-radius-rect;
+    scroll-snap-align: start;
+    
+    
+    &:last-of-type {
+      margin-right: 0;
+    }
 
     &__slider {
-      position: relative;
-      display: none;
+      display: flex;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       margin: {
         top: 50px;
         bottom: 50px;
+
       }
       
       &::-webkit-scrollbar {
@@ -43,25 +40,6 @@
         }
       }
 
-      label {
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        padding: 1px 5px;
-        z-index: 2;
-        border-radius: 5px;
-        background-color: $white-color;
-        transition: $transition-duration;
-
-        @include interaction--secondary;
-      }
     }
-  }
-  #show-mockups--mcd:checked ~ .projects__image__slider--mcd {
-    display: flex;
-  }
-  #show-mockups--cv:checked ~ .projects__image__slider--cv {
-    display: flex;
   }
 }

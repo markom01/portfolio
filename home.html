@@ -9,28 +9,31 @@
         <meta name="author" content="Marko Meseldžija">
 
         <link rel="stylesheet" href="./sass-boilerplate-master/stylesheets/main.css">
-        <link rel="shortcut icon" type="image" href="./images/profile/Logo.svg"/>
+        <link rel="icon" type="icon/svg" href="./images/profile/Logo.svg"/>
         <title>CV - Home | Marko Meseldžija</title>
     </head>
 
     <body>
         <a id="top"></a>
+            
+        <!-- Header -->
+        
+        <section class="header">
 
-        <section class="above-the-fold">
-            
-            <!-- Header -->
-            
             <header>
                 
                 <a href="#menu" class="menu--toggle nav-wrapper">
                     <div class="menu--toggle__icon">&vellip;</div>
                 </a>
+    
+                <!-- Menu -->
+    
                 <nav id="menu" class="menu nav">
                     <a href="#menu--toggle" class="menu--close">
                         <div class="menu--close__icon">X</div>
                     </a>
+                    <h3>Menu</h3>
                     <ul class="menu__list">
-                        <h2>Menu</h2>
                         <li class="menu__list__item">
                             <a href="#top">Home</a>
                         </li>
@@ -55,7 +58,7 @@
                     </ul>
                 </nav>
                 <a href="#main-menu-toggle" class="backdrop" hidden></a>
-
+    
                 <div class="icons">
                     <a href="https://www.github.com/markom01" target="_blank" class="icon__wrapper">
                         <img src="./images/icons/github-icon.svg" class="icon icon--github" alt="Github Icon">
@@ -70,22 +73,21 @@
                     </a>
                 </div>
             </header>
-
-            <!-- Menu -->
+        </section>
 
             
-            <main>
+        <main>
+              
+            <!-- Hero Section -->
                 
-                <!-- Hero Section -->
-                
-                <a id="hero"></a>
-                <div class="hero container">
-                    <img class="hero__profile-picture" src="./images/profile/profile-picture.png" alt="Personal Image">
-                    <p>Hi, my name is</p>
-                    <h1>Marko Meseldžija</h1>
-                    <p class="hero__copy">I'm intrested in <strong>Front-End Web Development</strong> & <strong>UI/UX Design</strong>.</p>
-                    <a href="#profile" class="button button--primary">More About Me</a>
-                </div>
+            <a id="hero"></a>
+
+            <section class="hero container">
+                <img class="hero__profile-picture" src="./images/profile/profile-picture.png" alt="Personal Image">
+                <p>Hi, my name is</p>
+                <h1>Marko Meseldžija</h1>
+                <p class="hero__copy">I'm intrested in <strong>Front-End Web Development</strong> & <strong>UI/UX Design</strong>.</p>
+                <a href="#profile" class="button button--primary">More About Me</a>
                 <a href="#top" class="nav-wrapper goto-top">
                     <div class="goto-top__arrow">&uarr;</div>
                 </a>
@@ -171,43 +173,39 @@
 
             <section class="projects container">
                 <h2>Projects</h2>
-                <div class="wrapper row__wrapper">
+                <div class="wrapper">
                     <div class="card card--mcd">
                         <div class="card__image-box">
                             <div class="card__image card__image--mcd"></div>
                         </div>
                         <h3>Mare Car Design Website</h3>
-                        <label for="show-mockups--mcd" class="button button--secondary" onclick>Show mockups &darr;</label>
+                        <a href="https://marecardesign.netlify.app" class="button button--secondary">Visit Website</a>
+                    </div>
+                    <div class="projects__image__slider projects__image__slider--mcd">
+                        <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
+                        <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
+                        <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
+                        <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
+                        <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
+                        <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
                     </div>
                     <div class="card card--cv">
                         <div class="card__image-box">
                             <div class="card__image card__image--mcd"></div>
                         </div>
                         <h3>Portfolio Website</h3>
-                        <label for="show-mockups--cv" class="button button--secondary" onclick>Show mockups &darr;</label>
+                        <a href="#top" class="button button--secondary">Visit Website</a>
+                    </div>
+                    <div class="projects__image__slider projects__image__slider--cv">
+                        <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
+                        <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
+                        <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
+                        <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
+                        <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
+                        <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
                     </div>
                 </div>
-                <input type="checkbox" id="show-mockups--mcd">
-                <div class="projects__image__slider projects__image__slider--mcd">
-                    <label for="show-mockups--mcd" onclick>X</label>
-                    <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
-                    <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
-                    <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
-                    <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
-                    <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
-                    <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
-                </div>
-                <br>
-                <input type="checkbox" id="show-mockups--cv">
-                <div class="projects__image__slider projects__image__slider--cv">
-                    <label for="show-mockups--cv" onclick>X</label>
-                    <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
-                    <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
-                    <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
-                    <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
-                    <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
-                    <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
-                </div>
+
             </section>
                             
             <!-- Experience Section -->
@@ -218,7 +216,7 @@
                 <h2>Expereince</h2>
                 <div class="wrapper">
                     <div class="card card--my-brand container">
-                        <label class="timeline__date">07.2019 - Present</label>
+                        <p class="timeline__date label">07.2019 - Present</p>
                         <h3 class="timeline__role">Freelance Design & Copywriting</h3>
                         <div class="timeline__image__wrapper timeline__image__wrapper--circle">
                             <img src="./images/icons/MCD-Logo-colored.svg" class="timeline__image timeline__image--bottom" alt="MCD Logo Colored">
@@ -229,7 +227,7 @@
                         </p>
                     </div>
                     <div class="card card--datadev container">
-                        <label class="timeline__date">07.2021 - 10.2021</label>
+                        <p class="timeline__date label">07.2021 - 10.2021</p>
                         <h3 class="timeline__role">Operator</h3>
                         <div class="timeline__image__wrapper timeline__image__wrapper--rect">
                             <img src="./images/icons/datadev-color.png" class="timeline__image timeline__image--bottom" alt="DataDEV Colored Logo">
@@ -238,7 +236,7 @@
                         <p class="expereince__description">Working on smaller projects with company software.</p>
                     </div>
                     <div class="card card--ewasoft-internship container">
-                        <label class="timeline__date">05.2018</label>
+                        <p class="timeline__date label">05.2018</p>
                         <h3 class="timeline__role">High-School Intern</h3>
                         <div class="timeline__image__wrapper timeline__image__wrapper--rect">
                             <img src="./images/icons/ewasoft-color.png" class="timeline__image timeline__image--bottom" alt="Ewasoft (Former fSD)">
@@ -258,7 +256,7 @@
                 <h2>Education</h2>
                 <div class="wrapper row__wrapper">
                     <div class="card card--faculty container">
-                        <label class="timeline__date">09.2020 - Present</label>
+                        <p class="timeline__date label">09.2020 - Present</p>
                         <h3 class="timeline__role">Computing & Automation</h3>
                         <div class="timeline__image__wrapper timeline__image__wrapper--circle">
                             <img src="./images/icons/ftn-colored.png" class="timeline__image timeline__image--bottom" alt="FTN Colored Logo">
@@ -269,7 +267,7 @@
                         </p>
                     </div>
                     <div class="card card--high-school container">
-                        <label class="timeline__date">08.2016 - 07.2020</label>
+                        <p class="timeline__date label">08.2016 - 07.2020</p>
                         <h3 class="timeline__role">Computer Techincian</h3>
                         <div class="timeline__image__wrapper timeline__image__wrapper--circle">
                             <img src="./images/icons/ets.png" class="timeline__image timeline__image--bottom" alt="ETŠ Mihajlo Pupin">
@@ -287,7 +285,7 @@
             <section class="container">
                 <h2>Contact</h2>
 
-                <form id="contact-form" netlify>
+                <form id="contact-form" data-netlify="true">
 
                     <div class="form">
 
@@ -296,16 +294,16 @@
                             <input class="card" type="text" id="form__name--first" name="form__name--first">
                             <label for="form__name--last">Last name:</label>
                             <input class="card" type="text" id="form__name--last" name="form__name--last">
-                            <label for="form__еmail">Email:</label>
-                            <input class="card" type="email" id="form__email" name="form__email">
+                            <label>Email:<input class="card" type="email" name="form__email"></label>
+                            
                         </div>
     
                         <div class="form__textarea__wrapper">
                             <label for="fmessage">Type message:</label>
                             <textarea class="card" id="fmessage" name="message" rows="5" cols="33"></textarea>
                             
-                            <div id="radio-buttons" class="form__radio__wrapper">
-                                <label class="form__radio__wrapper__label" for="radio-buttons">Choose service:</label>
+                            <p class="form__radio__wrapper__label label">Choose service:</p>
+                            <div class="form__radio__wrapper">
                                 <div class="form__radio">
                                     <input type="radio" id="front-end" name="services" value="front-end" checked>
                                     <label for="front-end">Front End Web Development</label>
@@ -331,7 +329,7 @@
                   </form> 
             </section>
 
-            </main>
+        </main>
 
         <!-- Footer -->
 

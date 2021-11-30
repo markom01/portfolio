@@ -1,0 +1,48 @@
+form {
+    @include card--skin;
+    width: 900px;
+    max-width: 80vw;
+    padding: 60px 30px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  
+  .form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+  
+    .container {
+      padding: 0;
+    }
+  
+    label {
+      color: $text-color;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    &__radio__wrapper {
+      margin: 20px auto;
+      width: 300px;
+      max-width: 60vw;
+      padding: 10px;
+  
+      &:focus {
+        outline: 0;
+      }
+    }
+  
+    &__radio__wrapper {
+      text-align: start;
+      padding: 0;
+  
+      &__label {
+        text-align: center;
+        margin: auto;
+      }
+    }
+  }
+  

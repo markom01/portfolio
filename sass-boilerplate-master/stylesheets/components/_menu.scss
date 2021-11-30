@@ -4,9 +4,11 @@
     left: -200px;
     top: 0;
     height: 100%;
-    background-image: url('../../images/bg/blur-image.png');
-    // overflow-y: scroll;
-    // overflow-x: visible;
+    padding: {
+        top: 20px;
+    }
+    background-image: image('bg/blurred-polygonal-background-rotated.png', '../../');
+    background-size: cover;
     animation: appear $transition-duration;
     z-index: 999;
 
@@ -41,12 +43,14 @@
     
     ul {
         @include grid;
-        
-        padding-top: 10px;
-        padding-bottom: 50px;
+
         position: absolute;
+        padding: {
+            bottom: 50px;
+            top: 50px;
+        }
         width: 50vw;
-        height: 100vh;
+        height: 70vh;
     }
 
     &--close {

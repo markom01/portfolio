@@ -1,6 +1,11 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
+$border-radius: 100vw;
+$border-radius-rect: 10px;
+$header-height: 80px;
+$hero-height: 90vh;
+$transition-duration: 0.3s;
 
 
 
@@ -32,7 +37,6 @@ $white-color: hsl(0, 0%, 97%) !default;
 /// Main brand color
 /// @type Color
 $brand-color: hsl(13, 87%, 54%) !default;
-
 $glass-color: hsla(0, 0%, 97%, 0.25);
 
 /// Light grey
@@ -54,24 +58,6 @@ $dark-grey: hsl(0, 0%, 27%) !default;
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
-
-
-
-
-
-$border-radius: 100vw;
-$border-radius-rect: 10px;
-
-
-
-
-$header-height: 80px;
-$hero-height: 90vh;
-
-
-
-
-$transition-duration: 0.3s;
 
 
 

@@ -16,6 +16,6 @@ header {
         position: absolute;
         top: 60px;
         display: block;
-        content: url(../../images/bg/light-effect.png);
+        content: image('bg/light-effect.png', '../../');
       }
 }

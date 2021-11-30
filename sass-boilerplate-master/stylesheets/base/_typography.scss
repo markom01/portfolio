@@ -22,11 +22,11 @@ h2 {
   text-transform: uppercase;
   color: $white-color;
   letter-spacing: 6px;
-  font-weight: 400;
+  font-weight: normal;
 
   &::after {
     display: block;
-    content: url(../../images/bg/light-effect.png);
+    content: image('bg/light-effect.png', '../../');
   }
 }
 
@@ -36,12 +36,16 @@ h3  {
 }
 
 h3 {
-  font-weight: 400;
+  font-weight: normal;
+}
+
+.label {
+  font-size: 15px;
 }
 
 label,
-input[type='text'],
-input[type='email'],
+input[type=text],
+input[type=email],
 textarea {
   font-size: 15px;
   color: $text-color;

@@ -9,12 +9,11 @@ html {
   box-sizing: border-box;
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
-  animation: appear 2s;
-  overflow-x: hidden;
+  animation: appear 1s;
 }
 
 body {
-  background-image: url('../../images/bg/blurred-polygonal-background.png');
+  background-image: image('bg/blurred-polygonal-background.png', '../../');
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
@@ -24,11 +23,8 @@ section,footer {
   scroll-snap-align: start;
 }
 
-section {
-  // margin-bottom: 15vh;
-}
-
-ul {
+.header {
+  min-height: unset;
 }
 
 li {
@@ -45,6 +41,13 @@ textarea {
   justify-content: space-around;
   gap: 30px;
   margin-bottom: 50px;
+}
+
+.row {
+  &__wrapper {
+    grid-template-columns: repeat(auto-fill, 450px);
+    gap: 50px;
+  }
 }
 
 @keyframes appear {
@@ -76,10 +79,4 @@ textarea {
 a {
   color: $white-color;
   text-decoration: none;
-
-  
-  @include on-event {
-    // color: $text-color;
-  }
-
 }
