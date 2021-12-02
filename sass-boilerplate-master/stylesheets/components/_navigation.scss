@@ -13,6 +13,7 @@
     bottom: 20px;
     left: 20px;
     transition: $transition-duration;
+    z-index: 1;
     
     &__icon {
         color: $brand-color;
@@ -26,6 +27,7 @@
     bottom: 20px;
     right: 20px;
     transition: $transition-duration;
+    z-index: 1;
     
     &__arrow {
         height: 35px;

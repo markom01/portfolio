@@ -581,6 +581,11 @@ footer {
   background-repeat: no-repeat;
 }
 
+footer .footer__wrapper {
+  -ms-grid-columns: (300px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 300px);
+}
+
 footer .container {
   padding-bottom: 0;
 }
@@ -601,6 +606,83 @@ footer p {
 
 footer .footer__copyright {
   color: #9c9c9c;
+}
+
+audio::-webkit-media-controls-panel {
+  background: radial-gradient(73.55% 73.55% at 50.17% 26.45%, #363636 0%, #141414 100%);
+}
+
+audio::-webkit-media-controls-panel, audio::-webkit-media-controls-mute-button, audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-timeline-container, audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display, audio::-webkit-media-controls-timeline, audio::-webkit-media-controls-volume-slider-container, audio::-webkit-media-controls-volume-slider {
+  color: white;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+audio::-webkit-media-controls-panel:hover, audio::-webkit-media-controls-panel:active, audio::-webkit-media-controls-panel:focus, audio::-webkit-media-controls-mute-button:hover, audio::-webkit-media-controls-mute-button:active, audio::-webkit-media-controls-mute-button:focus, audio::-webkit-media-controls-play-button:hover, audio::-webkit-media-controls-play-button:active, audio::-webkit-media-controls-play-button:focus, audio::-webkit-media-controls-timeline-container:hover, audio::-webkit-media-controls-timeline-container:active, audio::-webkit-media-controls-timeline-container:focus, audio::-webkit-media-controls-current-time-display:hover, audio::-webkit-media-controls-current-time-display:active, audio::-webkit-media-controls-current-time-display:focus, audio::-webkit-media-controls-time-remaining-display:hover, audio::-webkit-media-controls-time-remaining-display:active, audio::-webkit-media-controls-time-remaining-display:focus, audio::-webkit-media-controls-timeline:hover, audio::-webkit-media-controls-timeline:active, audio::-webkit-media-controls-timeline:focus, audio::-webkit-media-controls-volume-slider-container:hover, audio::-webkit-media-controls-volume-slider-container:active, audio::-webkit-media-controls-volume-slider-container:focus, audio::-webkit-media-controls-volume-slider:hover, audio::-webkit-media-controls-volume-slider:active, audio::-webkit-media-controls-volume-slider:focus {
+  background-color: #f05024;
+  color: #fff;
+}
+
+.song.card.container {
+  padding: 10px;
+  place-items: start;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -ms-grid-rows: 80% 20%;
+      grid-template-rows: 80% 20%;
+  gap: 0;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.song__image {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.song__image img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.song__info {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  text-align: start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.song__info .label::before {
+  content: url("../../images/icons/headphones-icon.svg");
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.song__info--name {
+  color: #f7f7f7;
+}
+
+audio {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  height: 50px;
+  margin-bottom: 5px;
+  border-radius: 10px;
 }
 
 .button {
@@ -636,7 +718,6 @@ footer .footer__copyright {
 .card {
   margin-top: 60px;
   margin-bottom: 35px;
-  gap: 30px;
   border-radius: 10px;
   background: radial-gradient(73.55% 73.55% at 50.17% 26.45%, #363636 0%, #141414 100%);
   border: 0.5px solid rgba(240, 80, 36, 0.2);
@@ -650,17 +731,13 @@ footer .footer__copyright {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  gap: 30px;
 }
 
 .card:hover, .card:active, .card:focus {
   border: 0.5px solid rgba(240, 80, 36, 0.3);
   -webkit-box-shadow: 0px 7px 50px rgba(240, 80, 36, 0.4);
           box-shadow: 0px 7px 50px rgba(240, 80, 36, 0.4);
-}
-
-.card .cards__wrapper {
-  -ms-grid-columns: (300px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 300px);
 }
 
 .card .cards__heading--front-end::before {
@@ -682,12 +759,12 @@ footer .footer__copyright {
 }
 
 .card__icon {
-  height: 80px;
+  height: 50px;
   width: auto;
 }
 
 .card__progress-bar {
-  width: 200px;
+  width: 150px;
   height: 20px;
   border-radius: 100vw;
   background-color: #9c9c9c;
@@ -712,11 +789,19 @@ footer .footer__copyright {
 }
 
 .card__progress-bar__fill--sass {
+  width: 35%;
+}
+
+.card__progress-bar__fill--git {
   width: 25%;
 }
 
 .card__progress-bar__fill--figma {
   width: 60%;
+}
+
+.card__progress-bar__fill--xd {
+  width: 20%;
 }
 
 .card__progress-bar__fill--photoshop {
@@ -757,6 +842,16 @@ footer .footer__copyright {
   background-color: #cf6399;
 }
 
+.card--git:hover {
+  border: 0.5px solid rgba(240, 82, 51, 0.3);
+  -webkit-box-shadow: 0px 7px 50px rgba(240, 82, 51, 0.4);
+          box-shadow: 0px 7px 50px rgba(240, 82, 51, 0.4);
+}
+
+.card--git:hover .card__progress-bar__fill {
+  background-color: #f05233;
+}
+
 .card--figma:hover {
   border: 0.5px solid rgba(255, 113, 97, 0.3);
   -webkit-box-shadow: 0px 7px 50px rgba(255, 113, 97, 0.4);
@@ -765,6 +860,16 @@ footer .footer__copyright {
 
 .card--figma:hover .card__progress-bar__fill {
   background-color: #ff7161;
+}
+
+.card--xd:hover {
+  border: 0.5px solid rgba(255, 97, 247, 0.3);
+  -webkit-box-shadow: 0px 7px 50px rgba(255, 97, 247, 0.4);
+          box-shadow: 0px 7px 50px rgba(255, 97, 247, 0.4);
+}
+
+.card--xd:hover .card__progress-bar__fill {
+  background-color: #ff61f7;
 }
 
 .card--photoshop:hover {
@@ -785,6 +890,11 @@ footer .footer__copyright {
 
 .card--illustrator:hover .card__progress-bar__fill {
   background-color: #ff9900;
+}
+
+.cards__wrapper {
+  -ms-grid-columns: (231px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 231px);
 }
 
 .projects__image {
@@ -839,7 +949,6 @@ footer .footer__copyright {
 form {
   margin-top: 60px;
   margin-bottom: 35px;
-  gap: 30px;
   border-radius: 10px;
   background: radial-gradient(73.55% 73.55% at 50.17% 26.45%, #363636 0%, #141414 100%);
   border: 0.5px solid rgba(240, 80, 36, 0.2);
@@ -1007,6 +1116,7 @@ form:hover, form:active, form:focus {
   left: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 1;
 }
 
 .menu--toggle:hover, .menu--toggle:active, .menu--toggle:focus {
@@ -1026,6 +1136,7 @@ form:hover, form:active, form:focus {
   right: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 1;
 }
 
 .goto-top:hover, .goto-top:active, .goto-top:focus {
@@ -1079,10 +1190,27 @@ form:hover, form:active, form:focus {
   margin: 20px 0;
 }
 
+.profile .card {
+  width: 350px;
+}
+
+.profile .wrapper {
+  margin-bottom: 100px;
+}
+
+.profile .wrapper.row__wrapper.languages__wrapper {
+  -ms-grid-columns: (300px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 300px);
+}
+
 .profile__languages__picture {
   width: 30px;
   height: auto;
   border-radius: 2px;
+}
+
+.profile__languages__name {
+  color: #f7f7f7;
 }
 
 .profile .container {
@@ -1093,20 +1221,60 @@ form:hover, form:active, form:focus {
 }
 
 .profile .wrapper {
-  -ms-grid-columns: (300px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 300px);
+  -ms-grid-columns: (350px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 350px);
 }
 
 .profile__description {
   margin-bottom: 60px;
 }
 
-.profile h3::before {
+.profile__title--languages::before {
   content: url("../../images/icons/languages-icon.svg");
   display: inline-block;
   margin-right: 10px;
   width: 20px;
   height: 20px;
+}
+
+.profile .hobbies.card.container {
+  position: relative;
+  grid-auto-flow: row;
+  gap: 20px;
+}
+
+.profile .hobbies .label::before {
+  content: url("../../images/icons/hobbies-icon.svg");
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+  width: 15px;
+  height: auto;
+}
+
+.profile .hobbies__image {
+  width: 50px;
+  height: auto;
+}
+
+.profile .hobbies__image__label {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 215px;
+  margin-bottom: 20px;
+  color: #f7f7f7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.profile .hobbies__image:hover + p {
+  opacity: 1;
+}
+
+.profile .hobbies__image__wrapper {
+  margin-bottom: 40px;
 }
 
 .projects .card {

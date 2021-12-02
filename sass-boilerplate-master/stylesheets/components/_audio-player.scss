@@ -1,0 +1,79 @@
+audio::-webkit-media-controls-panel {
+  background: radial-gradient(
+    73.55% 73.55% at 50.17% 26.45%,
+    #363636 0%,
+    #141414 100%
+  );
+}
+
+audio::-webkit-media-controls {
+  &-panel,
+  &-mute-button,
+  &-play-button,
+  &-timeline-container,
+  &-current-time-display,
+  &-time-remaining-display,
+  &-timeline,
+  &-volume-slider-container,
+  &-volume-slider {
+    color: white;
+    border-radius: $border-radius-rect;
+    transition: $transition-duration;
+
+    @include on-event {
+      background-color: $brand-color;
+      color: #fff;
+    }
+  }
+}
+
+.song.card.container {
+  padding: 10px;
+  place-items: start;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 80% 20%;
+  gap: 0;
+  column-gap: 20px;
+}
+
+.song {
+  &__image {
+    grid-column: 1;
+    grid-row: 1;
+
+    img {
+      width: 100px;
+      height: auto;
+      border-radius: $border-radius-rect;
+    }
+  }
+
+  &__info {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: start;
+    align-self: center;
+
+    .label::before {
+      content: image("icons/headphones-icon.svg", "../../");
+      display: inline-block;
+      position: relative;
+      top: 2px;
+      margin-right: 5px;
+      width: 15px;
+      height: 15px;
+    }
+
+    &--name {
+      color: $white-color;
+    }
+  }
+}
+
+audio {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  height: 50px;
+  margin-bottom: 5px;
+  border-radius: $border-radius-rect;
+}

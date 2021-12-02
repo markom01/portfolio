@@ -2,10 +2,7 @@
   @include card--skin;
   @include grid;
   width: max-content;
-
-  .cards__wrapper {
-    grid-template-columns: repeat(auto-fill, 300px);
-  }
+  gap: 30px;
 
   .cards__heading {
     &--front-end::before {
@@ -28,12 +25,12 @@
   } 
 
   &__icon {
-    height: 80px;
+    height: 50px;
     width: auto;
   }
 
   &__progress-bar {
-    width: 200px;
+    width: 150px;
     height: 20px;
     border-radius: $border-radius;
     background-color: $text-color;
@@ -55,11 +52,19 @@
       }
 
       &--sass {
+        width: 35%;
+      }
+
+      &--git {
         width: 25%;
       }
 
       &--figma {
         width: 60%;
+      }
+
+      &--xd {
+        width: 20%;
       }
 
       &--photoshop {
@@ -96,11 +101,27 @@
     }
   }
 
+  &--git:hover {
+    @include colored-card(10, 86%, 57%);
+
+    .card__progress-bar__fill {
+      background-color: hsl(10, 86%, 57%);
+    }
+  }
+
   &--figma:hover {
     @include colored-card(6, 100%, 69%);
 
     .card__progress-bar__fill {
       background-color: hsl(6, 100%, 69%);
+    }
+  }
+
+  &--xd:hover {
+    @include colored-card(303, 100%, 69%);
+
+    .card__progress-bar__fill {
+      background-color: hsl(303, 100%, 69%);
     }
   }
 
@@ -119,4 +140,8 @@
       background-color: hsl(36, 100%, 50%);
     }
   }
+}
+
+.cards__wrapper {
+  grid-template-columns: repeat(auto-fill, 231px);
 }
