@@ -20,16 +20,29 @@ form {
     label {
       color: $text-color;
     }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      background-color: hsl(0, 0%, 15%);
+      
+      @include on-event {
+        background-color: hsl(0, 0%, 20%);
+        border: none;
+        box-shadow: none;
+      }
+    }
   
     input[type="text"],
     input[type="email"],
     textarea,
     &__radio__wrapper {
+      border: 0px;
       margin: 20px auto;
       width: 300px;
       max-width: 60vw;
       padding: 10px;
-  
+
       &:focus {
         outline: 0;
       }

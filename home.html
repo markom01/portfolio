@@ -3,18 +3,20 @@
     <head>
         <meta charset="UTF-8">    
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Personal CV Website">
-        <meta name="keywords" content="CV, Curriculum Vitae, Portfolio, Personal Portfolio, Web Developer
+        <meta name="description" content="Portfolio Website">
+        <meta name="keywords" content="Portfolio, Personal Portfolio, Web Developer
         Front-End Web Developer, UI Developer, UI, UX">
         <meta name="author" content="Marko Meseldžija">
 
         <link rel="stylesheet" href="./sass-boilerplate-master/stylesheets/main.css">
         <link rel="icon" type="icon/svg" href="./images/profile/Logo.svg"/>
-        <title>CV - Home | Marko Meseldžija</title>
+        <title>Portfolio | Marko Meseldžija</title>
     </head>
 
     <body>
         <a id="top"></a>
+
+        <div class="blurry-circle"></div>
             
         <!-- Header -->
         
@@ -47,7 +49,7 @@
                             <a href="#projects">Projects</a>
                         </li>
                         <li class="menu__list__item">
-                            <a href="#experience">Expereince</a>
+                            <a href="#experience">Experience</a>
                         </li>
                         <li class="menu__list__item">
                             <a href="#education">Education</a>
@@ -104,54 +106,30 @@
                 <div class="wrapper cards__wrapper">
                     <div class="card card--html5 container">
                         <img class="card__icon" src="./images/icons/html5-icon.svg" alt="HTML Icon">
-                        <div class="card__progress-bar">
-                            <div class="card__progress-bar__fill card__progress-bar__fill--html5"></div>
-                        </div>
                     </div>
                     <div class="card card--css3 container">
                         <img class="card__icon" src="./images/icons/css3-icon.svg" alt="CSS3 Icon">
-                        <div class="card__progress-bar">
-                            <div class="card__progress-bar__fill card__progress-bar__fill--css3"></div>
-                        </div>
                     </div>
                     <div class="card card--sass container">
                         <img class="card__icon" src="./images/icons/sass-icon.svg" alt="Sass Icon">
-                        <div class="card__progress-bar">
-                            <div class="card__progress-bar__fill card__progress-bar__fill--sass"></div>
-                        </div>
                     </div>
                     <div class="card card--git container">
                         <img class="card__icon" src="./images/icons/git-icon.svg" alt="Git Icon">
-                        <div class="card__progress-bar">
-                            <div class="card__progress-bar__fill card__progress-bar__fill--git"></div>
-                        </div>
                     </div>
                 </div>
                 <h3 class="cards__heading--ui-ux">UI/UX Design</h3>
                 <div class="wrapper cards__wrapper">
                     <div class="card card--figma container">
                         <img class="card__icon" src="./images/icons/figma-icon.svg" alt="Figma Icon">
-                        <div class="card__progress-bar">
-                            <div class="card__progress-bar__fill card__progress-bar__fill--figma"></div>
-                        </div>
                     </div>
                     <div class="card card--xd container">
                         <img class="card__icon" src="./images/icons/xd-icon.svg" alt="Adobe XD Icon">
-                        <div class="card__progress-bar">
-                            <div class="card__progress-bar__fill card__progress-bar__fill--xd"></div>
-                        </div>
                     </div>
                     <div class="card card--photoshop container">
                         <img class="card__icon" src="./images/icons/photoshop-icon.svg" alt="Photoshop Icon">
-                        <div class="card__progress-bar">
-                            <div class="card__progress-bar__fill card__progress-bar__fill--photoshop"></div>
-                        </div>
                     </div>
                     <div class="card card--illustrator container">
                         <img class="card__icon" src="./images/icons/illustrator-icon.svg" alt="Illustrator Icon">
-                        <div class="card__progress-bar">
-                            <div class="card__progress-bar__fill card__progress-bar__fill--illustrator"></div>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -170,28 +148,32 @@
                         <h3>Mare Car Design Website</h3>
                         <a href="https://marecardesign.netlify.app" class="button button--secondary">Visit Website</a>
                     </div>
-                    <div class="projects__image__slider projects__image__slider--mcd">
-                        <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
-                        <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
-                        <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
-                        <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
-                        <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
-                        <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
+                    <div class="projects__image__slider__wrapper">
+                        <div class="projects__image__slider projects__image__slider--mcd">
+                            <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
+                            <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
+                            <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
+                            <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
+                            <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
+                            <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
+                        </div>
                     </div>
-                    <div class="card card--cv">
+                    <div class="card card--portfolio">
                         <div class="card__image-box">
                             <div class="card__image card__image--mcd"></div>
                         </div>
                         <h3>Portfolio Website</h3>
                         <a href="#top" class="button button--secondary">Visit Website</a>
                     </div>
-                    <div class="projects__image__slider projects__image__slider--cv">
-                        <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
-                        <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
-                        <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
-                        <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
-                        <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
-                        <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
+                    <div class="projects__image__slider__wrapper">
+                        <div class="projects__image__slider projects__image__slider--portfolio">
+                            <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
+                            <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
+                            <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
+                            <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
+                            <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
+                            <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
+                        </div>
                     </div>
                 </div>
 
@@ -202,7 +184,7 @@
             <a id="experience"></a>
 
             <section class="timeline container">
-                <h2>Expereince</h2>
+                <h2>Experience</h2>
                 <div class="wrapper">
                     <div class="card card--my-brand container">
                         <p class="timeline__date label">07.2019 - Present</p>
@@ -211,7 +193,7 @@
                             <img src="./images/icons/MCD-Logo-colored.svg" class="timeline__image timeline__image--bottom" alt="MCD Logo Colored">
                             <img src="./images/icons/MCD-Logo-white.svg" class="timeline__image timeline__image--top" alt="MCD Logo Colored">
                         </a>
-                        <p class="expereince__description">Making Car Wrap Designs, Illustrations & Sketches in PS and AI.
+                        <p class="experience__description">Making Car Wrap Designs, Illustrations & Sketches in PS and AI.
                             <br>Writing posts and documents in IT industry.
                         </p>
                     </div>
@@ -222,7 +204,7 @@
                             <img src="./images/icons/datadev-color.png" class="timeline__image timeline__image--bottom" alt="DataDEV Colored Logo">
                             <img src="./images/icons/datadev.png" class="timeline__image timeline__image--top" alt="DataDEV Logo">
                         </a>
-                        <p class="expereince__description">Working on smaller projects with company software on image blurring.</p>
+                        <p class="experience__description">Working on smaller projects with company software on image blurring.</p>
                     </div>
                     <div class="card card--ewasoft-internship container">
                         <p class="timeline__date label">05.2018</p>
@@ -231,7 +213,7 @@
                             <img src="./images/icons/ewasoft-color.png" class="timeline__image timeline__image--bottom" alt="Ewasoft (Former fSD)">
                             <img src="./images/icons/ewasoft.png" class="timeline__image timeline__image--top" alt="Ewasoft (Former fSD)">
                         </a>
-                        <p class="expereince__description">One-week Computer Technician Internship with a goal to 
+                        <p class="experience__description">One-week Computer Technician Internship with a goal to 
                             get basic timeline with computer hardware & software.</p>
                     </div>
                 </div>
@@ -251,7 +233,7 @@
                             <img src="./images/icons/ftn-colored.png" class="timeline__image timeline__image--bottom" alt="FTN Colored Logo">
                             <img src="./images/icons/ftn.png" class="timeline__image timeline__image--top" alt="FTN Colored Logo">
                         </a>                        
-                        <p class="expereince__description">II year of study, where I expanded my C programming language knowledge 
+                        <p class="experience__description">II year of study, where I expanded my C programming language knowledge 
                             and learned Assembly language. Currently learning C++.
                         </p>
                     </div>
@@ -262,7 +244,7 @@
                             <img src="./images/icons/ets.png" class="timeline__image timeline__image--bottom" alt="ETŠ Mihajlo Pupin">
                             <img src="./images/icons/ets-colored.png" class="timeline__image timeline__image--top" alt="ETŠ Mihajlo Pupin">
                         </a>                        
-                        <p class="expereince__description">Completed course where I learned C & C# programming languages.</p>
+                        <p class="experience__description">Completed course where I learned C & C# programming languages.</p>
                     </div>
                 </div>
             </section>
@@ -410,7 +392,7 @@
                                 <a href="#projects">Projects</a>
                             </li>
                             <li class="footer__nav__list__item">
-                                <a href="#experience">Expereince</a>
+                                <a href="#experience">Experience</a>
                             </li>
                             <li class="footer__nav__list__item">
                                 <a href="#education">Education</a>

@@ -18,13 +18,26 @@
 
     &__slider {
       display: flex;
-      overflow-x: auto;
+      overflow-x: scroll;
       scroll-snap-type: x mandatory;
       margin: {
         top: 50px;
         bottom: 50px;
-
       }
+
+      &__wrapper {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          bottom: 20px;
+          right: 10px;
+          content: 'Scroll left →';
+          font-size: 15px;
+          color: $text-color;
+        }
+      }
+
       
       &::-webkit-scrollbar {
         width: 10px;

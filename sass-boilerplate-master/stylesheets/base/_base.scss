@@ -10,6 +10,7 @@ html {
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
   animation: appear 1s;
+  overflow-x: hidden;
 }
 
 body {
@@ -56,6 +57,27 @@ textarea {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes blurry-circle-movement {
+  from {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(80vw);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(40vw, 70vh);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translate(-10vw, 80vh);
+  }
+  to {
+    opacity: 0;
   }
 }
 

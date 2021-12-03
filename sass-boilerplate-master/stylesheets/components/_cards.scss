@@ -25,120 +25,47 @@
   } 
 
   &__icon {
-    height: 50px;
+    height: 70px;
     width: auto;
-  }
-
-  &__progress-bar {
-    width: 150px;
-    height: 20px;
-    border-radius: $border-radius;
-    background-color: $text-color;
-
-    &__fill {
-      position: relative;
-      height: 100%;
-      border-top-left-radius: $border-radius;
-      border-bottom-left-radius: $border-radius;
-      background-color: $brand-color;
-      transition: $transition-duration;
-
-      &--html5 {
-        width: 50%;
-      }
-
-      &--css3 {
-        width: 70%;
-      }
-
-      &--sass {
-        width: 35%;
-      }
-
-      &--git {
-        width: 25%;
-      }
-
-      &--figma {
-        width: 60%;
-      }
-
-      &--xd {
-        width: 20%;
-      }
-
-      &--photoshop {
-        width: 50%;
-      }
-
-      &--illustrator {
-        width: 40%;
-      }
-    }
   }
 
   &--html5:hover {
     @include colored-card(18, 88%, 55%);
-
-    .card__progress-bar__fill {
-      background-color: hsl(18, 88%, 55%);
-    }
   }
 
   &--css3:hover {
     @include colored-card(222, 88%, 55%);
-
-    .card__progress-bar__fill {
-      background-color: hsl(222, 88%, 55%);
-    }
   }
 
   &--sass:hover {
     @include colored-card(330, 53%, 60%);
-
-    .card__progress-bar__fill {
-      background-color: hsl(330, 53%, 60%);
-    }
   }
 
   &--git:hover {
     @include colored-card(10, 86%, 57%);
-
-    .card__progress-bar__fill {
-      background-color: hsl(10, 86%, 57%);
-    }
   }
 
   &--figma:hover {
     @include colored-card(6, 100%, 69%);
-
-    .card__progress-bar__fill {
-      background-color: hsl(6, 100%, 69%);
-    }
   }
 
   &--xd:hover {
     @include colored-card(303, 100%, 69%);
-
-    .card__progress-bar__fill {
-      background-color: hsl(303, 100%, 69%);
-    }
   }
 
   &--photoshop:hover {
     @include colored-card(205, 100%, 60%);
-
-    .card__progress-bar__fill {
-      background-color: hsl(205, 100%, 60%);
-    }
   }
 
   &--illustrator:hover {
     @include colored-card(36, 100%, 50%);
+  }
+}
 
-    .card__progress-bar__fill {
-      background-color: hsl(36, 100%, 50%);
-    }
+.cards {
+  .card {
+    width: 200px;
+    height: 200px;
   }
 }
 

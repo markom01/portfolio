@@ -33,16 +33,11 @@
 }
 
 @mixin card--skin {
+  position: relative;
   margin-top: 60px;
   margin-bottom: 35px;
   border-radius: $border-radius-rect;
-  background: radial-gradient(
-    73.55% 73.55% at 50.17% 26.45%,
-    #363636 0%,
-    #141414 100%
-  );
-  border: 0.5px solid rgba($color: $brand-color, $alpha: 0.2);
-  box-shadow: 0px 7px 50px rgba(83, 83, 83, 0.5);
+  background: hsl(0, 0%, 10%);
   transition: $transition-duration;
 
   @include on-event {
@@ -62,8 +57,8 @@
 }
 
 @mixin colored-card($h-value, $s-value, $l-value) {
-  border: 0.5px solid hsla($h-value, $s-value, $l-value, 0.3);
-  box-shadow: 0px 7px 50px hsla($h-value, $s-value, $l-value, 0.4);
+  border: 0.5px solid hsla($h-value, $s-value, $l-value, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla($h-value, $s-value, $l-value, 0.3);
 }
 
 @mixin interaction--primary {
