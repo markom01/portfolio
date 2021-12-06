@@ -1,6 +1,6 @@
 .card {
-  @include card--skin;
-  @include grid;
+  @extend %card--skin;
+  @extend %grid;
   width: max-content;
   gap: 30px;
 
@@ -70,5 +70,5 @@
 }
 
 .cards__wrapper {
-  grid-template-columns: repeat(auto-fill, 231px);
+  grid-template-columns: repeat(auto-fill, 250px);
 }

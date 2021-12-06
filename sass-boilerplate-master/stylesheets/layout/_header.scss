@@ -7,7 +7,7 @@ header {
     height: $header-height;
     // width: 100%;
     padding: 20px;
-    @include grid;
+    @extend %grid;
     justify-content: space-between;
     grid-template-columns: 1fr 30fr 1fr;
     grid-auto-flow: row;
@@ -18,4 +18,14 @@ header {
         display: block;
         content: image('bg/light-effect.png', '../../');
       }
+    .icon__wrapper {
+      position: fixed;
+      z-index: 1;
+
+      .icon--linkedin {
+        position: fixed;
+        right: 30px;
+
+      }
+    }
 }

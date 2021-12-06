@@ -1,5 +1,5 @@
 .nav-wrapper {
-    @include grid;
+    @extend %grid;
     position: fixed;
     border-radius: 50%;
     width: 35px;
@@ -8,8 +8,8 @@
 }
 
 .menu--toggle {
-    @include grid;
-    @include interaction--primary;
+    @extend %grid;
+    @extend %interaction--primary;
     bottom: 20px;
     left: 20px;
     transition: $transition-duration;
@@ -22,8 +22,8 @@
 }
 
 .goto-top {
-    @include grid;
-    @include interaction--primary;
+    @extend %grid;
+    @extend %interaction--primary;
     bottom: 20px;
     right: 20px;
     transition: $transition-duration;

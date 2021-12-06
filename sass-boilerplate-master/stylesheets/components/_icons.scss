@@ -1,5 +1,5 @@
 .icon {
-    @include interaction--secondary;
+    @extend %interaction--secondary;
     width: 26px;
     height: 26px;
     border-radius: $border-radius;

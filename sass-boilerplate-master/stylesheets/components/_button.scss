@@ -13,14 +13,14 @@
   transition: $transition-duration;
 
   &--primary {
-    @include interaction--primary;
+    @extend %interaction--primary;
 
     color: $brand-color;
     border: 2px solid $brand-color;
   }
 
   &--secondary {
-    @include interaction--secondary;
+    @extend %interaction--secondary;
 
     color: $white-color;
     border: 2px solid $brand-color;

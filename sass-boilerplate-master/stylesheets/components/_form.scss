@@ -1,11 +1,16 @@
+#form__container {
+  padding: 0;
+}
+
 form {
-    @include card--skin;
+    @extend %card--skin;
     width: 900px;
     max-width: 80vw;
     padding: 60px 30px;
     margin: auto;
     margin-top: 50px;
   }
+
   
   .form {
     display: grid;
@@ -13,9 +18,6 @@ form {
     gap: 40px;
     margin-bottom: 50px;
   
-    .container {
-      padding: 0;
-    }
   
     label {
       color: $text-color;

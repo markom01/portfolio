@@ -7,23 +7,22 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/markom01/cv">
-    <img src="./images/Logo.svg" alt="Logo" width="80" height="80">
+  <a href="https://github.com/markom01/portfolio">
+    <img src="./images/profile/Logo.svg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Personal CV Website</h3>
+<h3 align="center">Portfolio Website</h3>
 
   <p align="center">
-    Web Version of my CV 
     <br />
     <a href="https://github.com/markom01/cv"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://marko-meseldzija-cv.netlify.app">View Demo</a>
+    <a href="https://marko-meseldzija.netlify.app">View Demo</a>
     ·
-    <a href="https://github.com/markom01/cv/issues">Report Bug</a>
+    <a href="https://github.com/markom01/portfolio/issues">Report Bug</a>
     ·
-    <a href="https://github.com/markom01/cv/issues">Request Feature</a>
+    <a href="https://github.com/markom01/portfolio/issues">Request Feature</a>
   </p>
 </div>
 
@@ -114,9 +113,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
  markomesa01@gmail.com
  
-[Project Link](https://github.com/markom01/cv)
+[Project Link](https://github.com/markom01/portfolio)
 
-[Live Demo](https://marko-meseldzija-cv.netlify.app)
+[Live Demo](https://marko-meseldzija.netlify.app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

@@ -42,7 +42,7 @@
     }
     
     ul {
-        @include grid;
+        @extend %grid;
 
         position: absolute;
         padding: {
@@ -60,7 +60,7 @@
         color: $brand-color;
         
         @include on-event {
-            @include interaction--primary;
+            @extend %interaction--primary;
         }
     }
 }

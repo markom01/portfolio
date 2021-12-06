@@ -3,8 +3,10 @@
 // -----------------------------------------------------------------------------
 $border-radius: 100vw;
 $border-radius-rect: 10px;
+
 $header-height: 80px;
 $hero-height: 90vh;
+
 $transition-duration: 0.3s;
 
 
@@ -14,12 +16,6 @@ $transition-duration: 0.3s;
 /// Regular font family
 /// @type List
 $text-font-stack: 'Myriad Pro', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-
-/// Code (monospace) font family
-/// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
-
 
 
 
@@ -39,25 +35,13 @@ $white-color: hsl(0, 0%, 97%) !default;
 $brand-color: hsl(13, 87%, 54%) !default;
 $glass-color: hsla(0, 0%, 97%, 0.25);
 
-/// Light grey
-/// @type Color
-$light-grey: hsl(0, 0%, 93%) !default;
-
-/// Medium grey
-/// @type Color
-$mid-grey: hsl(0, 0%, 60%) !default;
-
-/// Dark grey
-/// @type Color
-$dark-grey: hsl(0, 0%, 27%) !default;
-
 
 
 
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1180px !default;
+$max-width: 80vw !default;
 
 
 
@@ -71,13 +55,3 @@ $breakpoints: (
   'medium': 768px,
   'large': 1024px,
 ) !default;
-
-
-
-
-
-/// Relative or absolute URL where all assets are served from
-/// @type String
-/// @example scss - When using a CDN
-///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
