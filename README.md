@@ -2,8 +2,6 @@
 
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/marecardesigner/)
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -15,7 +13,7 @@
 
   <p align="center">
     <br />
-    <a href="https://github.com/markom01/cv"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/markom01/portfolio"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://marko-meseldzija.netlify.app">View Demo</a>
@@ -25,8 +23,6 @@
     <a href="https://github.com/markom01/portfolio/issues">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -45,43 +41,38 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+![Mockup](https://raw.githubusercontent.com/markom01/portfolio/main/images/portfolio/Safari-Dark-Mode.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ### Built With
 
-* [HTML5](https://html.spec.whatwg.org//)
-* [Sass](https://sass-lang.com/) [(SCSS Sytnax)](https://sass-lang.com/documentation/syntax)
+- [HTML5](https://html.spec.whatwg.org//)
+- [Sass](https://sass-lang.com/) [(SCSS Sytnax)](https://sass-lang.com/documentation/syntax)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
 <!-- ROADMAP -->
+
 ## Roadmap
 
 - [HTML]
-    - Semantic Structure
-    - Cross-browser compatible
-    - Accessible
-- [Sass] 
-    - RWD
-    - Dark Theme
-    - Grid Layout
+  - Semantic Structure
+  - Cross-browser compatible
+  - Accessible
+- [Sass]
+  - RWD
+  - Dark Theme
+  - Grid Layout
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -97,41 +88,38 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
- markomesa01@gmail.com
- 
+markomesa01@gmail.com
+
 [Project Link](https://github.com/markom01/portfolio)
 
 [Live Demo](https://marko-meseldzija.netlify.app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/markom01/cv.svg?style=for-the-badge
-[contributors-url]: https://github.com/markom01/cv/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/markom01/cv.svg?style=for-the-badge
-[forks-url]: https://github.com/markom01/cv/network/members
-[stars-shield]: https://img.shields.io/github/stars/markom01/cv.svg?style=for-the-badge
-[stars-url]: https://github.com/markom01/cv/stargazers
-[issues-shield]: https://img.shields.io/github/issues/markom01/cv.svg?style=for-the-badge
-[issues-url]: https://github.com/markom01/cv/issues
-[license-shield]: https://img.shields.io/github/license/markom01/cv.svg?style=for-the-badge
-[license-url]: https://github.com/markom01/cv/blob/master/LICENSE.txt
+
+[contributors-shield]: https://img.shields.io/github/contributors/markom01/portfolio.svg?style=for-the-badge
+[contributors-url]: https://github.com/markom01/portfolio/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/markom01/portfolio.svg?style=for-the-badge
+[forks-url]: https://github.com/markom01/portfolio/network/members
+[stars-shield]: https://img.shields.io/github/stars/markom01/portfolio.svg?style=for-the-badge
+[stars-url]: https://github.com/markom01/portfolio/stargazers
+[issues-shield]: https://img.shields.io/github/issues/markom01/portfolio.svg?style=for-the-badge
+[issues-url]: https://github.com/markom01/portfolio/issues
+[license-shield]: https://img.shields.io/github/license/markom01/portfolio.svg?style=for-the-badge
+[license-url]: https://github.com/markom01/portfolio/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/marecardesigner
-[product-screenshot]: images/screenshot.png

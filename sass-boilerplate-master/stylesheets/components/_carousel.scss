@@ -10,8 +10,7 @@
     margin-right: 50px;
     border-radius: $border-radius-rect;
     scroll-snap-align: start;
-    
-    
+
     &:last-of-type {
       margin-right: 0;
     }
@@ -32,13 +31,12 @@
           position: absolute;
           bottom: 20px;
           right: 10px;
-          content: 'Scroll left →';
+          content: "Scroll left →";
           font-size: 15px;
           color: $text-color;
         }
       }
 
-      
       &::-webkit-scrollbar {
         width: 10px;
         height: 10px;
@@ -47,12 +45,11 @@
           background: black;
           border-radius: 10px;
         }
-        
+
         &-track {
           background: transparent;
         }
       }
-
     }
   }
 }

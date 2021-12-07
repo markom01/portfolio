@@ -1,12 +1,11 @@
 .icon {
-    @extend %interaction--secondary;
-    width: 26px;
-    height: 26px;
-    border-radius: $border-radius;
-    transition: $transition-duration;
+  @extend %interaction--secondary;
+  width: 26px;
+  height: 26px;
+  border-radius: $border-radius;
+  transition: $transition-duration;
 
-    &--front-end {
-        border-radius: 0;
-    }
-    
+  &--front-end {
+    border-radius: 0;
+  }
 }

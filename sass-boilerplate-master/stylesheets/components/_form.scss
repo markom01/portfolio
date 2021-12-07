@@ -3,61 +3,58 @@
 }
 
 form {
-    @extend %card--skin;
-    width: 900px;
-    max-width: 80vw;
-    padding: 60px 30px;
-    margin: auto;
-    margin-top: 50px;
+  @extend %card--skin;
+  width: 900px;
+  max-width: 80vw;
+  padding: 60px 30px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+
+  label {
+    color: $text-color;
   }
 
-  
-  .form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-bottom: 50px;
-  
-  
-    label {
-      color: $text-color;
-    }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    background-color: hsl(0, 0%, 15%);
 
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      background-color: hsl(0, 0%, 15%);
-      
-      @include on-event {
-        background-color: hsl(0, 0%, 20%);
-        border: none;
-        box-shadow: none;
-      }
-    }
-  
-    input[type="text"],
-    input[type="email"],
-    textarea,
-    &__radio__wrapper {
-      border: 0px;
-      margin: 20px auto;
-      width: 300px;
-      max-width: 60vw;
-      padding: 10px;
-
-      &:focus {
-        outline: 0;
-      }
-    }
-  
-    &__radio__wrapper {
-      text-align: start;
-      padding: 0;
-  
-      &__label {
-        text-align: center;
-        margin: auto;
-      }
+    @include on-event {
+      background-color: hsl(0, 0%, 20%);
+      border: none;
+      box-shadow: none;
     }
   }
-  
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  &__radio__wrapper {
+    border: 0px;
+    margin: 20px auto;
+    width: 300px;
+    max-width: 60vw;
+    padding: 10px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__radio__wrapper {
+    text-align: start;
+    padding: 0;
+
+    &__label {
+      text-align: center;
+      margin: auto;
+    }
+  }
+}

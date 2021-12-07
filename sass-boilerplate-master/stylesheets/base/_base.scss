@@ -1,4 +1,4 @@
-  // -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-image: image('bg/blurred-polygonal-background.png', '../../');
+  background-image: image("bg/blurred-polygonal-background.jpg", "../../");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
@@ -21,8 +21,9 @@ section:not(.header) {
   margin-bottom: 200px;
 }
 
-section,footer {
-  min-height: 95vh;
+section,
+footer {
+  min-height: 100vh;
 }
 
 .header {
@@ -60,8 +61,6 @@ textarea {
     opacity: 1;
   }
 }
-
-
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing

@@ -15,18 +15,18 @@
           box-shadow: 0px 0px 30px 1px rgba(240, 80, 36, 0.3);
 }
 
-.wrapper, header, footer, .card, .menu ul, .nav-wrapper, .menu--toggle, .goto-top, .hero.container {
+.wrapper, header, footer, .card, .menu ul, .nav-wrapper, .menu--toggle, .goto-top {
   display: -ms-grid;
   display: grid;
   place-items: center;
 }
 
-.button--primary:hover, .menu--close:hover, .menu--toggle:hover, .goto-top:hover, .button--primary:active, .menu--close:active, .menu--toggle:active, .goto-top:active, .button--primary:focus, .menu--close:focus, .menu--toggle:focus, .goto-top:focus {
+.button--primary:hover, .menu--toggle:hover, .goto-top:hover, .button--primary:active, .menu--toggle:active, .goto-top:active, .button--primary:focus, .menu--toggle:focus, .goto-top:focus {
   background: #f7f7f7;
   color: #f05024;
 }
 
-.button--secondary:hover, .icon:hover, .button--secondary:active, .icon:active, .button--secondary:focus, .icon:focus {
+.button--secondary:hover, .icon:hover, .menu--close:hover, .button--secondary:active, .icon:active, .menu--close:active, .button--secondary:focus, .icon:focus, .menu--close:focus {
   background: #f05024;
   color: #f7f7f7;
 }
@@ -386,7 +386,7 @@ html {
 }
 
 body {
-  background-image: url("../../images/bg/blurred-polygonal-background.png");
+  background-image: url("../../images/bg/blurred-polygonal-background.jpg");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
@@ -395,8 +395,9 @@ section:not(.header) {
   margin-bottom: 200px;
 }
 
-section, footer {
-  min-height: 95vh;
+section,
+footer {
+  min-height: 100vh;
 }
 
 .header {
@@ -510,8 +511,8 @@ h3 {
 }
 
 label,
-input[type=text],
-input[type=email],
+input[type="text"],
+input[type="email"],
 textarea {
   font-size: 15px;
   color: #9c9c9c;
@@ -560,16 +561,21 @@ header::after {
 
 header .icon__wrapper {
   position: fixed;
+  top: 30px;
   z-index: 1;
 }
 
-header .icon__wrapper .icon--linkedin {
-  position: fixed;
-  right: 30px;
+header .icon__wrapper--linkedin {
+  right: 2vw;
+}
+
+header .icon__wrapper--github {
+  left: 2vw;
 }
 
 footer {
-  background-image: url("../../images/bg/blurred-polygonal-background-rotated.png");
+  position: relative;
+  background-image: url("../../images/bg/blurred-polygonal-background-rotated.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -601,7 +607,13 @@ footer .footer__copyright {
   color: #9c9c9c;
 }
 
+footer .footer__copyright__link {
+  position: absolute;
+  bottom: 20px;
+}
+
 .button {
+  display: inline-block;
   cursor: pointer;
   padding: 12.5px 20px;
   font-size: 15px;
@@ -753,7 +765,7 @@ footer .footer__copyright {
   position: absolute;
   bottom: 20px;
   right: 10px;
-  content: 'Scroll left →';
+  content: "Scroll left →";
   font-size: 15px;
   color: #9c9c9c;
 }
@@ -861,7 +873,7 @@ form {
   top: 0;
   height: 100%;
   padding-top: 20px;
-  background-image: url("../../images/bg/blurred-polygonal-background-rotated.png");
+  background-image: url("../../images/bg/blurred-polygonal-background-rotated.jpg");
   background-size: cover;
   -webkit-animation: appear 0.3s;
           animation: appear 0.3s;
@@ -969,8 +981,8 @@ form {
 }
 
 .hero.container {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 .hero h1 {
@@ -1023,11 +1035,20 @@ form {
 .projects .card__image {
   width: 100%;
   height: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.projects .card__image--mcd {
   background: url("../../images/mcd/Glass-Morphism-Mockup.jpg");
   background-position: center;
   background-size: cover;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+}
+
+.projects .card__image--portfolio {
+  background: url("../../images/portfolio/Glass-Morphism-Mockup-Portfolio.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .projects .card__image:hover {

@@ -39,7 +39,7 @@
   @include on-event {
     @include colored-card(13, 87%, 54%);
   }
-} 
+}
 
 %grid {
   display: grid;
@@ -54,14 +54,14 @@
 
 %interaction--primary {
   @include on-event {
-        background: $white-color;
-        color: $brand-color;
-      }
+    background: $white-color;
+    color: $brand-color;
+  }
 }
 
 %interaction--secondary {
   @include on-event {
-        background: $brand-color;
-        color: $white-color;
-      }
+    background: $brand-color;
+    color: $white-color;
+  }
 }

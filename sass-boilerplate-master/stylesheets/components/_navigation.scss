@@ -1,52 +1,51 @@
 .nav-wrapper {
-    @extend %grid;
-    position: fixed;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    border: 1px solid $brand-color;
+  @extend %grid;
+  position: fixed;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 1px solid $brand-color;
 }
 
 .menu--toggle {
-    @extend %grid;
-    @extend %interaction--primary;
-    bottom: 20px;
-    left: 20px;
-    transition: $transition-duration;
-    z-index: 1;
-    
-    &__icon {
-        color: $brand-color;
+  @extend %grid;
+  @extend %interaction--primary;
+  bottom: 20px;
+  left: 20px;
+  transition: $transition-duration;
+  z-index: 1;
 
-    }
+  &__icon {
+    color: $brand-color;
+  }
 }
 
 .goto-top {
-    @extend %grid;
-    @extend %interaction--primary;
-    bottom: 20px;
-    right: 20px;
-    transition: $transition-duration;
-    z-index: 1;
-    
-    &__arrow {
-        height: 35px;
-        color: $brand-color;
-    }
+  @extend %grid;
+  @extend %interaction--primary;
+  bottom: 20px;
+  right: 20px;
+  transition: $transition-duration;
+  z-index: 1;
+
+  &__arrow {
+    height: 35px;
+    color: $brand-color;
+  }
 }
 
 .nav {
-    li {
-        margin-top: 20px;
-        margin-bottom: 20px;
+  li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  a {
+    padding: 10px;
+    border-radius: $border-radius-rect;
+    transition: $transition-duration;
+
+    @include on-event {
+      background-color: $brand-color;
     }
-    a {
-        padding: 10px;
-        border-radius: $border-radius-rect;
-        transition: $transition-duration;
-        
-        @include on-event {
-            background-color: $brand-color;
-        }
-    }
+  }
 }

@@ -7,8 +7,8 @@ body {
   text-align: center;
 }
 
-h1, 
-h2, 
+h1,
+h2,
 h3 {
   margin-bottom: 30px;
 }
@@ -26,12 +26,12 @@ h2 {
 
   &::after {
     display: block;
-    content: image('bg/light-effect.png', '../../');
+    content: image("bg/light-effect.png", "../../");
   }
 }
 
 p,
-h3  {
+h3 {
   color: $text-color;
 }
 
@@ -44,11 +44,10 @@ h3 {
 }
 
 label,
-input[type=text],
-input[type=email],
+input[type="text"],
+input[type="email"],
 textarea {
   font-size: 15px;
   color: $text-color;
   text-align: center;
 }
-

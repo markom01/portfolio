@@ -3,37 +3,46 @@
 // -----------------------------------------------------------------------------
 
 footer {
-    @extend %grid;
+  position: relative;
+  @extend %grid;
 
-    background-image: image('bg/blurred-polygonal-background-rotated.png', '../../');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    
-    .footer__wrapper {
-        grid-template-columns: repeat(auto-fill, 320px);
-    }
+  background-image: image(
+    "bg/blurred-polygonal-background-rotated.jpg",
+    "../../"
+  );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 
-    .container {
-        padding-bottom: 0;
-    }
+  .footer__wrapper {
+    grid-template-columns: repeat(auto-fill, 320px);
+  }
 
-    .icons {
-        display: inline-block;
-        margin: 10px;
-    }
+  .container {
+    padding-bottom: 0;
+  }
 
-    a {
-        font-size: 15px;
-    }
+  .icons {
+    display: inline-block;
+    margin: 10px;
+  }
 
-    p { 
-        font-size: 15px;
-        color: $white-color;
-    }
+  a {
+    font-size: 15px;
+  }
 
-    .footer {
-        &__copyright {
-            color: $text-color;
-        }
+  p {
+    font-size: 15px;
+    color: $white-color;
+  }
+
+  .footer {
+    &__copyright {
+      color: $text-color;
+
+      &__link {
+        position: absolute;
+        bottom: 20px;
+      }
     }
+  }
 }

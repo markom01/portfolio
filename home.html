@@ -1,378 +1,639 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">    
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Portfolio Website">
-        <meta name="keywords" content="Portfolio, Personal Portfolio, Web Developer
-        Front-End Web Developer, UI Developer, UI, UX">
-        <meta name="author" content="Marko Meseldžija">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio Website" />
+    <meta
+      name="keywords"
+      content="Portfolio, Personal Portfolio, Web Developer
+        Front-End Web Developer, UI Developer, UI, UX"
+    />
+    <meta name="author" content="Marko Meseldžija" />
 
-        <link rel="stylesheet" href="./sass-boilerplate-master/stylesheets/main.css">
-        <link rel="icon" type="icon/svg" href="./images/profile/Logo.svg"/>
-        <title>Portfolio | Marko Meseldžija</title>
-    </head>
+    <link
+      rel="stylesheet"
+      href="./sass-boilerplate-master/stylesheets/main.css"
+    />
+    <link rel="icon" type="icon/svg" href="./images/profile/Logo.svg" />
+    <title>Portfolio | Marko Meseldžija</title>
+  </head>
 
-    <body>
-        <a id="top"></a>
-            
-        <!-- Header -->
-        
-        <section class="header">
+  <body>
+    <a id="top"></a>
 
-            <header>
-                
-                <a href="#menu" class="menu--toggle nav-wrapper">
-                    <div class="menu--toggle__icon">&vellip;</div>
-                </a>
-    
-                <!-- Menu -->
-    
-                <nav id="menu" class="menu nav">
-                    <a href="#menu--toggle" class="menu--close">
-                        <div class="menu--close__icon">X</div>
-                    </a>
-                    <h3>Menu</h3>
-                    <ul class="menu__list">
-                        <li class="menu__list__item">
-                            <a href="#top">Home</a>
-                        </li>
-                        <li class="menu__list__item">
-                            <a href="#profile">Profile</a>
-                        </li>
-                        <li class="menu__list__item">
-                            <a href="#skills">Skills</a>
-                        </li>
-                        <li class="menu__list__item">
-                            <a href="#projects">Projects</a>
-                        </li>
-                        <li class="menu__list__item">
-                            <a href="#experience">Experience</a>
-                        </li>
-                        <li class="menu__list__item">
-                            <a href="#education">Education</a>
-                        </li>
-                        <li class="menu__list__item">
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-                <a href="#main-menu-toggle" class="backdrop" hidden></a>
-    
-                <div class="icons">
-                    <a href="https://www.github.com/markom01" target="_blank" class="icon__wrapper">
-                        <img src="./images/icons/github-icon.svg" class="icon icon--github" alt="Github Icon">
-                    </a>
-                </div>
-                <a href="./images/profile/Logo.svg" class="header-logo__link" target="_blank">
-                    <img class="logo header__logo" src="./images/profile/Logo.svg" alt="Logo Icon">
-                </a>
-                <div class="icons">
-                    <a href="https://www.linkedin.com/in/marecardesigner" target="_blank" class="icon__wrapper">
-                        <img src="./images/icons/linkedin-icon.svg" class="icon icon--linkedin" alt="LinkedIn Icon">
-                    </a>
-                </div>
-            </header>
-        </section>
+    <!-- Header -->
 
-            
-        <main>
-              
-            <!-- Hero Section -->
-                
-            <a id="hero"></a>
+    <section class="header">
+      <header>
+        <a href="#menu" class="menu--toggle nav-wrapper">
+          <div class="menu--toggle__icon">&vellip;</div>
+        </a>
 
-            <section class="hero container">
-                <img class="hero__profile-picture" src="./images/profile/profile-picture.png" alt="Personal Image">
-                <p>Hi, my name is</p>
-                <h1>Marko Meseldžija</h1>
-                <p class="hero__copy">I'm intrested in <strong>Front-End Web Development</strong> & <strong>UI/UX Design</strong>.</p>
-                <a href="#profile" class="button button--primary">More About Me</a>
-                <a href="#top" class="nav-wrapper goto-top">
-                    <div class="goto-top__arrow">&uarr;</div>
-                </a>
-            </section>
-                            
-            <!-- Skills Section -->
+        <!-- Menu -->
 
-            <a id="skills"></a>
+        <nav id="menu" class="menu nav">
+          <a href="#menu--toggle" class="menu--close">
+            <div class="menu--close__icon">X</div>
+          </a>
+          <h3>Menu</h3>
+          <ul class="menu__list">
+            <li class="menu__list__item">
+              <a href="#top">Home</a>
+            </li>
+            <li class="menu__list__item">
+              <a href="#skills">Skills</a>
+            </li>
+            <li class="menu__list__item">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="menu__list__item">
+              <a href="#experience">Experience</a>
+            </li>
+            <li class="menu__list__item">
+              <a href="#education">Education</a>
+            </li>
+            <li class="menu__list__item">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#main-menu-toggle" class="backdrop" hidden></a>
 
-            <section class="cards container"> 
-                <h2>Skills</h2>
+        <div class="icons">
+          <a
+            href="https://www.github.com/markom01"
+            target="_blank"
+            class="icon__wrapper icon__wrapper--github"
+          >
+            <img
+              src="./images/icons/github-icon.svg"
+              class="icon icon--github"
+              alt="Github Icon"
+            />
+          </a>
+        </div>
+        <a
+          href="./images/profile/Logo.svg"
+          class="header-logo__link"
+          target="_blank"
+        >
+          <img
+            class="logo header__logo"
+            src="./images/profile/Logo.svg"
+            alt="Logo Icon"
+          />
+        </a>
+        <div class="icons">
+          <a
+            href="https://www.linkedin.com/in/marecardesigner"
+            target="_blank"
+            class="icon__wrapper icon__wrapper--linkedin"
+          >
+            <img
+              src="./images/icons/linkedin-icon.svg"
+              class="icon icon--linkedin"
+              alt="LinkedIn Icon"
+            />
+          </a>
+        </div>
+      </header>
+    </section>
 
-                <h3 class="cards__heading--front-end">Front-End Web Development</h3>
-                <div class="wrapper cards__wrapper">
-                    <div class="card card--html5 container">
-                        <img class="card__icon" src="./images/icons/html5-icon.svg" alt="HTML Icon">
-                    </div>
-                    <div class="card card--css3 container">
-                        <img class="card__icon" src="./images/icons/css3-icon.svg" alt="CSS3 Icon">
-                    </div>
-                    <div class="card card--sass container">
-                        <img class="card__icon" src="./images/icons/sass-icon.svg" alt="Sass Icon">
-                    </div>
-                    <div class="card card--git container">
-                        <img class="card__icon" src="./images/icons/git-icon.svg" alt="Git Icon">
-                    </div>
-                </div>
-                <h3 class="cards__heading--ui-ux">UI/UX Design</h3>
-                <div class="wrapper cards__wrapper">
-                    <div class="card card--figma container">
-                        <img class="card__icon" src="./images/icons/figma-icon.svg" alt="Figma Icon">
-                    </div>
-                    <div class="card card--xd container">
-                        <img class="card__icon" src="./images/icons/xd-icon.svg" alt="Adobe XD Icon">
-                    </div>
-                    <div class="card card--photoshop container">
-                        <img class="card__icon" src="./images/icons/photoshop-icon.svg" alt="Photoshop Icon">
-                    </div>
-                    <div class="card card--illustrator container">
-                        <img class="card__icon" src="./images/icons/illustrator-icon.svg" alt="Illustrator Icon">
-                    </div>
-                </div>
-            </section>
-                            
-            <!-- Projects Section -->
+    <main>
+      <!-- Hero Section -->
 
-            <a id="projects"></a>
+      <a id="hero"></a>
 
-            <section class="projects container">
-                <h2>Projects</h2>
-                <div class="wrapper">
-                    <div class="card card--mcd">
-                        <div class="card__image-box">
-                            <div class="card__image card__image--mcd"></div>
-                        </div>
-                        <h3>Mare Car Design Website</h3>
-                        <a href="https://marecardesign.netlify.app" class="button button--secondary">Visit Website</a>
-                    </div>
-                    <div class="projects__image__slider__wrapper">
-                        <div class="projects__image__slider projects__image__slider--mcd">
-                            <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
-                            <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
-                            <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
-                            <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
-                            <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
-                            <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
-                        </div>
-                    </div>
-                    <div class="card card--portfolio">
-                        <div class="card__image-box">
-                            <div class="card__image card__image--mcd"></div>
-                        </div>
-                        <h3>Portfolio Website</h3>
-                        <a href="#top" class="button button--secondary">Visit Website</a>
-                    </div>
-                    <div class="projects__image__slider__wrapper">
-                        <div class="projects__image__slider projects__image__slider--portfolio">
-                            <img class="projects__image" src="./images/mcd/iMac-Mockup.jpg" alt="iMac Mockup - MCD Website">
-                            <img class="projects__image" src="./images/mcd/Glass-Morphism-Mockup.jpg" alt="Glass Morphism Mockup - MCD Website">
-                            <img class="projects__image" src="./images/mcd/ipad-mockup.jpg" alt="Ipad Mockup - MCD Website">
-                            <img class="projects__image" src="./images/mcd/iPhone-Mockup.jpg" alt="Iphone Mockup - MCD Website">
-                            <img class="projects__image" src="./images/mcd/one-Iphone-mockup.jpg" alt="One Iphone Mockup - MCD Website">
-                            <img class="projects__image" src="./images/mcd/Safari-Mockup.jpg" alt="Safari Mockup - MCD Website">
-                        </div>
-                    </div>
-                </div>
+      <section class="hero container">
+        <img
+          class="hero__profile-picture"
+          src="./images/profile/profile-picture.png"
+          alt="Personal Image"
+        />
+        <p>Hi, my name is</p>
+        <h1>Marko Meseldžija</h1>
+        <p class="hero__copy">
+          I'm intrested in <strong>Front-End Web Development</strong> &
+          <strong>UI/UX Design</strong>.
+        </p>
+        <a href="#skills" class="button button--primary">My Skills</a>
+        <a href="#top" class="nav-wrapper goto-top">
+          <div class="goto-top__arrow">&uarr;</div>
+        </a>
+      </section>
 
-            </section>
-                            
-            <!-- Experience Section -->
+      <!-- Skills Section -->
 
-            <a id="experience"></a>
+      <a id="skills"></a>
 
-            <section class="timeline container">
-                <h2>Experience</h2>
-                <div class="wrapper">
-                    <div class="card card--my-brand container">
-                        <p class="timeline__date label">07.2019 - Present</p>
-                        <h3 class="timeline__role">Freelance Design & Copywriting</h3>
-                        <a href="https://marecardesign.netlify.app" target="_blank" class="timeline__image__wrapper timeline__image__wrapper--circle">
-                            <img src="./images/icons/MCD-Logo-colored.svg" class="timeline__image timeline__image--bottom" alt="MCD Logo Colored">
-                            <img src="./images/icons/MCD-Logo-white.svg" class="timeline__image timeline__image--top" alt="MCD Logo Colored">
-                        </a>
-                        <p class="experience__description">Making Car Wrap Designs, Illustrations & Sketches in PS and AI.
-                            <br>Writing posts and documents in IT industry.
-                        </p>
-                    </div>
-                    <div class="card card--datadev container">
-                        <p class="timeline__date label">07.2021 - 10.2021</p>
-                        <h3 class="timeline__role">Operator</h3>
-                        <a href="https://datadev-ds.com/image-blurring/" target="_blank" class="timeline__image__wrapper timeline__image__wrapper--rect">
-                            <img src="./images/icons/datadev-color.png" class="timeline__image timeline__image--bottom" alt="DataDEV Colored Logo">
-                            <img src="./images/icons/datadev.png" class="timeline__image timeline__image--top" alt="DataDEV Logo">
-                        </a>
-                        <p class="experience__description">Working on smaller projects with company software on image blurring.</p>
-                    </div>
-                    <div class="card card--ewasoft-internship container">
-                        <p class="timeline__date label">05.2018</p>
-                        <h3 class="timeline__role">High-School Intern</h3>
-                        <a href="https://www.ewasoft.ch" target="_blank" class="timeline__image__wrapper timeline__image__wrapper--rect">
-                            <img src="./images/icons/ewasoft-color.png" class="timeline__image timeline__image--bottom" alt="Ewasoft (Former fSD)">
-                            <img src="./images/icons/ewasoft.png" class="timeline__image timeline__image--top" alt="Ewasoft (Former fSD)">
-                        </a>
-                        <p class="experience__description">One-week Computer Technician Internship with a goal to 
-                            get basic timeline with computer hardware & software.</p>
-                    </div>
-                </div>
-            </section>
-                            
-            <!-- Education Section -->
+      <section class="cards container">
+        <h2>Skills</h2>
 
-            <a id="education"></a>
+        <h3 class="cards__heading--front-end">Front-End Web Development</h3>
+        <div class="wrapper cards__wrapper">
+          <div class="card card--html5 container">
+            <img
+              class="card__icon"
+              src="./images/icons/html5-icon.svg"
+              alt="HTML Icon"
+            />
+          </div>
+          <div class="card card--css3 container">
+            <img
+              class="card__icon"
+              src="./images/icons/css3-icon.svg"
+              alt="CSS3 Icon"
+            />
+          </div>
+          <div class="card card--sass container">
+            <img
+              class="card__icon"
+              src="./images/icons/sass-icon.svg"
+              alt="Sass Icon"
+            />
+          </div>
+          <div class="card card--git container">
+            <img
+              class="card__icon"
+              src="./images/icons/git-icon.svg"
+              alt="Git Icon"
+            />
+          </div>
+        </div>
+        <h3 class="cards__heading--ui-ux">UI/UX Design</h3>
+        <div class="wrapper cards__wrapper">
+          <div class="card card--figma container">
+            <img
+              class="card__icon"
+              src="./images/icons/figma-icon.svg"
+              alt="Figma Icon"
+            />
+          </div>
+          <div class="card card--xd container">
+            <img
+              class="card__icon"
+              src="./images/icons/xd-icon.svg"
+              alt="Adobe XD Icon"
+            />
+          </div>
+          <div class="card card--photoshop container">
+            <img
+              class="card__icon"
+              src="./images/icons/photoshop-icon.svg"
+              alt="Photoshop Icon"
+            />
+          </div>
+          <div class="card card--illustrator container">
+            <img
+              class="card__icon"
+              src="./images/icons/illustrator-icon.svg"
+              alt="Illustrator Icon"
+            />
+          </div>
+        </div>
+      </section>
 
-            <section class="timeline container">
-                <h2>Education</h2>
-                <div class="wrapper row__wrapper">
-                    <div class="card card--faculty container">
-                        <p class="timeline__date label">09.2020 - Present</p>
-                        <h3 class="timeline__role">Computing & Automation</h3>
-                        <a href="http://www.ftn.uns.ac.rs/n1065015669/racunarstvo-i-automatika" target="_blank" class="timeline__image__wrapper timeline__image__wrapper--circle">
-                            <img src="./images/icons/ftn-colored.png" class="timeline__image timeline__image--bottom" alt="FTN Colored Logo">
-                            <img src="./images/icons/ftn.png" class="timeline__image timeline__image--top" alt="FTN Colored Logo">
-                        </a>                        
-                        <p class="experience__description">II year of study, where I expanded my C programming language knowledge 
-                            and learned Assembly language. Currently learning C++.
-                        </p>
-                    </div>
-                    <div class="card card--high-school container">
-                        <p class="timeline__date label">08.2016 - 07.2020</p>
-                        <h3 class="timeline__role">Computer Techincian</h3>
-                        <a href="http://www.etspupin.edu.rs/2010/04/20/elektrotehnicar-racunara-2/" target="_blank" class="timeline__image__wrapper timeline__image__wrapper--circle">
-                            <img src="./images/icons/ets.png" class="timeline__image timeline__image--bottom" alt="ETŠ Mihajlo Pupin">
-                            <img src="./images/icons/ets-colored.png" class="timeline__image timeline__image--top" alt="ETŠ Mihajlo Pupin">
-                        </a>                        
-                        <p class="experience__description">Completed course where I learned C & C# programming languages.</p>
-                    </div>
-                </div>
-            </section>
-                            
-            <!-- Contact Section -->
+      <!-- Projects Section -->
 
-            <a id="contact"></a>
+      <a id="projects"></a>
 
-            <section class="container" id="form__container">
-                <h2>Contact</h2>
-
-                <form id="contact-form" data-netlify="true">
-
-                    <div class="form">
-
-                        <div class="form__contact-info__wrapper">
-                            <label for="form__name--first">First name:</label>
-                            <input class="card" type="text" id="form__name--first" name="form__name--first">
-                            <label for="form__name--last">Last name:</label>
-                            <input class="card" type="text" id="form__name--last" name="form__name--last">
-                            <label>Email:<input class="card" type="email" name="form__email"></label>
-                            
-                        </div>
-    
-                        <div class="form__textarea__wrapper">
-                            <label for="fmessage">Type message:</label>
-                            <textarea class="card" id="fmessage" name="message" rows="5" cols="33"></textarea>
-                            
-                            <p class="form__radio__wrapper__label label">Choose service:</p>
-                            <div class="form__radio__wrapper">
-                                <div class="form__radio">
-                                    <input type="radio" id="front-end" name="services" value="front-end">
-                                    <label for="front-end">Front End Web Development</label>
-                                </div>
-                                <div class="form__radio">
-                                    <input type="radio" id="ui-ux" name="services" value="ui-ux">
-                                    <label for="ui-ux">UI/UX Design</label>
-                                </div>
-                                <div class="form__radio">
-                                    <input type="radio" id="graphic" name="services" value="graphic">
-                                    <label for="graphic">Graphic Design</label>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="form__button__wrapper">
-                        <button type="submit" form="contact-form" value="Submit" class="button button--secondary">Submit</button>
-                    </div>
-                                        
-
-                  </form> 
-            </section>
-
-        </main>
-
-        <!-- Footer -->
-
-        <footer>
-            <div class="container">
-                <div class="wrapper footer__wrapper">
-                    <div class="footer__logotype container">
-                        <img src="./images/profile/Logo.svg" class="logo footer__logo" alt="Footer Logo Image">
-                        <h3 class="footer__headline">Marko Meseldžija</h3>
-                        <p class="footer__paragraph">Front-End Web Development <br> & UI/UX Design</p>
-                    </div>
-        
-                    <nav class="nav footer__nav container">
-                        <h3>Navigation</h3>
-                        <ul class="footer__nav__list">
-                            <li class="footer__nav__list__item">
-                                <a href="#top">Home</a>
-                            </li>
-                            <li class="footer__nav__list__item">
-                                <a href="#profile">Profile</a>
-                            </li>
-                            <li class="footer__nav__list__item">
-                                <a href="#skills">Skills</a>
-                            </li>
-                            <li class="footer__nav__list__item">
-                                <a href="#projects">Projects</a>
-                            </li>
-                            <li class="footer__nav__list__item">
-                                <a href="#experience">Experience</a>
-                            </li>
-                            <li class="footer__nav__list__item">
-                                <a href="#education">Education</a>
-                            </li>
-                            <li class="footer__nav__list__item">
-                                <a href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-
-                    <div class="footer__contact">
-                        <h3>Contact</h3>
-                        <div class="icons">
-                            <a href="https://www.github.com/markom01" target="_blank" class="icon__wrapper">
-                                <img src="./images/icons/github-icon.svg" class="icon icon--github" alt="Github Icon">
-                                <p class="footer__icon__label">Github</p>
-                            </a>
-                        </div>
-                        <div class="icons">
-                            <a href="https://www.linkedin.com/in/marecardesigner" target="_blank" class="icon__wrapper">
-                                <img src="./images/icons/linkedin-icon.svg" class="icon icon--linkedin" alt="LinkedIn Icon">
-                                <p class="footer__icon__label">LinkedIn</p>
-                            </a>
-                        </div>
-                        <div class="icons">
-                            <a href="mailto:marecardesign@gmail.com" target="_blank" class="icon__wrapper">
-                                <img src="./images/icons/email-icon.svg" class="icon icon--email" alt="Email Icon">
-                                <p class="footer__icon__label">Email</p>
-                            </a>
-                        </div>
-                        <div class="icons">
-                            <a href="#contact" class="icon__wrapper">
-                                <img src="./images/icons/form-icon.svg" class="icon icon--form" alt="Form Icon">
-                                <p class="footer__icon__label">Form</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+      <section class="projects container">
+        <h2>Projects</h2>
+        <div class="wrapper">
+          <div class="card card--mcd">
+            <div class="card__image-box">
+              <div class="card__image card__image--mcd"></div>
             </div>
-            <a class="footer__copyright__link" href="#top">
-                <p class="footer__copyright"> &copy; 2021 Marko Meseldžija</p>
+            <h3>Mare Car Design Website</h3>
+            <a
+              href="https://marecardesign.netlify.app"
+              class="button button--secondary"
+              >Visit Website</a
+            >
+          </div>
+          <div class="projects__image__slider__wrapper">
+            <div class="projects__image__slider projects__image__slider--mcd">
+              <img
+                class="projects__image"
+                src="./images/mcd/Glass-Morphism-Mockup.jpg"
+                alt="Glass Morphism Mockup - MCD Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/mcd/iMac-Mockup.jpg"
+                alt="iMac Mockup - MCD Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/mcd/ipad-mockup.jpg"
+                alt="Ipad Mockup - MCD Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/mcd/iPhone-Mockup.jpg"
+                alt="Iphone Mockup - MCD Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/mcd/one-Iphone-mockup.jpg"
+                alt="One Iphone Mockup - MCD Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/mcd/Safari-Mockup.jpg"
+                alt="Safari Mockup - MCD Website"
+              />
+            </div>
+          </div>
+          <div class="card card--portfolio">
+            <div class="card__image-box">
+              <div class="card__image card__image--portfolio"></div>
+            </div>
+            <h3>Portfolio Website</h3>
+            <a href="#top" class="button button--secondary">Visit Website</a>
+          </div>
+          <div class="projects__image__slider__wrapper">
+            <div
+              class="projects__image__slider projects__image__slider--portfolio"
+            >
+              <img
+                class="projects__image"
+                src="./images/portfolio/Glass-Morphism-Mockup-Portfolio.jpg"
+                alt="Glass Morphism Mockup - Portfolio Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/portfolio/iMac.jpg"
+                alt="iMac - Portfolio Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/portfolio/iMac_2.jpg"
+                alt="IMac_2 Mockup - Portfolio Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/portfolio/iPad.jpg"
+                alt="Ipad Mockup - Portfolio Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/portfolio/iPhone_1.jpg"
+                alt="iPhone_1 Mockup - Portfolio Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/portfolio/iPhone_2.jpg"
+                alt="iPhone_2 Mockup - Portfolio Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/portfolio/iPhone_3.jpg"
+                alt="iPhone_3 Mockup - Portfolio Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/portfolio/Macbook.jpg"
+                alt="Macbook Mockup - Portfolio Website"
+              />
+              <img
+                class="projects__image"
+                src="./images/portfolio/Safari-Dark-Mode.png"
+                alt="Safari Mockup - Portfolio Website"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+
+      <a id="experience"></a>
+
+      <section class="timeline container">
+        <h2>Experience</h2>
+        <div class="wrapper">
+          <div class="card card--my-brand container">
+            <p class="timeline__date label">07.2019 - Present</p>
+            <h3 class="timeline__role">Freelance Design & Copywriting</h3>
+            <a
+              href="https://marecardesign.netlify.app"
+              target="_blank"
+              class="timeline__image__wrapper timeline__image__wrapper--circle"
+            >
+              <img
+                src="./images/icons/MCD-Logo-colored.svg"
+                class="timeline__image timeline__image--bottom"
+                alt="MCD Logo Colored"
+              />
+              <img
+                src="./images/icons/MCD-Logo-white.svg"
+                class="timeline__image timeline__image--top"
+                alt="MCD Logo"
+              />
             </a>
+            <p class="experience__description">
+              Making Car Wrap Designs, Illustrations & Sketches in PS and AI.
+              <br />Writing posts and documents in IT industry.
+            </p>
+          </div>
+          <div class="card card--datadev container">
+            <p class="timeline__date label">07.2021 - 10.2021</p>
+            <h3 class="timeline__role">Operator</h3>
+            <a
+              href="https://datadev-ds.com/image-blurring/"
+              target="_blank"
+              class="timeline__image__wrapper timeline__image__wrapper--rect"
+            >
+              <img
+                src="./images/icons/datadev-color.png"
+                class="timeline__image timeline__image--bottom"
+                alt="DataDEV Colored Logo"
+              />
+              <img
+                src="./images/icons/datadev.png"
+                class="timeline__image timeline__image--top"
+                alt="DataDEV Logo"
+              />
+            </a>
+            <p class="experience__description">
+              Working on smaller projects with company software on image
+              blurring.
+            </p>
+          </div>
+          <div class="card card--ewasoft-internship container">
+            <p class="timeline__date label">05.2018</p>
+            <h3 class="timeline__role">High-School Intern</h3>
+            <a
+              href="https://www.ewasoft.ch"
+              target="_blank"
+              class="timeline__image__wrapper timeline__image__wrapper--rect"
+            >
+              <img
+                src="./images/icons/ewasoft-color.png"
+                class="timeline__image timeline__image--bottom"
+                alt="Ewasoft Colored (Former fSD)"
+              />
+              <img
+                src="./images/icons/ewasoft.png"
+                class="timeline__image timeline__image--top"
+                alt="Ewasoft (Former fSD)"
+              />
+            </a>
+            <p class="experience__description">
+              One-week Computer Technician Internship with a goal to get basic
+              timeline with computer hardware & software.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        </footer>
+      <!-- Education Section -->
 
-    </body>
+      <a id="education"></a>
 
+      <section class="timeline container">
+        <h2>Education</h2>
+        <div class="wrapper row__wrapper">
+          <div class="card card--faculty container">
+            <p class="timeline__date label">09.2020 - Present</p>
+            <h3 class="timeline__role">Computing & Automation</h3>
+            <a
+              href="http://www.ftn.uns.ac.rs/n1065015669/racunarstvo-i-automatika"
+              target="_blank"
+              class="timeline__image__wrapper timeline__image__wrapper--circle"
+            >
+              <img
+                src="./images/icons/ftn-colored.png"
+                class="timeline__image timeline__image--bottom"
+                alt="FTN Colored Logo"
+              />
+              <img
+                src="./images/icons/ftn.png"
+                class="timeline__image timeline__image--top"
+                alt="FTN Colored Logo"
+              />
+            </a>
+            <p class="experience__description">
+              II year of study, where I expanded my C programming language
+              knowledge and learned Assembly language. Currently learning C++.
+            </p>
+          </div>
+          <div class="card card--high-school container">
+            <p class="timeline__date label">08.2016 - 07.2020</p>
+            <h3 class="timeline__role">Computer Techincian</h3>
+            <a
+              href="http://www.etspupin.edu.rs/2010/04/20/elektrotehnicar-racunara-2/"
+              target="_blank"
+              class="timeline__image__wrapper timeline__image__wrapper--circle"
+            >
+              <img
+                src="./images/icons/ets.png"
+                class="timeline__image timeline__image--bottom"
+                alt="ETŠ Mihajlo Pupin"
+              />
+              <img
+                src="./images/icons/ets-colored.png"
+                class="timeline__image timeline__image--top"
+                alt="ETŠ Mihajlo Pupin Colored Logo"
+              />
+            </a>
+            <p class="experience__description">
+              Completed course where I learned C & C# programming languages.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+
+      <a id="contact"></a>
+
+      <section class="container" id="form__container">
+        <h2>Contact</h2>
+
+        <form id="contact-form" data-netlify="true">
+          <div class="form">
+            <div class="form__contact-info__wrapper">
+              <label for="form__name--first">First name:</label>
+              <input
+                class="card"
+                type="text"
+                id="form__name--first"
+                name="form__name--first"
+              />
+              <label for="form__name--last">Last name:</label>
+              <input
+                class="card"
+                type="text"
+                id="form__name--last"
+                name="form__name--last"
+              />
+              <label
+                >Email:<input class="card" type="email" name="form__email"
+              /></label>
+            </div>
+
+            <div class="form__textarea__wrapper">
+              <label for="fmessage">Type message:</label>
+              <textarea
+                class="card"
+                id="fmessage"
+                name="message"
+                rows="5"
+                cols="33"
+              ></textarea>
+
+              <p class="form__radio__wrapper__label label">Choose service:</p>
+              <fieldset class="form__radio__wrapper">
+                <div class="form__radio">
+                  <input
+                    type="radio"
+                    id="front-end"
+                    name="services"
+                    value="front-end"
+                  />
+                  <label for="front-end">Front End Web Development</label>
+                </div>
+                <div class="form__radio">
+                  <input
+                    type="radio"
+                    id="ui-ux"
+                    name="services"
+                    value="ui-ux"
+                  />
+                  <label for="ui-ux">UI/UX Design</label>
+                </div>
+                <div class="form__radio">
+                  <input
+                    type="radio"
+                    id="graphic"
+                    name="services"
+                    value="graphic"
+                  />
+                  <label for="graphic">Graphic Design</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="form__button__wrapper">
+            <button
+              type="submit"
+              form="contact-form"
+              value="Submit"
+              class="button button--secondary"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="container">
+        <div class="wrapper footer__wrapper">
+          <div class="footer__logotype container">
+            <img
+              src="./images/profile/Logo.svg"
+              class="logo footer__logo"
+              alt="Footer Logo Image"
+            />
+            <h3 class="footer__headline">Marko Meseldžija</h3>
+            <p class="footer__paragraph">
+              Front-End Web Development <br />
+              & UI/UX Design
+            </p>
+          </div>
+
+          <nav class="nav footer__nav container">
+            <h3>Navigation</h3>
+            <ul class="footer__nav__list">
+              <li class="footer__nav__list__item">
+                <a href="#top">Home</a>
+              </li>
+              <li class="footer__nav__list__item">
+                <a href="#skills">Skills</a>
+              </li>
+              <li class="footer__nav__list__item">
+                <a href="#projects">Projects</a>
+              </li>
+              <li class="footer__nav__list__item">
+                <a href="#experience">Experience</a>
+              </li>
+              <li class="footer__nav__list__item">
+                <a href="#education">Education</a>
+              </li>
+              <li class="footer__nav__list__item">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="footer__contact">
+            <h3>Contact</h3>
+            <div class="icons">
+              <a
+                href="https://www.github.com/markom01"
+                target="_blank"
+                class="icon__wrapper"
+              >
+                <img
+                  src="./images/icons/github-icon.svg"
+                  class="icon icon--github"
+                  alt="Github Icon"
+                />
+                <p class="footer__icon__label">Github</p>
+              </a>
+            </div>
+            <div class="icons">
+              <a
+                href="https://www.linkedin.com/in/marecardesigner"
+                target="_blank"
+                class="icon__wrapper"
+              >
+                <img
+                  src="./images/icons/linkedin-icon.svg"
+                  class="icon icon--linkedin"
+                  alt="LinkedIn Icon"
+                />
+                <p class="footer__icon__label">LinkedIn</p>
+              </a>
+            </div>
+            <div class="icons">
+              <a
+                href="mailto:marecardesign@gmail.com"
+                target="_blank"
+                class="icon__wrapper"
+              >
+                <img
+                  src="./images/icons/email-icon.svg"
+                  class="icon icon--email"
+                  alt="Email Icon"
+                />
+                <p class="footer__icon__label">Email</p>
+              </a>
+            </div>
+            <div class="icons">
+              <a href="#contact" class="icon__wrapper">
+                <img
+                  src="./images/icons/form-icon.svg"
+                  class="icon icon--form"
+                  alt="Form Icon"
+                />
+                <p class="footer__icon__label">Form</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="footer__copyright__link" href="#top">
+        <p class="footer__copyright">&copy; 2021 Marko Meseldžija</p>
+      </a>
+    </footer>
+  </body>
 </html>

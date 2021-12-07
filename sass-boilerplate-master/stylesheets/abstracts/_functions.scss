@@ -17,5 +17,5 @@
 /// @return {Url}
 /// @require $base-url
 @function image($path, $base: $base-url) {
-  @return asset($base, 'images/', $path);
+  @return asset($base, "images/", $path);
 }

@@ -1,71 +1,72 @@
 .menu {
-    position: absolute;
-    display: none;
-    left: -200px;
-    top: 0;
-    height: 100%;
-    padding: {
-        top: 20px;
-    }
-    background-image: image('bg/blurred-polygonal-background-rotated.png', '../../');
-    background-size: cover;
-    animation: appear $transition-duration;
-    z-index: 999;
+  position: absolute;
+  display: none;
+  left: -200px;
+  top: 0;
+  height: 100%;
+  padding: {
+    top: 20px;
+  }
+  background-image: image(
+    "bg/blurred-polygonal-background-rotated.jpg",
+    "../../"
+  );
+  background-size: cover;
+  animation: appear $transition-duration;
+  z-index: 999;
 
-    
-    &:target {
-        display: block;
-        left: 0;
-        outline: none;
-        
-        
-        ul {
-            position: relative;
-            z-index: 1000;
-        }
-        
-        & + .backdrop {
-            position: absolute;
-            display: block;  
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 997;
-            background: rgba($color: black, $alpha: .5);
-            cursor: default;
-        } 
-        
-        .menu--close {
-            z-index: 1001;
-        }
-    }
-    
+  &:target {
+    display: block;
+    left: 0;
+    outline: none;
+
     ul {
-        @extend %grid;
-
-        position: absolute;
-        padding: {
-            bottom: 50px;
-            top: 50px;
-        }
-        width: 50vw;
-        height: 70vh;
+      position: relative;
+      z-index: 1000;
     }
 
-    &--close {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        color: $brand-color;
-        
-        @include on-event {
-            @extend %interaction--primary;
-        }
+    & + .backdrop {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 997;
+      background: rgba($color: black, $alpha: 0.5);
+      cursor: default;
     }
+
+    .menu--close {
+      z-index: 1001;
+    }
+  }
+
+  ul {
+    @extend %grid;
+
+    position: absolute;
+    padding: {
+      bottom: 50px;
+      top: 50px;
+    }
+    width: 50vw;
+    height: 70vh;
+  }
+
+  &--close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: $brand-color;
+
+    @include on-event {
+      @extend %interaction--secondary;
+    }
+  }
 }
 
-.menu, 
+.menu,
 .menu:target + .backdrop {
-    position: fixed;
- }
+  position: fixed;
+}

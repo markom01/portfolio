@@ -9,15 +9,10 @@ $hero-height: 90vh;
 
 $transition-duration: 0.3s;
 
-
-
-
-
 /// Regular font family
 /// @type List
-$text-font-stack: 'Myriad Pro', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-
-
+$text-font-stack: "Myriad Pro", "Helvetica Neue Light", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif !default;
 
 /// Background color
 /// @type Color
@@ -35,23 +30,15 @@ $white-color: hsl(0, 0%, 97%) !default;
 $brand-color: hsl(13, 87%, 54%) !default;
 $glass-color: hsla(0, 0%, 97%, 0.25);
 
-
-
-
-
 /// Container's maximum width
 /// @type Length
 $max-width: 80vw !default;
 
-
-
-
-
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-) !default;
+// $breakpoints: (
+//   "small": 320px,
+//   "medium": 768px,
+//   "large": 1024px,
+// ) !default;
