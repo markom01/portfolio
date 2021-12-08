@@ -23,6 +23,7 @@
 .goto-top {
   @extend %grid;
   @extend %interaction--primary;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   transition: $transition-duration;

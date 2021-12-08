@@ -8,13 +8,14 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
-  animation: appear 1s;
+  scroll-behavior: smooth;
 }
 
 body {
   background-image: image("bg/blurred-polygonal-background.jpg", "../../");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
+  animation: drop 1s;
 }
 
 section:not(.header) {
@@ -53,12 +54,59 @@ textarea {
   }
 }
 
+//Animations
+
 @keyframes appear {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drop {
+  from {
+    background-position: 0 -100vh;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+header > * {
+  animation: appear 2s;
+}
+
+@for $i from 1 through 6 {
+  .hero {
+
+    & > :nth-child(#{$i}) {
+      animation-name: pop;
+      animation-duration: 1.5s;
+      animation-delay: $i * 0.5s;
+      animation-fill-mode: both;
+    }
   }
 }
 

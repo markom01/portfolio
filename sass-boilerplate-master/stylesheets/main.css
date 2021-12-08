@@ -381,14 +381,15 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
-  -webkit-animation: appear 1s;
-          animation: appear 1s;
+  scroll-behavior: smooth;
 }
 
 body {
   background-image: url("../../images/bg/blurred-polygonal-background.jpg");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
+  -webkit-animation: drop 1s;
+          animation: drop 1s;
 }
 
 section:not(.header) {
@@ -442,6 +443,143 @@ textarea {
   to {
     opacity: 1;
   }
+}
+
+@-webkit-keyframes pop {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(5vh);
+            transform: translateY(5vh);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(5vh);
+            transform: translateY(5vh);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes drop {
+  from {
+    background-position: 0 -100vh;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes drop {
+  from {
+    background-position: 0 -100vh;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-webkit-keyframes slide-in-left {
+  from {
+    -webkit-transform: translateX(-50vw);
+            transform: translateX(-50vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    -webkit-transform: translateX(-50vw);
+            transform: translateX(-50vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+header > * {
+  -webkit-animation: appear 2s;
+          animation: appear 2s;
+}
+
+.hero > :nth-child(1) {
+  -webkit-animation-name: pop;
+          animation-name: pop;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.hero > :nth-child(2) {
+  -webkit-animation-name: pop;
+          animation-name: pop;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.hero > :nth-child(3) {
+  -webkit-animation-name: pop;
+          animation-name: pop;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.hero > :nth-child(4) {
+  -webkit-animation-name: pop;
+          animation-name: pop;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.hero > :nth-child(5) {
+  -webkit-animation-name: pop;
+          animation-name: pop;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.hero > :nth-child(6) {
+  -webkit-animation-name: pop;
+          animation-name: pop;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 /**
@@ -869,21 +1007,22 @@ form {
 .menu {
   position: absolute;
   display: none;
-  left: -200px;
   top: 0;
+  left: 0;
   height: 100%;
   padding-top: 20px;
   background-image: url("../../images/bg/blurred-polygonal-background-rotated.jpg");
   background-size: cover;
-  -webkit-animation: appear 0.3s;
-          animation: appear 0.3s;
+  -webkit-animation: slide-in-left 0.5s backwards;
+          animation: slide-in-left 0.5s backwards;
   z-index: 999;
 }
 
 .menu:target {
   display: block;
-  left: 0;
   outline: none;
+  -webkit-animation: slide-in-left 0.5s;
+          animation: slide-in-left 0.5s;
 }
 
 .menu:target ul {
@@ -899,7 +1038,7 @@ form {
   width: 100%;
   height: 100%;
   z-index: 997;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   cursor: default;
 }
 
@@ -948,6 +1087,7 @@ form {
 }
 
 .goto-top {
+  position: fixed;
   bottom: 20px;
   right: 20px;
   -webkit-transition: 0.3s;

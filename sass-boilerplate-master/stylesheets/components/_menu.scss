@@ -1,8 +1,8 @@
 .menu {
   position: absolute;
   display: none;
-  left: -200px;
   top: 0;
+  left: 0;
   height: 100%;
   padding: {
     top: 20px;
@@ -12,13 +12,14 @@
     "../../"
   );
   background-size: cover;
-  animation: appear $transition-duration;
+  animation: slide-in-left 0.5s backwards;
   z-index: 999;
 
   &:target {
     display: block;
-    left: 0;
+    // left: 0;
     outline: none;
+    animation: slide-in-left 0.5s;
 
     ul {
       position: relative;
@@ -33,12 +34,13 @@
       width: 100%;
       height: 100%;
       z-index: 997;
-      background: rgba($color: black, $alpha: 0.5);
+      background: rgba($color: black, $alpha: 0.6);
       cursor: default;
     }
 
     .menu--close {
       z-index: 1001;
+      
     }
   }
 
