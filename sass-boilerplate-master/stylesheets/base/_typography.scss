@@ -23,11 +23,6 @@ h2 {
   color: $white-color;
   letter-spacing: 6px;
   font-weight: normal;
-
-  &::after {
-    display: block;
-    content: image("bg/light-effect.png", "../../");
-  }
 }
 
 p,

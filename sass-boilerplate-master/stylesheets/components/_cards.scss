@@ -3,26 +3,7 @@
   @extend %grid;
   width: max-content;
   gap: 30px;
-
-  .cards__heading {
-    &--front-end::before {
-      content: image("icons/front-end-web-development-icon.svg", "../../");
-      display: inline-block;
-      position: relative;
-      top: 2.5px;
-      margin-right: 10px;
-      width: 20px;
-      height: 20px;
-    }
-
-    &--ui-ux::before {
-      content: image("icons/ui-ux-icon.svg", "../../");
-      display: inline-block;
-      margin-right: 10px;
-      width: 20px;
-      height: 20px;
-    }
-  }
+  transition: $transition-duration;
 
   &__icon {
     height: 70px;
@@ -39,6 +20,10 @@
 
   &--sass:hover {
     @include colored-card(330, 53%, 60%);
+  }
+
+  &--bootstrap:hover {
+    @include colored-card(272, 98%, 53%);
   }
 
   &--git:hover {
@@ -66,6 +51,31 @@
   .card {
     width: 200px;
     height: 200px;
+  }
+
+  .cards__heading {
+    &--front-end {
+      margin-top: 60px;
+
+      &::before {
+        content: image("icons/front-end-icon.svg", "../");
+        display: inline-block;
+        position: relative;
+        top: 2.5px;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    
+
+    &--ui-ux::before {
+      content: image("icons/ui-ux-icon.svg", "../../");
+      display: inline-block;
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 

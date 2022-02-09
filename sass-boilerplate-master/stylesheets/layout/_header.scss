@@ -5,19 +5,12 @@
 header {
   position: relative;
   height: $header-height;
-  // width: 100%;
   padding: 20px;
   @extend %grid;
   justify-content: space-between;
   grid-template-columns: 1fr 30fr 1fr;
   grid-auto-flow: row;
 
-  &::after {
-    position: absolute;
-    top: 60px;
-    display: block;
-    content: image("bg/light-effect.png", "../../");
-  }
   .icon__wrapper {
     position: fixed;
     top: 30px;
