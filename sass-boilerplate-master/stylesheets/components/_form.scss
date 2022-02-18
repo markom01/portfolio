@@ -2,6 +2,10 @@
   padding: 0;
 }
 
+#contact-form {
+  @include colored-card(18, 88%, 55%);
+}
+
 form {
   @extend %card--skin;
   width: 900px;
@@ -25,6 +29,7 @@ form {
   input[type="email"],
   textarea {
     background-color: hsl(0, 0%, 15%);
+    box-shadow: none;
 
     @include on-event {
       background-color: hsl(0, 0%, 20%);

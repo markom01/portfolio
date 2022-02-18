@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.card, form {
+form, .card {
   position: relative;
   margin-top: 60px;
   margin-bottom: 35px;
@@ -7,26 +7,25 @@
   background: #1a1a1a;
   transition: 0.3s;
 }
-
-.card:hover, form:hover, .card:active, form:active, .card:focus, form:focus {
+form:hover, .card:hover, form:active, .card:active, form:focus, .card:focus {
   border: 0.5px solid rgba(240, 80, 36, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(240, 80, 36, 0.3);
 }
 
-.wrapper, header, footer, .card, .menu ul, .nav-wrapper, .menu--toggle,
-.goto-top {
+.menu--toggle,
+.goto-top, .nav-wrapper, .menu ul, .card, footer, header, .wrapper {
   display: grid;
   place-items: center;
 }
 
-.button--primary:hover, .menu--toggle:hover,
-.goto-top:hover, .button--primary:active, .menu--toggle:active,
-.goto-top:active, .button--primary:focus, .menu--toggle:focus,
-.goto-top:focus {
+.menu--toggle:hover,
+.goto-top:hover, .button--primary:hover, .menu--toggle:active,
+.goto-top:active, .button--primary:active, .menu--toggle:focus,
+.goto-top:focus, .button--primary:focus {
   box-shadow: 0 0 15px #f05024;
 }
 
-.button--secondary:hover, .icon:hover, .menu--close:hover, .button--secondary:active, .icon:active, .menu--close:active, .button--secondary:focus, .icon:focus, .menu--close:focus {
+.menu--close:hover, .icon:hover, .button--secondary:hover, .menu--close:active, .icon:active, .button--secondary:active, .menu--close:focus, .icon:focus, .button--secondary:focus {
   background: #f05024;
   color: #f7f7f7;
 }
@@ -220,9 +219,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -230,9 +229,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -241,9 +240,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -293,8 +292,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -304,8 +303,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -313,7 +312,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -323,7 +322,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -386,6 +385,11 @@ body {
   animation: drop 1s;
 }
 
+::selection {
+  color: #f7f7f7;
+  background-color: #f05024;
+}
+
 section:not(.header) {
   margin-bottom: 200px;
 }
@@ -427,7 +431,6 @@ textarea {
     opacity: 1;
   }
 }
-
 @keyframes pop {
   from {
     opacity: 0;
@@ -438,7 +441,6 @@ textarea {
     transform: translateY(0);
   }
 }
-
 @keyframes drop {
   from {
     background-position: 0 -100vh;
@@ -447,7 +449,6 @@ textarea {
     background-position: 0 0;
   }
 }
-
 @keyframes slide-in-left {
   from {
     transform: translateX(-50vw);
@@ -456,7 +457,6 @@ textarea {
     transform: translateX(0);
   }
 }
-
 header > * {
   animation: appear 2s;
 }
@@ -564,8 +564,8 @@ h3 {
 }
 
 label,
-input[type="text"],
-input[type="email"],
+input[type=text],
+input[type=email],
 textarea {
   font-size: 15px;
   color: #9c9c9c;
@@ -601,17 +601,14 @@ header {
   grid-template-columns: 1fr 30fr 1fr;
   grid-auto-flow: row;
 }
-
 header .icon__wrapper {
   position: fixed;
   top: 30px;
   z-index: 1;
 }
-
 header .icon__wrapper--linkedin {
   right: 2vw;
 }
-
 header .icon__wrapper--github {
   left: 2vw;
 }
@@ -622,33 +619,26 @@ footer {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-
 footer .footer__wrapper {
   grid-template-columns: repeat(auto-fill, 320px);
 }
-
 footer .container {
   padding-bottom: 0;
 }
-
 footer .icons {
   display: inline-block;
   margin: 10px;
 }
-
 footer a {
   font-size: 15px;
 }
-
 footer p {
   font-size: 15px;
   color: #f7f7f7;
 }
-
 footer .footer__copyright {
   color: #9c9c9c;
 }
-
 footer .footer__copyright__link {
   position: absolute;
   bottom: 20px;
@@ -664,12 +654,10 @@ footer .footer__copyright__link {
   background: transparent;
   transition: 0.3s;
 }
-
 .button--primary {
   color: #f05024;
   border: 2px solid #f05024;
 }
-
 .button--secondary {
   color: #f7f7f7;
   border: 2px solid #f05024;
@@ -678,54 +666,49 @@ footer .footer__copyright__link {
 .card {
   width: max-content;
   gap: 30px;
+  border: 0.5px solid rgba(241, 100, 39, 0.2);
+  box-shadow: 0px 0px 30px 1px rgba(241, 100, 39, 0.3);
   transition: 0.3s;
 }
-
+.card__description {
+  padding-inline: 30px;
+}
 .card__icon {
   height: 70px;
   width: auto;
 }
-
 .card--html5:hover {
   border: 0.5px solid rgba(241, 100, 39, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(241, 100, 39, 0.3);
 }
-
 .card--css3:hover {
   border: 0.5px solid rgba(39, 100, 241, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(39, 100, 241, 0.3);
 }
-
 .card--sass:hover {
   border: 0.5px solid rgba(207, 99, 153, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(207, 99, 153, 0.3);
 }
-
 .card--bootstrap:hover {
   border: 0.5px solid rgba(143, 18, 253, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(143, 18, 253, 0.3);
 }
-
 .card--git:hover {
   border: 0.5px solid rgba(240, 82, 51, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(240, 82, 51, 0.3);
 }
-
 .card--figma:hover {
   border: 0.5px solid rgba(255, 113, 97, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(255, 113, 97, 0.3);
 }
-
 .card--xd:hover {
   border: 0.5px solid rgba(255, 97, 247, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(255, 97, 247, 0.3);
 }
-
 .card--photoshop:hover {
   border: 0.5px solid rgba(51, 170, 255, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(51, 170, 255, 0.3);
 }
-
 .card--illustrator:hover {
   border: 0.5px solid rgba(255, 153, 0, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(255, 153, 0, 0.3);
@@ -735,11 +718,9 @@ footer .footer__copyright__link {
   width: 200px;
   height: 200px;
 }
-
 .cards .cards__heading--front-end {
   margin-top: 60px;
 }
-
 .cards .cards__heading--front-end::before {
   content: url("../images/icons/front-end-icon.svg");
   display: inline-block;
@@ -749,7 +730,6 @@ footer .footer__copyright__link {
   width: 20px;
   height: 20px;
 }
-
 .cards .cards__heading--ui-ux::before {
   content: url("../../images/icons/ui-ux-icon.svg");
   display: inline-block;
@@ -758,10 +738,41 @@ footer .footer__copyright__link {
   height: 20px;
 }
 
+.card__info {
+  padding-inline: 30px;
+}
+.card__info__heading {
+  margin-bottom: 10px;
+  color: #f7f7f7;
+}
+.card__info__tech-stack {
+  background-color: #333;
+  border-radius: 100vw;
+  display: grid;
+  gap: 10px;
+  padding: 5px 10px;
+  grid-auto-flow: column;
+  margin-inline: auto;
+  width: min-content;
+}
+.card__info__tech-stack__img {
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+
 .cards__wrapper {
   grid-template-columns: repeat(auto-fill, 250px);
 }
 
+@media screen and (max-width: 550px) {
+  .card {
+    width: 90vw;
+  }
+
+  .card__description {
+    padding-inline: 15px;
+  }
+}
 .projects__image {
   position: relative;
   display: flex;
@@ -774,11 +785,9 @@ footer .footer__copyright__link {
   border-radius: 10px;
   scroll-snap-align: start;
 }
-
 .projects__image:last-of-type {
   margin-right: 0;
 }
-
 .projects__image__slider {
   display: flex;
   overflow-x: scroll;
@@ -786,11 +795,9 @@ footer .footer__copyright__link {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
 .projects__image__slider__wrapper {
   position: relative;
 }
-
 .projects__image__slider__wrapper::after {
   position: absolute;
   bottom: 20px;
@@ -799,23 +806,25 @@ footer .footer__copyright__link {
   font-size: 15px;
   color: #9c9c9c;
 }
-
 .projects__image__slider::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-
 .projects__image__slider::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 10px;
 }
-
 .projects__image__slider::-webkit-scrollbar-track {
   background: transparent;
 }
 
 #form__container {
   padding: 0;
+}
+
+#contact-form {
+  border: 0.5px solid rgba(241, 100, 39, 0.2);
+  box-shadow: 0px 0px 30px 1px rgba(241, 100, 39, 0.3);
 }
 
 form {
@@ -832,21 +841,19 @@ form {
   gap: 40px;
   margin-bottom: 50px;
 }
-
 .form label {
   color: #9c9c9c;
 }
-
-.form input[type="text"],
-.form input[type="email"],
+.form input[type=text],
+.form input[type=email],
 .form textarea {
   background-color: #262626;
+  box-shadow: none;
 }
-
-.form input[type="text"]:hover, .form input[type="text"]:active, .form input[type="text"]:focus,
-.form input[type="email"]:hover,
-.form input[type="email"]:active,
-.form input[type="email"]:focus,
+.form input[type=text]:hover, .form input[type=text]:active, .form input[type=text]:focus,
+.form input[type=email]:hover,
+.form input[type=email]:active,
+.form input[type=email]:focus,
 .form textarea:hover,
 .form textarea:active,
 .form textarea:focus {
@@ -854,9 +861,8 @@ form {
   border: none;
   box-shadow: none;
 }
-
-.form input[type="text"],
-.form input[type="email"],
+.form input[type=text],
+.form input[type=email],
 .form textarea, .form__radio__wrapper {
   border: 0px;
   margin: 20px auto;
@@ -864,18 +870,15 @@ form {
   max-width: 60vw;
   padding: 10px;
 }
-
-.form input[type="text"]:focus,
-.form input[type="email"]:focus,
+.form input[type=text]:focus,
+.form input[type=email]:focus,
 .form textarea:focus, .form__radio__wrapper:focus {
   outline: 0;
 }
-
 .form__radio__wrapper {
   text-align: start;
   padding: 0;
 }
-
 .form__radio__wrapper__label {
   text-align: center;
   margin: auto;
@@ -887,7 +890,6 @@ form {
   border-radius: 100vw;
   transition: 0.3s;
 }
-
 .icon--front-end {
   border-radius: 0;
 }
@@ -904,18 +906,15 @@ form {
   animation: slide-in-left 0.5s backwards;
   z-index: 999;
 }
-
 .menu:target {
   display: block;
   outline: none;
   animation: slide-in-left 0.5s;
 }
-
 .menu:target ul {
   position: relative;
   z-index: 1000;
 }
-
 .menu:target + .backdrop {
   position: absolute;
   display: block;
@@ -927,11 +926,9 @@ form {
   background: rgba(0, 0, 0, 0.6);
   cursor: default;
 }
-
 .menu:target .menu--close {
   z-index: 1001;
 }
-
 .menu ul {
   position: absolute;
   padding-bottom: 50px;
@@ -939,14 +936,12 @@ form {
   width: 50vw;
   height: 70vh;
 }
-
 .menu--close {
   position: absolute;
   right: 10px;
   top: 10px;
   color: #f05024;
 }
-
 .menu,
 .menu:target + .backdrop {
   position: fixed;
@@ -981,13 +976,11 @@ form {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
 .nav a {
   padding: 10px;
   border-radius: 10px;
   transition: 0.3s;
 }
-
 .nav a:hover, .nav a:active, .nav a:focus {
   background-color: #f05024;
 }
@@ -1000,69 +993,60 @@ form {
   padding-top: 75px;
   padding-bottom: 75px;
 }
-
 .hero h1 {
   margin-top: 0px;
 }
-
 .hero__profile-picture {
   width: 250px;
   margin: 20px 0;
   border-radius: 50%;
   box-shadow: 0 0 0 2px #f05024;
 }
-
 .hero__copy {
   padding: 10px;
   margin-bottom: 40px;
 }
-
 .hero__button {
   margin: 20px 0;
 }
 
 .projects .card {
   padding-bottom: 40px;
+  max-width: 450px;
 }
-
+.projects .card > * {
+  max-width: 450px;
+}
 .projects .card--mcd:hover {
   border: 0.5px solid rgba(38, 119, 217, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(38, 119, 217, 0.3);
 }
-
 .projects .card--portfolio:hover {
   border: 0.5px solid rgba(240, 80, 36, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(240, 80, 36, 0.3);
 }
-
 .projects .card__image-box {
-  width: 80vw;
-  max-width: 450px;
+  width: 100%;
   height: 200px;
   overflow: hidden;
   background: transparent;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
 .projects .card__image {
-  width: 100%;
   height: 100%;
   transition: 0.3s;
 }
-
 .projects .card__image--mcd {
   background: url("../../images/mcd/Glass-Morphism-Mockup.jpg");
   background-position: center;
   background-size: cover;
 }
-
 .projects .card__image--portfolio {
   background: url("../../images/portfolio/Glass-Morphism-Mockup-Portfolio.jpg");
   background-position: center;
   background-size: cover;
 }
-
 .projects .card__image:hover {
   transform: scale(1.17);
 }
@@ -1071,7 +1055,6 @@ form {
   width: 100px;
   height: auto;
 }
-
 .timeline__date::before {
   content: url("../../images/icons/calendar-icon.svg");
   display: inline-block;
@@ -1081,67 +1064,54 @@ form {
   width: 15px;
   height: 15px;
 }
-
 .timeline .wrapper {
   margin-top: 50px;
   column-gap: 100px;
 }
-
 .timeline h3 {
   text-transform: uppercase;
   margin-bottom: 0;
   color: #f7f7f7;
 }
-
 .timeline__image__wrapper {
   position: relative;
   width: 100px;
 }
-
 .timeline__image__wrapper--rect {
   height: 50px;
 }
-
 .timeline__image__wrapper--circle {
   height: 100px;
 }
-
 .timeline__image {
   position: absolute;
   left: 0;
   transition: 0.3s;
 }
-
 .timeline .card {
   width: 80vw;
   max-width: 450px;
   padding: 50px;
 }
-
 .timeline .card:hover .timeline__image--top, .timeline .card:active .timeline__image--top, .timeline .card:focus .timeline__image--top {
   opacity: 0;
 }
-
 .timeline .card--my-brand:hover, .timeline .card--my-brand:active, .timeline .card--my-brand:focus {
   border: 0.5px solid rgba(38, 119, 217, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(38, 119, 217, 0.3);
 }
-
 .timeline .card--datadev:hover, .timeline .card--datadev:active, .timeline .card--datadev:focus {
   border: 0.5px solid rgba(0, 143, 209, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(0, 143, 209, 0.3);
 }
-
 .timeline .card--fsd-internship:hover, .timeline .card--fsd-internship:active, .timeline .card--fsd-internship:focus {
   border: 0.5px solid rgba(237, 29, 35, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(237, 29, 35, 0.3);
 }
-
 .timeline .card--faculty:hover, .timeline .card--faculty:active, .timeline .card--faculty:focus {
   border: 0.5px solid rgba(66, 146, 154, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(66, 146, 154, 0.3);
 }
-
 .timeline .card--high-school:hover, .timeline .card--high-school:active, .timeline .card--high-school:focus {
   border: 0.5px solid rgba(0, 92, 158, 0.2);
   box-shadow: 0px 0px 30px 1px rgba(0, 92, 158, 0.3);

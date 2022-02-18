@@ -18,6 +18,11 @@ body {
   animation: drop 1s;
 }
 
+::selection {
+  color: $white-color;
+  background-color: $brand-color;
+}
+
 section:not(.header) {
   margin-bottom: 200px;
 }

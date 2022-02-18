@@ -3,7 +3,12 @@
   @extend %grid;
   width: max-content;
   gap: 30px;
+  @include colored-card(18, 88%, 55%);
   transition: $transition-duration;
+
+  &__description {
+    padding-inline: 30px;
+  }
 
   &__icon {
     height: 70px;
@@ -79,6 +84,41 @@
   }
 }
 
+.card__info {
+  padding-inline: 30px;
+
+  &__heading {
+    margin-bottom: 10px;
+    color: $white-color;
+  }
+
+  &__tech-stack {
+    background-color: #333;
+    border-radius: $border-radius;
+    display: grid;
+    gap: 10px;
+    padding: 5px 10px;
+    grid-auto-flow: column;
+    margin-inline: auto;
+    width: min-content;
+
+    &__img {
+      width: 30px;
+      aspect-ratio: 1 / 1;
+    }
+  }
+}
+
 .cards__wrapper {
   grid-template-columns: repeat(auto-fill, 250px);
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    width: 90vw;
+  }
+
+  .card__description {
+    padding-inline: 15px;
+  }
 }
