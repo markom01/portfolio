@@ -1,4 +1,44 @@
 @charset "UTF-8";
+@import url("../../../fonts/Poppins/Poppins-Regular.ttf");
+.light .projects__image__slider::-webkit-scrollbar-thumb {
+  background: #cccccc !important;
+}
+.light body,
+.light .menu {
+  background-image: url(../../../images/bg/honeycomb-bg-blue.jpg.png) !important;
+  background-size: contain;
+  background-repeat: repeat;
+}
+.light form, .light .card {
+  background: white !important;
+  border-color: white !important;
+  box-shadow: 0px 0px 10px 1px #cccccc !important;
+}
+.light .card__info__tech-stack {
+  background-color: #e6e6e6 !important;
+}
+.light .card__info__heading,
+.light .timeline h3,
+.light footer h3,
+.light .menu h3 {
+  color: #1a1a1a !important;
+}
+.light .button--secondary {
+  color: #247ff1 !important;
+}
+.light h2,
+.light .footer__copyright {
+  color: #247ff1 !important;
+}
+.light p, .light h3,
+.light .footer__nav__list__item a,
+.light .menu__list__item a {
+  color: #9c9c9c !important;
+}
+.light .menu {
+  background: white !important;
+}
+
 form, .card {
   position: relative;
   margin-top: 60px;
@@ -378,11 +418,19 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-image: url("../../images/bg/blurred-polygonal-background.jpg");
+body,
+footer {
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
+}
+
+body {
+  background-image: url("../../images/bg/blurred-polygonal-background.jpg");
   animation: drop 1s;
+}
+
+footer {
+  background-image: url("../../images/bg/blurred-polygonal-background-rotated.jpg");
 }
 
 ::selection {
@@ -526,9 +574,13 @@ a {
 /**
  * Basic typography style for copy text
  */
+@font-face {
+  font-family: "Poppins";
+  src: url("../../../fonts/Poppins/Poppins-Regular.ttf");
+}
 body {
   background-color: black;
-  font: normal 125%/1.4 "Myriad Pro", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font: normal 125%/1.4 "Poppins", sans-serif;
   text-align: center;
 }
 
@@ -541,6 +593,7 @@ h3 {
 h1 {
   color: #f05024;
   font-weight: 500;
+  font-size: 50px;
 }
 
 h2 {
@@ -615,9 +668,6 @@ header .icon__wrapper--github {
 
 footer {
   position: relative;
-  background-image: url("../../images/bg/blurred-polygonal-background-rotated.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 footer .footer__wrapper {
   grid-template-columns: repeat(auto-fill, 320px);

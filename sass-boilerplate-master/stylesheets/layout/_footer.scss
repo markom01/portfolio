@@ -6,13 +6,6 @@ footer {
   position: relative;
   @extend %grid;
 
-  background-image: image(
-    "bg/blurred-polygonal-background-rotated.jpg",
-    "../../"
-  );
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-
   .footer__wrapper {
     grid-template-columns: repeat(auto-fill, 320px);
   }

@@ -11,11 +11,19 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-image: image("bg/blurred-polygonal-background.jpg", "../../");
+body, 
+footer {
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
+}
+
+body {
+  background-image: image("bg/blurred-polygonal-background.jpg", "../../");
   animation: drop 1s;
+}
+
+footer {
+  background-image: image("bg/blurred-polygonal-background-rotated.jpg", "../../");
 }
 
 ::selection {

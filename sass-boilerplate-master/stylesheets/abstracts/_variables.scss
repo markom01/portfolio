@@ -11,8 +11,7 @@ $transition-duration: 0.3s;
 
 /// Regular font family
 /// @type List
-$text-font-stack: "Myriad Pro", "Helvetica Neue Light", "Helvetica Neue",
-  "Helvetica", "Arial", sans-serif !default;
+$text-font-stack: "Poppins", sans-serif !default;
 
 /// Background color
 /// @type Color
@@ -29,6 +28,66 @@ $white-color: hsl(0, 0%, 97%) !default;
 /// @type Color
 $brand-color: hsl(13, 87%, 54%) !default;
 $glass-color: hsla(0, 0%, 97%, 0.25);
+
+// Light Theme
+
+.light {
+  $brand-color: #247ff1;
+  $white-color: hsl(0, 0%, 100%);
+  $bg-color: $white-color;
+  $text-color: hsl(0, 0%, 25%);
+  $card-bg-color: hsl(0, 0%, 10%);
+
+  .projects__image__slider::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 80%) !important;
+  }
+
+  body, 
+  .menu {
+    background-image: url(../../../images/bg/honeycomb-bg-blue.jpg.png) !important;
+    background-size: contain;
+    background-repeat: repeat;
+    // background: hsl(0, 0%, 91%) !important;
+  }
+
+  %card--skin {
+    background: $white-color !important;
+
+    border-color: $white-color !important;
+    box-shadow: 0px 0px 10px 1px hsl(0, 0%, 80%) !important;
+  }
+
+  .card__info__tech-stack {
+    background-color: hsl(0, 0%, 90%) !important;
+  }
+
+  .card__info__heading, 
+  .timeline h3,
+  footer h3,
+  .menu h3 {
+    color: $card-bg-color !important;
+  }
+
+  .button--secondary {
+    color: $brand-color !important;
+  }
+
+  h2,
+  .footer__copyright {
+    color: $brand-color !important;
+  }
+
+  p, h3, 
+  .footer__nav__list__item a,
+  .menu__list__item a {
+    color: hsl(0, 0%, 61%) !important;
+  }
+
+  .menu {
+    background: $white-color !important;
+  }
+
+}
 
 /// Container's maximum width
 /// @type Length

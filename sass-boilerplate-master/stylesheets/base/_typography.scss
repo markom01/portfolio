@@ -1,6 +1,14 @@
 /**
  * Basic typography style for copy text
  */
+
+@import url('../../../fonts/Poppins/Poppins-Regular.ttf');
+
+ @font-face {
+  font-family: 'Poppins';
+  src: url('../../../fonts/Poppins/Poppins-Regular.ttf');
+}
+
 body {
   background-color: $bg-color;
   font: normal 125% / 1.4 $text-font-stack;
@@ -16,6 +24,7 @@ h3 {
 h1 {
   color: $brand-color;
   font-weight: 500;
+  font-size: 50px;
 }
 
 h2 {
