@@ -23,6 +23,10 @@
     @include colored-card(222, 88%, 55%);
   }
 
+  &--js:hover {
+    @include colored-card(53, 93%, 54%);
+  }
+
   &--sass:hover {
     @include colored-card(330, 53%, 60%);
   }
