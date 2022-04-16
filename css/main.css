@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("../../../fonts/Poppins/Poppins-Regular.ttf");
 .light .projects__image__slider::-webkit-scrollbar-thumb {
-  background: #cccccc !important;
+  background: hsl(0deg, 0%, 80%) !important;
 }
 .light body,
 .light .menu {
@@ -10,18 +10,18 @@
   background-repeat: repeat;
 }
 .light form, .light .card {
-  background: white !important;
-  border-color: white !important;
-  box-shadow: 0px 0px 10px 1px #cccccc !important;
+  background: hsl(0deg, 0%, 100%) !important;
+  border-color: hsl(0deg, 0%, 100%) !important;
+  box-shadow: 0px 0px 10px 1px hsl(0deg, 0%, 80%) !important;
 }
 .light .card__info__tech-stack {
-  background-color: #e6e6e6 !important;
+  background-color: hsl(0deg, 0%, 90%) !important;
 }
 .light .card__info__heading,
 .light .timeline h3,
 .light footer h3,
 .light .menu h3 {
-  color: #1a1a1a !important;
+  color: hsl(0deg, 0%, 10%) !important;
 }
 .light .button--secondary {
   color: #247ff1 !important;
@@ -33,10 +33,10 @@
 .light p, .light h3,
 .light .footer__nav__list__item a,
 .light .menu__list__item a {
-  color: #9c9c9c !important;
+  color: hsl(0deg, 0%, 61%) !important;
 }
 .light .menu {
-  background: white !important;
+  background: hsl(0deg, 0%, 100%) !important;
 }
 
 form, .card {
@@ -44,12 +44,12 @@ form, .card {
   margin-top: 60px;
   margin-bottom: 35px;
   border-radius: 10px;
-  background: #1a1a1a;
+  background: hsl(0deg, 0%, 10%);
   transition: 0.3s;
 }
 form:hover, .card:hover, form:active, .card:active, form:focus, .card:focus {
-  border: 0.5px solid rgba(240, 80, 36, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(240, 80, 36, 0.3);
+  border: 0.5px solid hsla(13deg, 87%, 54%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(13deg, 87%, 54%, 0.3);
 }
 
 .menu--toggle,
@@ -62,12 +62,12 @@ form:hover, .card:hover, form:active, .card:active, form:focus, .card:focus {
 .goto-top:hover, .button--primary:hover, .menu--toggle:active,
 .goto-top:active, .button--primary:active, .menu--toggle:focus,
 .goto-top:focus, .button--primary:focus {
-  box-shadow: 0 0 15px #f05024;
+  box-shadow: 0 0 15px hsl(13deg, 87%, 54%);
 }
 
 .menu--close:hover, .icon:hover, .button--secondary:hover, .menu--close:active, .icon:active, .button--secondary:active, .menu--close:focus, .icon:focus, .button--secondary:focus {
-  background: #f05024;
-  color: #f7f7f7;
+  background: hsl(13deg, 87%, 54%);
+  color: hsl(0deg, 0%, 97%);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -434,8 +434,8 @@ footer {
 }
 
 ::selection {
-  color: #f7f7f7;
-  background-color: #f05024;
+  color: hsl(0deg, 0%, 97%);
+  background-color: hsl(13deg, 87%, 54%);
 }
 
 section:not(.header) {
@@ -453,7 +453,7 @@ footer {
 
 li {
   list-style-type: none;
-  color: #f7f7f7;
+  color: hsl(0deg, 0%, 97%);
 }
 
 textarea {
@@ -567,7 +567,7 @@ header > * {
  * Basic styles for links
  */
 a {
-  color: #f7f7f7;
+  color: hsl(0deg, 0%, 97%);
   text-decoration: none;
 }
 
@@ -579,7 +579,7 @@ a {
   src: url("../../../fonts/Poppins/Poppins-Regular.ttf");
 }
 body {
-  background-color: black;
+  background-color: hsl(0deg, 0%, 0%);
   font: normal 125%/1.4 "Poppins", sans-serif;
   text-align: center;
 }
@@ -591,21 +591,22 @@ h3 {
 }
 
 h1 {
-  color: #f05024;
-  font-weight: 500;
-  font-size: 50px;
+  color: hsl(13deg, 87%, 54%);
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 50px;
 }
 
 h2 {
   text-transform: uppercase;
-  color: #f7f7f7;
+  color: hsl(0deg, 0%, 97%);
   letter-spacing: 6px;
   font-weight: normal;
 }
 
 p,
 h3 {
-  color: #9c9c9c;
+  color: hsl(0deg, 0%, 61%);
 }
 
 h3 {
@@ -621,7 +622,7 @@ input[type=text],
 input[type=email],
 textarea {
   font-size: 15px;
-  color: #9c9c9c;
+  color: hsl(0deg, 0%, 61%);
   text-align: center;
 }
 
@@ -684,10 +685,10 @@ footer a {
 }
 footer p {
   font-size: 15px;
-  color: #f7f7f7;
+  color: hsl(0deg, 0%, 97%);
 }
 footer .footer__copyright {
-  color: #9c9c9c;
+  color: hsl(0deg, 0%, 61%);
 }
 footer .footer__copyright__link {
   position: absolute;
@@ -705,19 +706,19 @@ footer .footer__copyright__link {
   transition: 0.3s;
 }
 .button--primary {
-  color: #f05024;
-  border: 2px solid #f05024;
+  color: hsl(13deg, 87%, 54%);
+  border: 2px solid hsl(13deg, 87%, 54%);
 }
 .button--secondary {
-  color: #f7f7f7;
-  border: 2px solid #f05024;
+  color: hsl(0deg, 0%, 97%);
+  border: 2px solid hsl(13deg, 87%, 54%);
 }
 
 .card {
   width: max-content;
   gap: 30px;
-  border: 0.5px solid rgba(241, 100, 39, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(241, 100, 39, 0.3);
+  border: 0.5px solid hsla(18deg, 88%, 55%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(18deg, 88%, 55%, 0.3);
   transition: 0.3s;
 }
 .card__description {
@@ -728,44 +729,44 @@ footer .footer__copyright__link {
   width: auto;
 }
 .card--html5:hover {
-  border: 0.5px solid rgba(241, 100, 39, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(241, 100, 39, 0.3);
+  border: 0.5px solid hsla(18deg, 88%, 55%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(18deg, 88%, 55%, 0.3);
 }
 .card--css3:hover {
-  border: 0.5px solid rgba(39, 100, 241, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(39, 100, 241, 0.3);
+  border: 0.5px solid hsla(222deg, 88%, 55%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(222deg, 88%, 55%, 0.3);
 }
 .card--js:hover {
-  border: 0.5px solid rgba(247, 221, 29, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(247, 221, 29, 0.3);
+  border: 0.5px solid hsla(53deg, 93%, 54%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(53deg, 93%, 54%, 0.3);
 }
 .card--sass:hover {
-  border: 0.5px solid rgba(207, 99, 153, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(207, 99, 153, 0.3);
+  border: 0.5px solid hsla(330deg, 53%, 60%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(330deg, 53%, 60%, 0.3);
 }
 .card--bootstrap:hover {
-  border: 0.5px solid rgba(143, 18, 253, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(143, 18, 253, 0.3);
+  border: 0.5px solid hsla(272deg, 98%, 53%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(272deg, 98%, 53%, 0.3);
 }
 .card--git:hover {
-  border: 0.5px solid rgba(240, 82, 51, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(240, 82, 51, 0.3);
+  border: 0.5px solid hsla(10deg, 86%, 57%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(10deg, 86%, 57%, 0.3);
 }
 .card--figma:hover {
-  border: 0.5px solid rgba(255, 113, 97, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(255, 113, 97, 0.3);
+  border: 0.5px solid hsla(6deg, 100%, 69%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(6deg, 100%, 69%, 0.3);
 }
 .card--xd:hover {
-  border: 0.5px solid rgba(255, 97, 247, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(255, 97, 247, 0.3);
+  border: 0.5px solid hsla(303deg, 100%, 69%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(303deg, 100%, 69%, 0.3);
 }
 .card--photoshop:hover {
-  border: 0.5px solid rgba(51, 170, 255, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(51, 170, 255, 0.3);
+  border: 0.5px solid hsla(205deg, 100%, 60%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(205deg, 100%, 60%, 0.3);
 }
 .card--illustrator:hover {
-  border: 0.5px solid rgba(255, 153, 0, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(255, 153, 0, 0.3);
+  border: 0.5px solid hsla(36deg, 100%, 50%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(36deg, 100%, 50%, 0.3);
 }
 
 .cards .card {
@@ -797,7 +798,7 @@ footer .footer__copyright__link {
 }
 .card__info__heading {
   margin-bottom: 10px;
-  color: #f7f7f7;
+  color: hsl(0deg, 0%, 97%);
 }
 .card__info__tech-stack {
   background-color: #333;
@@ -858,7 +859,7 @@ footer .footer__copyright__link {
   right: 10px;
   content: "Scroll left →";
   font-size: 15px;
-  color: #9c9c9c;
+  color: hsl(0deg, 0%, 61%);
 }
 .projects__image__slider::-webkit-scrollbar {
   width: 10px;
@@ -877,8 +878,8 @@ footer .footer__copyright__link {
 }
 
 #contact-form {
-  border: 0.5px solid rgba(241, 100, 39, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(241, 100, 39, 0.3);
+  border: 0.5px solid hsla(18deg, 88%, 55%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(18deg, 88%, 55%, 0.3);
 }
 
 form {
@@ -896,12 +897,12 @@ form {
   margin-bottom: 50px;
 }
 .form label {
-  color: #9c9c9c;
+  color: hsl(0deg, 0%, 61%);
 }
 .form input[type=text],
 .form input[type=email],
 .form textarea {
-  background-color: #262626;
+  background-color: hsl(0deg, 0%, 15%);
   box-shadow: none;
 }
 .form input[type=text]:hover, .form input[type=text]:active, .form input[type=text]:focus,
@@ -911,7 +912,7 @@ form {
 .form textarea:hover,
 .form textarea:active,
 .form textarea:focus {
-  background-color: #333333;
+  background-color: hsl(0deg, 0%, 20%);
   border: none;
   box-shadow: none;
 }
@@ -994,7 +995,7 @@ form {
   position: absolute;
   right: 10px;
   top: 10px;
-  color: #f05024;
+  color: hsl(13deg, 87%, 54%);
 }
 .menu,
 .menu:target + .backdrop {
@@ -1006,7 +1007,7 @@ form {
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  border: 1px solid #f05024;
+  border: 1px solid hsl(13deg, 87%, 54%);
 }
 
 .menu--toggle,
@@ -1036,7 +1037,7 @@ form {
   transition: 0.3s;
 }
 .nav a:hover, .nav a:active, .nav a:focus {
-  background-color: #f05024;
+  background-color: hsl(13deg, 87%, 54%);
 }
 
 .logo {
@@ -1047,14 +1048,20 @@ form {
   padding-top: 75px;
   padding-bottom: 75px;
 }
+.hero p {
+  margin-block: 10px 20px;
+}
 .hero h1 {
   margin-top: 0px;
+}
+.hero span {
+  font-weight: 100;
 }
 .hero__profile-picture {
   width: 250px;
   margin: 20px 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px #f05024;
+  box-shadow: 0 0 0 2px hsl(13deg, 87%, 54%);
 }
 .hero__copy {
   padding: 10px;
@@ -1072,22 +1079,24 @@ form {
   max-width: 450px;
 }
 .projects .card--mcd:hover {
-  border: 0.5px solid rgba(38, 119, 217, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(38, 119, 217, 0.3);
+  border: 0.5px solid hsla(213deg, 70%, 50%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(213deg, 70%, 50%, 0.3);
 }
 .projects .card--portfolio:hover {
-  border: 0.5px solid rgba(240, 80, 36, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(240, 80, 36, 0.3);
+  border: 0.5px solid hsla(13deg, 87%, 54%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(13deg, 87%, 54%, 0.3);
 }
 .projects .card__image-box {
   width: 100%;
   height: 200px;
+  padding: 5px;
   overflow: hidden;
   background: transparent;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 .projects .card__image {
+  border-radius: 5px;
   height: 100%;
   transition: 0.3s;
 }
@@ -1125,7 +1134,7 @@ form {
 .timeline h3 {
   text-transform: uppercase;
   margin-bottom: 0;
-  color: #f7f7f7;
+  color: hsl(0deg, 0%, 97%);
 }
 .timeline__image__wrapper {
   position: relative;
@@ -1151,8 +1160,8 @@ form {
   opacity: 0;
 }
 .timeline .card--my-brand:hover, .timeline .card--my-brand:active, .timeline .card--my-brand:focus {
-  border: 0.5px solid rgba(20, 168, 0, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(20, 168, 0, 0.3);
+  border: 0.5px solid hsla(113deg, 100%, 33%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(113deg, 100%, 33%, 0.3);
 }
 .timeline .card--my-brand .timeline__image--bottom,
 .timeline .card--my-brand .timeline__image--top {
@@ -1164,18 +1173,18 @@ form {
   filter: brightness(0) invert(1);
 }
 .timeline .card--datadev:hover, .timeline .card--datadev:active, .timeline .card--datadev:focus {
-  border: 0.5px solid rgba(0, 143, 209, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(0, 143, 209, 0.3);
+  border: 0.5px solid hsla(199deg, 100%, 41%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(199deg, 100%, 41%, 0.3);
 }
 .timeline .card--fsd-internship:hover, .timeline .card--fsd-internship:active, .timeline .card--fsd-internship:focus {
-  border: 0.5px solid rgba(237, 29, 35, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(237, 29, 35, 0.3);
+  border: 0.5px solid hsla(358deg, 85%, 52%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(358deg, 85%, 52%, 0.3);
 }
 .timeline .card--faculty:hover, .timeline .card--faculty:active, .timeline .card--faculty:focus {
-  border: 0.5px solid rgba(66, 146, 154, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(66, 146, 154, 0.3);
+  border: 0.5px solid hsla(185deg, 40%, 43%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(185deg, 40%, 43%, 0.3);
 }
 .timeline .card--high-school:hover, .timeline .card--high-school:active, .timeline .card--high-school:focus {
-  border: 0.5px solid rgba(0, 92, 158, 0.2);
-  box-shadow: 0px 0px 30px 1px rgba(0, 92, 158, 0.3);
+  border: 0.5px solid hsla(205deg, 100%, 31%, 0.2);
+  box-shadow: 0px 0px 30px 1px hsla(205deg, 100%, 31%, 0.3);
 }

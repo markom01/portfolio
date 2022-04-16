@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Sets size and scale of the viewport. -->
+    <meta name="viewport" content="width=device-width" initial-scale="1" />
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+
+    <!-- IE=Edge makes good things happen on Windows Phones. (https://www.emailonacid.com/blog/article/email-development/demystifying-meta-tags-in-email) -->
+    <!--[if !mso]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif]-->
+
+    <!-- Disables auto-scaling in iOS Mail 10. (https://litmus.com/blog/9-things-you-need-to-know-about-email-in-ios-10) -->
+    <meta name="x-apple-disable-message-reformatting" />
+
+    <!-- Will display in auto-preview area in some clients. -->
+    <title>Marko | Frontend Developer</title>
+
+    <!-- Desktop Outlook defaults to Times New Roman. Forces a less obscene fallback font. -->
+    <!--[if mso]>
+      <style>
+        * {
+          font-family: sans-serif !important;
+        }
+      </style>
+    <![endif]-->
+
+    <!-- Webfont reference. For current support: http://stylecampaign.com/blog/2015/02/webfont-support-in-email -->
+    <!--[if !mso]><!-->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--<![endif]-->
+
+    <style>
+      /* Box sizing. Gets decent support. (https://freshmail.com/developers/best-practices-for-email-coding) */
+      *,
+      *:after,
+      *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      /* Prevents small text resizing. */
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      /* Basic reset. Removes default spacing around emails in various clients. (https://templates.mailchimp.com/development/css/reset-styles) */
+      html,
+      body,
+      .document {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Improves text rendering when supported. */
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+
+      /* Centers email to device width in Android 4.4. (https://blog.jmwhite.co.uk/2015/09/19/revealing-why-emails-appear-off-centre-in-android-4-4-kitkat) */
+      div[style*="margin: 16px 0"] {
+        margin: 0 !important;
+      }
+
+      /* Removes added spacing within tables in Outlook. (https://templates.mailchimp.com/development/css/client-specific-styles) */
+      table,
+      td {
+        /* mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt; */
+      }
+
+      /* Removes added spacing within tables in WebKit. */
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        table-layout: fixed;
+        margin: 0 auto;
+      }
+
+      /* Responsive images. Improves rendering of scaled images in IE. */
+      img {
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%;
+        border: 0;
+      }
+
+      /* Overrules triggered links in iOS. */
+      *[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      /* Overrules triggered links in Gmail. */
+      .x-gmail-data-detectors,
+      .x-gmail-data-detectors *,
+      .aBn {
+        border-bottom: 0 !important;
+        cursor: default !important;
+      }
+
+      /* Adds hover effects on buttons. */
+      .btn {
+        -webkit-transition: all 200ms ease;
+        transition: all 200ms ease;
+      }
+      .btn:hover {
+        background-color: #222222;
+        border-color: #222222;
+      }
+
+      /* Media queries o' doom. */
+      @media screen and (max-width: 450px) {
+        /* Transitions container to a fluid layout. */
+        .container {
+          width: 100%;
+          margin: auto;
+        }
+
+        /* Collapses table cells into full-width rows. */
+        .stack {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+        }
+
+        /* Centers and expands CTA. */
+        .btn {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+      /***
+    The new CSS reset - version 1.5.1 (last updated 1.3.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+      /* Remove list styles (bullets/numbers) */
+      ol,
+      ul,
+      menu {
+        list-style: none;
+      }
+
+      /* For images to not be able to exceed their container */
+      img {
+        max-width: 100%;
+      }
+
+      /* removes spacing between cells in tables */
+      table {
+        border-collapse: collapse;
+      }
+
+	  /* My Styles */
+
+      html {
+        font: normal 125%/1.4 "Poppins", sans-serif;
+        background: black;
+        color: white;
+        padding: 10px;
+        width: 1600px !important;
+        height: 400px !important;
+      }
+
+      .hide {
+        white-space: nowrap;
+        display: none;
+        font-size: 0px;
+        line-height: 0px;
+      }
+
+      .main-table {
+        border-collapse: separate;
+        border-spacing: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: #1a1a1a;
+        border-radius: 10px;
+      }
+
+      .main-table td {
+        text-align: center;
+      }
+
+      .text {
+        text-align: center;
+      }
+
+	  h1, h5 {
+		  margin: 0;
+	  }
+
+      .main-table h1 {
+        color: hsl(13deg, 87%, 54%);
+        font-weight: 500;
+      }
+      .main-table h5 {
+        font-weight: normal;
+        letter-spacing: 6px;
+      }
+      .main-table a {
+		text-decoration: none;
+        color: white;
+		padding: 5px 10px;
+		border-radius: 10px;
+      }
+
+      .main-table .icons a {
+        margin-bottom: 5px;
+      }
+      .main-table .icons .icon {
+        width: 16px;
+        vertical-align: -2px;
+        margin-right: 5px;
+      }
+      .main-table .icons .icon-text {
+        display: inline;
+        font-size: 16px;
+        white-space: nowrap;
+      }
+
+      .icons td {
+        text-align: left;
+		padding-bottom: 5px;
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio:0) {
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  }
+    </style>
+  </head>
+  <body>
+    <!-- Preheader text. Visible in inbox preview, not in email body. -->
+    <div style="display: none; max-height: 0px; overflow: hidden">
+      Marko M. | Frontend Web Developer
+    </div>
+
+    <!-- Hack to manage presentation of preheader text. (https://litmus.com/blog/the-little-known-preview-text-hack-you-may-want-to-use-in-every-email) -->
+    <div style="display: none; max-height: 0px; overflow: hidden">
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+
+    <table
+      role="presentation"
+      aria-hidden="true"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      align="center"
+      class="document"
+    >
+      <tr>
+        <td valign="top">
+          <!-- Main -->
+          <table
+            role="presentation"
+            aria-hidden="true"
+            cellspacing="0"
+            cellpadding="0"
+            border="0"
+            align="center"
+            class="container"
+          >
+            <tr>
+              <td>
+                <table
+                  role="presentation"
+                  aria-hidden="true"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  align="center"
+                  width="100%"
+                >
+                  <tr>
+                    <td style="padding: 20px">
+                      <table
+                        role="presentation"
+                        aria-hidden="true"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        align="center"
+                        width="80%"
+                        class="main-table"
+                      >
+                        <tr>
+                          <td class="profile-image-wrapper">
+                            <img
+                              src="https://marko-meseldzija.netlify.app/images/profile/profile-picture.png"
+                              width="150px"
+                            />
+                          </td>
+                          <td class="text">
+                            <h1>Marko Meseldžija</h1>
+                            <h5>FRONTEND WEB DEVELOPER</h5>
+                          </td>
+                          <td class="icons">
+                            <table>
+                              <tr>
+                                <td>
+                                  <img
+                                    src="https://firebasestorage.googleapis.com/v0/b/markos-assets.appspot.com/o/logos%2Fhyperlink-white.png?alt=media&token=9f526907-9c37-4502-9b03-7fd7b114391b"
+                                    class="icon"
+                                  />
+                                  <a
+                                    href="http://marko-meseldzija.netlify.app/"
+                                    class="text-link btn"
+                                  >
+                                    <p class="icon-text">Website</p>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <img
+                                    src="https://firebasestorage.googleapis.com/v0/b/markos-assets.appspot.com/o/logos%2FGitHub-Mark-Light-32px.png?alt=media&token=3c828ee8-9f31-468d-b8c5-ea4864bed07b"
+                                    class="icon"
+                                  />
+                                  <a
+                                    href="https://www.github.com/markom01"
+                                    class="text-link btn"
+                                  >
+                                    <p class="icon-text">Github</p>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <img
+                                    src="https://firebasestorage.googleapis.com/v0/b/markos-assets.appspot.com/o/logos%2FLI-In-Bug-white.png?alt=media&token=9c97244b-2f99-4a36-81bb-75955dd981f8"
+                                    class="icon"
+                                  />
+                                  <a
+                                    href="https://www.linkedin.com/in/marecardesigner"
+                                    class="text-link btn"
+                                  >
+                                    <p class="icon-text">LinkedIn</p>
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="logo" colspan="3">
+                            <img
+                              src="https://firebasestorage.googleapis.com/v0/b/markos-assets.appspot.com/o/logos%2FLogo.png?alt=media"
+                              width="50px"
+                            />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
