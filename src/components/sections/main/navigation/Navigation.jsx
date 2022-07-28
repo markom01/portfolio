@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./Navigation.module.sass"
+// import styles from "./Navigation.module.sass"
 
 const links = [
   {

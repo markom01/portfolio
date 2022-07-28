@@ -1,6 +1,6 @@
 import React from "react"
 import "./App.sass"
-import Header from "./components/sections/header/Header"
+// import Header from "./components/sections/header/Header"
 import Main from "./components/sections/main/Main"
 import Footer from "./components/sections/footer/Footer"
 
