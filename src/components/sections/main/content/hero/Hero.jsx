@@ -9,6 +9,7 @@ export default function Hero() {
         className={`col ${styles.img}`}
         alt="profile-avatar"
       />
+      <h1>cvwieqfy</h1>
     </section>
   )
 }
