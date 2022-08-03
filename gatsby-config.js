@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Portfolio | Marko M.",
+    siteUrl: `https://markom01.gatsbyjs.io`,
   },
   plugins: [
     {
@@ -12,5 +13,14 @@ module.exports = {
     },
     "gatsby-plugin-pnpm",
     "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          breakpoints: [400, 800],
+        },
+      },
+    },
+    "gatsby-plugin-image",
   ],
 }

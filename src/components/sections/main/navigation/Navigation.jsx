@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import { IconContext } from "react-icons"
 import { ImStack } from "react-icons/im"
 import { MdOutlineMonitor } from "react-icons/md"
@@ -29,7 +30,11 @@ export default function Navigation() {
   return (
     <div className="fixed-top col-2 h-100 col-md-1 border-start-0 d-flex flex-column justify-content-evenly align-items-center px-3 rounded-end glass overflow-auto">
       <a href="#hero">
-        <img src="./favicon.svg" width={30} alt="logo" />
+        <StaticImage
+          src="../../../../images/favicon.svg"
+          width={30}
+          alt="logo"
+        />
       </a>
       {links.map((link) => (
         <a className="d-flex flex-col" href={`#${link.name}`} key={link.name}>

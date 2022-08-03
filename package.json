@@ -8,8 +8,8 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
     "start": "gatsby develop",
+    "preinstall": "npx pnpm install --store=node_modules/.pnpm-store && npx pnpm build",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
