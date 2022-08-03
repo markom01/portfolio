@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "start": "gatsby develop",
-    "prebuild": "npx pnpm install --store=node_modules/.pnpm-store",
+    "preinstall": "npx pnpm install --store=node_modules/.pnpm-store",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"

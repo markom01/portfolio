@@ -5,7 +5,7 @@ import { ImStack } from "react-icons/im"
 import { MdOutlineMonitor } from "react-icons/md"
 import { TbBriefcase } from "react-icons/tb"
 import { AiOutlineMessage } from "react-icons/ai"
-import styles from "./Navigation.module.sass"
+import * as styles from "./Navigation.module.sass"
 
 const links = [
   {
@@ -33,8 +33,7 @@ export default function Navigation() {
         <StaticImage src="../../../../images/logo.svg" width={30} alt="logo" />
       </a>
       <IconContext.Provider
-        value={{ color: "white", size: "1.3em" }}
-        className={styles.icons}
+        value={{ color: "var(--icons-white)", size: "1.3em" }}
       >
         {links.map((link) => (
           <a
@@ -42,8 +41,10 @@ export default function Navigation() {
             href={`#${link.name}`}
             key={link.name}
           >
-            {link.icon}
-            <small className="d-block text-white mt-2">
+            <span className={`rounded-circle p-2 ${styles.icons}`}>
+              {link.icon}
+            </span>
+            <small className="d-block mt-2 icon-label">
               {link.name.toUpperCase()}
             </small>
           </a>
