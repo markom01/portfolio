@@ -13,6 +13,7 @@ specifiers:
   react-bootstrap: ^2.4.0
   react-dom: ^18.2.0
   react-icons: ^4.4.0
+  sass: ^1.54.1
 
 dependencies:
   bootstrap: 5.2.0_@popperjs+core@2.11.5
@@ -20,13 +21,14 @@ dependencies:
   gatsby-plugin-alias-imports: 1.0.5_gatsby@4.20.0
   gatsby-plugin-image: 2.20.0_lhjr4qxw3kiecebqtsweb2rkxi
   gatsby-plugin-pnpm: 1.2.10_gatsby@4.20.0
-  gatsby-plugin-sass: 5.20.0_mycw5hwxehn5v7mrelzotox4za
+  gatsby-plugin-sass: 5.20.0_rcbk6cym7mjseoglyx6ma3m7xe
   gatsby-plugin-sharp: 4.20.0_qxfvqn5ydvzvumhc7us2mywliy
   gatsby-source-filesystem: 4.20.0_gatsby@4.20.0
   react: 18.2.0
   react-bootstrap: 2.4.0_biqbaboplfbrettd7655fr4n2y
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.4.0_react@18.2.0
+  sass: 1.54.1
 
 packages:
 
@@ -6675,7 +6677,7 @@ packages:
       lodash.uniq: 4.5.0
     dev: false
 
-  /gatsby-plugin-sass/5.20.0_mycw5hwxehn5v7mrelzotox4za:
+  /gatsby-plugin-sass/5.20.0_rcbk6cym7mjseoglyx6ma3m7xe:
     resolution: {integrity: sha512-vsuWavfPONvPqHbmvoVRdyzNDKZ3jZVmm7fVc6pNBoV2nak/UIW9PnOah9T5bPu+htGB15Gp1uoA7sHCih9BcQ==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
@@ -6685,8 +6687,8 @@ packages:
       '@babel/runtime': 7.18.9
       gatsby: 4.20.0_par4rzqdjbjk7zulgdis3zslre
       resolve-url-loader: 3.1.4
-      sass: 1.54.0
-      sass-loader: 10.3.1_sass@1.54.0+webpack@5.74.0
+      sass: 1.54.1
+      sass-loader: 10.3.1_sass@1.54.1+webpack@5.74.0
     transitivePeerDependencies:
       - fibers
       - node-sass
@@ -10340,7 +10342,7 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: false
 
-  /sass-loader/10.3.1_sass@1.54.0+webpack@5.74.0:
+  /sass-loader/10.3.1_sass@1.54.1+webpack@5.74.0:
     resolution: {integrity: sha512-y2aBdtYkbqorVavkC3fcJIUDGIegzDWPn3/LAFhsf3G+MzPKTJx37sROf5pXtUeggSVbNbmfj8TgRaSLMelXRA==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -10359,14 +10361,14 @@ packages:
       klona: 2.0.5
       loader-utils: 2.0.2
       neo-async: 2.6.2
-      sass: 1.54.0
+      sass: 1.54.1
       schema-utils: 3.1.1
       semver: 7.3.7
       webpack: 5.74.0
     dev: false
 
-  /sass/1.54.0:
-    resolution: {integrity: sha512-C4zp79GCXZfK0yoHZg+GxF818/aclhp9F48XBu/+bm9vXEVAYov9iU3FBVRMq3Hx3OA4jfKL+p2K9180mEh0xQ==}
+  /sass/1.54.1:
+    resolution: {integrity: sha512-GHJJr31Me32RjjUBagyzx8tzjKBUcDwo5239XANIRBq0adDu5iIG0aFO0i/TBb/4I9oyxkEv44nq/kL1DxdDhA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
