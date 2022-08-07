@@ -1,5 +1,6 @@
 *
   transition: $transition-base
+
 ::selection
   background-color: $primary
   color: $white
@@ -16,10 +17,9 @@
 
 body
   overflow-x: hidden
-  background: url("../images/background.jpg") left/cover no-repeat fixed
 
 .glass
-  background: rgba(255, 255, 255, 0.15)
+  background: rgba(255, 255, 255, 0.1)
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
   backdrop-filter: blur(15px)
   border: 1px solid rgba(255, 255, 255, 0.3)
@@ -41,6 +41,15 @@ section
 
 small
   font-size: 0.7em
-.icon-label
+
+.icon-label, h1
   letter-spacing: 0.15em
+
+.icon-label
   color: var(--icons-white)
+
+.btns .btn
+  @extend .me-3
+
+.content
+  opacity: 0

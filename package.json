@@ -1,32 +1,34 @@
 {
-  "name": "gatsby-starter-minimal",
+  "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "A Gatsby starter with no plugins and a single welcome page.",
-  "author": "Laurie Barth",
-  "keywords": [
-    "gatsby"
-  ],
+  "description": "Frontend Web Development Portfolio",
+  "author": "Marko Meseldžija",
   "scripts": {
     "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
+    "build": "gatsby build && gatsby serve",
     "clean": "gatsby clean"
   },
-  "license": "0BSD",
   "dependencies": {
     "bootstrap": "^5.2.0",
     "gatsby": "^4.20.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-google-gtag": "^4.20.0",
     "gatsby-plugin-image": "^2.20.0",
+    "gatsby-plugin-manifest": "^4.20.0",
+    "gatsby-plugin-offline": "^5.20.0",
     "gatsby-plugin-pnpm": "^1.2.10",
+    "gatsby-plugin-purgecss": "^6.1.2",
     "gatsby-plugin-sass": "^5.20.0",
     "gatsby-plugin-sharp": "^4.20.0",
+    "gatsby-plugin-sitemap": "^5.20.0",
     "gatsby-source-filesystem": "^4.20.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
+    "react-reveal": "^1.2.2",
     "sass": "^1.54.1"
   }
 }
