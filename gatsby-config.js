@@ -48,7 +48,7 @@ module.exports = {
         lang: `en`,
         display: `standalone`,
         start_url: `/`,
-        icon: "src/images/Logo.svg",
+        icon: "src/images/brand/Logo.svg",
         background_color: `#f05024`,
         theme_color: `#f05024`,
         cache_busting_mode: "none",
@@ -59,9 +59,6 @@ module.exports = {
       resolve: "gatsby-plugin-offline",
       options: {
         precachePages: [`/index`],
-        workboxConfig: {
-          globPatterns: ["*.html"],
-        },
       },
     },
     {

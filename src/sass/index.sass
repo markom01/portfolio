@@ -13,7 +13,7 @@
 
   &-thumb
     @extend .rounded-pill
-    background-color: $gray
+    background-color: var(--glass-border)
 
 body
   overflow-x: hidden
@@ -22,9 +22,11 @@ body
   background: rgba(255, 255, 255, 0.1)
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
   backdrop-filter: blur(15px)
-  border: 1px solid rgba(255, 255, 255, 0.3)
+  border: 1px solid var(--glass-border)
+
+#content
   overflow-y: scroll
-  overflow-x: hidden
+  scroll-behavior: smooth
 
 section
   @extend .row, .row-cols-1, .justify-content-center, .gy-4, .mt-4
@@ -38,18 +40,48 @@ section
 
 // .filter--primary
 //   filter: invert(40%) sepia(96%) saturate(3073%) hue-rotate(349deg) brightness(98%) contrast(91%)
+h2
+  @extend .text-uppercase, .fw-bold
 
 small
   font-size: 0.7em
 
-.icon-label, h1
+.icon-label, h1, h2
   letter-spacing: 0.15em
 
-.icon-label
-  color: var(--icons-white)
+// .icon-label
+//   color: $secondary
 
 .btns .btn
   @extend .me-3
 
 .content
   opacity: 0
+
+@media (max-aspect-ratio: 1/1) //< tablet
+  #main
+    flex-direction: column-reverse
+  #content
+    margin-block-end: 1.5rem
+  nav
+    @include border-top-radius()
+    border-block-end: none !important
+    padding: 1rem 0.75rem
+    overflow-y: hidden
+    a
+      padding-inline: 0.25rem
+      span
+        padding: 0.25rem
+
+@media (min-aspect-ratio: 1/1) //tablet >
+  #main
+    padding-block-end: 1.5rem
+
+  nav
+    @include border-end-radius()
+    flex-direction: column
+    border-inline-start: none !important
+    padding-inline: 0.5rem
+    span
+      padding: 0.5rem
+      padding-inline-start: 0

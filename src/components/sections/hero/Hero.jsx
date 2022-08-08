@@ -8,19 +8,31 @@ export default function Hero() {
   return (
     <Section id="hero">
       <StaticImage
-        src="../../../images/profile-picture.png"
+        src="../../../images/brand/profile-picture.png"
         className={`col ${styles.img}`}
         alt="profile-avatar"
       />
       <p>Marko Meseldžija</p>
+
       <h1 className="text-primary text-uppercase fw-bold">
         Frontend Web Development
       </h1>
+
       <div className="btns">
-        <Button variant="primary" size="lg" href="#projects">
+        <Button
+          variant="outline-primary"
+          className="btn-outline-primary"
+          size="lg"
+          href="#projects"
+        >
           Projects
         </Button>
-        <Button variant="outline-primary" size="lg" href="#skills">
+        <Button
+          variant="outline-secondary"
+          className="btn-outline-secondary"
+          size="lg"
+          href="#skills"
+        >
           Skills
         </Button>
       </div>

@@ -31,14 +31,20 @@ export default function Navigation() {
   return (
     <Fade left>
       <nav
-        className={`h-100 d-flex flex-column justify-content-evenly border-start-0 align-items-center px-3 rounded-end glass ${styles.nav} 
+        className={`d-flex justify-content-evenly align-items-center glass ${styles.nav} 
       `}
       >
         <a href="#hero">
-          <StaticImage src="../../../images/logo.svg" width={30} alt="logo" />
+          <StaticImage
+            src="../../../images/brand/logo.svg"
+            width={30}
+            alt="logo"
+          />
         </a>
         <IconContext.Provider
-          value={{ color: "var(--icons-white)", size: "1.3em" }}
+          value={{
+            size: "1.3em",
+          }}
         >
           {links.map((link) => (
             <a
@@ -46,10 +52,11 @@ export default function Navigation() {
               href={`#${link.name}`}
               key={link.name}
             >
-              <span className={`rounded-circle p-2 ${styles.icons}`}>
-                {link.icon}
-              </span>
-              <small className="d-none d-md-block mt-2 icon-label">
+              <span className={styles.navLink}>{link.icon}</span>
+              <small
+                className="mt-2 icon-label"
+                style={{ color: "var(--icons-color)" }}
+              >
                 {link.name.toUpperCase()}
               </small>
             </a>

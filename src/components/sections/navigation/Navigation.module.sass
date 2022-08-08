@@ -1,11 +1,13 @@
 @import "@sass/mixins"
+@import "@sass/variables"
 
 .nav
     min-width: fit-content
-
-.icons
+.navLink
+    transition: 0.15s
+    color: var(--icons-color)
     @include on-interaction
-        background-color: #ffffff2e
+        color: var(--bs-primary)
 
 .visible
     transform: translateX(0)

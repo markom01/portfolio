@@ -6,7 +6,7 @@ export default function Loader() {
   return (
     <div className="d-flex justify-content-center align-items-center vh-100">
       <StaticImage
-        src="../../../../images/Logo.svg"
+        src="../../../../images/brand/Logo.svg"
         alt="Loader"
         className={styles.loading}
       />
