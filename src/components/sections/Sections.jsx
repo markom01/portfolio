@@ -21,18 +21,16 @@ export default function Sections() {
       <Scrollbar state={scrolled} />
       <div className={`vw-100 vh-100 pt-3 d-flex`} id="main">
         <Navigation />
-        <Fade>
-          <div
-            className={`glass mx-2  px-3  h-100 text-center 
+        <div
+          className={`glass mx-2  px-3  h-100 text-center 
             }
       `}
-            id="content"
-            onScroll={handleScroll}
-          >
-            <Hero />
-            <BelowTheFold />
-          </div>
-        </Fade>
+          id="content"
+          onScroll={handleScroll}
+        >
+          <Hero />
+          <BelowTheFold />
+        </div>
       </div>
     </>
   );

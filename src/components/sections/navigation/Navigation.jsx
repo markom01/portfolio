@@ -40,39 +40,37 @@ const links = [
 
 export default function Navigation() {
   return (
-    <Fade>
-      <nav
-        className={`d-flex justify-content-evenly align-items-center glass ${styles.nav}  
+    <nav
+      className={`d-flex justify-content-evenly align-items-center glass ${styles.nav}  
       `}
-        id="nav"
+      id="nav"
+    >
+      <IconContext.Provider
+        value={{
+          size: "1.3em"
+        }}
       >
-        <IconContext.Provider
-          value={{
-            size: "1.3em"
-          }}
-        >
-          {links.map((link) => (
-            <a
-              className={`text-center text-decoration-none py-1 px-2 w-100`}
-              href={`#${link.name}`}
-              key={link.name}
+        {links.map((link) => (
+          <a
+            className={`text-center text-decoration-none py-1 px-2 w-100`}
+            href={`#${link.name}`}
+            key={link.name}
+          >
+            <span
+              className={`d-flex align-items-center justify-content-center`}
+              style={{ color: "var(--icons-color)" }}
             >
-              <span
-                className={`d-flex align-items-center justify-content-center`}
-                style={{ color: "var(--icons-color)" }}
-              >
-                {link.icon}
-              </span>
-              <small
-                className="d-none d-sm-block my-2 icon-label"
-                style={{ color: "var(--icons-color)" }}
-              >
-                {link.name.toUpperCase()}
-              </small>
-            </a>
-          ))}
-        </IconContext.Provider>
-      </nav>
-    </Fade>
+              {link.icon}
+            </span>
+            <small
+              className="d-none d-sm-block my-2 icon-label"
+              style={{ color: "var(--icons-color)" }}
+            >
+              {link.name.toUpperCase()}
+            </small>
+          </a>
+        ))}
+      </IconContext.Provider>
+    </nav>
   );
 }
