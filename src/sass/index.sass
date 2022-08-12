@@ -50,3 +50,30 @@ small
 
 .btns .button
   @extend .me-3
+
+@media (max-aspect-ratio: 1/1) //< tablet
+  #main
+    flex-direction: column-reverse
+  #content
+    margin-block-end: 1rem
+  nav
+    border-block-end: none !important
+    padding: 1rem 0.75rem
+    margin-inline: 0.5rem
+    overflow-y: hidden
+    a
+      padding-inline: 0.25rem
+      span
+        padding: 0.25rem
+
+@media (min-aspect-ratio: 1/1) //tablet >
+  #main
+    padding-block-end: 1.5rem
+
+  nav
+    flex-direction: column
+    border-inline-start: none !important
+    padding-inline: 0.5rem
+    span
+      padding: 0.5rem
+      padding-inline-start: 0
