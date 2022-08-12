@@ -3,7 +3,6 @@ import * as styles from "./Card.module.sass"
 import Fade from "react-reveal/Fade"
 
 export default function Card({ skill }) {
-  //! todo
   return (
     <>
       <div className={`m-4 ${styles.scene}`}>

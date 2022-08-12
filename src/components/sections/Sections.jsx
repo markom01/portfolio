@@ -1,11 +1,10 @@
-//! Folder refactor
-import React, { useState, useEffect, lazy, Suspense } from "react"
+import React, { useState, useEffect } from "react"
 import Fade from "react-reveal/Fade"
 import Scrollbar from "@myBlocks/scrollbar/Scrollbar"
 import Navigation from "@sections/navigation/Navigation"
 import Hero from "@sections/hero/Hero"
 import * as styles from "./Sections.module.sass"
-const BelowTheFold = lazy(() => import("./BelowTheFold"))
+import BelowTheFold from "./BelowTheFold"
 
 export default function Sections() {
   const [scrolled, setScrolled] = useState(0)
@@ -39,9 +38,7 @@ export default function Sections() {
             onScroll={handleScroll}
           >
             <Hero />
-            <Suspense>
-              <BelowTheFold />
-            </Suspense>
+            <BelowTheFold />
           </div>
         </Fade>
       </div>
