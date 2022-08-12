@@ -58,28 +58,9 @@ module.exports = {
         legacy: false, // this will not add apple-touch-icon links to <head>
       },
     },
-    {
-      resolve: "gatsby-plugin-offline",
-      options: {
-        precachePages: [`/index`],
-      },
-    },
     "gatsby-plugin-pnpm",
     "gatsby-plugin-sass",
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: true, // Print removed selectors and processed file names
-        // develop: true, // Enable while using `gatsby develop`
-        // ignore: ['/ignored.css'], // Ignore files/folders
-        // purgeOnly : ['components/'], // Purge only these files/folders
-        purgeCSSOptions: {
-          // https://purgecss.com/configuration.html#options
-          // safelist: ['safelist'], // Don't remove this selector
-        },
-        // More options defined here https://purgecss.com/configuration.html#options
-      },
-    },
+    `gatsby-plugin-purgecss`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {

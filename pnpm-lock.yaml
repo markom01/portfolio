@@ -17,6 +17,7 @@ specifiers:
   gatsby-plugin-sharp: ^4.20.0
   gatsby-plugin-sitemap: ^5.20.0
   gatsby-source-filesystem: ^4.20.0
+  gatsby-transformer-sharp: ^4.20.0
   preact: ^10.10.2
   preact-render-to-string: ^5.2.1
   react: ^18.2.0
@@ -43,6 +44,7 @@ dependencies:
   gatsby-plugin-sharp: 4.20.0_qxfvqn5ydvzvumhc7us2mywliy
   gatsby-plugin-sitemap: 5.20.0_5q5viszt6ot7ezb5wwsl4ao2hq
   gatsby-source-filesystem: 4.20.0_gatsby@4.20.0
+  gatsby-transformer-sharp: 4.20.0_gw6hzqmlypwrn7uwxnefubyrhu
   preact: 10.10.2
   preact-render-to-string: 5.2.1_preact@10.10.2
   react: 18.2.0
@@ -3153,7 +3155,7 @@ packages:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
       '@types/eslint': 8.4.5
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
     dev: false
 
   /@types/eslint/7.29.0:
@@ -3166,7 +3168,7 @@ packages:
   /@types/eslint/8.4.5:
     resolution: {integrity: sha512-dhsC09y1gpJWnK+Ff4SGvCuSnk9DaU0BJZSzOwa6GVSg65XtTugLBITDAAzRU5duGBoXBHpdR/9jHGxJjNflJQ==}
     dependencies:
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
     dev: false
 
@@ -7154,6 +7156,29 @@ packages:
       node-fetch: 2.6.7
     transitivePeerDependencies:
       - encoding
+    dev: false
+
+  /gatsby-transformer-sharp/4.20.0_gw6hzqmlypwrn7uwxnefubyrhu:
+    resolution: {integrity: sha512-TwGOyR2alSF0JkhB2v9iWSjNr8SXqtlbTX826myC7qoA8ejIdnwkbKv2pSrOdAIy9A5fqm7inSmzWGEYKg4ktQ==}
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      gatsby: ^4.0.0-next
+      gatsby-plugin-sharp: ^4.0.0-next
+    dependencies:
+      '@babel/runtime': 7.18.9
+      '@gatsbyjs/potrace': 2.2.0
+      bluebird: 3.7.2
+      common-tags: 1.8.2
+      fs-extra: 10.1.0
+      gatsby: 4.20.0_par4rzqdjbjk7zulgdis3zslre
+      gatsby-plugin-sharp: 4.20.0_qxfvqn5ydvzvumhc7us2mywliy
+      gatsby-plugin-utils: 3.14.0_qxfvqn5ydvzvumhc7us2mywliy
+      probe-image-size: 7.2.3
+      semver: 7.3.7
+      sharp: 0.30.7
+    transitivePeerDependencies:
+      - graphql
+      - supports-color
     dev: false
 
   /gatsby-worker/1.20.0:
@@ -11411,7 +11436,7 @@ packages:
       graphql: 15.8.0
       iterall: 1.3.0
       symbol-observable: 1.2.0
-      ws: 7.4.5
+      ws: 7.4.6
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate

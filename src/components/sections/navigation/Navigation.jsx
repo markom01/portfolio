@@ -13,7 +13,7 @@ const links = [
     name: "",
     icon: (
       <StaticImage
-        src="../../../images/brand/logo.svg"
+        src="../../../images/brand/Logo.svg"
         style={{ width: "2rem", marginBlockStart: "0.5rem" }}
         alt="logo"
         className={styles.logo}
