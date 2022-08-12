@@ -1,3 +1,10 @@
+@font-face
+  font-family: 'Poppins'
+  font-style: normal
+  font-weight: 400
+  src: local(''), url('../fonts/poppins-v20-latin-regular.woff2') format('woff2')
+
+@import "@sass/mixins"
 *
   transition: $transition-base
 
@@ -8,11 +15,7 @@
 ::-webkit-scrollbar
   width: 7px
 
-  &-track
-    margin-block: 10px
-
   &-thumb
-    @extend .rounded-pill
     background-color: var(--glass-border)
 
 body
@@ -32,56 +35,18 @@ section
   @extend .row, .row-cols-1, .justify-content-center, .gy-4, .mt-4
   margin-block-end: 200px
 
-// .btn
-//   border-radius: 100vw
+nav a:not(:first-child)
+  @include on-interaction
+    background-color: var(--white-bg)
 
-// .filter--white
-//   filter: brightness(0) invert(1)
-
-// .filter--primary
-//   filter: invert(40%) sepia(96%) saturate(3073%) hue-rotate(349deg) brightness(98%) contrast(91%)
 h2
   @extend .text-uppercase, .fw-bold
 
 small
   font-size: 0.7em
 
-.icon-label, h1, h2
+.icon-label, h1, h2, a.button
   letter-spacing: 0.15em
 
-// .icon-label
-//   color: $secondary
-
-.btns .btn
+.btns .button
   @extend .me-3
-
-.content
-  opacity: 0
-
-@media (max-aspect-ratio: 1/1) //< tablet
-  #main
-    flex-direction: column-reverse
-  #content
-    margin-block-end: 1.5rem
-  nav
-    @include border-top-radius()
-    border-block-end: none !important
-    padding: 1rem 0.75rem
-    overflow-y: hidden
-    a
-      padding-inline: 0.25rem
-      span
-        padding: 0.25rem
-
-@media (min-aspect-ratio: 1/1) //tablet >
-  #main
-    padding-block-end: 1.5rem
-
-  nav
-    @include border-end-radius()
-    flex-direction: column
-    border-inline-start: none !important
-    padding-inline: 0.5rem
-    span
-      padding: 0.5rem
-      padding-inline-start: 0

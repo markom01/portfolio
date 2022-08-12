@@ -3,11 +3,11 @@
 
 .nav
     min-width: fit-content
-.navLink
-    transition: 0.15s
-    color: var(--icons-color)
-    @include on-interaction
-        color: var(--bs-primary)
+    a:first-of-type small
+        color: var(--bs-primary) !important
+.logo
+    @media ( max-width:  576px)
+        margin-block-start: 0 !important
 
 .visible
     transform: translateX(0)

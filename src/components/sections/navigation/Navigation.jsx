@@ -10,6 +10,17 @@ import * as styles from "./Navigation.module.sass"
 
 const links = [
   {
+    name: "",
+    icon: (
+      <StaticImage
+        src="../../../images/brand/logo.svg"
+        style={{ width: "2rem", marginBlockStart: "0.5rem" }}
+        alt="logo"
+        className={styles.logo}
+      />
+    ),
+  },
+  {
     name: "skills",
     icon: <ImStack />,
   },
@@ -27,20 +38,20 @@ const links = [
   },
 ]
 
-export default function Navigation() {
+export default function Navigation({ wide }) {
   return (
-    <Fade left>
+    <Fade left={wide} bottom={!wide}>
       <nav
-        className={`d-flex justify-content-evenly align-items-center glass ${styles.nav} 
-      `}
+        className={`d-flex justify-content-evenly align-items-center glass ${
+          styles.nav
+        }  
+      ${
+        wide
+          ? `flex-column  border-start-0 px-2`
+          : `border-bottom-0 px-3 py-2 mx-2`
+      }`}
+        id="nav"
       >
-        <a href="#hero">
-          <StaticImage
-            src="../../../images/brand/logo.svg"
-            width={30}
-            alt="logo"
-          />
-        </a>
         <IconContext.Provider
           value={{
             size: "1.3em",
@@ -48,13 +59,22 @@ export default function Navigation() {
         >
           {links.map((link) => (
             <a
-              className="text-center text-decoration-none"
+              className={`text-center text-decoration-none py-1 px-2 w-100 ${
+                wide ? "" : `px-2`
+              }`}
               href={`#${link.name}`}
               key={link.name}
             >
-              <span className={styles.navLink}>{link.icon}</span>
+              <span
+                className={`d-flex align-items-center justify-content-center ${
+                  wide ? `p-3` : "p-2"
+                }`}
+                style={{ color: "var(--icons-color)" }}
+              >
+                {link.icon}
+              </span>
               <small
-                className="mt-2 icon-label"
+                className="d-none d-sm-block my-2 icon-label"
                 style={{ color: "var(--icons-color)" }}
               >
                 {link.name.toUpperCase()}

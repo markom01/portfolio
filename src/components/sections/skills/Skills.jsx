@@ -8,7 +8,7 @@ import { RiGatsbyLine } from "react-icons/ri"
 import { SiWebpack } from "react-icons/si"
 import { BsBootstrap } from "react-icons/bs"
 import { SiPnpm } from "react-icons/si"
-import { DiGit } from "react-icons/di"
+import { FaGitAlt } from "react-icons/fa"
 
 const skills = [
   {
@@ -26,7 +26,7 @@ const skills = [
   },
   {
     name: "Git",
-    icon: <DiGit />,
+    icon: <FaGitAlt />,
   },
   {
     name: "Webpack",
@@ -41,13 +41,12 @@ const skills = [
 export default function Skills() {
   return (
     <Section id="skills">
-      <h2 className="mb-5">Skills</h2>
       <div className="px-3 px-md-5">
         <div className="d-flex flex-wrap justify-content-center align-items-center">
           <IconContext.Provider
             value={{
               color: "var(--icons-color)",
-              size: "2rem",
+              size: "1.7rem",
             }}
           >
             {skills.map((skill) => (

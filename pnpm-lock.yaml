@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@popperjs/core': ^2.11.6
   bootstrap: ^5.2.0
   gatsby: ^4.20.0
   gatsby-plugin-alias-imports: ^1.0.5
@@ -10,11 +11,14 @@ specifiers:
   gatsby-plugin-manifest: ^4.20.0
   gatsby-plugin-offline: ^5.20.0
   gatsby-plugin-pnpm: ^1.2.10
+  gatsby-plugin-preact: ^6.20.0
   gatsby-plugin-purgecss: ^6.1.2
   gatsby-plugin-sass: ^5.20.0
   gatsby-plugin-sharp: ^4.20.0
   gatsby-plugin-sitemap: ^5.20.0
   gatsby-source-filesystem: ^4.20.0
+  preact: ^10.10.2
+  preact-render-to-string: ^5.2.1
   react: ^18.2.0
   react-bootstrap: ^2.4.0
   react-dom: ^18.2.0
@@ -23,7 +27,8 @@ specifiers:
   sass: ^1.54.1
 
 dependencies:
-  bootstrap: 5.2.0_@popperjs+core@2.11.5
+  '@popperjs/core': 2.11.6
+  bootstrap: 5.2.0_@popperjs+core@2.11.6
   gatsby: 4.20.0_par4rzqdjbjk7zulgdis3zslre
   gatsby-plugin-alias-imports: 1.0.5_gatsby@4.20.0
   gatsby-plugin-google-fonts: 1.0.1
@@ -32,11 +37,14 @@ dependencies:
   gatsby-plugin-manifest: 4.20.0_qxfvqn5ydvzvumhc7us2mywliy
   gatsby-plugin-offline: 5.20.0_5q5viszt6ot7ezb5wwsl4ao2hq
   gatsby-plugin-pnpm: 1.2.10_gatsby@4.20.0
+  gatsby-plugin-preact: 6.20.0_lh7dw45mopmrpb44btyndcjfya
   gatsby-plugin-purgecss: 6.1.2_gatsby@4.20.0
   gatsby-plugin-sass: 5.20.0_rcbk6cym7mjseoglyx6ma3m7xe
   gatsby-plugin-sharp: 4.20.0_qxfvqn5ydvzvumhc7us2mywliy
   gatsby-plugin-sitemap: 5.20.0_5q5viszt6ot7ezb5wwsl4ao2hq
   gatsby-source-filesystem: 4.20.0_gatsby@4.20.0
+  preact: 10.10.2
+  preact-render-to-string: 5.2.1_preact@10.10.2
   react: 18.2.0
   react-bootstrap: 2.4.0_biqbaboplfbrettd7655fr4n2y
   react-dom: 18.2.0_react@18.2.0
@@ -2955,8 +2963,38 @@ packages:
       webpack: 5.74.0
     dev: false
 
-  /@popperjs/core/2.11.5:
-    resolution: {integrity: sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==}
+  /@popperjs/core/2.11.6:
+    resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
+    dev: false
+
+  /@prefresh/babel-plugin/0.4.3:
+    resolution: {integrity: sha512-fYAWbU1WDSLn108kKY4eDaaeUcnszFqXjgaGKYXNZ5NLulpRTpsrY+Sbfo9q8LDpWrBpqIgzjrwNnvglWI1xNQ==}
+    dev: false
+
+  /@prefresh/core/1.3.4_preact@10.10.2:
+    resolution: {integrity: sha512-s7iNsnyJ3lZEUrYIgmVIB/hKtp4U6mdD91a31Zg7Q8M49O0x2KThrbrMQYraoDDrs4STdFB8Zv6bceUguOoX1A==}
+    peerDependencies:
+      preact: ^10.0.0
+    dependencies:
+      preact: 10.10.2
+    dev: false
+
+  /@prefresh/utils/1.1.3:
+    resolution: {integrity: sha512-Mb9abhJTOV4yCfkXrMrcgFiFT7MfNOw8sDa+XyZBdq/Ai2p4Zyxqsb3EgHLOEdHpMj6J9aiZ54W8H6FTam1u+A==}
+    dev: false
+
+  /@prefresh/webpack/3.3.4_6j6ybmvl35p5z6xxj5hwav4emi:
+    resolution: {integrity: sha512-RiXS/hvXDup5cQw/267kxkKie81kxaAB7SFbkr8ppshobDEzwgUN1tbGbHNx6Uari0Ql2XByC6HIgQGpaq2Q7w==}
+    peerDependencies:
+      '@prefresh/babel-plugin': ^0.4.0
+      preact: ^10.4.0
+      webpack: ^4.0.0 || ^5.0.0
+    dependencies:
+      '@prefresh/babel-plugin': 0.4.3
+      '@prefresh/core': 1.3.4_preact@10.10.2
+      '@prefresh/utils': 1.1.3
+      preact: 10.10.2
+      webpack: 5.74.0
     dev: false
 
   /@react-aria/ssr/3.3.0_react@18.2.0:
@@ -2984,7 +3022,7 @@ packages:
       react-dom: '>=16.14.0'
     dependencies:
       '@babel/runtime': 7.18.9
-      '@popperjs/core': 2.11.5
+      '@popperjs/core': 2.11.6
       '@react-aria/ssr': 3.3.0_react@18.2.0
       '@restart/hooks': 0.4.7_react@18.2.0
       '@types/warning': 3.0.0
@@ -4201,12 +4239,12 @@ packages:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
     dev: false
 
-  /bootstrap/5.2.0_@popperjs+core@2.11.5:
+  /bootstrap/5.2.0_@popperjs+core@2.11.6:
     resolution: {integrity: sha512-qlnS9GL6YZE6Wnef46GxGv1UpGGzAwO0aPL1yOjzDIJpeApeMvqV24iL+pjr2kU4dduoBA9fINKWKgMToobx9A==}
     peerDependencies:
       '@popperjs/core': ^2.11.5
     dependencies:
-      '@popperjs/core': 2.11.5
+      '@popperjs/core': 2.11.6
     dev: false
 
   /boxen/4.2.0:
@@ -6901,6 +6939,25 @@ packages:
       gatsby: 4.20.0_par4rzqdjbjk7zulgdis3zslre
       lodash.get: 4.4.2
       lodash.uniq: 4.5.0
+    dev: false
+
+  /gatsby-plugin-preact/6.20.0_lh7dw45mopmrpb44btyndcjfya:
+    resolution: {integrity: sha512-5N1mB+Wyytp6lzYapMm44TdI82mMGDdlpzyy5tuUSTlQ2kKhcIaF1Ae5xSCyPJM7bttBokAgo5+CMzqIH6pMew==}
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      gatsby: ^4.0.0-next
+      preact: ^10.3.4
+      preact-render-to-string: ^5.1.8
+    dependencies:
+      '@babel/runtime': 7.18.9
+      '@gatsbyjs/webpack-hot-middleware': 2.25.3
+      '@prefresh/babel-plugin': 0.4.3
+      '@prefresh/webpack': 3.3.4_6j6ybmvl35p5z6xxj5hwav4emi
+      gatsby: 4.20.0_par4rzqdjbjk7zulgdis3zslre
+      preact: 10.10.2
+      preact-render-to-string: 5.2.1_preact@10.10.2
+    transitivePeerDependencies:
+      - webpack
     dev: false
 
   /gatsby-plugin-purgecss/6.1.2_gatsby@4.20.0:
@@ -9986,6 +10043,19 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
+  /preact-render-to-string/5.2.1_preact@10.10.2:
+    resolution: {integrity: sha512-Wp3ner1aIVBpKg02C4AoLdBiw4kNaiFSYHr4wUF+fR7FWKAQzNri+iPfPp31sEhAtBfWoJrSxiEFzd5wp5zCgQ==}
+    peerDependencies:
+      preact: '>=10'
+    dependencies:
+      preact: 10.10.2
+      pretty-format: 3.8.0
+    dev: false
+
+  /preact/10.10.2:
+    resolution: {integrity: sha512-GUXSsfwq4NKhlLYY5ctfNE0IjFk7Xo4952yPI8yMkXdhzeQmQ+FahZITe7CeHXMPyKBVQ8SoCmGNIy9TSOdhgQ==}
+    dev: false
+
   /prebuild-install/7.1.1:
     resolution: {integrity: sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==}
     engines: {node: '>=10'}
@@ -10025,6 +10095,10 @@ packages:
     dependencies:
       lodash: 4.17.21
       renderkid: 2.0.7
+    dev: false
+
+  /pretty-format/3.8.0:
+    resolution: {integrity: sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==}
     dev: false
 
   /probe-image-size/7.2.3:

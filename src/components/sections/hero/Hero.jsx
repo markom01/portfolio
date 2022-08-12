@@ -1,12 +1,11 @@
 import React from "react"
-import Section from "@sections/Section"
 import * as styles from "./Hero.module.sass"
 import { StaticImage } from "gatsby-plugin-image"
-import Button from "react-bootstrap/Button"
+import Button from "../../blocks/myBlocks/button/Button"
 
 export default function Hero() {
   return (
-    <Section id="hero">
+    <section id="home">
       <StaticImage
         src="../../../images/brand/profile-picture.png"
         className={`col ${styles.img}`}
@@ -19,23 +18,9 @@ export default function Hero() {
       </h1>
 
       <div className="btns">
-        <Button
-          variant="outline-primary"
-          className="btn-outline-primary"
-          size="lg"
-          href="#projects"
-        >
-          Projects
-        </Button>
-        <Button
-          variant="outline-secondary"
-          className="btn-outline-secondary"
-          size="lg"
-          href="#skills"
-        >
-          Skills
-        </Button>
+        <Button id="projects" variant="primary" />
+        <Button id="about" variant="secondary" />
       </div>
-    </Section>
+    </section>
   )
 }

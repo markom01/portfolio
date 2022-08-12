@@ -5,13 +5,23 @@ import Fade from "react-reveal/Fade"
 export default function Card({ skill }) {
   //! todo
   return (
-    <div
-      className={`${styles.glassCard} p-3 m-2 m-md-3 m-lg-4 p-md-4 rounded d-flex flex-column justify-content-center align-items-center`}
-    >
-      <div className="mb-3">{skill.icon}</div>
-      <Fade left cascade>
-        <small>{skill.name}</small>
-      </Fade>
-    </div>
+    <>
+      <div className={`m-4 ${styles.scene}`}>
+        <div className={styles.card}>
+          <div
+            className={`${styles.glassCard} p-3 p-md-4  d-flex flex-column justify-content-center align-items-center ${styles.card__face}`}
+          >
+            <div className={`p-3  ${styles.icon}`}>{skill.icon}</div>
+          </div>
+          <div
+            className={`${styles.glassCard} p-3 p-md-4  d-flex flex-column justify-content-center align-items-center ${styles.card__face} ${styles.card__faceback}`}
+          >
+            <Fade left cascade>
+              <small>{skill.name}</small>
+            </Fade>
+          </div>
+        </div>
+      </div>
+    </>
   )
 }

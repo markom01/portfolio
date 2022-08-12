@@ -1,0 +1,24 @@
+@import "@sass/variables"
+@import "@sass/mixins"
+
+@mixin btn-variant($variant)
+    color: $variant
+    border: 1px solid $variant
+    @include on-interaction
+        color: $variant
+        border-image: conic-gradient(from var(--angle), transparent, transparent, $variant) 1
+        animation: 1.5s rotate linear infinite
+
+.primary
+    @include btn-variant($primary)
+.secondary
+    @include btn-variant($secondary)
+
+@keyframes rotate
+    to
+        --angle: 360deg
+
+@property --angle
+    syntax: '<angle>'
+    initial-value: 0deg
+    inherits: false

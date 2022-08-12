@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React, { Suspense, lazy } from "react"
 import "@sass/App.sass"
 import { StaticImage } from "gatsby-plugin-image"
 import Loader from "@myBlocks/loader/Loader"
-import Sections from "@sections/Sections"
+const Page = lazy(() => import("@sections/Sections"))
 
 export function Head() {
   return (
@@ -14,13 +14,6 @@ export function Head() {
 }
 
 export default function App() {
-  const [playAnimation, setPlayAnimation] = useState(true)
-  useEffect(() => {
-    setTimeout(() => {
-      setPlayAnimation(false)
-    }, 2000)
-  }, [])
-
   return (
     <>
       <StaticImage
@@ -28,7 +21,9 @@ export default function App() {
         alt="Background Image"
         className="position-absolute top-50 start-50 translate-middle vw-100 vh-100"
       />
-      {playAnimation ? <Loader /> : <Sections />}
+      <Suspense fallback={<Loader />}>
+        <Page />
+      </Suspense>
     </>
   )
 }
