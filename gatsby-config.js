@@ -4,7 +4,6 @@ module.exports = {
     siteUrl: `https://marko.gatsbyjs.io`,
   },
   plugins: [
-    `gatsby-plugin-preact`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -16,8 +15,6 @@ module.exports = {
         pluginConfig: {
           // Puts tracking script in the head instead of the body
           head: false,
-          // Avoids sending pageview hits from custom paths
-          exclude: ["/404"],
         },
       },
     },
