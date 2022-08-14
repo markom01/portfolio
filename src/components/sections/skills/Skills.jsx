@@ -1,42 +1,24 @@
-import React from "react"
-import Section from "@sections/Section"
-import Card from "./card/Card"
-import { IconContext } from "react-icons"
-import { DiSass } from "react-icons/di"
-import { DiReact } from "react-icons/di"
-import { RiGatsbyLine } from "react-icons/ri"
-import { SiWebpack } from "react-icons/si"
-import { BsBootstrap } from "react-icons/bs"
-import { SiPnpm } from "react-icons/si"
-import { FaGitAlt } from "react-icons/fa"
+import React from "react";
+import Section from "@sections/Section";
+import Card from "./card/Card";
+import { IconContext } from "react-icons";
+import { DiSass } from "react-icons/di";
+import { DiReact } from "react-icons/di";
+import { RiGatsbyLine } from "react-icons/ri";
+import { SiWebpack } from "react-icons/si";
+import { BsBootstrap } from "react-icons/bs";
+import { SiPnpm } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
 
-const skills = [
+const projects = [
   {
-    name: "Gatsby",
-    icon: <RiGatsbyLine />,
-  },
-  {
-    name: "React & Friends",
-    icon: <DiReact />,
-  },
-  { name: "Sass", icon: <DiSass /> },
-  {
-    name: "Bootstrap",
-    icon: <BsBootstrap />,
-  },
-  {
-    name: "Git",
-    icon: <FaGitAlt />,
-  },
-  {
-    name: "Webpack",
-    icon: <SiWebpack />,
-  },
-  {
-    name: "PNPM",
-    icon: <SiPnpm />,
-  },
-]
+    title: "Mare Car Design",
+    description:
+      "Personal website made with HTML5 & CSS, where I showcased my automotive art. It's website built using Neumorphism style with IE12 support.",
+    link: "https://marecardesign.netlify.app/",
+    thumbnail: "./images/mcd/Glass-Morphism-Mockup.jpg"
+  }
+];
 
 export default function Skills() {
   return (
@@ -46,15 +28,15 @@ export default function Skills() {
           <IconContext.Provider
             value={{
               color: "var(--icons-color)",
-              size: "1.7rem",
+              size: "1.7rem"
             }}
           >
-            {skills.map((skill) => (
-              <Card skill={skill} key={skill.name} />
+            {projects.map((project) => (
+              <Card project={project} key={project.title} />
             ))}
           </IconContext.Provider>
         </div>
       </div>
     </Section>
-  )
+  );
 }

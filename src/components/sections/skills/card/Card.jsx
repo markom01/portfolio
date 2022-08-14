@@ -1,8 +1,9 @@
-import React from "react"
-import * as styles from "./Card.module.sass"
-import Fade from "react-reveal/Fade"
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import * as styles from "./Card.module.sass";
+import Fade from "react-reveal/Fade";
 
-export default function Card({ skill }) {
+export default function Card({ project }) {
   return (
     <>
       <div className={`m-4 ${styles.scene}`}>
@@ -10,17 +11,17 @@ export default function Card({ skill }) {
           <div
             className={`${styles.glassCard} p-3 p-md-4  d-flex flex-column justify-content-center align-items-center ${styles.card__face}`}
           >
-            <div className={`p-3  ${styles.icon}`}>{skill.icon}</div>
+            <StaticImage src={project.thumbnail} />
           </div>
           <div
             className={`${styles.glassCard} p-3 p-md-4  d-flex flex-column justify-content-center align-items-center ${styles.card__face} ${styles.card__faceback}`}
           >
             <Fade left cascade>
-              <small>{skill.name}</small>
+              <small>{project.description}</small>
             </Fade>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
