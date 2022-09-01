@@ -1,0 +1,40 @@
+@import "@sass/mixins"
+@import "@sass/variables"
+
+.scene
+    @include size(300px)
+    perspective: 900px
+
+.card
+    transform-style: preserve-3d
+    transform-origin: center right
+    backface-visibility: hidden
+    transition: transform 0.75s
+
+.show_back
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 1, 0, -180deg)
+
+.card__face
+    @include size(100%)
+
+.card__faceback
+    backface-visibility: hidden
+    transform: rotate3d(0, 1, 0, 180deg)
+    background: rgba(255, 255, 255, 0.1)
+    backdrop-filter: blur(30px)
+
+.flip_btn
+    padding: 0.25rem 0.5rem
+
+.glassCard
+    border: 1px solid var(--glass-border)
+
+.icon
+    background-color: var(--white-bg)
+
+.img_overlay
+    opacity: 0
+    z-index: 1
+    @include on-interaction
+        opacity: 1
+        background-color: rgba($body-bg, 50%)

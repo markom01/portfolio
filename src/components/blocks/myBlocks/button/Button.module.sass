@@ -4,9 +4,11 @@
 @mixin btn-variant($variant)
     color: $variant
     border: 1px solid $variant
+    border-image-slice: 1
+    border-images-source: conic-gradient(from var(--angle), $variant, $variant, $variant)
     @include on-interaction
         color: $variant
-        border-image: conic-gradient(from var(--angle), transparent, transparent, $variant) 1
+        border-image-source: conic-gradient(from var(--angle), transparent, transparent, $variant)
         animation: 1.5s rotate linear infinite
 
 .primary

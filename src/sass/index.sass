@@ -9,7 +9,7 @@
   transition: $transition-base
 
 ::selection
-  background-color: $primary
+  background-color: rgba(255, 255, 255, 0.1)
   color: $white
 
 ::-webkit-scrollbar
@@ -21,8 +21,13 @@
 body
   overflow-x: hidden
 
+button
+  background-color: transparent
+  color: var(--bs-secondary)
+  border: 0
+
 .glass
-  background: rgba(255, 255, 255, 0.1)
+  background-color: rgba(255, 255, 255, 0.1)
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
   backdrop-filter: blur(15px)
   border: 1px solid var(--glass-border)
@@ -35,12 +40,18 @@ section
   @extend .row, .row-cols-1, .justify-content-center, .gy-4, .mt-4
   margin-block-end: 200px
 
-nav a:not(:first-child)
+a:not(.button)
+  @extend .text-decoration-none
+
+nav a:not(:first-child), .my-card button
   @include on-interaction
     background-color: var(--white-bg)
 
 h2
   @extend .text-uppercase, .fw-bold
+
+.card button svg
+  @extend .text-primary
 
 small
   font-size: 0.7em
@@ -69,6 +80,8 @@ small
 @media (min-aspect-ratio: 1/1) //tablet >
   #main
     padding-block-end: 1.5rem
+  #content
+    width: 100%
 
   nav
     flex-direction: column

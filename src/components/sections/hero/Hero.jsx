@@ -1,7 +1,7 @@
-import React from "react"
-import * as styles from "./Hero.module.sass"
-import { StaticImage } from "gatsby-plugin-image"
-import Button from "../../blocks/myBlocks/button/Button"
+import React from "react";
+import * as styles from "./Hero.module.sass";
+import { StaticImage } from "gatsby-plugin-image";
+import Button from "@myBlocks/button/Button";
 
 export default function Hero() {
   return (
@@ -18,9 +18,9 @@ export default function Hero() {
       </h1>
 
       <div className="btns">
-        <Button id="projects" variant="primary" />
-        <Button id="about" variant="secondary" />
+        <Button id="projects" />
+        <Button secondary id="about" />
       </div>
     </section>
-  )
+  );
 }
