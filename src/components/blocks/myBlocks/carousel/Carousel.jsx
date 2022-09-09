@@ -1,7 +1,5 @@
-import React from // , { createContext, useContext }
-"react";
+import React from "react"; // , { createContext, useContext }
 import * as styles from "./Carousel.module.sass";
-import { FaTimes } from "react-icons/fa";
 
 // export const CarouselVisibilityContext = createContext(false);
 
@@ -11,6 +9,7 @@ export default function Carousel() {
     // <CarouselVisibilityContext.Provider value={isCarouselVisible}>
     <div
       className={`vw-100 vh-100 bg-dark p-3 fixed-top ${styles.background} `}
+      style={{ width: window.innerWidth, height: window.innerHeight }}
       // ${
       //   isCarouselVisible ?
       // "bg-opacity-75"

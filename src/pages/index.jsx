@@ -1,8 +1,7 @@
-import React from // , { Suspense, lazy }
-"react";
+import React, { Suspense, lazy } from "react";
 import "@sass/App.sass";
 import { StaticImage } from "gatsby-plugin-image";
-// import Loader from "@myBlocks/loader/Loader"
+import Loader from "@myBlocks/loader/Loader";
 // const Page = lazy(() => import("@sections/Sections"))
 import Page from "@sections/Sections";
 

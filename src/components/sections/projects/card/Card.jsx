@@ -1,4 +1,5 @@
 import React, {
+  createElement,
   useState,
   // , useContext
 } from "react";
@@ -7,12 +8,11 @@ import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "./Card.module.sass";
 import Fade from "react-reveal/Fade";
-import { IconContext } from "react-icons";
-import { FiChevronRight } from "react-icons/fi";
-import { FiChevronLeft } from "react-icons/fi";
-import { AiOutlineLink } from "react-icons/ai";
-import { AiOutlineCalendar } from "react-icons/ai";
-// import { MdZoomOutMap } from "react-icons/md";
+
+import { StaticImage } from "gatsby-plugin-image";
+import { techStack } from "../Projects";
+import Icon from "../../../blocks/myBlocks/Icon";
+// import SVG from "../../../blocks/myBlocks/SVG/SVG";
 // import Button from "@myBlocks/button/Button";
 // import Carousel from "@myBlocks/carousel/Carousel";
 
@@ -26,20 +26,15 @@ export default function Card(props) {
           showBack ? styles.show_back : ""
         }`}
       >
-        <IconContext.Provider
-          value={{ color: "var(--bs-secondary)", size: "1.3rem" }}
-        >
-          {!showBack && (
-            <CardFront {...props} state={[showBack, setShowBack]} />
-          )}
-          {showBack && <CardBack {...props} state={[showBack, setShowBack]} />}
-        </IconContext.Provider>
+        <CardFront {...props} state={[showBack, setShowBack]} />
+        <CardBack {...props} state={[showBack, setShowBack]} />
       </div>
     </div>
   );
 }
 
 function CardFront({ project, i, state }) {
+  const thumbnail = getImage(project.frontmatter.thumbnail);
   // const [isCarouselVisibleState, setisCarouselVisibleState] = useState(false)
   return (
     <div
@@ -47,8 +42,7 @@ function CardFront({ project, i, state }) {
     >
       {!state[0] && (
         <Fade cascade>
-          <div className="position-relative">
-            {/* <div
+          {/* <div
           className={`w-100 h-100 d-flex justify-content-center align-items-center position-absolute ${styles.img_overlay}`}
         >
           <Button
@@ -58,47 +52,29 @@ function CardFront({ project, i, state }) {
             <MdZoomOutMap /> Show Gallery
           </Button>
         </div> */}
-            {/* <Carousel /> */}
-            <StaticQuery
-              query={graphql`
-                query {
-                  allImageSharp {
-                    nodes {
-                      gatsbyImageData
-                    }
-                  }
-                }
-              `}
-              render={(data) => (
-                <GatsbyImage
-                  image={getImage(data.allImageSharp.nodes[i])}
-                  alt=""
-                />
-              )}
-            />
-          </div>
+          {/* <Carousel /> */}
+          <GatsbyImage image={thumbnail} alt="" />
           <div className="d-flex flex-column justify-content-between h-100 w-100 p-3">
             <div>
-              <a href={project.link} className="text-secondary">
-                {project.title}
-                <sup className="ms-1">
-                  <IconContext.Provider value={{ size: "1rem" }}>
-                    <AiOutlineLink />
-                  </IconContext.Provider>
-                </sup>
+              <a href={project.frontmatter.link} className="text-secondary">
+                {project.frontmatter.title}
+                <sup className="ms-1"></sup>
               </a>
             </div>
             <div className="d-flex justify-content-between align-items-center w-100">
               <div className="row row-cols-auto gx-1">
-                {project.techStack.map((tech) => {
-                  const Icon = tech.icon;
+                {project.frontmatter.techStack.map(({ name, img }) => {
                   return (
                     <div
-                      className="col position-relative"
-                      key={tech.name}
-                      data-tooltip={tech.name}
+                      className="col d-flex align-items-center"
+                      key={name}
+                      data-tooltip={name}
                     >
-                      <Icon />
+                      <GatsbyImage
+                        image={getImage(img)}
+                        alt={name}
+                        className="icon"
+                      />
                     </div>
                   );
                 })}
@@ -108,7 +84,7 @@ function CardFront({ project, i, state }) {
                 onClick={() => state[1](true)}
                 data-tooltip="Show More"
               >
-                <FiChevronRight />
+                <Icon name="chevron-right" />
               </button>
             </div>
           </div>
@@ -118,41 +94,41 @@ function CardFront({ project, i, state }) {
   );
 }
 function CardBack({ project, state }) {
-  const date = project.date;
+  const startDate = new Date(project.frontmatter.startDate);
+  const endDate = new Date(project.frontmatter.endDate);
   return (
     <div
-      className={`${styles.glassCard} p-3 p-md-4  d-flex flex-column align-items-center position-absolute text-start ${styles.card__face} ${styles.card__faceback}`}
+      className={`${styles.glassCard} p-3 d-flex flex-column align-items-center position-absolute text-start ${styles.card__face} ${styles.card__faceback}`}
     >
-      {state[0] && (
-        <>
+      <>
+        {state[0] && (
           <Fade cascade>
             <div className="d-flex flex-column h-100">
               <h5 className="mb-2 text-white">Description</h5>
-              <h6>{project.description}</h6>
+              <h6>{project.frontmatter.description}</h6>
             </div>
             <div className="d-flex w-100 justify-content-between align-items-center">
               <button
                 className={styles.flip_btn}
                 onClick={() => state[1](false)}
               >
-                <FiChevronLeft />
+                <Icon name="chevron-left" />
               </button>
               <h6
                 data-tooltip="Project Duration"
                 className="d-flex align-items-center mb-0"
                 style={{ fontSize: "14px" }}
               >
-                <IconContext.Provider value={{ size: "14px" }}>
-                  <AiOutlineCalendar />
-                </IconContext.Provider>
                 <span className="ms-1">
-                  {`${date[0].getMonth()}.${date[0].getFullYear()} - ${date[1].getMonth()}.${date[1].getFullYear()}`}
+                  {`${startDate.getMonth() + 1}.${startDate.getFullYear()} - ${
+                    endDate.getMonth() + 1
+                  }.${endDate.getFullYear()}`}
                 </span>
               </h6>
             </div>
           </Fade>
-        </>
-      )}
+        )}
+      </>
     </div>
   );
 }

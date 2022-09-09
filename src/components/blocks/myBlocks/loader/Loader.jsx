@@ -1,6 +1,6 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import * as styles from "./Loader.module.sass"
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import * as styles from "./Loader.module.sass";
 
 export default function Loader() {
   return (
@@ -11,5 +11,5 @@ export default function Loader() {
         className={styles.loading}
       />
     </div>
-  )
+  );
 }

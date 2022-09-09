@@ -1,5 +1,6 @@
 import React, {
   useState,
+  Suspense,
   // , useEffect
 } from "react";
 // import Fade from "react-reveal/Fade";
@@ -7,7 +8,7 @@ import Scrollbar from "@myBlocks/scrollbar/Scrollbar";
 import Navigation from "@sections/navigation/Navigation";
 import Hero from "@sections/hero/Hero";
 // import * as styles from "./Sections.module.sass";
-import BelowTheFold from "./BelowTheFold";
+const BelowTheFold = React.lazy(() => import("./BelowTheFold"));
 // import Carousel from "@myBlocks/carousel/Carousel";
 
 export default function Sections() {
@@ -31,7 +32,9 @@ export default function Sections() {
           onScroll={handleScroll}
         >
           <Hero />
-          <BelowTheFold />
+          <Suspense>
+            <BelowTheFold />
+          </Suspense>
         </div>
         {/* <Carousel /> */}
       </div>

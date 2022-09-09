@@ -7,15 +7,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
           "G-SX8LB89F9Q", // Google Analytics / GA
         ],
-        // This object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: false,
-        },
       },
     },
     {
@@ -25,7 +19,6 @@ module.exports = {
           "@node": "node_modules",
           "@myBlocks": "src/components/blocks/myBlocks",
           "@vendor": "src/components/blocks/vendor",
-          "@images": "src/images",
           "@sections": "src/components/sections",
           "@pages": "src/pages",
           "@sass": "src/sass",
@@ -74,9 +67,10 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `projects`,
-        path: `${__dirname}/src/images/projects`,
+        name: `data`,
+        path: `${__dirname}/data`,
       }
     },
+    "gatsby-plugin-mdx",
   ],
 }

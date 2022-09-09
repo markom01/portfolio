@@ -1,20 +1,40 @@
 import React, { useState, useEffect } from "react";
-import { IconContext } from "react-icons";
+import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "./Filter.module.sass";
-import { techStack } from "../Projects";
 
 export default function Filter({ state }) {
+  const data = useStaticQuery(graphql`
+    query Filter {
+      allMdx(
+        filter: {
+          frontmatter: { icons: { elemMatch: { name: { regex: "" } } } }
+        }
+      ) {
+        nodes {
+          frontmatter {
+            icons {
+              img {
+                childImageSharp {
+                  gatsbyImageData(width: 24)
+                }
+              }
+              name
+            }
+          }
+        }
+      }
+    }
+  `);
   return (
     <div className="col d-flex flex-column justify-content-center">
-      <small className="ms-auto mb-1">Filter by tech used</small>
+      <small className="me-auto me-md-0 ms-md-auto mb-1">
+        Filter by tech used
+      </small>
       <div className="row row-cols-auto gx-1 my-1">
-        <IconContext.Provider
-          value={{ size: "1.5rem", color: `var(--bs-secondary)` }}
-        >
-          {techStack.map((tech) => (
-            <TechIcon tech={tech} state={state} key={tech.name} />
-          ))}
-        </IconContext.Provider>
+        {data.allMdx.nodes[0].frontmatter.icons.map((tech) => (
+          <TechIcon tech={tech} state={state} key={tech.name} />
+        ))}
       </div>
     </div>
   );
@@ -22,9 +42,6 @@ export default function Filter({ state }) {
 
 function TechIcon(props) {
   const [activeTech, setActiveTech] = useState(false);
-
-  const Icon = props.tech.icon;
-
   return (
     <button
       onClick={() => {
@@ -38,10 +55,14 @@ function TechIcon(props) {
       className="col"
     >
       <div
-        className={`p-2 ${activeTech ? styles.bg_active : ""}`}
+        className={`p-2  ${activeTech ? styles.bg_active : ""}`}
         data-tooltip={props.tech.name}
       >
-        <Icon />
+        <GatsbyImage
+          className="icon"
+          image={getImage(props.tech.img)}
+          alt={props.tech.name}
+        />
       </div>
     </button>
   );
