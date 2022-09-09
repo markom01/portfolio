@@ -5,16 +5,18 @@ export default function Button({
   id = "",
   secondary = false,
   onClick,
+  type,
   className = "",
   children,
 }) {
   return id === "" ? (
     <button
       onClick={onClick}
+      type={type}
       className={
         `button position-relative d-inline-block px-3 py-2 text-decoration-none text-uppercase ${
           secondary ? styles.secondary : styles.primary
-        }` + `${className}`
+        }` + ` ${className}`
       }
     >
       {children}

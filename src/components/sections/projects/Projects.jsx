@@ -31,7 +31,7 @@ export default function Skills() {
             }
             thumbnail {
               childImageSharp {
-                gatsbyImageData(width: 250)
+                gatsbyImageData(width: 300)
               }
             }
           }
