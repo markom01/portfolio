@@ -9,15 +9,15 @@
 .input
     max-inline-size: 100%
 
-    @include on-interaction
-        background-color: var(--white-bg)
+    // @include on-interaction
+    //     
 
 .input_clicked
+    &_bg
+        background-color: var(--white-bg)
     label
         color: var(--glass-border)
         font-size: 12px
         transform: translate3d(10px, 5px, 0)
-
 .label
-    cursor: text
-    transform: translate3d(10px, calc(50% + 5px), 0)
+    transform: translate3d(10px, calc(50% + 2.5px), 0)

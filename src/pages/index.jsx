@@ -3,7 +3,7 @@ import "@sass/App.sass";
 import { StaticImage } from "gatsby-plugin-image";
 import Loader from "@myBlocks/loader/Loader";
 // const Page = lazy(() => import("@sections/Sections"))
-import Page from "@sections/Sections";
+import Sections from "@sections/Sections";
 
 export function Head() {
   return (
@@ -23,7 +23,7 @@ export default function App() {
         className="position-absolute top-50 start-50 translate-middle vw-100 vh-100"
       />
       {/* <Suspense fallback={<Loader />}> */}
-      <Page />
+      <Sections />
       {/* </Suspense> */}
     </>
   );

@@ -6,10 +6,6 @@ import Icon from "../../blocks/myBlocks/Icon";
 
 const links = [
   {
-    name: "skills",
-    class: "stack",
-  },
-  {
     name: "projects",
     class: "display-fill",
   },

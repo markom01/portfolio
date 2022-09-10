@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import * as styles from "./Form.module.sass";
 import Button from "@myBlocks/button/Button";
+import Alert from "../../../blocks/myBlocks/alert/Alert";
+import Select from "./select/Select";
 
 export default function Form() {
+  const [responseInfo, setResponseInfo] = useState("");
+  const [alertVisible, setAlertVisible] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setResponseInfo("Sent! Expect answers soon.");
     // console.log(responses);
     emailjs
       .send(
@@ -17,12 +21,17 @@ export default function Form() {
       )
       .then(
         (response) => {
-          console.log("SUCCESS!", response.status, response.text);
+          setResponseInfo("Sent! Expect answers soon.");
+          setAlertVisible(true);
+          process.env.NODE_ENV === "development" && console.log(response.text);
         },
         (err) => {
-          console.log("FAILED...", err);
+          setResponseInfo(err);
+          setAlertVisible(true);
+          process.env.NODE_ENV === "development" && console.log(err);
         }
       );
+    // setAlertVisible(true);
   };
   const textInputs = [
     {
@@ -35,24 +44,19 @@ export default function Form() {
     },
   ];
 
-  const selectInputs = [
-    { name: "Redesign" },
-    { name: "Design" },
-    { name: "Development" },
-  ];
-
   const [responses, setResponses] = useState({});
 
   return (
     <form
       id="contact"
-      className={`mx-auto p-3 p-md-4  ${styles.form}`}
+      className={`mx-auto px-3 px-md-4 py-5  ${styles.form}`}
       onSubmit={handleSubmit}
       autoComplete="off"
+      spellCheck="false"
     >
-      <div className="row row-cols-1 row-cols-md-2 g-4 mb-3">
+      <div className="row row-cols-1 row-cols-md-2 g-4 mb-4">
         {textInputs.map((data) => (
-          <Input
+          <TextInput
             text
             data={data}
             responses={responses}
@@ -60,101 +64,72 @@ export default function Form() {
             key={data.name}
           />
         ))}
+        <Select responses={responses} handleChange={setResponses} />
       </div>
       <div className="row row-cols-1">
-        <Input
-          select
-          responses={responses}
-          handleChange={setResponses}
-          data={selectInputs}
-          className="mb-3"
-        />
         <TextArea
           responses={responses}
           handleChange={setResponses}
           className="mb-5"
         />
         <div className="col">
-          <Button secondary type="submit" className="mx-auto">
+          <Button
+            secondary
+            type="submit"
+            className={`mx-auto ${alertVisible ? "mb-4" : ""}`}
+          >
             Submit
           </Button>
         </div>
       </div>
+      <Alert
+        text={responseInfo}
+        visible={alertVisible}
+        handleClick={setAlertVisible}
+      />
     </form>
   );
 }
 
-function Input({
-  data,
-  responses,
-  handleChange,
-  text = false,
-  select = false,
-  className,
-}) {
+function TextInput({ data, responses, handleChange, className }) {
   const [clicked, setClicked] = useState(false);
-  const [optionsViewable, setOptionsViewable] = useState(false);
+  const [bgActive, setBgActive] = useState(false);
 
   return (
     <div className="col" style={{ minInlineSize: "200px" }}>
       <div
-        className={`position-relative ${clicked ? styles.input_clicked : ""}`}
+        className={`position-relative 
+        ${clicked ? styles.input_clicked : ""}
+        ${bgActive ? styles.input_clicked_bg : ""}
+        `}
       >
-        {text ? (
-          <>
-            <label
-              htmlFor={data.name}
-              className={`position-absolute ${styles.label}`}
-            >
-              {data.name}
-            </label>
-            <input
-              type={data.type}
-              id={data.name}
-              name={data.name}
-              className={` pb-1 w-100 pt-4 ${styles.input} `}
-              onClick={() => setClicked(true)}
-              onChange={(e) => {
-                handleChange({ ...responses, [data.name]: e.target.value });
-              }}
-              onBlur={(e) => !e.target.value && setClicked(false)}
-            />
-          </>
-        ) : (
-          <>
-            <label
-              htmlFor="projects"
-              className={`position-absolute ${styles.label}`}
-            >
-              Select Project Type:
-            </label>
-            <select
-              id="projects"
-              name="projects"
-              style={optionsViewable ? { color: "var(--bs-secondary)" } : {}}
-              className={` pb-1 w-100 pt-4 ${styles.input} ${className} `}
-            >
-              {data.map((data) => (
-                <option
-                  key={data.name}
-                  value={data.name}
-                  onClick={(e) => {
-                    setClicked(true);
-
-                    handleChange({
-                      ...responses,
-                      project: `Website ${e.target.value}`,
-                    });
-                    setOptionsViewable(true);
-                  }}
-                  onBlur={(e) => !e.target.value && setClicked(false)}
-                >
-                  {`Website ${data.name}`}
-                </option>
-              ))}
-            </select>
-          </>
-        )}
+        <>
+          <label
+            htmlFor={data.name}
+            className={`position-absolute ${styles.label}`}
+          >
+            {data.name}
+          </label>
+          <input
+            type={data.type}
+            id={data.name}
+            name={data.name}
+            className={` pb-1 w-100 pt-4 ${styles.input} `}
+            onClick={() => {
+              setClicked(true);
+              setBgActive(true);
+            }}
+            onChange={(e) => {
+              handleChange({ ...responses, [data.name]: e.target.value });
+            }}
+            onBlur={(e) => {
+              if (!e.target.value) {
+                setClicked(false);
+              }
+              setBgActive(false);
+            }}
+          />
+        </>
       </div>
     </div>
   );
@@ -162,10 +137,13 @@ function Input({
 
 function TextArea({ className, responses, handleChange }) {
   const [clicked, setClicked] = useState(false);
+  const [bgActive, setBgActive] = useState(false);
+
   return (
-    <div className="col" style={{ minInlineSize: "200px" }}>
+    <div className={`col ${className}`} style={{ minInlineSize: "200px" }}>
       <div
-        className={`position-relative ${clicked ? styles.input_clicked : ""}`}
+        className={`position-relative ${clicked ? styles.input_clicked : ""}
+        ${bgActive ? styles.input_clicked_bg : ""}`}
       >
         <label
           htmlFor="message"
@@ -176,9 +154,17 @@ function TextArea({ className, responses, handleChange }) {
         <textarea
           name="message"
           id="message"
-          className={`pb-1 w-100 pt-4 ${styles.input} ${className}`}
-          onClick={() => setClicked(true)}
-          onBlur={(e) => !e.target.value && setClicked(false)}
+          className={`pb-1 w-100 pt-4 ${styles.input} `}
+          onClick={() => {
+            setClicked(true);
+            setBgActive(true);
+          }}
+          onBlur={(e) => {
+            if (!e.target.value) {
+              setClicked(false);
+            }
+            setBgActive(false);
+          }}
           onChange={(e) => {
             handleChange({ ...responses, message: e.target.value });
           }}
