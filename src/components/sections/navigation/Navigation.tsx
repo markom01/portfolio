@@ -1,5 +1,4 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
 import { StaticImage } from "gatsby-plugin-image";
 import * as styles from "./Navigation.module.sass";
 import Icon from "../../blocks/myBlocks/Icon";

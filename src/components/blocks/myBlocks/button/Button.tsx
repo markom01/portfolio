@@ -1,18 +1,25 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import * as styles from "./Button.module.sass";
+
+interface Button {
+  id?: string;
+  secondary?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  className?: string;
+  children?: JSX.Element;
+}
 
 export default function Button({
   id = "",
   secondary = false,
   onClick,
-  type,
   className = "",
   children,
-}) {
+  ...other
+}: Button) {
   return id === "" ? (
     <button
       onClick={onClick}
-      type={type}
       className={
         `button position-relative d-inline-block px-3 py-2 text-decoration-none text-uppercase ${
           secondary ? styles.secondary : styles.primary
@@ -23,11 +30,11 @@ export default function Button({
     </button>
   ) : (
     <a
-      className={`button position-relative d-inline-block px-3 py-2 text-decoration-none text-uppercase 
-         ${secondary ? styles.secondary : styles.primary}`}
+      className={`button position-relative d-inline-block px-3 py-2 text-decoration-none text-uppercase ${className}
+         ${secondary ? styles.secondary : styles.primary} ${className}`}
       href={`#${id}`}
+      {...other}
       // {...onClick}
-      {...className}
     >
       {id}
     </a>

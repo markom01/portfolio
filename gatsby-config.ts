@@ -1,4 +1,7 @@
-module.exports = {
+import type { GatsbyConfig } from "gatsby";
+
+const config: GatsbyConfig = {
+  graphqlTypegen: true,
   siteMetadata: {
     title: "Portfolio | Marko M.",
     siteUrl: `https://marko.gatsbyjs.io`,
@@ -13,20 +16,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-alias-imports`,
-      options: {
-        alias: {
-          "@node": "node_modules",
-          "@myBlocks": "src/components/blocks/myBlocks",
-          "@vendor": "src/components/blocks/vendor",
-          "@sections": "src/components/sections",
-          "@pages": "src/pages",
-          "@sass": "src/sass",
-        },
-        extensions: ["jsx"],
-      },
-    },
-    {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         entryLimit: 10,
@@ -38,7 +27,6 @@ module.exports = {
         name: `Portfolio | Marko M.`,
         short_name: `Portfolio`,
         description: `Frontend web development`,
-        lang: `en`,
         display: `standalone`,
         start_url: `/`,
         icon: "src/images/brand/Logo.svg",
@@ -69,8 +57,10 @@ module.exports = {
       options: {
         name: `data`,
         path: `${__dirname}/data`,
-      }
+      },
     },
     "gatsby-plugin-mdx",
   ],
-}
+};
+
+export default config;

@@ -1,11 +1,11 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
+import type { HeadProps } from "gatsby";
 import "@sass/App.sass";
 import { StaticImage } from "gatsby-plugin-image";
-import Loader from "@myBlocks/loader/Loader";
-// const Page = lazy(() => import("@sections/Sections"))
+// import Loader from "@myBlocks/loader/Loader";
 import Sections from "@sections/Sections";
 
-export function Head() {
+export function Head(props: HeadProps) {
   return (
     <>
       <title>Marko M | Portfolio</title>

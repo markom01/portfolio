@@ -1,8 +1,4 @@
-import React, {
-  useState,
-  // Suspense,
-  // , useEffect
-} from "react";
+import React, { useState } from "react";
 // import Fade from "react-reveal/Fade";
 import Scrollbar from "@myBlocks/scrollbar/Scrollbar";
 import Navigation from "@sections/navigation/Navigation";
@@ -14,17 +10,16 @@ import BelowTheFold from "./BelowTheFold";
 
 export default function Sections() {
   const [scrolled, setScrolled] = useState(0);
-  const handleScroll = (e) => {
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const target = e.currentTarget;
     const scrollTop = target.scrollTop;
     const targetHeight = target.scrollHeight - target.clientHeight;
-    const scroll = `${(scrollTop / targetHeight) * 100}%`;
-    setScrolled(scroll);
+    setScrolled((scrollTop / targetHeight) * 100);
   };
 
   return (
     <>
-      <Scrollbar state={scrolled} />
+      <Scrollbar progress={scrolled} />
       <div className={`vw-100 vh-100 pt-3 d-flex`} id="main">
         <Navigation />
         <div

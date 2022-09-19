@@ -10,13 +10,27 @@ import * as styles from "./Card.module.sass";
 import Fade from "react-reveal/Fade";
 
 import { StaticImage } from "gatsby-plugin-image";
-import { techStack } from "../Projects";
 import Icon from "../../../blocks/myBlocks/Icon";
 // import SVG from "../../../blocks/myBlocks/SVG/SVG";
 // import Button from "@myBlocks/button/Button";
 // import Carousel from "@myBlocks/carousel/Carousel";
 
-export default function Card(props) {
+interface CardProps {
+  readonly frontmatter: {
+    readonly startDate: string;
+    readonly endDate: string;
+    readonly link: string;
+    readonly title: string;
+    readonly description: string;
+    readonly techStack: readonly {
+      readonly name: string;
+      readonly img: {};
+    }[];
+    readonly thumbnail: {};
+  };
+}
+
+export default function Card(props: CardProps) {
   const [showBack, setShowBack] = useState(false);
 
   return (
@@ -26,14 +40,19 @@ export default function Card(props) {
           showBack ? styles.show_back : ""
         }`}
       >
-        <CardFront {...props} state={[showBack, setShowBack]} />
-        <CardBack {...props} state={[showBack, setShowBack]} />
+        <CardFront project={props} state={[showBack, setShowBack]} />
+        <CardBack project={props} state={[showBack, setShowBack]} />
       </div>
     </div>
   );
 }
 
-function CardFront({ project, i, state }) {
+interface CardSidesProps {
+  project: CardProps;
+  state: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
+}
+
+function CardFront({ project, state }: CardSidesProps) {
   const thumbnail = getImage(project.frontmatter.thumbnail);
   // const [isCarouselVisibleState, setisCarouselVisibleState] = useState(false)
   return (
@@ -93,7 +112,7 @@ function CardFront({ project, i, state }) {
     </div>
   );
 }
-function CardBack({ project, state }) {
+function CardBack({ project, state }: CardSidesProps) {
   const startDate = new Date(project.frontmatter.startDate);
   const endDate = new Date(project.frontmatter.endDate);
   return (
@@ -119,7 +138,8 @@ function CardBack({ project, state }) {
                 className="d-flex align-items-center mb-0"
                 style={{ fontSize: "14px" }}
               >
-                <span className="ms-1">
+                <Icon name="calendar" className="me-2" />
+                <span>
                   {`${startDate.getMonth() + 1}.${startDate.getFullYear()} - ${
                     endDate.getMonth() + 1
                   }.${endDate.getFullYear()}`}

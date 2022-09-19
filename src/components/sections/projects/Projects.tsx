@@ -11,8 +11,8 @@ import Sort from "./sort/Sort";
 export default function Skills() {
   const [activeTechArray, setActiveTechArray] = useState([]);
   const [ascendingSort, setAscendingSort] = useState(false);
-  const data = useStaticQuery(graphql`
-    query Projects {
+  const data = useStaticQuery<Queries.TypegenPageQuery>(graphql`
+    query TypegenPage {
       allMdx(filter: { frontmatter: { title: { regex: "" } } }) {
         nodes {
           frontmatter {
@@ -51,15 +51,14 @@ export default function Skills() {
           {[...data.allMdx.nodes]
             .sort((a, b) =>
               ascendingSort
-                ? Date.parse(a.frontmatter.startDate) -
-                  Date.parse(b.frontmatter.startDate)
-                : Date.parse(b.frontmatter.startDate) -
-                  Date.parse(a.frontmatter.startDate)
+                ? Date.parse(a?.frontmatter?.startDate) -
+                  Date.parse(b?.frontmatter?.startDate)
+                : Date.parse(b?.frontmatter?.startDate) -
+                  Date.parse(a?.frontmatter?.startDate)
             )
             .map((project, i) => (
               <Card
                 project={project}
-                i={i}
                 key={`scene-${project.frontmatter.title}`}
               />
             ))}

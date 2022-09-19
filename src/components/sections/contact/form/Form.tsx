@@ -94,6 +94,10 @@ export default function Form() {
 function TextInput({ data, responses, handleChange, className }) {
   const [clicked, setClicked] = useState(false);
   const [bgActive, setBgActive] = useState(false);
+  const handleInteraction = () => {
+    setClicked(true);
+    setBgActive(true);
+  };
 
   return (
     <div className="col" style={{ minInlineSize: "200px" }}>
@@ -115,10 +119,8 @@ function TextInput({ data, responses, handleChange, className }) {
             id={data.name}
             name={data.name}
             className={` pb-1 w-100 pt-4 ${styles.input} `}
-            onClick={() => {
-              setClicked(true);
-              setBgActive(true);
-            }}
+            onClick={handleInteraction}
+            onFocus={handleInteraction}
             onChange={(e) => {
               handleChange({ ...responses, [data.name]: e.target.value });
             }}
@@ -138,7 +140,10 @@ function TextInput({ data, responses, handleChange, className }) {
 function TextArea({ className, responses, handleChange }) {
   const [clicked, setClicked] = useState(false);
   const [bgActive, setBgActive] = useState(false);
-
+  const handleInteraction = () => {
+    setClicked(true);
+    setBgActive(true);
+  };
   return (
     <div className={`col ${className}`} style={{ minInlineSize: "200px" }}>
       <div
@@ -155,10 +160,8 @@ function TextArea({ className, responses, handleChange }) {
           name="message"
           id="message"
           className={`pb-1 w-100 pt-4 ${styles.input} `}
-          onClick={() => {
-            setClicked(true);
-            setBgActive(true);
-          }}
+          onClick={handleInteraction}
+          onFocus={handleInteraction}
           onBlur={(e) => {
             if (!e.target.value) {
               setClicked(false);
