@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-reveal";
 import Icon from "../../../../blocks/myBlocks/Icon";
 import * as selectStyles from "./Select.module.sass";
+import { TextInputProps } from "../Form";
 // import * as formStyles from "../Form.module.sass";
 
-export default function Select({ responses, handleChange }) {
+interface SelectProps {
+  responses: TextInputProps["responses"];
+  handleChange: TextInputProps["handleChange"];
+}
+export default function Select({ responses, handleChange }: SelectProps) {
   const selectInputs = [
     { name: "Redesign" },
     { name: "Design" },

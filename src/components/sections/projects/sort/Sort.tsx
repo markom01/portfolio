@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import Icon from "../../../blocks/myBlocks/Icon";
 import * as styles from "./Sort.module.sass";
-export default function Sort({ state }) {
+
+interface State {
+  state: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
+}
+
+export default function Sort({ state }: State) {
   return (
     <div className="col d-flex flex-column justify-content-center">
       <small className="mb-1">Sort by Date</small>

@@ -3,5 +3,5 @@ import Section from "../Section";
 import * as styles from "./Experience.module.sass";
 
 export default function Experience() {
-  return <Section id="experience"></Section>;
+  return <Section id="experience">''</Section>;
 }

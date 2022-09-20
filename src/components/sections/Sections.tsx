@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import Fade from "react-reveal/Fade";
+// import {Fade} from "react-reveal";
 import Scrollbar from "@myBlocks/scrollbar/Scrollbar";
 import Navigation from "@sections/navigation/Navigation";
 import Hero from "@sections/hero/Hero";

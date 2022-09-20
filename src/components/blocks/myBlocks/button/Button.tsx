@@ -6,7 +6,8 @@ interface Button {
   secondary?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   className?: string;
-  children?: JSX.Element;
+  children?: JSX.Element | string;
+  type?: "button" | "submit" | "reset" | undefined;
 }
 
 export default function Button({
@@ -15,7 +16,7 @@ export default function Button({
   onClick,
   className = "",
   children,
-  ...other
+  type = "button",
 }: Button) {
   return id === "" ? (
     <button
@@ -25,6 +26,7 @@ export default function Button({
           secondary ? styles.secondary : styles.primary
         }` + ` ${className}`
       }
+      type={type}
     >
       {children}
     </button>
@@ -33,7 +35,7 @@ export default function Button({
       className={`button position-relative d-inline-block px-3 py-2 text-decoration-none text-uppercase ${className}
          ${secondary ? styles.secondary : styles.primary} ${className}`}
       href={`#${id}`}
-      {...other}
+      type={type}
       // {...onClick}
     >
       {id}

@@ -8,7 +8,7 @@ import Select from "./select/Select";
 export default function Form() {
   const [responseInfo, setResponseInfo] = useState("");
   const [alertVisible, setAlertVisible] = useState(false);
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setResponseInfo("Sent! Expect answers soon.");
     // console.log(responses);
@@ -33,6 +33,7 @@ export default function Form() {
       );
     // setAlertVisible(true);
   };
+
   const textInputs = [
     {
       type: "text",
@@ -57,7 +58,6 @@ export default function Form() {
       <div className="row row-cols-1 row-cols-md-2 g-4 mb-4">
         {textInputs.map((data) => (
           <TextInput
-            text
             data={data}
             responses={responses}
             handleChange={setResponses}
@@ -91,7 +91,26 @@ export default function Form() {
   );
 }
 
-function TextInput({ data, responses, handleChange, className }) {
+interface textInput {
+  type: string;
+  name: string;
+}
+
+export interface TextInputProps {
+  data: textInput;
+  responses: {
+    [key: string]: string;
+  };
+  handleChange: React.Dispatch<React.SetStateAction<{}>>;
+  className?: string;
+}
+
+function TextInput({
+  data,
+  responses,
+  handleChange,
+  className,
+}: TextInputProps) {
   const [clicked, setClicked] = useState(false);
   const [bgActive, setBgActive] = useState(false);
   const handleInteraction = () => {
@@ -137,7 +156,13 @@ function TextInput({ data, responses, handleChange, className }) {
   );
 }
 
-function TextArea({ className, responses, handleChange }) {
+interface TextAreaProps {
+  className?: string;
+  responses: TextInputProps["responses"];
+  handleChange: React.Dispatch<React.SetStateAction<{}>>;
+}
+
+function TextArea({ className, responses, handleChange }: TextAreaProps) {
   const [clicked, setClicked] = useState(false);
   const [bgActive, setBgActive] = useState(false);
   const handleInteraction = () => {

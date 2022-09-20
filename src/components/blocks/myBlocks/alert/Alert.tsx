@@ -1,9 +1,15 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-reveal";
 import Icon from "../Icon";
 import * as styles from "./Alert.module.sass";
 
-export default function Alert({ text, visible, handleClick }) {
+interface AlertProps {
+  text: string;
+  visible: boolean;
+  handleClick: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function Alert({ text, visible, handleClick }: AlertProps) {
   const success = text === "Sent! Expect answers soon.";
   return (
     visible && (

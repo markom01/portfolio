@@ -7,7 +7,7 @@ import React, {
 import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "./Card.module.sass";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-reveal";
 
 import { StaticImage } from "gatsby-plugin-image";
 import Icon from "../../../blocks/myBlocks/Icon";
@@ -15,22 +15,9 @@ import Icon from "../../../blocks/myBlocks/Icon";
 // import Button from "@myBlocks/button/Button";
 // import Carousel from "@myBlocks/carousel/Carousel";
 
-interface CardProps {
-  readonly frontmatter: {
-    readonly startDate: string;
-    readonly endDate: string;
-    readonly link: string;
-    readonly title: string;
-    readonly description: string;
-    readonly techStack: readonly {
-      readonly name: string;
-      readonly img: {};
-    }[];
-    readonly thumbnail: {};
-  };
-}
+type CardProps = Queries.TypegenPageQuery["allMdx"]["nodes"][0];
 
-export default function Card(props: CardProps) {
+export default function Card({ project }: { project: CardProps }) {
   const [showBack, setShowBack] = useState(false);
 
   return (
@@ -40,8 +27,8 @@ export default function Card(props: CardProps) {
           showBack ? styles.show_back : ""
         }`}
       >
-        <CardFront project={props} state={[showBack, setShowBack]} />
-        <CardBack project={props} state={[showBack, setShowBack]} />
+        <CardFront project={project} state={[showBack, setShowBack]} />
+        <CardBack project={project} state={[showBack, setShowBack]} />
       </div>
     </div>
   );

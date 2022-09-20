@@ -57,10 +57,7 @@ export default function Skills() {
                   Date.parse(a?.frontmatter?.startDate)
             )
             .map((project, i) => (
-              <Card
-                project={project}
-                key={`scene-${project.frontmatter.title}`}
-              />
+              <Card project={project} key={project.frontmatter.title} />
             ))}
         </div>
       </div>

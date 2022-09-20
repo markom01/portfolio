@@ -1,7 +1,12 @@
 import React from "react";
-import Slide from "react-reveal/Slide";
+import { Slide } from "react-reveal";
 
-export default function Section({ children, id }) {
+interface SectionProps {
+  children: React.ReactNode;
+  id: string;
+}
+
+export default function Section({ children, id }: SectionProps) {
   return (
     <Slide bottom>
       <section id={id} className="px-4">

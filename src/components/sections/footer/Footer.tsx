@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "@myBlocks/Icon";
 import Button from "@myBlocks/button/Button";
-import { secondary } from "@myBlocks/button/Button.module.sass";
+import * as styles from "@myBlocks/button/Button.module.sass";
 
 // import * as styles from "./Footer.module.sass";
 
@@ -26,9 +26,10 @@ const socialIcons = [
   },
 ];
 
-const capitalize = (word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`;
+const capitalize = (word: string) =>
+  `${word.charAt(0).toUpperCase()}${word.slice(1)}`;
 
-const generateLink = (network, username) =>
+const generateLink = (network: string, username: string) =>
   `https://${network}.com/${username}`;
 
 export default function Footer() {
@@ -53,7 +54,7 @@ export default function Footer() {
         <div className="col-12">
           <a
             className={`button position-relative d-inline-block px-3 py-2 text-decoration-none text-uppercase
-         ${secondary}`}
+         ${styles.secondary}`}
             href="cv.pdf"
           >
             <Icon name="file-earmark-arrow-down" className="me-1" />

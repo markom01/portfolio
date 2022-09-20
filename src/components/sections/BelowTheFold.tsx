@@ -9,8 +9,8 @@ export default function BelowTheFold() {
     <>
       <Projects />
       {/* <Experience /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Contact />
+      <Footer />
     </>
   );
 }
