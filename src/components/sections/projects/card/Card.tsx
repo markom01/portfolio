@@ -15,7 +15,7 @@ import Icon from "../../../blocks/myBlocks/Icon";
 // import Button from "@myBlocks/button/Button";
 // import Carousel from "@myBlocks/carousel/Carousel";
 
-type CardProps = Queries.TypegenPageQuery["allMdx"]["nodes"][0];
+type CardProps = Queries.ProjectsQuery["allMdx"]["nodes"][0];
 
 export default function Card({ project }: { project: CardProps }) {
   const [showBack, setShowBack] = useState(false);
@@ -62,7 +62,7 @@ function CardFront({ project, state }: CardSidesProps) {
           <GatsbyImage image={thumbnail} alt="" />
           <div className="d-flex flex-column justify-content-between h-100 w-100 p-3">
             <div>
-              <a href={project.frontmatter.link} className="text-secondary">
+              <a href={project.frontmatter.link} className="text-white">
                 {project.frontmatter.title}
                 <sup className="ms-1"></sup>
               </a>
@@ -86,7 +86,7 @@ function CardFront({ project, state }: CardSidesProps) {
                 })}
               </div>
               <button
-                className={`text-secondary ${styles.flip_btn}`}
+                className={`text-white ${styles.flip_btn}`}
                 onClick={() => state[1](true)}
                 data-tooltip="Show More"
               >
@@ -107,34 +107,31 @@ function CardBack({ project, state }: CardSidesProps) {
       className={`${styles.glassCard} p-3 d-flex flex-column align-items-center position-absolute text-start ${styles.card__face} ${styles.card__faceback}`}
     >
       <>
-        {state[0] && (
-          <Fade cascade>
-            <div className="d-flex flex-column h-100">
-              <h5 className="mb-2 text-white">Description</h5>
-              <h6>{project.frontmatter.description}</h6>
-            </div>
-            <div className="d-flex w-100 justify-content-between align-items-center">
-              <button
-                className={styles.flip_btn}
-                onClick={() => state[1](false)}
-              >
-                <Icon name="chevron-left" />
-              </button>
-              <h6
-                data-tooltip="Project Duration"
-                className="d-flex align-items-center mb-0"
-                style={{ fontSize: "14px" }}
-              >
-                <Icon name="calendar" className="me-2" />
-                <span>
-                  {`${startDate.getMonth() + 1}.${startDate.getFullYear()} - ${
-                    endDate.getMonth() + 1
-                  }.${endDate.getFullYear()}`}
-                </span>
-              </h6>
-            </div>
-          </Fade>
-        )}
+        {/* {state[0] && ( */}
+        <Fade cascade>
+          <div className="d-flex flex-column h-100">
+            <h5 className="mb-2 text-white">Description</h5>
+            <h6>{project.frontmatter.description}</h6>
+          </div>
+          <div className="d-flex w-100 justify-content-between align-items-center">
+            <button className={styles.flip_btn} onClick={() => state[1](false)}>
+              <Icon name="chevron-left" />
+            </button>
+            <h6
+              data-tooltip="Project Duration"
+              className="d-flex align-items-center mb-0"
+              style={{ fontSize: "14px" }}
+            >
+              <Icon name="calendar" className="me-2" />
+              <span>
+                {`${startDate.getMonth() + 1}.${startDate.getFullYear()} - ${
+                  endDate.getMonth() + 1
+                }.${endDate.getFullYear()}`}
+              </span>
+            </h6>
+          </div>
+        </Fade>
+        {/* )} */}
       </>
     </div>
   );

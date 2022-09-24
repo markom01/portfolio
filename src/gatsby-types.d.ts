@@ -677,11 +677,50 @@ type FileFieldsEnum =
   | 'childMdx.frontmatter.icons'
   | 'childMdx.frontmatter.icons.name'
   | 'childMdx.frontmatter.link'
+  | 'childMdx.frontmatter.logo.absolutePath'
+  | 'childMdx.frontmatter.logo.accessTime'
+  | 'childMdx.frontmatter.logo.atime'
+  | 'childMdx.frontmatter.logo.atimeMs'
+  | 'childMdx.frontmatter.logo.base'
+  | 'childMdx.frontmatter.logo.birthTime'
+  | 'childMdx.frontmatter.logo.birthtime'
+  | 'childMdx.frontmatter.logo.birthtimeMs'
+  | 'childMdx.frontmatter.logo.blksize'
+  | 'childMdx.frontmatter.logo.blocks'
+  | 'childMdx.frontmatter.logo.changeTime'
+  | 'childMdx.frontmatter.logo.children'
+  | 'childMdx.frontmatter.logo.childrenImageSharp'
+  | 'childMdx.frontmatter.logo.childrenMdx'
+  | 'childMdx.frontmatter.logo.ctime'
+  | 'childMdx.frontmatter.logo.ctimeMs'
+  | 'childMdx.frontmatter.logo.dev'
+  | 'childMdx.frontmatter.logo.dir'
+  | 'childMdx.frontmatter.logo.ext'
+  | 'childMdx.frontmatter.logo.extension'
+  | 'childMdx.frontmatter.logo.gid'
+  | 'childMdx.frontmatter.logo.id'
+  | 'childMdx.frontmatter.logo.ino'
+  | 'childMdx.frontmatter.logo.mode'
+  | 'childMdx.frontmatter.logo.modifiedTime'
+  | 'childMdx.frontmatter.logo.mtime'
+  | 'childMdx.frontmatter.logo.mtimeMs'
+  | 'childMdx.frontmatter.logo.name'
+  | 'childMdx.frontmatter.logo.nlink'
+  | 'childMdx.frontmatter.logo.prettySize'
+  | 'childMdx.frontmatter.logo.publicURL'
+  | 'childMdx.frontmatter.logo.rdev'
+  | 'childMdx.frontmatter.logo.relativeDirectory'
+  | 'childMdx.frontmatter.logo.relativePath'
+  | 'childMdx.frontmatter.logo.root'
+  | 'childMdx.frontmatter.logo.size'
+  | 'childMdx.frontmatter.logo.sourceInstanceName'
+  | 'childMdx.frontmatter.logo.uid'
   | 'childMdx.frontmatter.role'
   | 'childMdx.frontmatter.skills'
   | 'childMdx.frontmatter.skills.icon'
   | 'childMdx.frontmatter.skills.name'
   | 'childMdx.frontmatter.startDate'
+  | 'childMdx.frontmatter.tasks'
   | 'childMdx.frontmatter.techStack'
   | 'childMdx.frontmatter.techStack.name'
   | 'childMdx.frontmatter.thumbnail.absolutePath'
@@ -848,11 +887,50 @@ type FileFieldsEnum =
   | 'childrenMdx.frontmatter.icons'
   | 'childrenMdx.frontmatter.icons.name'
   | 'childrenMdx.frontmatter.link'
+  | 'childrenMdx.frontmatter.logo.absolutePath'
+  | 'childrenMdx.frontmatter.logo.accessTime'
+  | 'childrenMdx.frontmatter.logo.atime'
+  | 'childrenMdx.frontmatter.logo.atimeMs'
+  | 'childrenMdx.frontmatter.logo.base'
+  | 'childrenMdx.frontmatter.logo.birthTime'
+  | 'childrenMdx.frontmatter.logo.birthtime'
+  | 'childrenMdx.frontmatter.logo.birthtimeMs'
+  | 'childrenMdx.frontmatter.logo.blksize'
+  | 'childrenMdx.frontmatter.logo.blocks'
+  | 'childrenMdx.frontmatter.logo.changeTime'
+  | 'childrenMdx.frontmatter.logo.children'
+  | 'childrenMdx.frontmatter.logo.childrenImageSharp'
+  | 'childrenMdx.frontmatter.logo.childrenMdx'
+  | 'childrenMdx.frontmatter.logo.ctime'
+  | 'childrenMdx.frontmatter.logo.ctimeMs'
+  | 'childrenMdx.frontmatter.logo.dev'
+  | 'childrenMdx.frontmatter.logo.dir'
+  | 'childrenMdx.frontmatter.logo.ext'
+  | 'childrenMdx.frontmatter.logo.extension'
+  | 'childrenMdx.frontmatter.logo.gid'
+  | 'childrenMdx.frontmatter.logo.id'
+  | 'childrenMdx.frontmatter.logo.ino'
+  | 'childrenMdx.frontmatter.logo.mode'
+  | 'childrenMdx.frontmatter.logo.modifiedTime'
+  | 'childrenMdx.frontmatter.logo.mtime'
+  | 'childrenMdx.frontmatter.logo.mtimeMs'
+  | 'childrenMdx.frontmatter.logo.name'
+  | 'childrenMdx.frontmatter.logo.nlink'
+  | 'childrenMdx.frontmatter.logo.prettySize'
+  | 'childrenMdx.frontmatter.logo.publicURL'
+  | 'childrenMdx.frontmatter.logo.rdev'
+  | 'childrenMdx.frontmatter.logo.relativeDirectory'
+  | 'childrenMdx.frontmatter.logo.relativePath'
+  | 'childrenMdx.frontmatter.logo.root'
+  | 'childrenMdx.frontmatter.logo.size'
+  | 'childrenMdx.frontmatter.logo.sourceInstanceName'
+  | 'childrenMdx.frontmatter.logo.uid'
   | 'childrenMdx.frontmatter.role'
   | 'childrenMdx.frontmatter.skills'
   | 'childrenMdx.frontmatter.skills.icon'
   | 'childrenMdx.frontmatter.skills.name'
   | 'childrenMdx.frontmatter.startDate'
+  | 'childrenMdx.frontmatter.tasks'
   | 'childrenMdx.frontmatter.techStack'
   | 'childrenMdx.frontmatter.techStack.name'
   | 'childrenMdx.frontmatter.thumbnail.absolutePath'
@@ -1831,11 +1909,79 @@ type MdxFieldsEnum =
   | 'frontmatter.icons.img.uid'
   | 'frontmatter.icons.name'
   | 'frontmatter.link'
+  | 'frontmatter.logo.absolutePath'
+  | 'frontmatter.logo.accessTime'
+  | 'frontmatter.logo.atime'
+  | 'frontmatter.logo.atimeMs'
+  | 'frontmatter.logo.base'
+  | 'frontmatter.logo.birthTime'
+  | 'frontmatter.logo.birthtime'
+  | 'frontmatter.logo.birthtimeMs'
+  | 'frontmatter.logo.blksize'
+  | 'frontmatter.logo.blocks'
+  | 'frontmatter.logo.changeTime'
+  | 'frontmatter.logo.childImageSharp.children'
+  | 'frontmatter.logo.childImageSharp.gatsbyImageData'
+  | 'frontmatter.logo.childImageSharp.id'
+  | 'frontmatter.logo.childMdx.body'
+  | 'frontmatter.logo.childMdx.children'
+  | 'frontmatter.logo.childMdx.excerpt'
+  | 'frontmatter.logo.childMdx.id'
+  | 'frontmatter.logo.childMdx.tableOfContents'
+  | 'frontmatter.logo.children'
+  | 'frontmatter.logo.childrenImageSharp'
+  | 'frontmatter.logo.childrenImageSharp.children'
+  | 'frontmatter.logo.childrenImageSharp.gatsbyImageData'
+  | 'frontmatter.logo.childrenImageSharp.id'
+  | 'frontmatter.logo.childrenMdx'
+  | 'frontmatter.logo.childrenMdx.body'
+  | 'frontmatter.logo.childrenMdx.children'
+  | 'frontmatter.logo.childrenMdx.excerpt'
+  | 'frontmatter.logo.childrenMdx.id'
+  | 'frontmatter.logo.childrenMdx.tableOfContents'
+  | 'frontmatter.logo.children.children'
+  | 'frontmatter.logo.children.id'
+  | 'frontmatter.logo.ctime'
+  | 'frontmatter.logo.ctimeMs'
+  | 'frontmatter.logo.dev'
+  | 'frontmatter.logo.dir'
+  | 'frontmatter.logo.ext'
+  | 'frontmatter.logo.extension'
+  | 'frontmatter.logo.gid'
+  | 'frontmatter.logo.id'
+  | 'frontmatter.logo.ino'
+  | 'frontmatter.logo.internal.content'
+  | 'frontmatter.logo.internal.contentDigest'
+  | 'frontmatter.logo.internal.contentFilePath'
+  | 'frontmatter.logo.internal.description'
+  | 'frontmatter.logo.internal.fieldOwners'
+  | 'frontmatter.logo.internal.ignoreType'
+  | 'frontmatter.logo.internal.mediaType'
+  | 'frontmatter.logo.internal.owner'
+  | 'frontmatter.logo.internal.type'
+  | 'frontmatter.logo.mode'
+  | 'frontmatter.logo.modifiedTime'
+  | 'frontmatter.logo.mtime'
+  | 'frontmatter.logo.mtimeMs'
+  | 'frontmatter.logo.name'
+  | 'frontmatter.logo.nlink'
+  | 'frontmatter.logo.parent.children'
+  | 'frontmatter.logo.parent.id'
+  | 'frontmatter.logo.prettySize'
+  | 'frontmatter.logo.publicURL'
+  | 'frontmatter.logo.rdev'
+  | 'frontmatter.logo.relativeDirectory'
+  | 'frontmatter.logo.relativePath'
+  | 'frontmatter.logo.root'
+  | 'frontmatter.logo.size'
+  | 'frontmatter.logo.sourceInstanceName'
+  | 'frontmatter.logo.uid'
   | 'frontmatter.role'
   | 'frontmatter.skills'
   | 'frontmatter.skills.icon'
   | 'frontmatter.skills.name'
   | 'frontmatter.startDate'
+  | 'frontmatter.tasks'
   | 'frontmatter.techStack'
   | 'frontmatter.techStack.img.absolutePath'
   | 'frontmatter.techStack.img.accessTime'
@@ -2017,9 +2163,11 @@ type MdxFrontmatter = {
   readonly endDate: Maybe<Scalars['Date']>;
   readonly icons: Maybe<ReadonlyArray<Maybe<MdxFrontmatterIcons>>>;
   readonly link: Maybe<Scalars['String']>;
+  readonly logo: Maybe<File>;
   readonly role: Maybe<Scalars['String']>;
   readonly skills: Maybe<ReadonlyArray<Maybe<MdxFrontmatterSkills>>>;
   readonly startDate: Maybe<Scalars['Date']>;
+  readonly tasks: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly techStack: Maybe<ReadonlyArray<Maybe<MdxFrontmatterTechStack>>>;
   readonly thumbnail: Maybe<File>;
   readonly title: Maybe<Scalars['String']>;
@@ -2046,9 +2194,11 @@ type MdxFrontmatterFilterInput = {
   readonly endDate: InputMaybe<DateQueryOperatorInput>;
   readonly icons: InputMaybe<MdxFrontmatterIconsFilterListInput>;
   readonly link: InputMaybe<StringQueryOperatorInput>;
+  readonly logo: InputMaybe<FileFilterInput>;
   readonly role: InputMaybe<StringQueryOperatorInput>;
   readonly skills: InputMaybe<MdxFrontmatterSkillsFilterListInput>;
   readonly startDate: InputMaybe<DateQueryOperatorInput>;
+  readonly tasks: InputMaybe<StringQueryOperatorInput>;
   readonly techStack: InputMaybe<MdxFrontmatterTechStackFilterListInput>;
   readonly thumbnail: InputMaybe<FileFilterInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
@@ -3687,6 +3837,11 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
+type ExperienceQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type ExperienceQuery = { readonly allMdx: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly startDate: string | null, readonly endDate: string | null, readonly link: string | null, readonly role: string | null, readonly tasks: ReadonlyArray<string | null> | null, readonly skills: ReadonlyArray<{ readonly icon: string | null, readonly name: string | null } | null> | null, readonly logo: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null }> } };
+
 type FilterQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3718,10 +3873,10 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: st
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
 
-type TypegenPageQueryVariables = Exact<{ [key: string]: never; }>;
+type ProjectsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type TypegenPageQuery = { readonly allMdx: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly startDate: string | null, readonly endDate: string | null, readonly link: string | null, readonly title: string | null, readonly description: string | null, readonly techStack: ReadonlyArray<{ readonly name: string | null, readonly img: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null> | null, readonly thumbnail: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null }> } };
+type ProjectsQuery = { readonly allMdx: { readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly startDate: string | null, readonly endDate: string | null, readonly link: string | null, readonly title: string | null, readonly description: string | null, readonly techStack: ReadonlyArray<{ readonly name: string | null, readonly img: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null> | null, readonly thumbnail: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null }> } };
 
 
 }

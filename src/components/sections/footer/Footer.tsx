@@ -2,6 +2,7 @@ import React from "react";
 import Icon from "@myBlocks/Icon";
 import Button from "@myBlocks/button/Button";
 import * as styles from "@myBlocks/button/Button.module.sass";
+import Section from "@sections/Section";
 
 // import * as styles from "./Footer.module.sass";
 
@@ -34,34 +35,36 @@ const generateLink = (network: string, username: string) =>
 
 export default function Footer() {
   return (
-    <footer className="p-5">
-      <div className="row g-5 justify-content-center">
-        {socialIcons.map((icon) => (
-          <div
-            data-tooltip={capitalize(icon.name)}
-            className="col-auto"
-            key={icon.name}
-          >
-            <a
-              target="_blank"
-              href={icon.link()}
-              style={{ color: "var(--icons-color)" }}
+    <Section id="connect" className="mb-5">
+      <footer className="p-5">
+        <div className="row g-5 justify-content-center">
+          {socialIcons.map((icon) => (
+            <div
+              data-tooltip={capitalize(icon.name)}
+              className="col-auto"
+              key={icon.name}
             >
-              <Icon name={icon.name} />
+              <a
+                target="_blank"
+                href={icon.link()}
+                style={{ color: "var(--icons-color)" }}
+              >
+                <Icon name={icon.name} />
+              </a>
+            </div>
+          ))}
+          <div className="col-12">
+            <a
+              className={`button position-relative d-inline-block px-3 py-2 text-decoration-none text-uppercase
+         ${styles.secondary}`}
+              href="cv.pdf"
+            >
+              <Icon name="file-earmark-arrow-down" className="me-1" />
+              CV
             </a>
           </div>
-        ))}
-        <div className="col-12">
-          <a
-            className={`button position-relative d-inline-block px-3 py-2 text-decoration-none text-uppercase
-         ${styles.secondary}`}
-            href="cv.pdf"
-          >
-            <Icon name="file-earmark-arrow-down" className="me-1" />
-            CV
-          </a>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </Section>
   );
 }

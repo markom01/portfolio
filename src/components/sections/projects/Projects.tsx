@@ -11,8 +11,8 @@ import Sort from "./sort/Sort";
 export default function Skills() {
   const [activeTechArray, setActiveTechArray] = useState([]);
   const [ascendingSort, setAscendingSort] = useState(false);
-  const data = useStaticQuery<Queries.TypegenPageQuery>(graphql`
-    query TypegenPage {
+  const data = useStaticQuery<Queries.ProjectsQuery>(graphql`
+    query Projects {
       allMdx(filter: { frontmatter: { title: { regex: "" } } }) {
         nodes {
           frontmatter {

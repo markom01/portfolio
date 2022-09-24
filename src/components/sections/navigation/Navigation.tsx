@@ -6,15 +6,19 @@ import Icon from "../../blocks/myBlocks/Icon";
 const links = [
   {
     name: "projects",
-    class: "display-fill",
+    class: "display",
   },
   {
     name: "experience",
-    class: "briefcase-fill",
+    class: "briefcase",
   },
   {
     name: "contact",
-    class: "chat-dots-fill",
+    class: "chat-dots",
+  },
+  {
+    name: "connect",
+    class: "link",
   },
 ];
 

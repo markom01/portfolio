@@ -5,7 +5,7 @@ import Button from "@myBlocks/button/Button";
 
 export default function Hero() {
   return (
-    <section id="home">
+    <section id="hero">
       <StaticImage
         src="../../../images/brand/profile-picture.png"
         className={`col ${styles.img}`}
