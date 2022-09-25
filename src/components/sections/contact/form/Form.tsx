@@ -4,6 +4,7 @@ import * as styles from "./Form.module.sass";
 import Button from "@myBlocks/button/Button";
 import Alert from "../../../blocks/myBlocks/alert/Alert";
 import Select from "./select/Select";
+import Checkbox from "./checkbox/Checkbox";
 
 export default function Form() {
   const [responseInfo, setResponseInfo] = useState("");

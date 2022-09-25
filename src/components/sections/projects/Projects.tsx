@@ -25,7 +25,7 @@ export default function Skills() {
               name
               img {
                 childImageSharp {
-                  gatsbyImageData(width: 24)
+                  gatsbyImageData(height: 24)
                 }
               }
             }

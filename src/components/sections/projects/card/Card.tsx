@@ -64,7 +64,9 @@ function CardFront({ project, state }: CardSidesProps) {
             <div>
               <a href={project.frontmatter.link} className="text-white">
                 {project.frontmatter.title}
-                <sup className="ms-1"></sup>
+                <sup className="ms-1">
+                  <Icon name="link-45deg" />
+                </sup>
               </a>
             </div>
             <div className="d-flex justify-content-between align-items-center w-100">

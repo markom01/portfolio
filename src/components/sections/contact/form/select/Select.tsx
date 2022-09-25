@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Fade } from "react-reveal";
+import { Slide, Fade } from "react-reveal";
 import Icon from "../../../../blocks/myBlocks/Icon";
 import * as selectStyles from "./Select.module.sass";
 import { TextInputProps } from "../Form";
@@ -45,29 +45,31 @@ export default function Select({ responses, handleChange }: SelectProps) {
           <Icon name="chevron-down" />
         </button>
         {optionsViewable && (
-          <Fade top>
+          <Slide top>
             <div
               className={`position-absolute start-50 translate-middle-x glass d-flex flex-column w-100 ${selectStyles.select}`}
             >
               {selectInputs.map((data) => (
-                <button
-                  key={data.name}
-                  type="button"
-                  className={`py-2 ${selectStyles.select_item}`}
-                  onClick={(e) => {
-                    setSelected(`Website ${data.name}`);
+                <Fade cascade>
+                  <button
+                    key={data.name}
+                    type="button"
+                    className={`py-2 ${selectStyles.select_item}`}
+                    onClick={(e) => {
+                      setSelected(`Website ${data.name}`);
 
-                    handleChange({
-                      ...responses,
-                      project: `Website ${data.name}`,
-                    });
-                  }}
-                >
-                  {`Website ${data.name}`}
-                </button>
+                      handleChange({
+                        ...responses,
+                        project: `Website ${data.name}`,
+                      });
+                    }}
+                  >
+                    {`Website ${data.name}`}
+                  </button>
+                </Fade>
               ))}
             </div>
-          </Fade>
+          </Slide>
         )}
       </div>
     </div>
