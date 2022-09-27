@@ -18,7 +18,7 @@ export default function Sections() {
   };
 
   return (
-    <div style={{ zIndex: 2 }}>
+    <>
       <Scrollbar progress={scrolled} />
       <div className={`vw-100 vh-100 pt-3 d-flex`} id="main">
         <Navigation />
@@ -28,12 +28,9 @@ export default function Sections() {
           onScroll={handleScroll}
         >
           <Hero />
-          {/* <Suspense> */}
           <BelowTheFold />
-          {/* </Suspense> */}
         </div>
-        {/* <Carousel /> */}
       </div>
-    </div>
+    </>
   );
 }
