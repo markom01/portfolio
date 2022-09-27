@@ -10,7 +10,6 @@ export default function Cursor({
     <div
       style={{
         transform: `translate3d(${coords.x - 15}px, ${coords.y - 15}px,0)`,
-        zIndex: 2,
       }}
       className={`position-absolute ${styles.cursor} glass--border p-2`}
     >

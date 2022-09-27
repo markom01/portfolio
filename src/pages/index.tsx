@@ -20,10 +20,7 @@ export default function App() {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
   return (
-    <div
-      // className="position-absolute vw-100 vh-100"
-      onPointerMove={(e) => setCoords({ x: e.clientX, y: e.clientY })}
-    >
+    <div onPointerMove={(e) => setCoords({ x: e.clientX, y: e.clientY })}>
       {/* <Cursor coords={coords} /> */}
       <div className="video position-absolute top-50 start-50 translate-middle vw-100 vh-100">
         <video

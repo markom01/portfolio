@@ -6,11 +6,12 @@
   font-weight: 400
   src: local(''), url('../fonts/poppins-v20-latin-regular.woff2') format('woff2')
 
-// :root
-//   cursor: none
-
 *
   transition: $transition-base
+
+//todo add input classes
+*:not(.input)
+  cursor: url(../../static/cursor.png) 15 15, auto !important
 
 ::selection
   background-color: rgba(255, 255, 255, 0.1)

@@ -37,7 +37,12 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-pnpm",
-    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        useResolveUrlLoader: true,
+      },
+    },
     `gatsby-plugin-purgecss`,
     {
       resolve: `gatsby-plugin-sharp`,
