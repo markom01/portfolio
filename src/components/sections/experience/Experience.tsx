@@ -35,7 +35,7 @@ export default function Experience() {
   return (
     <Section id="experience">
       {data.allMdx.nodes.map((project) => (
-        <ExperienceCard project={project} />
+        <ExperienceCard project={project} key={project.frontmatter.role} />
       ))}
     </Section>
   );
@@ -89,7 +89,10 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
           <h5 className="text-white mb-3 text-start">Skills</h5>
           <div className="d-flex flex-wrap justify-content-start">
             {project.frontmatter.skills.map((skill) => (
-              <div className="d-flex align-items-center me-3 mb-3">
+              <div
+                className="d-flex align-items-center me-3 mb-3"
+                key={skill.name}
+              >
                 <Icon name={skill.icon} className="me-2" />
                 <h6>{skill.name}</h6>
               </div>

@@ -1,12 +1,11 @@
 import React from "react";
+import * as styles from "./Scrollbar.module.sass";
 
 export default function Scrollbar({ progress }: { progress: number }) {
   return (
-    <div
-      className="position-absolute top-0 left-0 vw-100"
-      style={{ height: 4, zIndex: 1 }}
-    >
-      <div className="bg-primary h-100" style={{ width: `${progress}%` }} />
-    </div>
+    <progress
+      className={`${styles.scrollbar} position-absolute top-0 left-0 vw-100 bg-transparent border-0`}
+      value={progress}
+    />
   );
 }

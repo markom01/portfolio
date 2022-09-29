@@ -5,6 +5,7 @@ import Button from "@myBlocks/button/Button";
 import Alert from "../../../blocks/myBlocks/alert/Alert";
 import Select from "./select/Select";
 import Checkbox from "./checkbox/Checkbox";
+import Radio from "./radio/Radio";
 
 export default function Form() {
   const [responseInfo, setResponseInfo] = useState("");
@@ -48,6 +49,9 @@ export default function Form() {
 
   const [responses, setResponses] = useState({});
 
+  const radioLabels = ["Radio 1", "Radio 2", "Radio 3"];
+  const [activeRadio, setActiveRadio] = useState(null);
+
   return (
     <form
       id="contact"
@@ -88,6 +92,9 @@ export default function Form() {
         visible={alertVisible}
         handleClick={setAlertVisible}
       />
+      {/* {radioLabels.map((label) => (
+        <Radio label={label} key={label} />
+      ))} */}
     </form>
   );
 }

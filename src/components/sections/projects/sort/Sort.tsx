@@ -1,12 +1,9 @@
+import Radio from "@sections/contact/form/radio/Radio";
 import React, { useState } from "react";
 import Icon from "../../../blocks/myBlocks/Icon";
 import * as styles from "./Sort.module.sass";
 
-interface State {
-  state: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
-}
-
-export default function Sort({ state }: State) {
+export default function Sort() {
   return (
     <div className="col d-flex flex-column justify-content-center">
       <small className="mb-1">Sort by Date</small>
@@ -15,16 +12,8 @@ export default function Sort({ state }: State) {
           className="p-1"
           style={{ border: "1px solid var(--glass-border)" }}
         >
-          <button onClick={() => state[1](false)}>
-            <div className={`py-1 px-2 ${!state[0] ? styles.active : ""}`}>
-              <Icon name="chevron-down" />
-            </div>
-          </button>
-          <button onClick={() => state[1](true)}>
-            <div className={`py-1 px-2 ${state[0] ? styles.active : ""}`}>
-              <Icon name="chevron-up" />
-            </div>
-          </button>
+          <Radio label="sort-descending" icon="chevron-down" className="me-1" />
+          <Radio label="sort-ascending" icon="chevron-up" />
         </div>
       </div>
     </div>

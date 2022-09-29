@@ -14,7 +14,7 @@ export default function Sections() {
     const target = e.currentTarget;
     const scrollTop = target.scrollTop;
     const targetHeight = target.scrollHeight - target.clientHeight;
-    setScrolled((scrollTop / targetHeight) * 100);
+    setScrolled(scrollTop / targetHeight);
   };
 
   return (
