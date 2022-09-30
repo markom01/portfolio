@@ -10,7 +10,7 @@ import Sort from "./sort/Sort";
 
 export default function Skills() {
   const [activeTechArray, setActiveTechArray] = useState([]);
-  const [ascendingSort, setAscendingSort] = useState(false);
+  const [sort, setSort] = useState("desc");
   const data = useStaticQuery<Queries.ProjectsQuery>(graphql`
     query Projects {
       allMdx(filter: { frontmatter: { title: { regex: "" } } }) {
@@ -45,18 +45,18 @@ export default function Skills() {
       <div className="px-3 px-md-5">
         <div className="row row-cols-auto align-items-start justify-content-between justify-content-md-end gx-4 mb-5">
           {/* <Filter state={[activeTechArray, setActiveTechArray]} /> */}
-          <Sort state={[ascendingSort, setAscendingSort]} />
+          <Sort handleSort={setSort} />
         </div>
         <div className="row row-cols-auto gx-4 gx-md-5 gy-5 justify-content-center align-items-center">
           {[...data.allMdx.nodes]
             .sort((a, b) =>
-              ascendingSort
+              sort === "asc"
                 ? Date.parse(a?.frontmatter?.startDate) -
                   Date.parse(b?.frontmatter?.startDate)
                 : Date.parse(b?.frontmatter?.startDate) -
                   Date.parse(a?.frontmatter?.startDate)
             )
-            .map((project, i) => (
+            .map((project) => (
               <Card project={project} key={project.frontmatter.title} />
             ))}
         </div>

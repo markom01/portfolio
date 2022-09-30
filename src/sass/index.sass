@@ -82,10 +82,10 @@ small
   filter: invert(1)
   opacity: 0.5
 
-form, input, select, textarea
+form, input:not([type='radio']), select, textarea
   @extend .glass--border
 
-input, select, textarea
+input:not([type='radio']), select, textarea
   // color: var(--bs-secondary)
   padding-inline: 10px
   background-color: transparent

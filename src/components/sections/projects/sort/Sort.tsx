@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import Icon from "../../../blocks/myBlocks/Icon";
 import * as styles from "./Sort.module.sass";
 
-export default function Sort() {
+export default function Sort({
+  handleSort,
+}: {
+  handleSort: React.Dispatch<React.SetStateAction<string>>;
+}) {
   return (
     <div className="col d-flex flex-column justify-content-center">
       <small className="mb-1">Sort by Date</small>
@@ -12,8 +16,13 @@ export default function Sort() {
           className="p-1"
           style={{ border: "1px solid var(--glass-border)" }}
         >
-          <Radio label="sort-descending" icon="chevron-down" className="me-1" />
-          <Radio label="sort-ascending" icon="chevron-up" />
+          <Radio
+            label="desc"
+            handleSort={handleSort}
+            icon="chevron-down"
+            className="me-1"
+          />
+          <Radio label="asc" handleSort={handleSort} icon="chevron-up" />
         </div>
       </div>
     </div>

@@ -89,7 +89,7 @@ function CardFront({ project, state }: CardSidesProps) {
               </div>
               <button
                 className={`text-white ${styles.flip_btn}`}
-                onClick={() => state[1](true)}
+                onClick={() => state[1]((s) => !s)}
                 data-tooltip="Show More"
               >
                 <Icon name="chevron-right" />
@@ -116,7 +116,10 @@ function CardBack({ project, state }: CardSidesProps) {
             <h6>{project.frontmatter.description}</h6>
           </div>
           <div className="d-flex w-100 justify-content-between align-items-center">
-            <button className={styles.flip_btn} onClick={() => state[1](false)}>
+            <button
+              className={styles.flip_btn}
+              onClick={() => state[1]((s) => !s)}
+            >
               <Icon name="chevron-left" />
             </button>
             <h6

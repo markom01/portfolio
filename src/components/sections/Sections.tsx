@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 // import {Fade} from "react-reveal";
 import Scrollbar from "@myBlocks/scrollbar/Scrollbar";
 import Navigation from "@sections/navigation/Navigation";
@@ -16,9 +16,22 @@ export default function Sections() {
     const targetHeight = target.scrollHeight - target.clientHeight;
     setScrolled(scrollTop / targetHeight);
   };
+  const videoRef = useRef<HTMLVideoElement>();
 
   return (
     <>
+      <div className="video position-absolute vw-100 vh-100">
+        <video
+          src="bg-triangles-small.mp4"
+          className="w-100 h-100"
+          autoPlay
+          muted
+          loop
+          ref={videoRef}
+          style={{ objectFit: "cover" }}
+          onPlay={() => (videoRef.current.playbackRate = 0.5)}
+        />
+      </div>
       <Scrollbar progress={scrolled} />
       <div className={`vw-100 vh-100 pt-3 d-flex`} id="main">
         <Navigation />

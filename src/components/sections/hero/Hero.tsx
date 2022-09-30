@@ -13,9 +13,7 @@ export default function Hero() {
       />
       <p>Marko Meseldžija</p>
 
-      <h1 className="text-primary text-uppercase fw-bold">
-        Frontend Web Development
-      </h1>
+      <h1 className="text-primary text-uppercase fw-bold">Frontend | UI UX</h1>
 
       <div className="btns">
         <Button id="projects" />

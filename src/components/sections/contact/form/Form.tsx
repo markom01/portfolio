@@ -13,26 +13,26 @@ export default function Form() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setResponseInfo("Sent! Expect answers soon.");
-    // console.log(responses);
-    emailjs
-      .send(
-        "service_uu3ohhx",
-        "template_tcns97j",
-        responses,
-        "CAC6I6BDizh-EyeW6"
-      )
-      .then(
-        (response) => {
-          setResponseInfo("Sent! Expect answers soon.");
-          setAlertVisible(true);
-          process.env.NODE_ENV === "development" && console.log(response.text);
-        },
-        (err) => {
-          setResponseInfo(err);
-          setAlertVisible(true);
-          process.env.NODE_ENV === "development" && console.log(err);
-        }
-      );
+    console.log(responses);
+    // emailjs
+    //   .send(
+    //     "service_uu3ohhx",
+    //     "template_tcns97j",
+    //     responses,
+    //     "CAC6I6BDizh-EyeW6"
+    //   )
+    //   .then(
+    //     (response) => {
+    //       setResponseInfo("Sent! Expect answers soon.");
+    //       setAlertVisible(true);
+    //       process.env.NODE_ENV === "development" && console.log(response.text);
+    //     },
+    //     (err) => {
+    //       setResponseInfo(err);
+    //       setAlertVisible(true);
+    //       process.env.NODE_ENV === "development" && console.log(err);
+    //     }
+    //   );
     // setAlertVisible(true);
   };
 

@@ -3,6 +3,7 @@ import { Slide, Fade } from "react-reveal";
 import Icon from "../../../../blocks/myBlocks/Icon";
 import * as selectStyles from "./Select.module.sass";
 import { TextInputProps } from "../Form";
+import * as radioStyles from "../radio/Radio.module.sass";
 // import * as formStyles from "../Form.module.sass";
 
 interface SelectProps {
@@ -40,7 +41,7 @@ export default function Select({ responses, handleChange }: SelectProps) {
             >
               Select Project Type
             </p>
-            {!initial && <p className="py-1">{selected}</p>}
+            {!initial && <p className="py-1 text-start">{selected}</p>}
           </div>
           <Icon name="chevron-down" />
         </button>
@@ -50,23 +51,29 @@ export default function Select({ responses, handleChange }: SelectProps) {
               className={`position-absolute start-50 translate-middle-x glass d-flex flex-column w-100 ${selectStyles.select}`}
             >
               {selectInputs.map((data) => (
-                <Fade cascade>
-                  <button
-                    key={data.name}
-                    type="button"
-                    className={`py-2 ${selectStyles.select_item}`}
-                    onClick={(e) => {
-                      setSelected(`Website ${data.name}`);
+                <div key={data.name}>
+                  <Fade cascade>
+                    <input
+                      type="radio"
+                      id={data.name}
+                      value={data.name}
+                      name="project-types-radios"
+                      className={radioStyles.hide}
+                      onChange={(e) => {
+                        setSelected(`Website ${e.target.value}`);
 
-                      handleChange({
-                        ...responses,
-                        project: `Website ${data.name}`,
-                      });
-                    }}
-                  >
-                    {`Website ${data.name}`}
-                  </button>
-                </Fade>
+                        handleChange({
+                          ...responses,
+                          project: `Website ${data.name}`,
+                        });
+                      }}
+                    />
+                    <label
+                      htmlFor={data.name}
+                      className={`py-2 w-100 ${selectStyles.select_item}`}
+                    >{`Website ${data.name}`}</label>
+                  </Fade>
+                </div>
               ))}
             </div>
           </Slide>

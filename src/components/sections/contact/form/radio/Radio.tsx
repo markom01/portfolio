@@ -6,31 +6,26 @@ export default function Radio({
   label,
   icon,
   className,
+  handleSort,
 }: {
   label: string;
   icon: string;
   className?: string;
+  handleSort: React.Dispatch<React.SetStateAction<string>>;
 }) {
   return (
     <>
       <input
-        id={label}
         type="radio"
+        id={label}
         value={label}
-        name="radios"
-        style={{ display: "none" }}
-        className={styles.radio}
+        name="sort-radios"
+        className={`${styles.radio} ${styles.hide}`}
+        onChange={(e) => handleSort(e.target.value)}
       />
       <label htmlFor={label} className={`py-1 px-2 ${className}`}>
         <Icon name={icon} />
       </label>
     </>
   );
-}
-
-{
-  /*   
-          <div
-            className={`w-100 h-100  ${state[0] === label ? "bg-primary" : ""}`}
-          ></div> */
 }
