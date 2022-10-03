@@ -67,7 +67,11 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
             className="me-3"
           />
           <div className="d-flex flex-column text-start">
-            <a className="text-white mb-2" href={project.frontmatter.link}>
+            <a
+              target="_blank"
+              className="text-white mb-2"
+              href={project.frontmatter.link}
+            >
               {project.frontmatter.role}
             </a>
             <h6>

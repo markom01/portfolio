@@ -57,7 +57,8 @@ export default function Footer() {
             <a
               className={`button position-relative d-inline-block px-3 py-2 text-decoration-none text-uppercase
          ${styles.secondary}`}
-              href="cv.pdf"
+              href="CV_Marko-Meseldžija.pdf"
+              target="_blank"
             >
               <Icon name="file-earmark-arrow-down" className="me-1" />
               CV

@@ -4,7 +4,7 @@
   font-family: 'Poppins'
   font-style: normal
   font-weight: 400
-  src: local(''), url('../fonts/poppins-v20-latin-regular.woff2') format('woff2')
+  src: local('Poppins'), url('../fonts/poppins-v20-latin-regular.woff2') format('woff2')
 
 *, *::before, *::after
   transition: $transition-base
@@ -24,6 +24,15 @@
 
   &-thumb
     background-color: var(--glass-border)
+
+progress
+  appearance: none
+  height: 4px
+  z-index: 1
+  accent-color: var(--bs-primary)
+  &::-webkit-progress-value,
+  &::-moz-progress-bar
+    background-color: var(--bs-primary)
 
 body
   overflow: hidden
