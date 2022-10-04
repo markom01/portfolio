@@ -30,12 +30,21 @@ progress
   height: 4px
   z-index: 1
   accent-color: var(--bs-primary)
-  &::-webkit-progress-value,
-  &::-moz-progress-bar
-    background-color: var(--bs-primary)
+
+progress::-webkit-progress-value
+  background-color: var(--bs-primary)
+progress::-moz-progress-bar
+  background-color: var(--bs-primary)
 
 body
   overflow: hidden
+
+#main
+  height: 100vh
+
+@supports(height: 100dvh)
+  #main
+    height: 100dvh
 
 button
   background-color: transparent

@@ -33,7 +33,7 @@ export default function Sections() {
         />
       </div>
       <Scrollbar progress={scrolled} />
-      <div className={`vw-100 vh-100 pt-3 d-flex`} id="main">
+      <div className={`vw-100 pt-3 d-flex`} id="main">
         <Navigation />
         <div
           className="glass mx-2  px-3  h-100 text-center"
