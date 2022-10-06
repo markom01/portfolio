@@ -16,7 +16,7 @@ export default function Sections() {
     const targetHeight = target.scrollHeight - target.clientHeight;
     setScrolled(scrollTop / targetHeight);
   };
-  const videoRef = useRef<HTMLVideoElement>();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function Sections() {
           loop
           ref={videoRef}
           style={{ objectFit: "cover" }}
-          onPlay={() => (videoRef.current.playbackRate = 0.5)}
+          onPlay={() => (videoRef.current!.playbackRate = 0.5)}
         />
       </div>
       <Scrollbar progress={scrolled} />

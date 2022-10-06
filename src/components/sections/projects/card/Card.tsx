@@ -44,9 +44,10 @@ function CardFront({ project, state }: CardSidesProps) {
   // const [isCarouselVisibleState, setisCarouselVisibleState] = useState(false)
   return (
     <div
-      className={`${styles.glassCard} d-flex flex-column align-items-center position-absolute ${styles.card__face}`}
+      className={`${styles.glassCard} d-flex flex-column align-items-center position-absolute ${styles.card__face} ${styles.card__facefront}`}
     >
-      {!state[0] && (
+      {
+      
         <Fade cascade>
           {/* <div
           className={`w-100 h-100 d-flex justify-content-center align-items-center position-absolute ${styles.img_overlay}`}
@@ -97,7 +98,7 @@ function CardFront({ project, state }: CardSidesProps) {
             </div>
           </div>
         </Fade>
-      )}
+      }
     </div>
   );
 }
@@ -108,8 +109,8 @@ function CardBack({ project, state }: CardSidesProps) {
     <div
       className={`${styles.glassCard} p-3 d-flex flex-column align-items-center position-absolute text-start ${styles.card__face} ${styles.card__faceback}`}
     >
-      <>
-        {/* {state[0] && ( */}
+      
+        
         <Fade cascade>
           <div className="d-flex flex-column h-100">
             <h5 className="mb-2 text-white">Description</h5>
@@ -136,8 +137,8 @@ function CardBack({ project, state }: CardSidesProps) {
             </h6>
           </div>
         </Fade>
-        {/* )} */}
-      </>
+        
+    
     </div>
   );
 }

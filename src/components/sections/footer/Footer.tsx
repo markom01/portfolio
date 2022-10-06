@@ -3,6 +3,7 @@ import Icon from "@myBlocks/Icon";
 import Button from "@myBlocks/button/Button";
 import * as styles from "@myBlocks/button/Button.module.sass";
 import Section from "@sections/Section";
+import download from "bootstrap-icons/icons/file-earmark-arrow-down.svg";
 
 // import * as styles from "./Footer.module.sass";
 
@@ -60,7 +61,8 @@ export default function Footer() {
               href="CV_Marko-Meseldžija.pdf"
               target="_blank"
             >
-              <Icon name="file-earmark-arrow-down" className="me-1" />
+              <img src={download} alt="" className="me-1 icon" />
+              {/* <Icon name="file-earmark-arrow-down" className="me-1" /> */}
               CV
             </a>
           </div>

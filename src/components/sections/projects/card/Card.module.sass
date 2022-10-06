@@ -8,7 +8,7 @@
 .card
     transform-style: preserve-3d
     transform-origin: center right
-    backface-visibility: hidden
+    // backface-visibility: hidden
     transition: transform 0.75s
 
 .show_back
@@ -16,14 +16,17 @@
 
 .card__face
     @include size(100%)
+    &front,
+    &back
+        backface-visibility: hidden
 
 .card__faceback
-    backface-visibility: hidden
-    transform: rotate3d(0, 1, 0, 180deg)
+    transform: rotate3d(0, 1, 0, 180deg) translate3d(0,0,0.1px)
     background: rgba(255, 255, 255, 0.05)
     backdrop-filter: blur(30px)
 
 .flip_btn
+    z-index: 1
     padding: 0.25rem 0.5rem
 
 .glassCard

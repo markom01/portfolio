@@ -30,7 +30,7 @@ const config: GatsbyConfig = {
         display: `standalone`,
         start_url: `/`,
         icon: "src/images/brand/Logo.svg",
-        theme_color: `#f05024`,
+        theme_color: `#d70930`,
         background_color: `#292929`,
         cache_busting_mode: "none",
         legacy: false, // this will not add apple-touch-icon links to <head>

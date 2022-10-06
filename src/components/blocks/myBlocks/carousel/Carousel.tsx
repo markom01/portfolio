@@ -16,9 +16,7 @@ export default function Carousel() {
       //   : styles.opacity_0
       // }
     >
-      <button className="position-absolute top-0 end-0">
-        <FaTimes />
-      </button>
+      <button className="position-absolute top-0 end-0"></button>
     </div>
     // </CarouselVisibilityContext.Provider>
   );
