@@ -34,9 +34,12 @@ export default function Experience() {
   `);
   return (
     <Section id="experience">
+      <div className="pt-5 d-flex flex-column align-items-center">
+
       {data.allMdx.nodes.map((project) => (
         <ExperienceCard project={project} key={project.frontmatter.role} />
       ))}
+      </div>
     </Section>
   );
 }

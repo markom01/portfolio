@@ -3,8 +3,15 @@ import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "./Filter.module.sass";
 
-export default function Filter({ state }) {
-  const data = useStaticQuery(graphql`
+interface FilterProps {
+  state: [any[], React.Dispatch<React.SetStateAction<any[]>>];
+}
+
+type tech =
+  Queries.FilterQuery["allMdx"]["nodes"][0]["frontmatter"]["icons"][number];
+
+export default function Filter({ state }: FilterProps) {
+  const data = useStaticQuery<Queries.FilterQuery>(graphql`
     query Filter {
       allMdx(
         filter: {
@@ -16,7 +23,7 @@ export default function Filter({ state }) {
             icons {
               img {
                 childImageSharp {
-                  gatsbyImageData(width: 24)
+                  gatsbyImageData(height: 24)
                 }
               }
               name
@@ -31,8 +38,8 @@ export default function Filter({ state }) {
       <small className="me-auto me-md-0 ms-md-auto mb-1">
         Filter by tech used
       </small>
-      <div className="row row-cols-auto gx-1 my-1">
-        {data.allMdx.nodes[0].frontmatter.icons.map((tech) => (
+      <div className={`row row-cols-auto gx-1 my-1 ${styles.icons}`}>
+        {data.allMdx.nodes[0].frontmatter.icons.map((tech: tech) => (
           <TechIcon tech={tech} state={state} key={tech.name} />
         ))}
       </div>
@@ -40,28 +47,35 @@ export default function Filter({ state }) {
   );
 }
 
-function TechIcon(props) {
+function TechIcon({
+  tech,
+  state,
+}: {
+  tech: tech;
+  state: FilterProps["state"];
+}) {
   const [activeTech, setActiveTech] = useState(false);
+  const [activeTechArray, setActiveTechArray] = state;
   return (
     <button
       onClick={() => {
         activeTech
-          ? props.state[1](
-              props.state[0].filter((name) => name !== props.tech.name)
+          ? setActiveTechArray(
+              activeTechArray.filter((name) => name !== tech.name)
             )
-          : props.state[1]([...props.state[0], props.tech.name]);
+          : setActiveTechArray([...activeTechArray, tech.name]);
         setActiveTech(!activeTech);
       }}
       className="col"
     >
       <div
         className={`p-2  ${activeTech ? styles.bg_active : ""}`}
-        data-tooltip={props.tech.name}
+        data-tooltip={tech.name}
       >
         <GatsbyImage
           className="icon"
-          image={getImage(props.tech.img)}
-          alt={props.tech.name}
+          image={getImage(tech.img)}
+          alt={tech.name}
         />
       </div>
     </button>

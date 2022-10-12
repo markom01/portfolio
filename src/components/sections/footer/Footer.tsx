@@ -37,7 +37,7 @@ const generateLink = (network: string, username: string) =>
 export default function Footer() {
   return (
     <Section id="connect" className="mb-5">
-      <footer className="p-5">
+      <footer className="p-5 mt-0">
         <div className="row g-5 justify-content-center">
           {socialIcons.map((icon) => (
             <div

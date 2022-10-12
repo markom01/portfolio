@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Section from "@sections/Section";
 import Card from "./card/Card";
 
-// import Filter from "./filter/Filter";
+import Filter from "./filter/Filter";
 import Sort from "./sort/Sort";
 // import Carousel from "@myBlocks/carousel/Carousel";
 
@@ -44,7 +44,7 @@ export default function Skills() {
     <Section id="projects">
       <div className="px-3 px-md-5">
         <div className="row row-cols-auto align-items-start justify-content-between justify-content-md-end gx-4 mb-5">
-          {/* <Filter state={[activeTechArray, setActiveTechArray]} /> */}
+          <Filter state={[activeTechArray, setActiveTechArray]} />
           <Sort handleSort={setSort} />
         </div>
         <div className="row row-cols-auto gx-4 gx-md-5 gy-5 justify-content-center align-items-center">
@@ -56,6 +56,14 @@ export default function Skills() {
                 : Date.parse(b?.frontmatter?.startDate) -
                   Date.parse(a?.frontmatter?.startDate)
             )
+            .filter((projects) => {
+              if (!activeTechArray.length) return true;
+              return activeTechArray.every((activeTech) =>
+                projects.frontmatter.techStack.some(
+                  (projectTech) => projectTech.name === activeTech
+                )
+              );
+            })
             .map((project) => (
               <Card project={project} key={project.frontmatter.title} />
             ))}

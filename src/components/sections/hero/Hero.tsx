@@ -17,7 +17,7 @@ export default function Hero() {
 
       <div className="btns">
         <Button id="projects" />
-        <Button secondary id="about" />
+        <Button secondary id="contact" />
       </div>
     </section>
   );
