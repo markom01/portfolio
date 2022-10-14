@@ -1,9 +1,4 @@
-import React, {
-  createElement,
-  useState,
-  // , useContext
-} from "react";
-// import { CarouselVisibilityContext } from "@myBlocks/carousel/Carousel";
+import React, { createElement, useState, useContext } from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "./Card.module.sass";
@@ -11,9 +6,7 @@ import { Fade } from "react-reveal";
 
 import { StaticImage } from "gatsby-plugin-image";
 import Icon from "../../../blocks/myBlocks/Icon";
-// import SVG from "../../../blocks/myBlocks/SVG/SVG";
-// import Button from "@myBlocks/button/Button";
-// import Carousel from "@myBlocks/carousel/Carousel";
+import Button from "@myBlocks/button/Button";
 
 type CardProps = Queries.ProjectsQuery["allMdx"]["nodes"][0];
 
@@ -63,27 +56,17 @@ interface CardSidesProps {
   project: CardProps;
 }
 
+
 function CardFront({ project }: CardSidesProps) {
   const thumbnail = getImage(project.frontmatter.thumbnail);
-  // const [isCarouselVisibleState, setisCarouselVisibleState] = useState(false)
+
   return (
     <div
       className={`${styles.glassCard} d-flex flex-column align-items-center position-absolute ${styles.card__face} ${styles.card__facefront}`}
     >
       {
         <Fade cascade>
-          {/* <div
-          className={`w-100 h-100 d-flex justify-content-center align-items-center position-absolute ${styles.img_overlay}`}
-        >
-          <Button
-            secondary
-            // onClick={e=>setisCarouselVisibleState(true)}
-          >
-            <MdZoomOutMap /> Show Gallery
-          </Button>
-        </div> */}
-          {/* <Carousel /> */}
-          <GatsbyImage image={thumbnail} alt="" />
+          <GatsbyImage image={thumbnail} alt={project.frontmatter.title} />
           <div className="d-flex flex-column justify-content-between h-100 w-100 p-3">
             <div>
               <a href={project.frontmatter.link} className="text-white">
@@ -94,7 +77,7 @@ function CardFront({ project }: CardSidesProps) {
               </a>
             </div>
             <div className="d-flex justify-content-between align-items-center w-100">
-              <div className="row row-cols-auto gx-1">
+              <div className="row row-cols-auto gx-2">
                 {project.frontmatter.techStack.map(({ name, img }) => {
                   return (
                     <div
@@ -113,7 +96,8 @@ function CardFront({ project }: CardSidesProps) {
               </div>
               <button
                 className={`text-white ${styles.flip_btn}`}
-                // onClick={() => state[1]((s) => !s)}
+                // onClick={() => 
+                [1]((s) => !s)}
                 data-tooltip="Show More"
               >
                 <Icon name="chevron-right" />
@@ -140,7 +124,6 @@ function CardBack({ project }: CardSidesProps) {
         <div className="d-flex w-100 justify-content-between align-items-center">
           <button
             className={styles.flip_btn}
-            // onClick={() => state[1]((s) => !s)}
           >
             <Icon name="chevron-left" />
           </button>

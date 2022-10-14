@@ -1,23 +1,16 @@
-import React from "react"; // , { createContext, useContext }
+import Icon from "@myBlocks/Icon";
+import React, { createContext, useContext, useState } from "react"; // , { createContext, useContext }
 import * as styles from "./Carousel.module.sass";
 
-// export const CarouselVisibilityContext = createContext(false);
-
 export default function Carousel() {
-  // const isCarouselVisible = useContext(CarouselVisibilityContext);
   return (
-    // <CarouselVisibilityContext.Provider value={isCarouselVisible}>
     <div
-      className={`vw-100 vh-100 bg-dark p-3 fixed-top ${styles.background} `}
+      className={`position-absolute left-0 top-0 h-100 w-100 bg-dark p-3 ${styles.background}  `}
       style={{ width: window.innerWidth, height: window.innerHeight }}
-      // ${
-      //   isCarouselVisible ?
-      // "bg-opacity-75"
-      //   : styles.opacity_0
-      // }
     >
-      <button className="position-absolute top-0 end-0"></button>
+      <button className="position-absolute top-0 end-0">
+        <Icon name="x" />
+      </button>
     </div>
-    // </CarouselVisibilityContext.Provider>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 // import {Fade} from "react-reveal";
 import Scrollbar from "@myBlocks/scrollbar/Scrollbar";
 import Navigation from "@sections/navigation/Navigation";
@@ -6,7 +6,7 @@ import Hero from "@sections/hero/Hero";
 // import * as styles from "./Sections.module.sass";
 import BelowTheFold from "./BelowTheFold";
 // const BelowTheFold = React.lazy(() => import("./BelowTheFold"));
-// import Carousel from "@myBlocks/carousel/Carousel";
+import Carousel from "@myBlocks/carousel/Carousel";
 
 export default function Sections() {
   const [scrolled, setScrolled] = useState(0);

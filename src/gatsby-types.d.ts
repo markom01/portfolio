@@ -672,6 +672,7 @@ type FileFieldsEnum =
   | 'childMdx.children.parent.children'
   | 'childMdx.children.parent.id'
   | 'childMdx.excerpt'
+  | 'childMdx.frontmatter.category'
   | 'childMdx.frontmatter.description'
   | 'childMdx.frontmatter.endDate'
   | 'childMdx.frontmatter.icons'
@@ -882,6 +883,7 @@ type FileFieldsEnum =
   | 'childrenMdx.children.parent.children'
   | 'childrenMdx.children.parent.id'
   | 'childrenMdx.excerpt'
+  | 'childrenMdx.frontmatter.category'
   | 'childrenMdx.frontmatter.description'
   | 'childrenMdx.frontmatter.endDate'
   | 'childrenMdx.frontmatter.icons'
@@ -1866,6 +1868,7 @@ type MdxFieldsEnum =
   | 'children.parent.parent.children'
   | 'children.parent.parent.id'
   | 'excerpt'
+  | 'frontmatter.category'
   | 'frontmatter.description'
   | 'frontmatter.endDate'
   | 'frontmatter.icons'
@@ -2159,6 +2162,7 @@ type MdxFilterListInput = {
 };
 
 type MdxFrontmatter = {
+  readonly category: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
   readonly endDate: Maybe<Scalars['Date']>;
   readonly icons: Maybe<ReadonlyArray<Maybe<MdxFrontmatterIcons>>>;
@@ -2190,6 +2194,7 @@ type MdxFrontmatter_startDateArgs = {
 };
 
 type MdxFrontmatterFilterInput = {
+  readonly category: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
   readonly endDate: InputMaybe<DateQueryOperatorInput>;
   readonly icons: InputMaybe<MdxFrontmatterIconsFilterListInput>;

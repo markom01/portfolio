@@ -1,4 +1,7 @@
-node_modules/
-.cache/
+node_modules
+.cache
+.vscode
 public
+.npmrc
+pnpm-lock.yaml
 todo
