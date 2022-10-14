@@ -10,7 +10,7 @@ export default function Sort({
 }) {
   return (
     <div className="col d-flex flex-column justify-content-center">
-      <small className="mb-1">Sort by Date</small>
+      <small className="mb-2">Sort by Date</small>
       <div className="d-flex align-items-center">
         <div
           className="p-1"
