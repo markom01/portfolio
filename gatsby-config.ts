@@ -51,7 +51,6 @@ const config: GatsbyConfig = {
           breakpoints: [400, 800, 1100],
           placeholder: `blurred`,
           quality: 70,
-          formats: [`webp`],
         },
       },
     },

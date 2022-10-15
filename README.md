@@ -1,54 +1,113 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+<div id="top"></div>
+
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/marecardesigner/)
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/markom01/portfolio">
+    <img src="src/images/brand/Logo.svg" alt="Logo" width="80" height="80">
   </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
 
-## 🚀 Quick start
+# Portfolio website
 
-1.  **Create a Gatsby site.**
+  <p align="center">
+    <a href="https://marko.gatsbyjs.io"><strong>View Demo »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/markom01/portfolio/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/markom01/portfolio/issues">Request Feature</a>
+  </p>
+</div>
+<br/>
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+        <li><a href="#built-with">Built With</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+<!-- ABOUT THE PROJECT -->
 
-2.  **Start developing.**
+<br/>
 
-    Navigate into your new site’s directory and start it up.
+![Mockup](data/projects/portfolio/portfolio_v2.jpg)
+<br/>
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Built With
 
-3.  **Open the code and start customizing!**
+- <b>GatsbyJS (React)</b>
+- <b>GraphQL</b>
+- <b>Sass</b>
+- <b>MDX</b>
 
-    Your site is now running at http://localhost:8000!
+<br/>
+<!-- ROADMAP -->
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+## Roadmap
 
-4.  **Learn more**
+- <b>GatsbyJS</b>
+  - Custom UI components built with <b>React</b> with help of some Gatsby components(for ex. <code>GatsbyImage</code> for image optimization)
+  - Using <b>MDX</b> files to store data and fetch them with <b>GraphQL</b> data layer
+- <b>Sass</b>
+  - Style: Glassmorphism
+  - Layout: Flexbox
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+<!-- CONTRIBUTING -->
+<br/>
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Contributing
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+<br/>
+<!-- LICENSE -->
 
-## 🚀 Quick start (Gatsby Cloud)
+## License
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+<!-- CONTACT -->
+<br/>
+
+## Contact
+
+[Email](mailto:markomesa01@gmail.com)
+
+[Project Link](https://github.com/markom01/portfolio)
+
+[Live Demo](https://marko.gatsbyjs.io)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/markom01/portfolio.svg?style=for-the-badge
+[contributors-url]: https://github.com/markom01/portfolio/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/markom01/portfolio.svg?style=for-the-badge
+[forks-url]: https://github.com/markom01/portfolio/network/members
+[stars-shield]: https://img.shields.io/github/stars/markom01/portfolio.svg?style=for-the-badge
+[stars-url]: https://github.com/markom01/portfolio/stargazers
+[issues-shield]: https://img.shields.io/github/issues/markom01/portfolio.svg?style=for-the-badge
+[issues-url]: https://github.com/markom01/portfolio/issues
+[license-shield]: https://img.shields.io/github/license/markom01/portfolio.svg?style=for-the-badge
+[license-url]: https://github.com/markom01/portfolio/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/marecardesigner

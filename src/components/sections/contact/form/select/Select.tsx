@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Slide, Fade } from "react-reveal";
-import Icon from "../../../../blocks/myBlocks/Icon";
+import Icon from "../../../../blocks/myBlocks/icon/Icon";
 import * as selectStyles from "./Select.module.sass";
 import { TextInputProps } from "../Form";
 import * as radioStyles from "../radio/Radio.module.sass";
@@ -43,7 +43,7 @@ export default function Select({ responses, handleChange }: SelectProps) {
             </p>
             {!initial && <p className="py-1 text-start">{selected}</p>}
           </div>
-          <Icon name="chevron-down" />
+          ⌄
         </button>
         {optionsViewable && (
           <Slide top>

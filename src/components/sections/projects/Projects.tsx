@@ -25,9 +25,7 @@ export default function Skills() {
             techStack {
               name
               img {
-                childImageSharp {
-                  gatsbyImageData(height: 22)
-                }
+                publicURL
               }
             }
             thumbnail {

@@ -1,24 +1,24 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import * as styles from "./Navigation.module.sass";
-import Icon from "../../blocks/myBlocks/Icon";
+import Icon from "../../blocks/myBlocks/icon/Icon";
 
 const links = [
   {
     name: "projects",
-    class: "display",
+    icon: "💻",
   },
   {
     name: "experience",
-    class: "briefcase",
+    icon: "💼",
   },
   {
     name: "contact",
-    class: "chat-dots",
+    icon: "📨",
   },
   {
     name: "connect",
-    class: "link",
+    icon: "🔗",
   },
 ];
 
@@ -37,12 +37,7 @@ export default function Navigation() {
           className={`d-flex align-items-center justify-content-center`}
           style={{ color: "var(--icons-color)" }}
         >
-          <StaticImage
-            src="../../../images/brand/Logo.svg"
-            style={{ width: "2rem", marginBlockStart: "0.5rem" }}
-            alt="logo"
-            className={styles.logo}
-          />
+          <img src="Logo.svg" alt="logo" width={40} className={styles.logo} />
         </span>
       </a>
       {links.map((link) => (
@@ -52,10 +47,10 @@ export default function Navigation() {
           key={link.name}
         >
           <span
-            className={`d-flex align-items-center justify-content-center`}
+            className={`d-flex align-items-center justify-content-center icon--medium`}
             style={{ color: "var(--icons-color)" }}
           >
-            <Icon name={link.class} />
+            {link.icon}
           </span>
           <small
             className="d-none d-sm-block my-2 icon-label"

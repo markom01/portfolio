@@ -1,12 +1,12 @@
 @import "../mixins"
 
-[data-tooltip]
+[aria-label]
     @extend .position-relative
     &::after
         @extend .position-absolute, .bottom-0, .start-50, .translate-middle-x, .glass, .p-1
         white-space: nowrap
         transition: 0.3s
-        content: attr(data-tooltip)
+        content: attr(aria-label)
         font-size: 12px
         border: 1px solid var(--glass-border)
         opacity: 0

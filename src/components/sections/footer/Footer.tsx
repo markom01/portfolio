@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "@myBlocks/Icon";
+import Icon from "@myBlocks/icon/Icon";
 import Button from "@myBlocks/button/Button";
 import * as styles from "@myBlocks/button/Button.module.sass";
 import Section from "@sections/Section";
@@ -41,7 +41,7 @@ export default function Footer() {
         <div className="row g-5 justify-content-center">
           {socialIcons.map((icon) => (
             <div
-              data-tooltip={capitalize(icon.name)}
+              aria-label={capitalize(icon.name)}
               className="col-auto"
               key={icon.name}
             >
@@ -50,7 +50,7 @@ export default function Footer() {
                 href={icon.link()}
                 style={{ color: "var(--icons-color)" }}
               >
-                <Icon name={icon.name} />
+                <Icon src={`icons/${icon.name}.svg`} alt={icon.name} />
               </a>
             </div>
           ))}
@@ -61,8 +61,7 @@ export default function Footer() {
               href="CV_Marko-Meseldžija.pdf"
               target="_blank"
             >
-              <img src={download} alt="" className="me-1 icon" />
-              {/* <Icon name="file-earmark-arrow-down" className="me-1" /> */}
+              <Icon src="icons/cv.svg" size="small" alt="cv" className="me-2" />
               CV
             </a>
           </div>

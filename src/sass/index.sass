@@ -93,12 +93,18 @@ small
 .icon-label, h1, h2, a.button
   letter-spacing: 0.15em
 
+.icon
+  &--small
+    font-size: 1em
+  &--medium
+    font-size: 1.5em
+  &--big
+    font-size: 2.5em
+  &--bigger
+    font-size: 3em
+
 .btns .button
   @extend .me-3
-
-.icon
-  filter: invert(1)
-  opacity: 0.5
 
 form, input:not([type='radio']), select, textarea
   @extend .glass--border

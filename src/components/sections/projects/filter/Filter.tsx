@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "./Filter.module.sass";
+import Icon from "@myBlocks/icon/Icon";
 
 interface FilterProps {
   state: [any[], React.Dispatch<React.SetStateAction<any[]>>];
@@ -22,9 +23,7 @@ export default function Filter({ state }: FilterProps) {
           frontmatter {
             icons {
               img {
-                childImageSharp {
-                  gatsbyImageData(height: 24)
-                }
+                publicURL
               }
               name
             }
@@ -70,13 +69,9 @@ function TechIcon({
     >
       <div
         className={`p-2  ${activeTech ? styles.bg_active : ""}`}
-        data-tooltip={tech.name}
+        aria-label={tech.name}
       >
-        <GatsbyImage
-          className="icon"
-          image={getImage(tech.img)}
-          alt={tech.name}
-        />
+        <Icon src={tech.img.publicURL} alt={tech.name} />
       </div>
     </button>
   );

@@ -1,6 +1,6 @@
 import Radio from "@sections/contact/form/radio/Radio";
 import React, { useState } from "react";
-import Icon from "../../../blocks/myBlocks/Icon";
+import Icon from "../../../blocks/myBlocks/icon/Icon";
 import * as styles from "./Sort.module.sass";
 
 export default function Sort({
@@ -19,10 +19,10 @@ export default function Sort({
           <Radio
             label="desc"
             handleSort={handleSort}
-            icon="chevron-down"
+            icon="˄"
             className="me-1"
           />
-          <Radio label="asc" handleSort={handleSort} icon="chevron-up" />
+          <Radio label="asc" handleSort={handleSort} icon="˅" />
         </div>
       </div>
     </div>

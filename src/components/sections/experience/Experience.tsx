@@ -1,4 +1,4 @@
-import Icon from "@myBlocks/Icon";
+import Icon from "@myBlocks/icon/Icon";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
@@ -35,10 +35,9 @@ export default function Experience() {
   return (
     <Section id="experience">
       <div className="pt-5 d-flex flex-column align-items-center">
-
-      {data.allMdx.nodes.map((project) => (
-        <ExperienceCard project={project} key={project.frontmatter.role} />
-      ))}
+        {data.allMdx.nodes.map((project) => (
+          <ExperienceCard project={project} key={project.frontmatter.role} />
+        ))}
       </div>
     </Section>
   );
@@ -100,7 +99,7 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
                 className="d-flex align-items-center me-3 mb-3"
                 key={skill.name}
               >
-                <Icon name={skill.icon} className="me-2" />
+                <span className="me-2">{skill.icon}</span>
                 <h6>{skill.name}</h6>
               </div>
             ))}

@@ -5,48 +5,23 @@ import * as styles from "./Card.module.sass";
 import { Fade } from "react-reveal";
 
 import { StaticImage } from "gatsby-plugin-image";
-import Icon from "../../../blocks/myBlocks/Icon";
+import Icon from "../../../blocks/myBlocks/icon/Icon";
 import Button from "@myBlocks/button/Button";
 
 type CardProps = Queries.ProjectsQuery["allMdx"]["nodes"][0];
 
 export default function Card({ project }: { project: CardProps }) {
-  // const [showBack, setShowBack] = useState(false);
-  const [rotation, setRotation] = useState(0);
-  const [translation, setTranslation] = useState(0);
-  const handleTransform = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const { clientX } = e;
-    const { right, width } = e.currentTarget.getBoundingClientRect();
-    const x = right - clientX;
-    const RATIO = x / width;
-    // const isLeft = x < width / 2;
-    // const isRight = x > width / 2;
-    setTranslation(RATIO * 100);
-    setRotation(RATIO * 180);
-  };
-  const handleMouseLeave = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    if (translation < 50) {
-      setRotation(0);
-      setTranslation(0);
-    } else {
-      setRotation(180);
-      setTranslation(100);
-    }
-  };
+  const [showBack, setShowBack] = useState(false);
+
   return (
     <div className={`col ${styles.scene}`}>
       <div
-        className={`h-100 w-100 position-relative my-card ${styles.card}`}
-        onMouseMove={handleTransform}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          transform: `translate3d(-${translation}%, 0, 0) rotate3d(0, 1, 0, -${rotation}deg) `,
-        }}
+        className={`h-100 w-100 position-relative my-card ${styles.card} ${
+          showBack ? styles.show_back : ""
+        }`}
       >
-        <CardFront project={project} />
-        <CardBack project={project} />
+        <CardFront project={project} state={[showBack, setShowBack]} />
+        <CardBack project={project} state={[showBack, setShowBack]} />
       </div>
     </div>
   );
@@ -54,10 +29,10 @@ export default function Card({ project }: { project: CardProps }) {
 
 interface CardSidesProps {
   project: CardProps;
+  state: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
 }
 
-
-function CardFront({ project }: CardSidesProps) {
+export function CardFront({ project, state }: CardSidesProps) {
   const thumbnail = getImage(project.frontmatter.thumbnail);
 
   return (
@@ -71,36 +46,29 @@ function CardFront({ project }: CardSidesProps) {
             <div>
               <a href={project.frontmatter.link} className="text-white">
                 {project.frontmatter.title}
-                <sup className="ms-1">
-                  <Icon name="link-45deg" />
-                </sup>
+                <sup className="ms-1">🔗</sup>
               </a>
             </div>
-            <div className="d-flex justify-content-between align-items-center w-100">
-              <div className="row row-cols-auto gx-2">
+            <div className="d-flex justify-content-between align-items-end w-100">
+              <div className="row row-cols-auto g-3 me-2">
                 {project.frontmatter.techStack.map(({ name, img }) => {
                   return (
                     <div
                       className="col d-flex align-items-center"
                       key={name}
-                      data-tooltip={name}
+                      aria-label={name}
                     >
-                      <GatsbyImage
-                        image={getImage(img)}
-                        alt={name}
-                        className="icon"
-                      />
+                      <Icon src={img.publicURL} alt={name} />
                     </div>
                   );
                 })}
               </div>
               <button
                 className={`text-white ${styles.flip_btn}`}
-                // onClick={() => 
-                [1]((s) => !s)}
-                data-tooltip="Show More"
+                onClick={() => state[1]((s) => !s)}
+                aria-label="Show More"
               >
-                <Icon name="chevron-right" />
+                {`˃`}
               </button>
             </div>
           </div>
@@ -109,7 +77,7 @@ function CardFront({ project }: CardSidesProps) {
     </div>
   );
 }
-function CardBack({ project }: CardSidesProps) {
+function CardBack({ project, state }: CardSidesProps) {
   const startDate = new Date(project.frontmatter.startDate);
   const endDate = new Date(project.frontmatter.endDate);
   return (
@@ -124,15 +92,16 @@ function CardBack({ project }: CardSidesProps) {
         <div className="d-flex w-100 justify-content-between align-items-center">
           <button
             className={styles.flip_btn}
+            onClick={() => state[1]((s) => !s)}
           >
-            <Icon name="chevron-left" />
+            {`˂`}
           </button>
           <h6
-            data-tooltip="Project Duration"
+            aria-label="Project Duration"
             className="d-flex align-items-center mb-0"
             style={{ fontSize: "14px" }}
           >
-            <Icon name="calendar" className="me-2" />
+            <span className="me-2">🗓</span>
             <span>
               {`${startDate.getMonth() + 1}.${startDate.getFullYear()} - ${
                 endDate.getMonth() + 1

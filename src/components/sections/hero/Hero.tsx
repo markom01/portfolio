@@ -2,7 +2,7 @@ import React from "react";
 import * as styles from "./Hero.module.sass";
 import { StaticImage } from "gatsby-plugin-image";
 import Button from "@myBlocks/button/Button";
-import Icon from "@myBlocks/Icon";
+import Icon from "@myBlocks/icon/Icon";
 
 export default function Hero() {
   return (
@@ -27,11 +27,16 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="mt-5 mt-md-auto">
-        <a href="#projects" style={{ color: "var(--bs-secondary)" }}>
-          <Icon name="chevron-double-down" size="30px" />
-        </a>
-      </div>
+      <a
+        href="#projects"
+        style={{ color: "var(--bs-secondary)" }}
+        className="mt-5 mt-md-auto"
+      >
+        <span className="icon--big d-block" style={{ marginBlockEnd: "-55px" }}>
+          ⌄
+        </span>
+        <span className="icon--bigger d-block">⌄</span>
+      </a>
     </section>
   );
 }

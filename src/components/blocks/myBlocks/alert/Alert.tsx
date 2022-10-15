@@ -1,6 +1,6 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import Icon from "../Icon";
+import Icon from "../icon/Icon";
 import * as styles from "./Alert.module.sass";
 
 interface AlertProps {
@@ -22,9 +22,7 @@ export default function Alert({ text, visible, handleClick }: AlertProps) {
           <h6 className={`${success ? styles.success : styles.error}`}>
             {text}
           </h6>
-          <button onClick={() => handleClick(!visible)}>
-            <Icon name="x" />
-          </button>
+          <button onClick={() => handleClick(!visible)}>x</button>
         </div>
       </div>
     </Fade>

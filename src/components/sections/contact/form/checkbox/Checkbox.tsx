@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Icon from "@myBlocks/Icon";
+import Icon from "@myBlocks/icon/Icon";
 import * as styles from "./Checkbox.module.sass";
 
 export default function Checkbox() {

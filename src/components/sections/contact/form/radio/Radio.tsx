@@ -1,4 +1,4 @@
-import Icon from "@myBlocks/Icon";
+import Icon from "@myBlocks/icon/Icon";
 import React from "react";
 import * as styles from "./Radio.module.sass";
 
@@ -24,7 +24,7 @@ export default function Radio({
         onChange={(e) => handleSort(e.target.value)}
       />
       <label htmlFor={label} className={`py-1 px-2 ${className}`}>
-        <Icon name={icon} />
+        {icon}
       </label>
     </>
   );
