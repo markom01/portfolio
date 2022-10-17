@@ -77,7 +77,14 @@ nav a:not(:first-child), .my-card button
   @include on-interaction
     background-color: var(--white-bg)
 
+h1,h2
+  min-width: 100%
+
+h1
+  width: 70vmin
+
 h2
+  width: 50vmin
   @extend .text-uppercase, .fw-bold
 
 h6, p
@@ -146,7 +153,7 @@ li
   #content
     margin-block-end: 1rem
   #hero
-    height: 80vh
+    height: 85vh
   nav
     border-block-end: none !important
     padding: 1rem 0.75rem

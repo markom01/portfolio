@@ -6,8 +6,11 @@ import Icon from "@myBlocks/icon/Icon";
 
 export default function Hero() {
   return (
-    <section id="hero" className="d-flex flex-column justify-content-between">
-      <div className="my-auto row row-cols-1 gy-5 justify-content-center">
+    <section
+      id="hero"
+      className="d-flex flex-column justify-content-between align-items-center"
+    >
+      <div className="row w-100 my-auto row-cols-1 gy-5 justify-content-center">
         <div className="col">
           <StaticImage
             src="../../../images/brand/profile-picture.png"
@@ -16,10 +19,11 @@ export default function Hero() {
           />
           <p>Marko Meseldžija</p>
         </div>
-
-        <h1 className="text-primary text-uppercase fw-bold col">
-          Frontend | UI UX
-        </h1>
+        <div className="col">
+          <h1 className="text-primary text-uppercase mx-auto fw-bold">
+            Frontend | UI UX
+          </h1>
+        </div>
 
         <div className="btns col">
           <Button id="projects" />

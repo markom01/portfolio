@@ -7,7 +7,11 @@ interface SectionProps {
   className?: string;
 }
 
-export default function Section({ children, id, className }: SectionProps) {
+export default function Section({
+  children,
+  id,
+  className = "",
+}: SectionProps) {
   return (
     <Fade cascade>
       <section id={id} className={`px-4 ${className}`}>

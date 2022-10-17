@@ -5,7 +5,7 @@ import * as styles from "./Radio.module.sass";
 export default function Radio({
   label,
   icon,
-  className,
+  className = "",
   handleSort,
 }: {
   label: string;
