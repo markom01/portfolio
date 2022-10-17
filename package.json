@@ -5,9 +5,11 @@
   "description": "",
   "author": "Marko Meseldžija",
   "scripts": {
+    "clean": "gatsby clean",
     "start": "gatsby develop",
     "build": "gatsby build && gatsby serve",
-    "clean": "gatsby clean"
+    "cstart": "gatsby clean && pnpm start",
+    "cbuild": "gatsby clean && pnpm build"
   },
   "dependencies": {
     "@emailjs/browser": "^3.7.0",

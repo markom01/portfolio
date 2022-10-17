@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          "G-SX8LB89F9Q", // Google Analytics / GA
+          "G-LPZCYXK5HV", // Google Analytics / GA
         ],
       },
     },
@@ -29,7 +29,7 @@ const config: GatsbyConfig = {
         description: `Frontend web development`,
         display: `standalone`,
         start_url: `/`,
-        icon: "static/Logo.svg",
+        icon: "./static/Logo.svg",
         theme_color: `#d70930`,
         background_color: `#292929`,
         cache_busting_mode: "none",
