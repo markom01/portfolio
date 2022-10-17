@@ -6,7 +6,7 @@ import Icon from "@myBlocks/icon/Icon";
 
 export default function Hero() {
   return (
-    <section id="hero" style={{ height: "90vh" }}>
+    <section id="hero" className="d-flex flex-column justify-content-between">
       <div className="my-auto row row-cols-1 gy-5 justify-content-center">
         <div className="col">
           <StaticImage

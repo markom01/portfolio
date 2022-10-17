@@ -9,7 +9,7 @@
 *, *::before, *::after
   transition: $transition-base
 
-*
+*:not(a, button, input, textarea)
   cursor: url(../../static/cursor.png) 15 15, auto !important
 
 ::selection
@@ -68,8 +68,10 @@ section
   &:not(:last-child)
     margin-block-end: 200px
 
-a:not(.button)
-  @extend .text-decoration-none
+a
+  color: $white
+  &:not(.button)
+    @extend .text-decoration-none
 
 nav a:not(:first-child), .my-card button
   @include on-interaction
@@ -143,6 +145,8 @@ li
     flex-direction: column-reverse
   #content
     margin-block-end: 1rem
+  #hero
+    height: 80vh
   nav
     border-block-end: none !important
     padding: 1rem 0.75rem
@@ -158,7 +162,8 @@ li
     padding-block-end: 1.5rem
   #content
     width: 100%
-
+  #hero
+    height: 90vh
   nav
     flex-direction: column
     border-inline-start: none !important

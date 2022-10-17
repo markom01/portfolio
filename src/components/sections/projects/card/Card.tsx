@@ -87,7 +87,13 @@ function CardBack({ project, state }: CardSidesProps) {
       <Fade cascade>
         <div className="d-flex flex-column h-100">
           <h5 className="mb-2 text-white">Description</h5>
-          <h6>{project.frontmatter.description}</h6>
+          <h6 className="mb-4">{project.frontmatter.description}</h6>
+          <a
+            href={project.frontmatter.details}
+            className="text-white text-uppercase"
+          >
+            View More
+          </a>
         </div>
         <div className="d-flex w-100 justify-content-between align-items-center">
           <button
@@ -101,12 +107,15 @@ function CardBack({ project, state }: CardSidesProps) {
             className="d-flex align-items-center mb-0"
             style={{ fontSize: "14px" }}
           >
-            <span className="me-2">🗓</span>
-            <span>
-              {`${startDate.getMonth() + 1}.${startDate.getFullYear()} - ${
-                endDate.getMonth() + 1
-              }.${endDate.getFullYear()}`}
+            <span
+              className="me-2 icon--small"
+              style={{ marginBlockStart: "-4px" }}
+            >
+              🗓
             </span>
+            {`${startDate.getMonth() + 1}.${startDate.getFullYear()} - ${
+              endDate.getMonth() + 1
+            }.${endDate.getFullYear()}`}
           </h6>
         </div>
       </Fade>

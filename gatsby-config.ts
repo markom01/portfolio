@@ -29,7 +29,7 @@ const config: GatsbyConfig = {
         description: `Frontend web development`,
         display: `standalone`,
         start_url: `/`,
-        icon: "src/images/brand/Logo.svg",
+        icon: "static/Logo.svg",
         theme_color: `#d70930`,
         background_color: `#292929`,
         cache_busting_mode: "none",

@@ -14,26 +14,26 @@ export default function Form() {
     e.preventDefault();
     setResponseInfo("Sent! Expect answers soon.");
     console.log(responses);
-    // emailjs
-    //   .send(
-    //     "service_uu3ohhx",
-    //     "template_tcns97j",
-    //     responses,
-    //     "CAC6I6BDizh-EyeW6"
-    //   )
-    //   .then(
-    //     (response) => {
-    //       setResponseInfo("Sent! Expect answers soon.");
-    //       setAlertVisible(true);
-    //       process.env.NODE_ENV === "development" && console.log(response.text);
-    //     },
-    //     (err) => {
-    //       setResponseInfo(err);
-    //       setAlertVisible(true);
-    //       process.env.NODE_ENV === "development" && console.log(err);
-    //     }
-    //   );
-    // setAlertVisible(true);
+    emailjs
+      .send(
+        "service_uu3ohhx",
+        "template_tcns97j",
+        responses,
+        "CAC6I6BDizh-EyeW6"
+      )
+      .then(
+        (response) => {
+          setResponseInfo("Sent! Expect answers soon.");
+          setAlertVisible(true);
+          process.env.NODE_ENV === "development" && console.log(response.text);
+        },
+        (err) => {
+          setResponseInfo(err);
+          setAlertVisible(true);
+          process.env.NODE_ENV === "development" && console.log(err);
+        }
+      );
+    setAlertVisible(true);
   };
 
   const textInputs = [
@@ -178,9 +178,14 @@ function TextArea({ className, responses, handleChange }: TextAreaProps) {
     setBgActive(true);
   };
   return (
-    <div className={`col ${className}`} style={{ minInlineSize: "200px" }}>
+    <div
+      className={`col ${className}`}
+      style={{ minInlineSize: "200px", height: "150px" }}
+    >
       <div
-        className={`position-relative ${clicked ? styles.input_clicked : ""}
+        className={`position-relative h-100 ${
+          clicked ? styles.input_clicked : ""
+        }
         ${bgActive ? styles.input_clicked_bg : ""}`}
       >
         <label
@@ -192,7 +197,7 @@ function TextArea({ className, responses, handleChange }: TextAreaProps) {
         <textarea
           name="message"
           id="message"
-          className={`pb-1 w-100 pt-4 ${styles.input} `}
+          className={`pb-1 h-100 w-100 pt-4 ${styles.input} `}
           onClick={handleInteraction}
           onFocus={handleInteraction}
           onBlur={(e) => {

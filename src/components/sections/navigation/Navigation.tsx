@@ -47,7 +47,7 @@ export default function Navigation() {
           key={link.name}
         >
           <span
-            className={`d-flex align-items-center justify-content-center icon--medium`}
+            className={`d-flex align-items-center justify-content-center icon--small`}
             style={{ color: "var(--icons-color)" }}
           >
             {link.icon}

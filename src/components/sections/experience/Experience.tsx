@@ -10,7 +10,10 @@ type ExperienceProps = Queries.ExperienceQuery["allMdx"]["nodes"][number];
 export default function Experience() {
   const data = useStaticQuery<Queries.ExperienceQuery>(graphql`
     query Experience {
-      allMdx(filter: { frontmatter: { role: { regex: "" } } }) {
+      allMdx(
+        filter: { frontmatter: { role: { regex: "" } } }
+        sort: { fields: frontmatter___endDate, order: DESC }
+      ) {
         nodes {
           frontmatter {
             startDate
@@ -23,9 +26,7 @@ export default function Experience() {
               name
             }
             logo {
-              childImageSharp {
-                gatsbyImageData(width: 100)
-              }
+              publicURL
             }
           }
         }
@@ -63,10 +64,11 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
         className={`d-flex flex-column jusfity-content-center ${styles.card}`}
       >
         <div className="d-flex align-items-center mb-5">
-          <GatsbyImage
-            image={getImage(project.frontmatter.logo)}
+          <img
+            src={project.frontmatter.logo.publicURL}
             alt={project.frontmatter.role}
             className="me-3"
+            width={100}
           />
           <div className="d-flex flex-column text-start">
             <a

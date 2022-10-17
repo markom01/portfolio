@@ -22,6 +22,7 @@ export default function Skills() {
             link
             title
             description
+            details
             techStack {
               name
               img {

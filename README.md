@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/markom01/portfolio">
-    <img src="src/images/brand/Logo.svg" alt="Logo" width="80" height="80">
+    <img src="static/Logo.svg" alt="Logo" width="80" height="80">
   </a>
 
 # Portfolio website
@@ -43,22 +43,29 @@
 
 ## Built With
 
-- <b>GatsbyJS (React)</b>
-- <b>GraphQL</b>
-- <b>Sass</b>
-- <b>MDX</b>
+- <b>Typescript
+- GatsbyJS (React)
+- GraphQL
+- Bootstrap (Utility classes only)
+- Sass (w/ Modules)
+- MDX
+- Pnpm</b>
 
 <br/>
 <!-- ROADMAP -->
 
 ## Roadmap
 
+- <b>Typescript</b>
+  - Types (primitives, object literal, tuple, type indexing, mapped types) & Interfaces
 - <b>GatsbyJS</b>
   - Custom UI components built with <b>React</b> with help of some Gatsby components(for ex. <code>GatsbyImage</code> for image optimization)
   - Using <b>MDX</b> files to store data and fetch them with <b>GraphQL</b> data layer
 - <b>Sass</b>
+  - Using Modules to avoid naming conflicts, <code>@mixin</code>s, variables & <code>@extend</code>s
   - Style: Glassmorphism
   - Layout: Flexbox
+  - 3D transforms
 
 <!-- CONTRIBUTING -->
 <br/>

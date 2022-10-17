@@ -5,11 +5,7 @@ import * as styles from "./Loader.module.sass";
 export default function Loader() {
   return (
     <div className="d-flex justify-content-center align-items-center vh-100">
-      <StaticImage
-        src="../../../../images/brand/Logo.svg"
-        alt="Loader"
-        className={styles.loading}
-      />
+      <img src="Logo.svg" alt="Loader" className={styles.loading} />
     </div>
   );
 }
