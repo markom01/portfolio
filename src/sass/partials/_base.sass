@@ -1,0 +1,81 @@
+@import "@sass/partials/mixins"
+
+*, *::before, *::after
+    transition: $transition-base
+
+*:not(a, button, input, textarea)
+    cursor: url(../../../static/cursor.png) 15 15, auto !important
+
+::selection
+    background-color: rgba(255, 255, 255, 0.1)
+    color: $white
+
+:focus-visible
+    outline: none
+
+::-webkit-scrollbar
+    width: 7px
+    &-thumb
+        background-color: var(--glass-border)
+
+progress
+    appearance: none
+    height: 4px
+    z-index: 1
+    accent-color: var(--bs-primary)
+
+progress::-webkit-progress-value
+    background-color: var(--bs-primary)
+progress::-moz-progress-bar
+    background-color: var(--bs-primary)
+
+#main
+    height: calc(100vh - 40px)
+
+// @supports(height: 100dvh)
+//     #main
+//         height: 100dvh
+
+button
+    background-color: transparent
+    color: var(--bs-secondary)
+    border: 0
+
+.glass
+    background-color: rgba(255, 255, 255, 0.1)
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(7.5px)
+    border: 1px solid var(--glass-border)
+    &--border
+        border: 1px solid var(--glass-border)
+
+#content
+    overflow-y: scroll
+    scroll-behavior: smooth
+
+section
+    @extend .row, .row-cols-1, .justify-content-center, .gy-4, .mt-4
+    &:not(:last-child)
+        margin-block-end: 200px
+
+a
+    color: $white
+    &:not(.button)
+        @extend .text-decoration-none
+
+nav a:not(:first-child), .my-card button
+    @include on-interaction
+        background-color: var(--white-bg)
+
+.btns .button
+    @extend .me-3
+
+.connector:last-child
+    display: none
+
+ul
+    padding-left: 1rem
+
+li
+    list-style-type: "- "
+    margin-block-end: 5px

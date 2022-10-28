@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as styles from "./Filter.module.sass";
+import * as styles from "./Filter.module";
 import Icon from "@myBlocks/icon/Icon";
 
 interface FilterProps {

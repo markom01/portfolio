@@ -1,7 +1,7 @@
 import React, { createElement, useState, useContext } from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as styles from "./Card.module.sass";
+import * as styles from "./Card.module";
 import { Fade } from "react-reveal";
 
 import { StaticImage } from "gatsby-plugin-image";
@@ -15,14 +15,14 @@ export default function Card({ project }: { project: CardProps }) {
 
   return (
     <div className={`col ${styles.scene}`}>
-      <div
+      <article
         className={`h-100 w-100 position-relative my-card ${styles.card} ${
           showBack ? styles.show_back : ""
         }`}
       >
         <CardFront project={project} state={[showBack, setShowBack]} />
         <CardBack project={project} state={[showBack, setShowBack]} />
-      </div>
+      </article>
     </div>
   );
 }

@@ -33,6 +33,7 @@
     "baseUrl": "./" /* Specify the base directory to resolve non-relative module names. */,
     "paths": {
       "@node": ["node_modules"],
+      "@components/*": ["src/components/*"],
       "@myBlocks/*": ["src/components/blocks/myBlocks/*"],
       "@vendor/*": ["src/components/blocks/vendor/*"],
       "@sections/*": ["src/components/sections/*"],

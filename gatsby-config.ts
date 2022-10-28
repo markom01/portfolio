@@ -1,10 +1,14 @@
 import type { GatsbyConfig } from "gatsby";
+const path = require("path");
 
 const config: GatsbyConfig = {
   graphqlTypegen: true,
   siteMetadata: {
-    title: "Portfolio | Marko M.",
+    title: "Portfolio",
+    description: "Front End Web Development & UI/UX Design",
     siteUrl: `https://marko.gatsbyjs.io`,
+    image: `/static/Logo.svg`,
+    twitterUsername: `@marko_m_01`,
   },
   plugins: [
     {
@@ -13,6 +17,12 @@ const config: GatsbyConfig = {
         trackingIds: [
           "G-LPZCYXK5HV", // Google Analytics / GA
         ],
+        gtagConfig: {
+          send_page_view: true, // default appears to be false.
+        },
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     {
@@ -24,8 +34,6 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: `Portfolio | Marko M.`,
-        short_name: `Portfolio`,
         description: `Frontend web development`,
         display: `standalone`,
         start_url: `/`,
@@ -36,6 +44,24 @@ const config: GatsbyConfig = {
         legacy: false, // this will not add apple-touch-icon links to <head>
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-alias-imports`,
+    //   options: {
+    //     alias: {
+    //       "@node": path.resolve(__dirname, "node_modules"),
+    //       "@components": path.resolve(__dirname, "src/components"),
+    //       "@myBlocks": path.resolve(
+    //         __dirname,
+    //         "src/components/blocks/myBlocks"
+    //       ),
+    //       "@vendor": path.resolve(__dirname, "src/components/blocks/vendor"),
+    //       "@sections": path.resolve(__dirname, "src/components/sections"),
+    //       "@pages": path.resolve(__dirname, "src/pages"),
+    //       "@sass": path.resolve(__dirname, "src/sass"),
+    //     },
+    //     extensions: [".sass", ".tsx", ".ts"],
+    //   },
+    // },
     "gatsby-plugin-pnpm",
     {
       resolve: "gatsby-plugin-sass",

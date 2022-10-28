@@ -1,21 +1,20 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "run server on start",
-            "type": "shell",
-            "command": "pnpm start",
-            "windows": {
-                "command": "pnpm start"
-              },
-              "presentation": {
-                "reveal": "always",
-                "panel": "new"
-              },
-              "runOptions": { "runOn": "folderOpen" }
-            }
-        
-    ]
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "run server on start",
+      "type": "shell",
+      "command": "pn start",
+      "windows": {
+        "command": "pn start"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
 }

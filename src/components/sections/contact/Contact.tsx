@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./Contact.module.sass";
+import * as styles from "./Contact.module";
 import Section from "../Section";
 import Form from "./form/Form";
 

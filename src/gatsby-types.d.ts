@@ -3015,8 +3015,10 @@ type SiteFieldsEnum =
   | 'polyfill'
   | 'port'
   | 'siteMetadata.description'
+  | 'siteMetadata.image'
   | 'siteMetadata.siteUrl'
   | 'siteMetadata.title'
+  | 'siteMetadata.twitterUsername'
   | 'trailingSlash';
 
 type SiteFilterInput = {
@@ -3806,14 +3808,18 @@ type SitePluginSortInput = {
 
 type SiteSiteMetadata = {
   readonly description: Maybe<Scalars['String']>;
+  readonly image: Maybe<Scalars['String']>;
   readonly siteUrl: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
+  readonly twitterUsername: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataFilterInput = {
   readonly description: InputMaybe<StringQueryOperatorInput>;
+  readonly image: InputMaybe<StringQueryOperatorInput>;
   readonly siteUrl: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
+  readonly twitterUsername: InputMaybe<StringQueryOperatorInput>;
 };
 
 type SiteSortInput = {
@@ -3882,6 +3888,11 @@ type GatsbyImageSharpFluid_withWebp_noBase64Fragment = { readonly aspectRatio: n
 type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: string | null, readonly aspectRatio: number, readonly src: string, readonly srcSet: string, readonly srcWebp: string | null, readonly srcSetWebp: string | null, readonly sizes: string };
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
+
+type MetadataQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type MetadataQuery = { readonly site: { readonly siteMetadata: { readonly description: string | null, readonly twitterUsername: string | null, readonly image: string | null, readonly siteUrl: string | null } | null } | null };
 
 type ProjectsQueryVariables = Exact<{ [key: string]: never; }>;
 

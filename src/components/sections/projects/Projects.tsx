@@ -65,7 +65,7 @@ export default function Skills() {
           <Filter state={[activeTechArray, setActiveTechArray]} />
           <Sort handleSort={setSort} />
         </div>
-        <div className="row row-cols-auto gx-4 gx-md-5 gy-5 justify-content-center align-items-center">
+        <div className="row row-cols-auto gx-4 gx-md-5 gy-4 justify-content-center align-items-center">
           {[...data.allMdx.nodes]
             .sort(sortProjects)
             .filter(filterProjects)

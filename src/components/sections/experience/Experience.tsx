@@ -1,9 +1,7 @@
-import Icon from "@myBlocks/icon/Icon";
-import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import Section from "../Section";
-import * as styles from "./Experience.module.sass";
+import * as styles from "./Experience.module";
+import { useStaticQuery, graphql } from "gatsby";
 
 type ExperienceProps = Queries.ExperienceQuery["allMdx"]["nodes"][number];
 
@@ -48,9 +46,6 @@ function Connector() {
   return (
     <div className={`position-relative ${styles.connector} connector my-5`}>
       <div className={`mx-auto h-100 ${styles.connector_line}`} />
-      {/* <div
-        className={`position-absolute start-50 translate-middle rounded-circle mx-auto ${styles.connector_dot}`}
-      /> */}
     </div>
   );
 }
@@ -60,7 +55,7 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
   const endDate = new Date(project.frontmatter.endDate);
   return (
     <>
-      <div
+      <article
         className={`d-flex flex-column jusfity-content-center ${styles.card}`}
       >
         <div className="d-flex align-items-center mb-5">
@@ -76,7 +71,7 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
               className="text-white mb-2"
               href={project.frontmatter.link}
             >
-              {project.frontmatter.role}
+              <h3>{project.frontmatter.role}</h3>
             </a>
             <h6>
               {`${startDate.getMonth() + 1}.${startDate.getFullYear()} - ${
@@ -107,7 +102,7 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
             ))}
           </div>
         </div>
-      </div>
+      </article>
       <Connector />
     </>
   );

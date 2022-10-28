@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-reveal";
 import Icon from "../icon/Icon";
-import * as styles from "./Alert.module.sass";
+import * as styles from "./Alert.module";
 
 interface AlertProps {
   text: string;

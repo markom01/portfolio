@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from "react";
-import * as styles from "./Button.module.sass";
+import * as styles from "./Button.module";
 
 interface Button {
   id?: string;

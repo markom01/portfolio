@@ -1,7 +1,7 @@
 import Radio from "@sections/contact/form/radio/Radio";
 import React, { useState } from "react";
 import Icon from "../../../blocks/myBlocks/icon/Icon";
-import * as styles from "./Sort.module.sass";
+import * as styles from "./Sort.module";
 
 export default function Sort({
   handleSort,

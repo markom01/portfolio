@@ -1,6 +1,6 @@
 import Icon from "@myBlocks/icon/Icon";
 import React from "react";
-import * as styles from "./Radio.module.sass";
+import * as styles from "./Radio.module";
 
 export default function Radio({
   label,

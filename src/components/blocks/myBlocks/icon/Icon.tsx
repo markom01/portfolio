@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./Icon.module.sass";
+import * as styles from "./Icon.module";
 
 export default function Icon({
   src = "",

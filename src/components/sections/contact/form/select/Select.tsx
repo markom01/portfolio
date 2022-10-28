@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Slide, Fade } from "react-reveal";
 import Icon from "../../../../blocks/myBlocks/icon/Icon";
-import * as selectStyles from "./Select.module.sass";
+import * as selectStyles from "./Select.module";
 import { TextInputProps } from "../Form";
-import * as radioStyles from "../radio/Radio.module.sass";
-// import * as formStyles from "../Form.module.sass";
+import * as radioStyles from "../radio/Radio.module";
+// import * as formStyles from "../Form.module";
 
 interface SelectProps {
   responses: TextInputProps["responses"];

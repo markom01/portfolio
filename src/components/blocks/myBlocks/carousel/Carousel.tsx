@@ -1,6 +1,6 @@
 import Icon from "@myBlocks/icon/Icon";
 import React, { createContext, useContext, useState } from "react"; // , { createContext, useContext }
-import * as styles from "./Carousel.module.sass";
+import * as styles from "./Carousel.module";
 
 export default function Carousel() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as styles from "./Cursor.module.sass";
+import * as styles from "./Cursor.module";
 
 export default function Cursor({
   coords,

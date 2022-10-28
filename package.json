@@ -5,7 +5,9 @@
   "description": "",
   "author": "Marko Meseldžija",
   "scripts": {
+    "convert": "sass-convert -R ./ -F sass -T scss && find . -type f -name '*.sass' -delete",
     "clean": "gatsby clean",
+    "stylelint": "stylelint '**/*.sass'",
     "start": "gatsby develop",
     "build": "gatsby build && gatsby serve",
     "cstart": "gatsby clean && pnpm start",
@@ -42,6 +44,9 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "resolve-url-loader": "^5.0.0",
+    "stylelint": "^14.14.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^6.0.0",
     "typescript": "^4.8.4"
   }
 }

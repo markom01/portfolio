@@ -1,0 +1,38 @@
+@font-face
+  font-family: 'Poppins'
+  font-style: normal
+  font-weight: 400
+  src: local('Poppins'), url('../../fonts/poppins-v20-latin-regular.woff2') format('woff2')
+
+h1,h2
+  min-width: 100%
+
+h1
+  @extend .text-primary, .text-uppercase, .mx-auto, .fw-bold
+  width: 70vmin
+
+h2
+  width: 50vmin
+  @extend .text-uppercase, .fw-bold
+
+h6, p
+  margin-block-end: 0
+
+.text-white
+  opacity: 0.9
+
+small
+  font-size: 0.7em
+
+.icon-label, h1, h2, a.button
+  letter-spacing: 0.15em
+
+.icon
+  &--small
+    font-size: 1em
+  &--medium
+    font-size: 1.5em
+  &--big
+    font-size: 2.5em
+  &--bigger
+    font-size: 3em

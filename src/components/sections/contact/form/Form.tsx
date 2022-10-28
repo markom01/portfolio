@@ -1,11 +1,13 @@
-import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import * as styles from "./Form.module.sass";
+import React, { useState } from "react";
+
+import Alert from "@myBlocks/alert/Alert";
 import Button from "@myBlocks/button/Button";
-import Alert from "../../../blocks/myBlocks/alert/Alert";
-import Select from "./select/Select";
+
+import * as styles from "./Form.module";
 import Checkbox from "./checkbox/Checkbox";
 import Radio from "./radio/Radio";
+import Select from "./select/Select";
 
 export default function Form() {
   const [responseInfo, setResponseInfo] = useState("");
@@ -22,12 +24,12 @@ export default function Form() {
         "CAC6I6BDizh-EyeW6"
       )
       .then(
-        (response) => {
+        response => {
           setResponseInfo("Sent! Expect answers soon.");
           setAlertVisible(true);
           process.env.NODE_ENV === "development" && console.log(response.text);
         },
-        (err) => {
+        err => {
           setResponseInfo(err);
           setAlertVisible(true);
           process.env.NODE_ENV === "development" && console.log(err);
@@ -61,7 +63,7 @@ export default function Form() {
       spellCheck="false"
     >
       <div className="row row-cols-1 row-cols-md-2 g-4 mb-4">
-        {textInputs.map((data) => (
+        {textInputs.map(data => (
           <TextInput
             data={data}
             responses={responses}
@@ -148,10 +150,10 @@ function TextInput({
             className={` pb-1 w-100 pt-4 ${styles.input} `}
             onClick={handleInteraction}
             onFocus={handleInteraction}
-            onChange={(e) => {
+            onChange={e => {
               handleChange({ ...responses, [data.name]: e.target.value });
             }}
-            onBlur={(e) => {
+            onBlur={e => {
               if (!e.target.value) {
                 setClicked(false);
               }
@@ -200,13 +202,13 @@ function TextArea({ className, responses, handleChange }: TextAreaProps) {
           className={`pb-1 h-100 w-100 pt-4 ${styles.input} `}
           onClick={handleInteraction}
           onFocus={handleInteraction}
-          onBlur={(e) => {
+          onBlur={e => {
             if (!e.target.value) {
               setClicked(false);
             }
             setBgActive(false);
           }}
-          onChange={(e) => {
+          onChange={e => {
             handleChange({ ...responses, message: e.target.value });
           }}
           rows={5}
