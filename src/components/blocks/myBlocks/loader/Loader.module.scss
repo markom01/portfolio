@@ -1,0 +1,14 @@
+@keyframes loader {
+  from {
+    transform: rotateY(0);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.loading {
+  width: 10vw;
+  animation: loader 1.5s infinite;
+}

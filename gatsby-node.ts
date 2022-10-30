@@ -11,7 +11,7 @@ exports.onCreateWebpackConfig = ({ actions }: { actions: any }) => {
         "@pages": path.resolve(__dirname, "src/pages"),
         "@sass": path.resolve(__dirname, "src/sass"),
       },
-      extensions: [".sass", ".tsx", ".ts"],
+      extensions: [".scss", ".tsx", ".ts"],
     },
   });
 };

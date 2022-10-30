@@ -6,9 +6,9 @@
     {
       "label": "run server on start",
       "type": "shell",
-      "command": "pn start",
+      "command": "npm i -g pnpm && pnpm start",
       "windows": {
-        "command": "pn start"
+        "command": "pnpm start"
       },
       "presentation": {
         "reveal": "always",

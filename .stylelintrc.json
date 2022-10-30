@@ -2,5 +2,18 @@
   "extends": [
     "stylelint-config-standard-scss",
     "stylelint-config-prettier-scss"
+  ],
+  "rules": {
+    "scss/at-extend-no-missing-placeholder": null,
+    "function-url-quotes": "never"
+  },
+  "ignoreFiles": ["**/*.(ts|tsx|woff2|jpg|png)"],
+  "overrides": [
+    {
+      "files": ["**/*.module.scss"],
+      "rules": {
+        "selector-class-pattern": "^([a-z][a-z0-9]*)(_{1,2}[a-z0-9]+)*$"
+      }
+    }
   ]
 }

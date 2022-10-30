@@ -1,0 +1,15 @@
+@import "@sass/partials/mixins";
+
+.radio {
+  appearance: none;
+  width: 0;
+  height: 0;
+
+  &:checked + label {
+    background-color: var(--white-bg);
+  }
+}
+
+.flip {
+  rotate: 0.5turn;
+}

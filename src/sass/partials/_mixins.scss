@@ -1,0 +1,13 @@
+@mixin on-interaction {
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:active {
+    @content;
+  }
+}
+
+@mixin size($x, $y: $x) {
+  width: $x;
+  height: $y;
+}

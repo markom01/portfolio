@@ -1,0 +1,31 @@
+input,
+textarea {
+  color: var(--bs-secondary);
+}
+
+form,
+input:not([type="radio"]),
+select,
+textarea {
+  @extend .glass--border;
+}
+
+input:not([type="radio"]),
+select,
+textarea {
+  // color: var(--bs-secondary)
+  padding-inline: 10px;
+  background-color: transparent;
+}
+
+label {
+  cursor: text;
+}
+
+select {
+  color: transparent;
+}
+
+textarea {
+  resize: none;
+}

@@ -1,0 +1,22 @@
+@import "@sass/partials/mixins";
+
+.select {
+  z-index: 1;
+  top: 65px;
+
+  &_item {
+    @include on-interaction {
+      background-color: var(--white-bg);
+    }
+  }
+
+  &_label {
+    &_up {
+      font-size: 12px;
+      color: var(--glass-border);
+
+      // transform: translate3d(0, -125%, 0)
+   
+    }
+  }
+}

@@ -1,8 +1,11 @@
-import React from "react";
-import * as styles from "./Hero.module";
 import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
+
 import Button from "@myBlocks/button/Button";
 import Icon from "@myBlocks/icon/Icon";
+
+import { ChevronSVG } from "../contact/form/radio/Radio";
+import * as styles from "./Hero.module";
 
 export default function Hero() {
   return (
@@ -34,10 +37,12 @@ export default function Hero() {
         style={{ color: "var(--bs-secondary)" }}
         className="mt-5 mt-md-auto"
       >
-        <span className="icon--big d-block" style={{ marginBlockEnd: "-55px" }}>
-          ⌄
+        <span className="d-block" style={{ marginBlockEnd: "-40px" }}>
+          <ChevronSVG style={{ fill: "var(--icons-color)" }} />
         </span>
-        <span className="icon--bigger d-block">⌄</span>
+        <span className="d-block">
+          <ChevronSVG />
+        </span>
       </a>
     </section>
   );

@@ -1,0 +1,11 @@
+@import "@sass/partials/mixins";
+
+.cursor {
+  z-index: 3;
+
+  @include size(30px);
+
+  &_inner {
+    background-color: var(--white-bg);
+  }
+}

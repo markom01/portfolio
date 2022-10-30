@@ -44,24 +44,6 @@ const config: GatsbyConfig = {
         legacy: false, // this will not add apple-touch-icon links to <head>
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-alias-imports`,
-    //   options: {
-    //     alias: {
-    //       "@node": path.resolve(__dirname, "node_modules"),
-    //       "@components": path.resolve(__dirname, "src/components"),
-    //       "@myBlocks": path.resolve(
-    //         __dirname,
-    //         "src/components/blocks/myBlocks"
-    //       ),
-    //       "@vendor": path.resolve(__dirname, "src/components/blocks/vendor"),
-    //       "@sections": path.resolve(__dirname, "src/components/sections"),
-    //       "@pages": path.resolve(__dirname, "src/pages"),
-    //       "@sass": path.resolve(__dirname, "src/sass"),
-    //     },
-    //     extensions: [".sass", ".tsx", ".ts"],
-    //   },
-    // },
     "gatsby-plugin-pnpm",
     {
       resolve: "gatsby-plugin-sass",

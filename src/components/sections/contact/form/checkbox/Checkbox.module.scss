@@ -1,0 +1,9 @@
+@import "@sass/partials/mixins";
+
+.checkbox {
+  @include size(20px);
+
+  appearance: none;
+}
+
+// .checked

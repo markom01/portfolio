@@ -1,0 +1,31 @@
+@import "@sass/partials/mixins";
+
+.form {
+  @media (min-width: 576px) {
+    inline-size: 70%;
+  }
+
+  @media (min-width: 768px) {
+    inline-size: 500px;
+  }
+}
+
+.input {
+  max-inline-size: 100%;
+}
+
+.input_clicked {
+  &_bg {
+    background-color: var(--white-bg);
+  }
+
+  label {
+    color: var(--glass-border);
+    font-size: 12px;
+    transform: translate3d(10px, 5px, 0);
+  }
+}
+
+.label {
+  transform: translate3d(10px, calc(50% + 2.5px), 0);
+}

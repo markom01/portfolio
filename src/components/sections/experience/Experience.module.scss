@@ -1,0 +1,25 @@
+@import "@sass/partials/mixins";
+
+.card {
+  max-inline-size: 400px;
+
+  a {
+    font-size: 1.2em;
+  }
+}
+
+.connector {
+  height: 150px;
+
+  &_line {
+    width: 5px;
+    background-color: var(--white-bg);
+  }
+
+  &_dot {
+    @include size(20px);
+
+    bottom: -25px;
+    border: 5px solid var(--glass-border);
+  }
+}

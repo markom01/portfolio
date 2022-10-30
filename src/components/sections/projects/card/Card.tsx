@@ -1,12 +1,15 @@
-import React, { createElement, useState, useContext } from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as styles from "./Card.module";
+import { StaticImage } from "gatsby-plugin-image";
+import React, { createElement, useContext, useState } from "react";
 import { Fade } from "react-reveal";
 
-import { StaticImage } from "gatsby-plugin-image";
-import Icon from "../../../blocks/myBlocks/icon/Icon";
+import { ChevronSVG } from "@components/sections/contact/form/radio/Radio";
+
 import Button from "@myBlocks/button/Button";
+
+import Icon from "../../../blocks/myBlocks/icon/Icon";
+import * as styles from "./Card.module";
 
 type CardProps = Queries.ProjectsQuery["allMdx"]["nodes"][0];
 
@@ -14,15 +17,17 @@ export default function Card({ project }: { project: CardProps }) {
   const [showBack, setShowBack] = useState(false);
 
   return (
-    <div className={`col ${styles.scene}`}>
-      <article
-        className={`h-100 w-100 position-relative my-card ${styles.card} ${
-          showBack ? styles.show_back : ""
-        }`}
-      >
-        <CardFront project={project} state={[showBack, setShowBack]} />
-        <CardBack project={project} state={[showBack, setShowBack]} />
-      </article>
+    <div className={`col`}>
+      <div className={styles.scene}>
+        <article
+          className={`h-100 w-100 position-relative my-card ${styles.card} ${
+            showBack ? styles.show_back : ""
+          }`}
+        >
+          <CardFront project={project} state={[showBack, setShowBack]} />
+          <CardBack project={project} state={[showBack, setShowBack]} />
+        </article>
+      </div>
     </div>
   );
 }
@@ -37,7 +42,7 @@ export function CardFront({ project, state }: CardSidesProps) {
 
   return (
     <div
-      className={`${styles.glassCard} d-flex flex-column align-items-center position-absolute ${styles.card__face} ${styles.card__facefront}`}
+      className={`${styles.glass_card} d-flex flex-column align-items-center position-absolute ${styles.card__face} ${styles.card__facefront}`}
     >
       {
         <Fade cascade>
@@ -49,7 +54,7 @@ export function CardFront({ project, state }: CardSidesProps) {
                 <sup className="ms-1">🔗</sup>
               </a>
             </div>
-            <div className="d-flex justify-content-between align-items-end w-100">
+            <div className="d-flex justify-content-between align-items-center w-100">
               <div className="row row-cols-auto g-3 me-2">
                 {project.frontmatter.techStack.map(({ name, img }) => {
                   return (
@@ -65,10 +70,13 @@ export function CardFront({ project, state }: CardSidesProps) {
               </div>
               <button
                 className={`text-white ${styles.flip_btn}`}
-                onClick={() => state[1]((s) => !s)}
+                onClick={() => state[1](s => !s)}
                 aria-label="Show More"
               >
-                {`˃`}
+                <ChevronSVG
+                  className="p-1 py-2"
+                  style={{ width: "25px", rotate: "-.25turn" }}
+                />
               </button>
             </div>
           </div>
@@ -82,7 +90,7 @@ function CardBack({ project, state }: CardSidesProps) {
   const endDate = new Date(project.frontmatter.endDate);
   return (
     <div
-      className={`${styles.glassCard} p-3 d-flex flex-column align-items-center position-absolute text-start ${styles.card__face} ${styles.card__faceback}`}
+      className={`${styles.glass_card} p-3 d-flex flex-column align-items-center position-absolute text-start ${styles.card__face} ${styles.card__faceback}`}
     >
       <Fade cascade>
         <div className="d-flex flex-column h-100">
@@ -96,11 +104,11 @@ function CardBack({ project, state }: CardSidesProps) {
           </a>
         </div>
         <div className="d-flex w-100 justify-content-between align-items-center">
-          <button
-            className={styles.flip_btn}
-            onClick={() => state[1]((s) => !s)}
-          >
-            {`˂`}
+          <button className={styles.flip_btn} onClick={() => state[1](s => !s)}>
+            <ChevronSVG
+              className="p-1 py-2"
+              style={{ width: "25px", rotate: ".25turn" }}
+            />
           </button>
           <h6
             aria-label="Project Duration"
