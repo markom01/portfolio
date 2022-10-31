@@ -6,7 +6,7 @@ import Navigation from "@sections/navigation/Navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [scrolled, setScrolled] = useState(0);
-  let handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const target = e.currentTarget;
     const scrollTop = target.scrollTop;
     const targetHeight = target.scrollHeight - target.clientHeight;
@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           loop
           ref={videoRef}
           style={{ objectFit: "cover" }}
-          onPlay={() => (videoRef.current!.playbackRate = 0.5)}
+          onPlay={() => (videoRef.current.playbackRate = 0.5)}
         />
       </div>
       <div className="w-100 h-100 d-flex flex-column">

@@ -1,7 +1,8 @@
-import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import * as styles from "./Navigation.module";
+import React from "react";
+
 import NavLink from "./NavLink";
+import * as styles from "./Navigation.module";
 
 export type LinkType = {
   name: string;
@@ -26,11 +27,11 @@ const links: LinkType[] = [
     name: "connect",
     icon: "🔗",
   },
-  {
-    name: "about",
-    icon: "👋",
-    toPage: true,
-  },
+  // {
+  //   name: "about",
+  //   icon: "👋",
+  //   toPage: true,
+  // },
 ];
 
 export default function Navigation() {
@@ -52,7 +53,7 @@ export default function Navigation() {
             <img src="Logo.svg" alt="logo" width={40} className={styles.logo} />
           </span>
         </a>
-        {links.map((link) => (
+        {links.map(link => (
           <NavLink key={link.name} link={link}>
             <span
               className={`d-flex align-items-center justify-content-center icon--small`}

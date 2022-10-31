@@ -51,9 +51,6 @@ export default function Form() {
 
   const [responses, setResponses] = useState({});
 
-  const radioLabels = ["Radio 1", "Radio 2", "Radio 3"];
-  const [activeRadio, setActiveRadio] = useState(null);
-
   return (
     <form
       id="contact"
@@ -94,9 +91,6 @@ export default function Form() {
         visible={alertVisible}
         handleClick={setAlertVisible}
       />
-      {/* {radioLabels.map((label) => (
-        <Radio label={label} key={label} />
-      ))} */}
     </form>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+
 import * as styles from "./Icon.module";
 
 export default function Icon({
@@ -8,6 +9,10 @@ export default function Icon({
   size = "medium",
 }) {
   return (
-    <img src={src} className={`${styles.icon} ${className} ${styles[size]}`} />
+    <img
+      alt={alt}
+      src={src}
+      className={`${styles.icon} ${className} ${styles[size]}`}
+    />
   );
 }
