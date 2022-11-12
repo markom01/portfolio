@@ -22,7 +22,7 @@
   @include size(100%);
 
   &back {
-    transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 0.1px);
+    transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 1px);
     background: rgb(255 255 255 / 5%);
     backdrop-filter: blur(30px);
     backface-visibility: hidden;

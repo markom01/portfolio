@@ -9,7 +9,7 @@ export default function BelowTheFold() {
     <>
       <Projects />
       <Experience />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </>
   );
