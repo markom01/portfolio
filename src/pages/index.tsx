@@ -1,6 +1,7 @@
 import type { HeadProps } from "gatsby";
 import React, { Suspense, useRef, useState } from "react";
 
+import Layout from "@components/layout/Layout";
 import { SEO } from "@components/seo";
 
 import Loader from "@myBlocks/loader/Loader";
@@ -16,11 +17,11 @@ export function Head(props: HeadProps) {
 
 export default function App() {
   return (
-    <div>
-      <Suspense fallback={<Loader />}>
+    <Suspense fallback={<Loader />}>
+      <Layout>
         <Hero />
         <BelowTheFold />
-      </Suspense>
-    </div>
+      </Layout>
+    </Suspense>
   );
 }

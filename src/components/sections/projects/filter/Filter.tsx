@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as styles from "./Filter.module";
+import React, { useEffect, useState } from "react";
+
 import Icon from "@myBlocks/icon/Icon";
+
+import * as styles from "./Filter.module";
 
 interface FilterProps {
   state: [any[], React.Dispatch<React.SetStateAction<any[]>>];
@@ -60,7 +62,7 @@ function TechIcon({
       onClick={() => {
         activeTech
           ? setActiveTechArray(
-              activeTechArray.filter((name) => name !== tech.name)
+              activeTechArray.filter(name => name !== tech.name)
             )
           : setActiveTechArray([...activeTechArray, tech.name]);
         setActiveTech(!activeTech);
@@ -71,7 +73,7 @@ function TechIcon({
         className={`p-2  ${activeTech ? styles.bg_active : ""}`}
         aria-label={tech.name}
       >
-        <Icon src={tech.img.publicURL} alt={tech.name} />
+        <Icon src={tech.img.publicURL} alt={tech.name} size="large" />
       </div>
     </button>
   );

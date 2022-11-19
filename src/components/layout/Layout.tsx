@@ -12,32 +12,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     const targetHeight = target.scrollHeight - target.clientHeight;
     setScrolled(scrollTop / targetHeight);
   };
-  const videoRef = useRef<HTMLVideoElement>(null);
   return (
-    <div className="vw-100 position-relative" style={{ height: "99vh" }}>
-      <div className="video position-absolute top-0 w-100 h-100">
-        <video
-          src="bg-triangles-small.mp4"
-          className="w-100 h-100"
-          autoPlay
-          muted
-          loop
-          ref={videoRef}
-          style={{ objectFit: "cover" }}
-          onPlay={() => (videoRef.current.playbackRate = 0.5)}
-        />
-      </div>
-      <div className="w-100 h-100 d-flex flex-column">
-        <Scrollbar progress={scrolled} />
-        <div className={`w-100 h-100 pt-3 d-flex`} id="main">
-          <Navigation />
-          <div
-            className="glass mx-2  px-3  h-100 text-center"
-            id="content"
-            onScroll={handleScroll}
-          >
-            {children}
-          </div>
+    <div
+      className="w-100 d-flex flex-column"
+      style={{ zIndex: 2, position: "relative", height: "99vh" }}
+    >
+      <Scrollbar progress={scrolled} />
+      <div className={`w-100 h-100 pt-3 d-flex`} id="main">
+        <Navigation />
+        <div
+          className="glass mx-2  px-3  h-100 text-center"
+          id="content"
+          onScroll={handleScroll}
+        >
+          {children}
         </div>
       </div>
     </div>

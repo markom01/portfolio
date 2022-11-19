@@ -10,6 +10,7 @@ exports.onCreateWebpackConfig = ({ actions }: { actions: any }) => {
         "@sections": path.resolve(__dirname, "src/components/sections"),
         "@pages": path.resolve(__dirname, "src/pages"),
         "@sass": path.resolve(__dirname, "src/sass"),
+        "@images": "/src/images",
       },
       extensions: [".scss", ".tsx", ".ts"],
     },
