@@ -19,10 +19,10 @@ const links: LinkType[] = [
     name: "experience",
     icon: "💼",
   },
-  {
-    name: "contact",
-    icon: "📨",
-  },
+  // {
+  //   name: "contact",
+  //   icon: "📨",
+  // },
   {
     name: "connect",
     icon: "🔗",

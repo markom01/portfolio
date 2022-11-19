@@ -49,7 +49,11 @@ export function CardFront({ project, state }: CardSidesProps) {
           <GatsbyImage image={thumbnail} alt={project.frontmatter.title} />
           <div className="d-flex flex-column justify-content-between h-100 w-100 p-3">
             <div>
-              <a href={project.frontmatter.link} className="text-white">
+              <a
+                href={project.frontmatter.link}
+                target="_blank"
+                className="text-white"
+              >
                 {project.frontmatter.title}
                 <sup className="ms-1">🔗</sup>
               </a>
@@ -99,6 +103,7 @@ function CardBack({ project, state }: CardSidesProps) {
           <a
             href={project.frontmatter.details}
             className="text-white text-uppercase"
+            target="_blank"
           >
             View More
           </a>

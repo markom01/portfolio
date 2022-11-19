@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+
 const path = require("path");
 
 const config: GatsbyConfig = {
@@ -11,20 +12,20 @@ const config: GatsbyConfig = {
     twitterUsername: `@marko_m_01`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          "G-LPZCYXK5HV", // Google Analytics / GA
-        ],
-        gtagConfig: {
-          send_page_view: true, // default appears to be false.
-        },
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: [
+    //       "G-LPZCYXK5HV", // Google Analytics / GA
+    //     ],
+    //     gtagConfig: {
+    //       send_page_view: true, // default appears to be false.
+    //     },
+    //     pluginConfig: {
+    //       head: true,
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {

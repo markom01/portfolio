@@ -1,9 +1,11 @@
+import download from "bootstrap-icons/icons/file-earmark-arrow-down.svg";
 import React from "react";
-import Icon from "@myBlocks/icon/Icon";
+
 import Button from "@myBlocks/button/Button";
 import * as styles from "@myBlocks/button/Button.module";
+import Icon from "@myBlocks/icon/Icon";
+
 import Section from "@sections/Section";
-import download from "bootstrap-icons/icons/file-earmark-arrow-down.svg";
 
 // import * as styles from "./Footer.module";
 
@@ -17,7 +19,7 @@ const socialIcons = [
   {
     name: "linkedin",
     link: function () {
-      return generateLink(this.name, "in/marecardesigner");
+      return generateLink(this.name, "in/markom01");
     },
   },
   {
@@ -39,7 +41,7 @@ export default function Footer() {
     <Section id="connect" className="mb-5">
       <footer className="p-5 mt-0">
         <div className="row g-4 justify-content-center">
-          {socialIcons.map((icon) => (
+          {socialIcons.map(icon => (
             <div
               aria-label={capitalize(icon.name)}
               className="col-auto"

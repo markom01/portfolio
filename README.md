@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/marecardesigner/)
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/markom01/)
 
 <!-- PROJECT LOGO -->
 <br />
