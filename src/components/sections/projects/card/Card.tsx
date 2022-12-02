@@ -2,7 +2,6 @@ import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { StaticImage } from "gatsby-plugin-image";
 import React, { createElement, useContext, useState } from "react";
-import { Fade } from "react-reveal";
 
 import { ChevronSVG } from "@components/sections/contact/form/radio/Radio";
 
@@ -42,50 +41,51 @@ export function CardFront({ project, state }: CardSidesProps) {
 
   return (
     <div
-      className={`${styles.glass_card} d-flex flex-column align-items-center position-absolute ${styles.card__face} ${styles.card__facefront}`}
+      className={`${styles.glass_card} position-absolute d-flex flex-column w-100 h-100 ${styles.card__face} ${styles.card__facefront}`}
     >
-      {
-        <Fade cascade>
-          <GatsbyImage image={thumbnail} alt={project.frontmatter.title} />
-          <div className="d-flex flex-column justify-content-between h-100 w-100 p-3">
-            <div>
-              <a
-                href={project.frontmatter.link}
-                target="_blank"
-                className="text-white"
-              >
-                {project.frontmatter.title}
-                <sup className="ms-1">🔗</sup>
-              </a>
-            </div>
-            <div className="d-flex justify-content-between align-items-center w-100">
-              <div className="row row-cols-auto g-3 me-2">
-                {project.frontmatter.techStack.map(({ name, img }) => {
-                  return (
-                    <div
-                      className="col d-flex align-items-center"
-                      key={name}
-                      aria-label={name}
-                    >
-                      <Icon src={img.publicURL} alt={name} />
-                    </div>
-                  );
-                })}
-              </div>
-              <button
-                className={`text-white ${styles.flip_btn}`}
-                onClick={() => state[1](s => !s)}
-                aria-label="Show More"
-              >
-                <ChevronSVG
-                  className="p-1 py-2"
-                  style={{ width: "25px", rotate: "-.25turn" }}
-                />
-              </button>
-            </div>
+      <div style={{ height: "150px" }}>
+        <GatsbyImage
+          className="h-100"
+          image={thumbnail}
+          alt={project.frontmatter.title}
+        />
+      </div>
+      <div className="d-flex flex-column justify-content-between h-100 w-100 p-3">
+        <a
+          href={project.frontmatter.link}
+          target="_blank"
+          className="text-white mb-4"
+        >
+          {project.frontmatter.title}
+          <sup className="ms-1">🔗</sup>
+        </a>
+
+        <div className="d-flex justify-content-between align-items-center w-100">
+          <div className="row row-cols-auto g-3 me-2">
+            {project.frontmatter.techStack.map(({ name, img }) => {
+              return (
+                <div
+                  className="col d-flex align-items-center"
+                  key={name}
+                  aria-label={name}
+                >
+                  <Icon src={img.publicURL} alt={name} />
+                </div>
+              );
+            })}
           </div>
-        </Fade>
-      }
+          <button
+            className={`text-white ${styles.flip_btn}`}
+            onClick={() => state[1](s => !s)}
+            aria-label="Show More"
+          >
+            <ChevronSVG
+              className="p-1 py-2"
+              style={{ width: "25px", rotate: "-.25turn" }}
+            />
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
@@ -96,42 +96,40 @@ function CardBack({ project, state }: CardSidesProps) {
     <div
       className={`${styles.glass_card} p-3 d-flex flex-column align-items-center position-absolute text-start ${styles.card__face} ${styles.card__faceback}`}
     >
-      <Fade cascade>
-        <div className="d-flex flex-column h-100">
-          <h5 className="mb-2 text-white">Description</h5>
-          <h6 className="mb-4">{project.frontmatter.description}</h6>
-          <a
-            href={project.frontmatter.details}
-            className="text-white text-uppercase"
-            target="_blank"
+      <div className="d-flex flex-column h-100">
+        <h5 className="mb-2 text-white">Description</h5>
+        <h6 className="mb-4">{project.frontmatter.description}</h6>
+        <a
+          href={project.frontmatter.details}
+          className="text-white text-uppercase"
+          target="_blank"
+        >
+          View More
+        </a>
+      </div>
+      <div className="d-flex w-100 justify-content-between align-items-center">
+        <button className={styles.flip_btn} onClick={() => state[1](s => !s)}>
+          <ChevronSVG
+            className="p-1 py-2"
+            style={{ width: "25px", rotate: ".25turn" }}
+          />
+        </button>
+        <h6
+          aria-label="Project Duration"
+          className="d-flex align-items-center mb-0"
+          style={{ fontSize: "14px" }}
+        >
+          <span
+            className="me-2 icon--small"
+            style={{ marginBlockStart: "-4px" }}
           >
-            View More
-          </a>
-        </div>
-        <div className="d-flex w-100 justify-content-between align-items-center">
-          <button className={styles.flip_btn} onClick={() => state[1](s => !s)}>
-            <ChevronSVG
-              className="p-1 py-2"
-              style={{ width: "25px", rotate: ".25turn" }}
-            />
-          </button>
-          <h6
-            aria-label="Project Duration"
-            className="d-flex align-items-center mb-0"
-            style={{ fontSize: "14px" }}
-          >
-            <span
-              className="me-2 icon--small"
-              style={{ marginBlockStart: "-4px" }}
-            >
-              🗓
-            </span>
-            {`${startDate.getMonth() + 1}.${startDate.getFullYear()} - ${
-              endDate.getMonth() + 1
-            }.${endDate.getFullYear()}`}
-          </h6>
-        </div>
-      </Fade>
+            🗓
+          </span>
+          {`${startDate.getMonth() + 1}.${startDate.getFullYear()} - ${
+            endDate.getMonth() + 1
+          }.${endDate.getFullYear()}`}
+        </h6>
+      </div>
     </div>
   );
 }

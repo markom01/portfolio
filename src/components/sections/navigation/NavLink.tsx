@@ -1,5 +1,6 @@
-import React from "react";
 import { Link } from "gatsby";
+import React from "react";
+
 import type { LinkType } from "./Navigation";
 
 export default function NavLink({
