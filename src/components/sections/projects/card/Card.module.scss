@@ -4,6 +4,10 @@
 .scene {
   @include size(300px);
 
+  @media (max-width: 375px) {
+    width: 75vw;
+  }
+
   perspective: 900px;
 }
 

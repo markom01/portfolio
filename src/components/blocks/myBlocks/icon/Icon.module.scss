@@ -1,15 +1,18 @@
 .icon {
+  --base-size: 1rem;
+  --md: calc(var(--base-size) * 1.5);
+  --lg: calc(var(--base-size) * 2);
   opacity: 0.5;
 }
 
 .medium {
-  height: 24px;
+  height: var(--md);
 }
 
 .large {
-  height: 30px;
+  height: var(--lg);
 }
 
 .small {
-  height: 16px;
+  height: var(--base-size);
 }

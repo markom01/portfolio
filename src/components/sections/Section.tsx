@@ -12,7 +12,7 @@ export default function Section({
   className = "",
 }: SectionProps) {
   return (
-    <section id={id} className={`px-4 ${className}`}>
+    <section id={id} className={`px-2 px-md-4 ${className}`}>
       <h2 className="mb-5">{id}</h2>
       {children}
     </section>
