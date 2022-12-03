@@ -57,7 +57,7 @@ export default function Select({ responses, handleChange }: SelectProps) {
                   id={data.name}
                   value={data.name}
                   name="project-types-radios"
-                  className={radioStyles.hide}
+                  className={radioStyles.radio}
                   onChange={e => {
                     setSelected(`Website ${e.target.value}`);
 

@@ -15,7 +15,6 @@ export default function Form() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setResponseInfo("Sent! Expect answers soon.");
-    console.log(responses);
     emailjs
       .send(
         "service_uu3ohhx",
@@ -176,7 +175,7 @@ function TextArea({ className, responses, handleChange }: TextAreaProps) {
   return (
     <div
       className={`col ${className}`}
-      style={{ minInlineSize: "200px", height: "150px" }}
+      // style={{ minInlineSize: "200px"}}
     >
       <div
         className={`position-relative h-100 ${
@@ -193,7 +192,7 @@ function TextArea({ className, responses, handleChange }: TextAreaProps) {
         <textarea
           name="message"
           id="message"
-          className={`pb-1 h-100 w-100 pt-4 ${styles.input} `}
+          className={`pb-1 w-100 pt-4 ${styles.input} `}
           onClick={handleInteraction}
           onFocus={handleInteraction}
           onBlur={e => {
@@ -205,7 +204,7 @@ function TextArea({ className, responses, handleChange }: TextAreaProps) {
           onChange={e => {
             handleChange({ ...responses, message: e.target.value });
           }}
-          rows={5}
+          style={{ minHeight: "150px", maxHeight: "200px" }}
         ></textarea>
       </div>
     </div>

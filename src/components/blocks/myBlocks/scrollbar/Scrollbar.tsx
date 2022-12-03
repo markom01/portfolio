@@ -11,7 +11,6 @@ export default function Scrollbar({ container }: { container: any }) {
     scrollTop = target.scrollTop;
     setScrolled(scrollTop / targetHeight);
   };
-  // console.log(container.current);
   useEffect(() => {
     container.current.onscroll = handleScroll;
   }, []);

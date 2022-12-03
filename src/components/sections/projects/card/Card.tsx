@@ -1,7 +1,7 @@
 import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { StaticImage } from "gatsby-plugin-image";
-import React, { createElement, useContext, useState } from "react";
+import React, { createElement, useContext, useRef, useState } from "react";
 
 import { ChevronSVG } from "@components/sections/contact/form/radio/Radio";
 
@@ -13,18 +13,16 @@ import * as styles from "./Card.module";
 type CardProps = Queries.ProjectsQuery["allMdx"]["nodes"][0];
 
 export default function Card({ project }: { project: CardProps }) {
-  const [showBack, setShowBack] = useState(false);
-
+  const ref = useRef(null);
   return (
     <div className={`col`}>
       <div className={styles.scene}>
         <article
-          className={`h-100 w-100 position-relative my-card ${styles.card} ${
-            showBack ? styles.show_back : ""
-          }`}
+          ref={ref}
+          className={`h-100 w-100 position-relative my-card ${styles.card}`}
         >
-          <CardFront project={project} state={[showBack, setShowBack]} />
-          <CardBack project={project} state={[showBack, setShowBack]} />
+          <CardFront project={project} container={ref} />
+          <CardBack project={project} container={ref} />
         </article>
       </div>
     </div>
@@ -33,10 +31,10 @@ export default function Card({ project }: { project: CardProps }) {
 
 interface CardSidesProps {
   project: CardProps;
-  state: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
+  container: React.RefObject<HTMLDivElement>;
 }
 
-export function CardFront({ project, state }: CardSidesProps) {
+export function CardFront({ project, container }: CardSidesProps) {
   const thumbnail = getImage(project.frontmatter.thumbnail);
 
   return (
@@ -76,7 +74,12 @@ export function CardFront({ project, state }: CardSidesProps) {
           </div>
           <button
             className={`text-white ${styles.flip_btn}`}
-            onClick={() => state[1](s => !s)}
+            onClick={() =>
+              container.current.style.setProperty(
+                "--card-transform",
+                "translate3d(-100%, 0, 0) rotate3d(0, 1, 0, -180deg)"
+              )
+            }
             aria-label="Show More"
           >
             <ChevronSVG
@@ -89,7 +92,7 @@ export function CardFront({ project, state }: CardSidesProps) {
     </div>
   );
 }
-function CardBack({ project, state }: CardSidesProps) {
+function CardBack({ project, container }: CardSidesProps) {
   const startDate = new Date(project.frontmatter.startDate);
   const endDate = new Date(project.frontmatter.endDate);
   return (
@@ -108,7 +111,12 @@ function CardBack({ project, state }: CardSidesProps) {
         </a>
       </div>
       <div className="d-flex w-100 justify-content-between align-items-center">
-        <button className={styles.flip_btn} onClick={() => state[1](s => !s)}>
+        <button
+          className={styles.flip_btn}
+          onClick={() =>
+            container.current.style.setProperty("--card-transform", "none")
+          }
+        >
           <ChevronSVG
             className="p-1 py-2"
             style={{ width: "25px", rotate: ".25turn" }}
