@@ -39,7 +39,7 @@ export function CardFront({ project, container }: CardSidesProps) {
 
   return (
     <div
-      className={`${styles.glass_card} position-absolute d-flex flex-column w-100 h-100 ${styles.card__face}`}
+      className={`${styles.glass_card} position-absolute d-flex flex-column w-100 h-100 ${styles.card__face} ${styles.card__facefront}`}
     >
       <div style={{ height: "150px" }}>
         <GatsbyImage

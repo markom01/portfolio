@@ -12,21 +12,29 @@
 }
 
 .card {
-  backface-visibility: hidden;
+  // backface-visibility: hidden;
   transform-style: preserve-3d;
   transform-origin: center right;
   transition: transform 0.75s;
   transform: var(--card-transform);
-}
 
-.card__face {
-  @include size(100%);
+  &__face {
+    @include size(100%);
 
-  &back {
-    transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 1px);
-    background: rgb(255 255 255 / 5%);
-    backdrop-filter: blur(30px);
-    backface-visibility: hidden;
+    &front,
+    &back {
+      backface-visibility: hidden;
+    }
+
+    &front {
+      transform: translate3d(0, 0, 1px);
+    }
+
+    &back {
+      transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 1px);
+      background: rgb(255 255 255 / 5%);
+      backdrop-filter: blur(30px);
+    }
   }
 }
 
