@@ -1,7 +1,5 @@
-import download from "bootstrap-icons/icons/file-earmark-arrow-down.svg";
 import React from "react";
 
-import Button from "@myBlocks/button/Button";
 import * as styles from "@myBlocks/button/Button.module";
 import Icon from "@myBlocks/icon/Icon";
 
@@ -60,7 +58,7 @@ export default function Footer() {
             <a
               className={`button position-relative d-inline-block px-3 py-2 text-decoration-none text-uppercase
          ${styles.secondary}`}
-              href="CV_Marko-Meseldžija (1).pdf"
+              href="CV_Marko-Meseldžija.pdf"
               target="_blank"
             >
               <Icon src="icons/cv.svg" size="small" alt="cv" className="me-2" />
