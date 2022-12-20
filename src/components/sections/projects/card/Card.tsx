@@ -96,7 +96,7 @@ function CardBack({ project, container }: CardSidesProps) {
     <div
       className={`${styles.glass_card} p-3 d-flex flex-column align-items-center position-absolute text-start ${styles.card__face} ${styles.card__faceback}`}
     >
-      <div className="d-flex flex-column h-100">
+      <div className="d-flex flex-column h-100 w-100">
         <h5 className="mb-2 text-white">Description</h5>
         <h6 className="mb-4">{project.frontmatter.description}</h6>
         <a
