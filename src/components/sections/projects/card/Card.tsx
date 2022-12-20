@@ -1,11 +1,7 @@
-import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { StaticImage } from "gatsby-plugin-image";
-import React, { createElement, useContext, useRef, useState } from "react";
+import React, { useRef } from "react";
 
 import { ChevronSVG } from "@components/sections/contact/form/radio/Radio";
-
-import Button from "@myBlocks/button/Button";
 
 import Icon from "../../../blocks/myBlocks/icon/Icon";
 import * as styles from "./Card.module";
@@ -45,6 +41,7 @@ export function CardFront({ project, container }: CardSidesProps) {
         <GatsbyImage
           className="h-100"
           image={thumbnail}
+          objectPosition="top"
           alt={project.frontmatter.title}
         />
       </div>
