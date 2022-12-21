@@ -1,7 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
 
-const path = require("path");
-
 const config: GatsbyConfig = {
   graphqlTypegen: true,
   siteMetadata: {
@@ -12,20 +10,6 @@ const config: GatsbyConfig = {
     twitterUsername: `@marko_m_01`,
   },
   plugins: [
-    // {
-    //   resolve: `gatsby-plugin-google-gtag`,
-    //   options: {
-    //     trackingIds: [
-    //       "G-LPZCYXK5HV", // Google Analytics / GA
-    //     ],
-    //     gtagConfig: {
-    //       send_page_view: true, // default appears to be false.
-    //     },
-    //     pluginConfig: {
-    //       head: true,
-    //     },
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
@@ -59,7 +43,7 @@ const config: GatsbyConfig = {
         defaults: {
           breakpoints: [400, 800, 1100],
           placeholder: `blurred`,
-          quality: 70,
+          quality: 100,
         },
       },
     },

@@ -1,7 +1,7 @@
 // , { useState, useContext }
 // import { CarouselVisibilityContext } from "@myBlocks/carousel/Carousel";
 import { graphql, useStaticQuery } from "gatsby";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import Section from "@sections/Section";
 
@@ -34,7 +34,7 @@ export default function Skills() {
             }
             thumbnail {
               childImageSharp {
-                gatsbyImageData(width: 600)
+                gatsbyImageData(width: 1000)
               }
             }
           }
