@@ -1,7 +1,8 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
+
 import Section from "../Section";
 import * as styles from "./Experience.module";
-import { useStaticQuery, graphql } from "gatsby";
 
 type ExperienceProps = Queries.ExperienceQuery["allMdx"]["nodes"][number];
 
@@ -34,7 +35,7 @@ export default function Experience() {
   return (
     <Section id="experience">
       <div className="pt-5 d-flex flex-column align-items-center">
-        {data.allMdx.nodes.map((project) => (
+        {data.allMdx.nodes.map(project => (
           <ExperienceCard project={project} key={project.frontmatter.role} />
         ))}
       </div>
@@ -83,7 +84,7 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
         <div className="text-start mb-4">
           <h5 className="text-white mb-3">Responsibilities</h5>
           <ul>
-            {project.frontmatter.tasks.map((task) => (
+            {project.frontmatter.tasks.map(task => (
               <li key={task}>{task}</li>
             ))}
           </ul>
@@ -91,7 +92,7 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
         <div>
           <h5 className="text-white mb-3 text-start">Skills</h5>
           <div className="d-flex flex-wrap justify-content-start">
-            {project.frontmatter.skills.map((skill) => (
+            {project.frontmatter.skills.map(skill => (
               <div
                 className="d-flex align-items-center me-3 mb-3"
                 key={skill.name}
