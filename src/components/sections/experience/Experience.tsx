@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Section from "../Section";
 import * as styles from "./Experience.module";
@@ -54,6 +54,18 @@ function Connector() {
 function ExperienceCard({ project }: { project: ExperienceProps }) {
   const startDate = new Date(project.frontmatter.startDate);
   const endDate = new Date(project.frontmatter.endDate);
+  const [endDateFormatted, setEndDateFormatted] = useState(
+    `${endDate.getMonth() + 1}.${endDate.getFullYear()}`
+  );
+  useEffect(() => {
+    if (project.frontmatter.link === "https://www.hyperether.com/") {
+      setEndDateFormatted("Present");
+    }
+  }, []);
+
+  const date = `${
+    startDate.getMonth() + 1
+  }.${startDate.getFullYear()} - ${endDateFormatted}`;
   return (
     <>
       <article
@@ -74,11 +86,7 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
             >
               <h3>{project.frontmatter.role}</h3>
             </a>
-            <h6>
-              {`${startDate.getMonth() + 1}.${startDate.getFullYear()} - ${
-                endDate.getMonth() + 1
-              }.${endDate.getFullYear()}`}
-            </h6>
+            <h6>{date}</h6>
           </div>
         </div>
         <div className="text-start mb-4">
