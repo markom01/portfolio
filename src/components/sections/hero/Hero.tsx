@@ -2,7 +2,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
 import Button from "@myBlocks/button/Button";
-import Icon from "@myBlocks/icon/Icon";
 
 import { ChevronSVG } from "../contact/form/radio/Radio";
 import * as styles from "./Hero.module";
@@ -28,7 +27,7 @@ export default function Hero() {
 
         <div className="btns col">
           <Button id="projects" />
-          <Button secondary id="contact" />
+          <Button secondary id="connect" />
         </div>
       </div>
 

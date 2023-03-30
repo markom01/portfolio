@@ -1,5 +1,5 @@
 import { Script } from "gatsby";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 import Scrollbar from "@myBlocks/scrollbar/Scrollbar";
 
@@ -7,6 +7,11 @@ import Navigation from "@sections/navigation/Navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const ref = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    videoRef.current.playbackRate = 0.5;
+  }, []);
 
   return (
     <>
@@ -18,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   gtag('config', 'G-LPZCYXK5HV')`}
       </Script>
-
+      <video ref={videoRef} src="bg-triangles-small.mp4" autoPlay muted loop />
       <div
         className="w-100 d-flex flex-column"
         style={{ zIndex: 2, position: "relative", height: "99vh" }}
