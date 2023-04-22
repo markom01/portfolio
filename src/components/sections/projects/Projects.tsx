@@ -68,7 +68,14 @@ export default function Skills() {
           <Filter state={[activeTechArray, setActiveTechArray]} />
           <Sort handleSort={setSort} />
         </div>
-        <div className="row row-cols-auto gx-4 gx-md-5 gy-4 justify-content-center align-items-center">
+        <div
+          className="d-flex gap-2 gap-sm-3 gap-md-4 gap-lg-5 projects-wrapper-scroll"
+          style={{
+            height: 320,
+            overflowX: "scroll",
+            scrollSnapType: "x proximity",
+          }}
+        >
           {[...data.allMdx.nodes]
             .sort(sortProjects)
             .filter(filterProjects)

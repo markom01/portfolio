@@ -3,6 +3,7 @@
 
 .scene {
   @include size(300px);
+  scroll-snap-align: start;
 
   @media (max-width: 375px) {
     width: 75vw;
@@ -17,6 +18,7 @@
   transform-origin: center right;
   transition: transform 0.75s;
   transform: var(--card-transform);
+  width: 300px;
 
   &__face {
     @include size(100%);

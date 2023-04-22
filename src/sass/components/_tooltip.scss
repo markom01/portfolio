@@ -23,7 +23,7 @@
   @include on-interaction {
     &::after {
       opacity: 1;
-      transform: translate3d(-50%, 125%, 0) !important;
+      transform: translate3d(-50%, -125%, 0) !important;
     }
   }
 }

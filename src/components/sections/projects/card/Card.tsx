@@ -11,16 +11,14 @@ type CardProps = Queries.ProjectsQuery["allMdx"]["nodes"][0];
 export default function Card({ project }: { project: CardProps }) {
   const ref = useRef(null);
   return (
-    <div className={`col`}>
-      <div className={styles.scene}>
-        <article
-          ref={ref}
-          className={`h-100 w-100 position-relative my-card ${styles.card}`}
-        >
-          <CardFront project={project} container={ref} />
-          <CardBack project={project} container={ref} />
-        </article>
-      </div>
+    <div className={styles.scene}>
+      <article
+        ref={ref}
+        className={`h-100 position-relative my-card ${styles.card}`}
+      >
+        <CardFront project={project} container={ref} />
+        <CardBack project={project} container={ref} />
+      </article>
     </div>
   );
 }

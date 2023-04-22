@@ -27,6 +27,10 @@
   }
 }
 
+.projects-wrapper-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
 body {
   &::after {
     content: "";
