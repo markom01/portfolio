@@ -69,12 +69,8 @@ export default function Skills() {
           <Sort handleSort={setSort} />
         </div>
         <div
-          className="d-flex gap-2 gap-sm-3 gap-md-4 gap-lg-5 projects-wrapper-scroll"
-          style={{
-            height: 320,
-            overflowX: "scroll",
-            scrollSnapType: "x proximity",
-          }}
+          className="wrapper-scroll gap-2 gap-sm-3 gap-md-4 gap-lg-5"
+          style={{ height: 320 }}
         >
           {[...data.allMdx.nodes]
             .sort(sortProjects)

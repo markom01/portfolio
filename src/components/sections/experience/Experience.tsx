@@ -33,8 +33,8 @@ export default function Experience() {
     }
   `);
   return (
-    <Section id="experience">
-      <div className="pt-5 d-flex flex-column align-items-center">
+    <Section className="mx-1 mx-md-3" id="experience">
+      <div className={`wrapper-scroll pb-4 gap-5 ${styles.wrapper}`}>
         {data.allMdx.nodes.map(project => (
           <ExperienceCard project={project} key={project.frontmatter.role} />
         ))}
@@ -45,8 +45,8 @@ export default function Experience() {
 
 function Connector() {
   return (
-    <div className={`position-relative ${styles.connector} connector my-5`}>
-      <div className={`mx-auto h-100 ${styles.connector_line}`} />
+    <div className={`position-relative ${styles.connector} connector mx-5`}>
+      <div className={`w-100 ${styles.connector_line}`} />
     </div>
   );
 }
@@ -58,7 +58,10 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
     `${endDate.getMonth() + 1}.${endDate.getFullYear()}`
   );
   useEffect(() => {
-    if (project.frontmatter.link === "https://www.hyperether.com/") {
+    if (
+      project.frontmatter.link === "https://www.hyperether.com/" ||
+      project.frontmatter.role === "Freelance Frontend Developer"
+    ) {
       setEndDateFormatted("Present");
     }
   }, []);
@@ -67,10 +70,8 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
     startDate.getMonth() + 1
   }.${startDate.getFullYear()} - ${endDateFormatted}`;
   return (
-    <>
-      <article
-        className={`d-flex flex-column jusfity-content-center ${styles.card}`}
-      >
+    <div className="d-flex align-items-center h-100">
+      <article className={`d-flex flex-column h-100 ${styles.card}`}>
         <div className="d-flex align-items-center mb-5">
           <img
             src={project.frontmatter.logo.publicURL}
@@ -99,12 +100,9 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
         </div>
         <div>
           <h5 className="text-white mb-3 text-start">Skills</h5>
-          <div className="d-flex flex-wrap justify-content-start">
+          <div className="d-flex flex-wrap justify-content-start gap-2">
             {project.frontmatter.skills.map(skill => (
-              <div
-                className="d-flex align-items-center me-3 mb-3"
-                key={skill.name}
-              >
+              <div className="d-flex align-items-center me-3" key={skill.name}>
                 <span className="me-2">{skill.icon}</span>
                 <h6>{skill.name}</h6>
               </div>
@@ -112,7 +110,8 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
           </div>
         </div>
       </article>
-      <Connector />
-    </>
+      {project.frontmatter.role !==
+        "Data Collection and Labeling Associate" && <Connector />}
+    </div>
   );
 }

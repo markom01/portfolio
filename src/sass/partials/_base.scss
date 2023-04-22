@@ -27,7 +27,7 @@
   }
 }
 
-.projects-wrapper-scroll::-webkit-scrollbar {
+.wrapper-scroll::-webkit-scrollbar {
   width: 5px;
 }
 
@@ -122,9 +122,9 @@ nav a:not(:first-child),
   @extend .me-3;
 }
 
-.connector:last-child {
-  display: none;
-}
+// .connector:last-child {
+//   display: none;
+// }
 
 ul {
   padding-left: 1rem;
@@ -133,4 +133,15 @@ ul {
 li {
   list-style-type: "- ";
   margin-block-end: 5px;
+}
+
+.wrapper-scroll {
+  @extend .d-flex, .align-items-center;
+
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+
+  & > * {
+    scroll-snap-align: start;
+  }
 }

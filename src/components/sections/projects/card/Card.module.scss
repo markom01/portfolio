@@ -3,7 +3,6 @@
 
 .scene {
   @include size(300px);
-  scroll-snap-align: start;
 
   @media (max-width: 375px) {
     width: 75vw;
