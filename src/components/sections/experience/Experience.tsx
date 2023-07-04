@@ -35,7 +35,7 @@ export default function Experience() {
   return (
     <Section className="mx-1 mx-md-3" id="experience">
       <div className={`wrapper-scroll pb-4 gap-5 ${styles.wrapper}`}>
-        {data.allMdx.nodes.map(project => (
+        {data.allMdx.nodes.map((project, i) => (
           <ExperienceCard project={project} key={project.frontmatter.role} />
         ))}
       </div>
@@ -110,8 +110,7 @@ function ExperienceCard({ project }: { project: ExperienceProps }) {
           </div>
         </div>
       </article>
-      {project.frontmatter.role !==
-        "Data Collection and Labeling Associate" && <Connector />}
+      {project.frontmatter.role !== "Mobile Developer" && <Connector />}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 @import "@sass/partials/mixins";
 
 .wrapper {
+  justify-content: center;
   height: 400px;
 
   @media (max-width: 550px) {
